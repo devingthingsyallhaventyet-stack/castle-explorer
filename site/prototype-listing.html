@@ -812,10 +812,16 @@ footer p {
 <div class="content-layout">
   <div class="main-content">
 
-    <!-- HIGHLIGHTS -->
-    <div class="section highlights-section" style="margin-bottom:2rem;">
-      <h2>Highlights</h2>
-      <div class="icon-cards">
+    <!-- VISIT / HISTORY TABS -->
+    <div class="content-tabs">
+      <button class="content-tab active" onclick="switchTab('visit')">Visit</button>
+      <button class="content-tab" onclick="switchTab('history')">History</button>
+    </div>
+
+    <div class="tab-content" id="tab-visit">
+      <!-- HIGHLIGHTS -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Highlights</h3>
+      <div class="icon-cards" style="margin-bottom:2rem;">
         <div class="icon-card">
           <div class="icon-card-emoji">🎟️</div>
           <div class="icon-card-label">Guided Tours</div>
@@ -842,25 +848,76 @@ footer p {
           <div class="icon-card-detail">At the entrance</div>
         </div>
       </div>
+
+      <!-- ABOUT -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">About</h3>
+      <div style="margin-bottom:2rem;">
+        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:0;margin-bottom:2rem;padding-bottom:0;">Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
+
+        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
+
+        <p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:2rem;margin-bottom:2rem;padding-bottom:0;">Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
+      </div>
+
+      <!-- TERRAIN & ACCESSIBILITY -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Terrain & Accessibility</h3>
+      <div style="margin-bottom:2rem;">
+        <div class="terrain-chips">
+          <span class="chip chip-red">📐 Steep Approach</span>
+          <span class="chip chip-amber">⚠️ Cobblestones</span>
+          <span class="chip chip-green">🦽 Mobility Vehicle Available</span>
+          <span class="chip chip-amber">🌬️ Exposed & Windy</span>
+        </div>
+        <p style="font-family:var(--serif);font-size:18px;color:var(--ink-light);line-height:1.9;margin-top:.6rem;">
+          The Royal Mile approach is a steep cobbled climb. A free courtesy vehicle runs from the Portcullis Gate to the summit for visitors with mobility difficulties — book at the ticket office. Wheelchairs available to borrow. Crown Jewels and Great Hall are fully accessible; some areas including St Margaret's Chapel involve steps.
+        </p>
+      </div>
+
+      <!-- GUEST BOOK -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Guest Book</h3>
+      <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-faded);margin-bottom:1.2rem;">Visited Edinburgh Castle? Leave your mark.</p>
+      <div class="guestbook-entries">
+
+        <div class="gb-entry">
+          <div class="gb-header">
+            <div class="gb-avatar">🧑</div>
+            <div class="gb-name">Sarah M.</div>
+            <div class="gb-date">April 2026</div>
+          </div>
+          <div class="gb-mood">🌧️ Misty morning</div>
+          <div class="gb-text">Got there right at opening and had the battlements almost to ourselves. The haar was rolling in off the Forth and the One O'Clock Gun scared the life out of us — nobody warns you how loud it actually is. Crown Jewels room is small but genuinely moving. Would skip the gift shop.</div>
+        </div>
+
+        <div class="gb-entry">
+          <div class="gb-header">
+            <div class="gb-avatar">👨</div>
+            <div class="gb-name">James K.</div>
+            <div class="gb-date">March 2026</div>
+          </div>
+          <div class="gb-mood">☀️ Clear skies</div>
+          <div class="gb-text">Third visit and I still find new things. This time I actually read the plaques in the war memorial — bring tissues. The view from Argyle Battery on a clear day is absurd. You can see all the way to Fife. Budget at least three hours, we ran out of time again.</div>
+        </div>
+
+        <div class="gb-entry">
+          <div class="gb-header">
+            <div class="gb-avatar">👩</div>
+            <div class="gb-name">Priya R.</div>
+            <div class="gb-date">February 2026</div>
+          </div>
+          <div class="gb-mood">🥾 Packed but worth it</div>
+          <div class="gb-text">The cobblestones on the way up are no joke in winter — wear proper shoes. We borrowed a wheelchair for my mum and the staff were brilliant about it. St Margaret's Chapel is tiny and easy to miss but it's 900 years old and that hits different when you're standing inside it.</div>
+        </div>
+
+      </div>
+      <div class="gb-write">
+        <button class="gb-write-btn">✍️ Sign the Guest Book</button>
+      </div>
     </div>
 
-    <!-- ABOUT / HISTORY TABS -->
-    <div class="content-tabs">
-      <button class="content-tab active" onclick="switchTab('about')">About</button>
-      <button class="content-tab" onclick="switchTab('history')">History</button>
-      <button class="content-tab" onclick="switchTab('people')">People</button>
-    </div>
-
-    <div class="about-section tab-content" id="tab-about">
-      <p>Edinburgh Castle sits on a 350-million-year-old volcanic plug, and it shows. The rock rises sheer on three sides, leaving only one approach — a narrow ridge from the east that became the Royal Mile. People have fortified this spot since at least the Iron Age, making it one of the longest continuously occupied sites in Britain. The castle you see today is mostly 16th and 17th century, but St Margaret's Chapel, tucked inside the walls, dates to around 1130 and is the oldest surviving building in Edinburgh.</p>
-
-      <p>The Honours of Scotland — crown, sceptre, and sword of state — are the oldest crown jewels in Britain, predating the English set by a century. They sit in the Crown Room alongside the Stone of Destiny, which spent 700 years at Westminster Abbey before being returned to Scotland in 1996. Mons Meg, the six-tonne medieval siege cannon on the battlements, once launched a stone cannonball two miles across the Firth of Forth at Dumbarton Castle.</p>
-
-      <p>Every day at exactly one o'clock, the Time Gun fires from the Half Moon Battery — a tradition since 1861, originally so ships in the Forth could set their chronometers. It's the most besieged place in Great Britain, having been attacked 26 times in its 1,100-year history. In 1314, thirty Scots disguised as merchants scaled the sheer north face in darkness, climbing a route so treacherous it had been left unguarded. By dawn, the castle was theirs.</p>
-    </div>
-
-    <div class="history-section tab-content" id="tab-history" style="display:none;">
-      <div class="history-timeline">
+    <div class="tab-content" id="tab-history" style="display:none;">
+      <!-- HISTORY TIMELINE -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">History</h3>
+      <div class="history-timeline" style="margin-bottom:2rem;">
         <div class="timeline-item">
           <div class="timeline-date">c. 600 AD</div>
           <div class="timeline-body">
@@ -933,33 +990,9 @@ footer p {
         </div>
       </div>
 
-      <div class="history-subsection">
-        <h3>Architecture & Construction</h3>
-        <p>The castle complex spans multiple periods. The oldest structure is St Margaret's Chapel (c. 1130), a simple Romanesque chapel. The Great Hall, completed in 1511 for James IV, features Scotland's only surviving medieval open-timber roof. The Half Moon Battery (1573–1588) was constructed over the ruins of David's Tower after the Lang Siege. The Scottish National War Memorial was added in 1927, designed by Sir Robert Lorimer.</p>
-      </div>
-
-      <div class="history-subsection">
-        <h3>Notable Figures</h3>
-        <p><strong>St Margaret</strong> (d. 1093) — Queen consort, died in the castle; canonised 1250. <strong>Robert the Bruce</strong> — ordered the castle's defences destroyed after recapture in 1314. <strong>Mary, Queen of Scots</strong> — gave birth to James VI here in 1566. <strong>Sir William Kirkcaldy of Grange</strong> — held the castle during the Lang Siege. <strong>Sir Walter Scott</strong> — rediscovered the Honours of Scotland in 1818.</p>
-      </div>
-
-      <div class="history-subsection">
-        <h3>Designations</h3>
-        <p>Scheduled Ancient Monument · Category A Listed Building · Part of the UNESCO Old and New Towns of Edinburgh World Heritage Site</p>
-      </div>
-
-      <div class="history-subsection">
-        <h3>Further Reading</h3>
-        <ul>
-          <li>Gifford, J., McWilliam, C. & Walker, D. — <em>The Buildings of Scotland: Edinburgh</em> (1984)</li>
-          <li>Tabraham, C. — <em>Edinburgh Castle</em>, Historic Scotland (2003)</li>
-          <li>Ewart, G. & Dennis, J. — <em>Archaeological Excavations at Edinburgh Castle 1988–91</em></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="people-section tab-content" id="tab-people" style="display:none;">
-      <div class="people-grid">
+      <!-- PEOPLE -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">People</h3>
+      <div class="people-grid" style="margin-bottom:2rem;">
 
         <a href="https://en.wikipedia.org/wiki/Saint_Margaret_of_Scotland" target="_blank" class="person-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Margaret_of_Scotland.jpg/220px-Margaret_of_Scotland.jpg" alt="St Margaret" class="person-photo">
@@ -1007,42 +1040,45 @@ footer p {
         </a>
 
       </div>
+
+      <!-- VIDEOS -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Videos</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:2rem;">
+        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- FURTHER READING -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Further Reading</h3>
+      <div style="margin-bottom:1.5rem;">
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);padding:.3rem 0;border-bottom:1px solid rgba(224,216,200,.4);">Gifford, J., McWilliam, C. & Walker, D. — <em>The Buildings of Scotland: Edinburgh</em> (1984)</li>
+          <li style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);padding:.3rem 0;border-bottom:1px solid rgba(224,216,200,.4);">Tabraham, C. — <em>Edinburgh Castle</em>, Historic Scotland (2003)</li>
+          <li style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);padding:.3rem 0;border-bottom:none;">Ewart, G. & Dennis, J. — <em>Archaeological Excavations at Edinburgh Castle 1988–91</em></li>
+        </ul>
+      </div>
+
+      <div style="padding-top:1.5rem;border-top:1px solid var(--border);margin-bottom:1.5rem;">
+        <h4 style="font-family:var(--sans);font-size:.75rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Architecture & Construction</h4>
+        <p style="font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink-light);">The castle complex spans multiple periods. The oldest structure is St Margaret's Chapel (c. 1130), a simple Romanesque chapel. The Great Hall, completed in 1511 for James IV, features Scotland's only surviving medieval open-timber roof. The Half Moon Battery (1573–1588) was constructed over the ruins of David's Tower after the Lang Siege. The Scottish National War Memorial was added in 1927, designed by Sir Robert Lorimer.</p>
+      </div>
+
+      <div style="padding-top:1.5rem;border-top:1px solid var(--border);">
+        <h4 style="font-family:var(--sans);font-size:.75rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Designations</h4>
+        <p style="font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink-light);">Scheduled Ancient Monument · Category A Listed Building · Part of the UNESCO Old and New Towns of Edinburgh World Heritage Site</p>
+      </div>
     </div>
 
     <script>
     function switchTab(tab) {
-      document.getElementById('tab-about').style.display = tab === 'about' ? 'block' : 'none';
+      document.getElementById('tab-visit').style.display = tab === 'visit' ? 'block' : 'none';
       document.getElementById('tab-history').style.display = tab === 'history' ? 'block' : 'none';
-      document.getElementById('tab-people').style.display = tab === 'people' ? 'block' : 'none';
       document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
       event.target.classList.add('active');
     }
     </script>
 
     <!-- KEY FACTS removed -->
-
-    <!-- ACCESSIBILITY -->
-    <div class="section">
-      <h2>Terrain & Accessibility</h2>
-      <div class="terrain-chips">
-        <span class="chip chip-red">📐 Steep Approach</span>
-        <span class="chip chip-amber">⚠️ Cobblestones</span>
-        <span class="chip chip-green">🦽 Mobility Vehicle Available</span>
-        <span class="chip chip-amber">🌬️ Exposed & Windy</span>
-      </div>
-      <p style="font-family:var(--serif);font-size:18px;color:var(--ink-light);line-height:1.9;margin-top:.6rem;">
-        The Royal Mile approach is a steep cobbled climb. A free courtesy vehicle runs from the Portcullis Gate to the summit for visitors with mobility difficulties — book at the ticket office. Wheelchairs available to borrow. Crown Jewels and Great Hall are fully accessible; some areas including St Margaret's Chapel involve steps.
-      </p>
-    </div>
-
-    <!-- VIDEOS (hidden if empty in production) -->
-    <div class="section">
-      <h2>Videos</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        <iframe width="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
 
   </div>
 
@@ -1161,48 +1197,6 @@ footer p {
   </div>
 </div>
 
-<!-- GUEST BOOK -->
-<div class="guestbook-section">
-  <h2>Guest Book</h2>
-  <p class="guestbook-subtitle">Visited Edinburgh Castle? Leave your mark.</p>
-  <div class="guestbook-entries">
-
-    <div class="gb-entry">
-      <div class="gb-header">
-        <div class="gb-avatar">🧑</div>
-        <div class="gb-name">Sarah M.</div>
-        <div class="gb-date">April 2026</div>
-      </div>
-      <div class="gb-mood">🌧️ Misty morning</div>
-      <div class="gb-text">Got there right at opening and had the battlements almost to ourselves. The haar was rolling in off the Forth and the One O'Clock Gun scared the life out of us — nobody warns you how loud it actually is. Crown Jewels room is small but genuinely moving. Would skip the gift shop.</div>
-    </div>
-
-    <div class="gb-entry">
-      <div class="gb-header">
-        <div class="gb-avatar">👨</div>
-        <div class="gb-name">James K.</div>
-        <div class="gb-date">March 2026</div>
-      </div>
-      <div class="gb-mood">☀️ Clear skies</div>
-      <div class="gb-text">Third visit and I still find new things. This time I actually read the plaques in the war memorial — bring tissues. The view from Argyle Battery on a clear day is absurd. You can see all the way to Fife. Budget at least three hours, we ran out of time again.</div>
-    </div>
-
-    <div class="gb-entry">
-      <div class="gb-header">
-        <div class="gb-avatar">👩</div>
-        <div class="gb-name">Priya R.</div>
-        <div class="gb-date">February 2026</div>
-      </div>
-      <div class="gb-mood">🥾 Packed but worth it</div>
-      <div class="gb-text">The cobblestones on the way up are no joke in winter — wear proper shoes. We borrowed a wheelchair for my mum and the staff were brilliant about it. St Margaret's Chapel is tiny and easy to miss but it's 900 years old and that hits different when you're standing inside it.</div>
-    </div>
-
-  </div>
-  <div class="gb-write">
-    <button class="gb-write-btn">✍️ Sign the Guest Book</button>
-  </div>
-</div>
-
 <!-- COMMUNITY SUBMIT -->
 <div class="community-section">
   <div class="community-inner">
@@ -1236,6 +1230,3 @@ footer p {
 
 </body>
 </html>
-
-
-
