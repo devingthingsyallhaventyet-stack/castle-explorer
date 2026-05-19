@@ -1007,9 +1007,23 @@ footer p {
     lbCounter.textContent = (idx+1) + ' / ' + srcs.length;
   };
 
-  // Click handlers on strip images
+  // Click/tap handlers on strip images (distinguish tap from swipe)
+  var touchStartX = 0, touchStartY = 0, touchMoved = false;
+  var strip = document.getElementById('galleryStrip');
+  strip.addEventListener('touchstart', function(e){
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchMoved = false;
+  }, {passive: true});
+  strip.addEventListener('touchmove', function(e){
+    var dx = Math.abs(e.touches[0].clientX - touchStartX);
+    var dy = Math.abs(e.touches[0].clientY - touchStartY);
+    if (dx > 10 || dy > 10) touchMoved = true;
+  }, {passive: true});
+
   document.querySelectorAll('.gallery-strip img, .gallery-strip .img-wrap img').forEach(function(img){
     img.addEventListener('click', function(e){
+      if (touchMoved) return; // was a swipe, not a tap
       e.stopPropagation();
       var i = srcs.indexOf(this.src);
       if (i >= 0) openLightbox(i);
@@ -1029,6 +1043,18 @@ footer p {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') navLightbox(-1);
     if (e.key === 'ArrowRight') navLightbox(1);
+  });
+
+  // Swipe nav in lightbox
+  var lbTouchX = 0;
+  lbEl.addEventListener('touchstart', function(e){
+    lbTouchX = e.touches[0].clientX;
+  }, {passive: true});
+  lbEl.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - lbTouchX;
+    if (Math.abs(dx) > 50) {
+      navLightbox(dx > 0 ? -1 : 1);
+    }
   });
 })();
 </script>
