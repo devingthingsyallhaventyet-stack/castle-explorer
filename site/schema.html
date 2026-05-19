@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castlecore Schema — Phase 1.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #faf8f4; color: #2a1f14; line-height: 1.7; padding: 2rem clamp(1.5rem, 5vw, 4rem); max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: .3rem; }
+h2 { font-size: 1.3rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: .8rem; padding-bottom: .4rem; border-bottom: 2px solid #8b2335; }
+h3 { font-size: 1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: .5rem; }
+h4 { font-size: .85rem; font-weight: 600; margin-top: 1rem; margin-bottom: .4rem; }
+p { margin-bottom: .8rem; font-size: .9rem; }
+em { color: #8a7e6e; }
+hr { border: none; border-top: 1px solid #e0d8c8; margin: 1.5rem 0; }
+ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; font-size: .9rem; }
+li { margin-bottom: .3rem; }
+strong { color: #2a1f14; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: .82rem; }
+th { background: #8b2335; color: #fff; padding: .6rem .8rem; text-align: left; font-weight: 600; letter-spacing: .5px; }
+td { padding: .5rem .8rem; border-bottom: 1px solid #e0d8c8; }
+tr:nth-child(even) td { background: #f0ebe0; }
+code { background: #f0ebe0; padding: 2px 6px; border-radius: 3px; font-size: .82rem; }
+a { color: #8b2335; }
+</style>
+</head>
+<body>
+<h1>Castlecore Listing Page ??? Data Schema &amp; Functionality Audit</h1>
+<p><em>Phase 1, Step 2 ??? In Progress</em>
+<em>Started: 2026-05-19</em></p>
+<hr>
+<h2>Rule #1: No Filler. Ever.</h2>
+<p>See <code>castlecore-clean-slate.md</code> for full rule. Every field must be sourced from approved links only (Wikipedia, Google Places, official heritage/government pages). If we can&#39;t source it, it doesn&#39;t show.</p>
+<hr>
+<h2>Section 1: Breadcrumbs</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Country</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+<tr>
+<td>Castle Name</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Section 2: Header</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type tag</td>
+<td>Listing data (<code>type</code>)</td>
+<td>???</td>
+<td>Castle, Abbey, etc.</td>
+</tr>
+<tr>
+<td>Status tag</td>
+<td>Inferred from sources</td>
+<td>???</td>
+<td>See status rules below</td>
+</tr>
+<tr>
+<td>Condition tag</td>
+<td>Inferred from sources</td>
+<td>???</td>
+<td>See condition rules below</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Listing data (<code>name</code>)</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Subtitle</td>
+<td>Written by us</td>
+<td>???</td>
+<td>Editorial one-liner based on verified source material. Every claim must trace to an approved source. 1,163 unique lines needed.</td>
+</tr>
+<tr>
+<td>Location label</td>
+<td>Listing data (town/county)</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Badge</td>
+<td>Calculated from Google Places</td>
+<td>???</td>
+<td>See badge rules below</td>
+</tr>
+</tbody></table>
+<h3>Status Tag Rules</h3>
+<p>Only these 4 values. If unsure, hide the tag.</p>
+<ul>
+<li><strong>Open to Visitors</strong> ??? large well-maintained properties with admission cost, gift shops, guided tours, set hours</li>
+<li><strong>Book to Experience</strong> ??? hotels, event venues, tours by appointment only</li>
+<li><strong>Freely Accessible</strong> ??? places that can be accessed for free at any time (open ruins, free buildings, listed as free)</li>
+<li><strong>Private</strong> ??? privately owned, not open to visitors, listed to preserve history. Only used if explicitly stated on Wikipedia or a dedicated website.</li>
+</ul>
+<h3>Condition Tag Rules</h3>
+<p>Only these 2 values. If unsure, hide the tag.</p>
+<ul>
+<li><strong>Intact</strong> ??? has a roof, well preserved, people living in it or actively maintaining it</li>
+<li><strong>Ruin</strong> ??? no roof, partially standing, regardless of whether free or managed</li>
+</ul>
+<h3>Badge Rules</h3>
+<p>Mutually exclusive, highest tier match wins. Data from Google Places.</p>
+<ul>
+<li><strong>??? Must See</strong> ??? 4.5+ stars AND 5,000+ reviews</li>
+<li><strong>???? Hidden Gem</strong> ??? 4.0+ stars AND 20???100 reviews</li>
+<li><strong>???? Mysterious</strong> ??? any rating, fewer than 10 reviews</li>
+<li><strong>No badge</strong> ??? everything else</li>
+</ul>
+<hr>
+<h2>Section 3: Stats Bar</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Been Here count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires backend (user system)</td>
+</tr>
+<tr>
+<td>Been Here button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Toggle, per-user state</td>
+</tr>
+<tr>
+<td>Favorites count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires backend (user system)</td>
+</tr>
+<tr>
+<td>Favorite button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Toggle, per-user state</td>
+</tr>
+<tr>
+<td>Google Rating</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>e.g. &quot;4.6 ???&quot;</td>
+</tr>
+<tr>
+<td>Google Review Count</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Must say &quot;Google Reviews&quot; for policy compliance</td>
+</tr>
+</tbody></table>
+<h3>Backend Required</h3>
+<p>Been Here, Favorites, and Guest Book (Section 5) all require user accounts with authentication. This is v1 infrastructure.</p>
+<hr>
+<h2>Section 4: Image Gallery</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Images (up to 5)</td>
+<td>Google Places API (priority) + Wikimedia Commons (fills gaps)</td>
+<td>???</td>
+<td>See rules below</td>
+</tr>
+<tr>
+<td>Alt text</td>
+<td>Generated from place name + photo context</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Attribution</td>
+<td>Per-source rules below</td>
+<td>???</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>Gallery Rules</h3>
+<ul>
+<li><strong>5 images per gallery</strong></li>
+<li><strong>Google Places photos are prioritized</strong> ??? fetched live via API on every page load. Cannot be stored on R2/CDN. Cannot cache photo names (they expire).</li>
+<li><strong>Wikimedia Commons fills gaps</strong> ??? if a listing has fewer than 5 Google photos, remaining slots filled with Wikimedia images hosted on R2</li>
+<li><strong>Browse/collection pages</strong> use Wikimedia thumbnails from R2 only (not Google photos) to control API costs</li>
+</ul>
+<h3>Google Places Photo Attribution (Required)</h3>
+<ol>
+<li><strong>Author name</strong> displayed from <code>authorAttributions.displayName</code>, linked to <code>authorAttributions.uri</code> when available</li>
+<li><strong>Google Maps logo or &quot;Google Maps&quot; text</strong> must appear near the photos<ul>
+<li>Logo: official assets, 16???19dp height, 10dp clearspace (left/right/top), 5dp bottom</li>
+<li>Text alternative: Roboto font, 12???16sp, normal weight, color white/#1F1F1F/#5E5E5E</li>
+</ul>
+</li>
+<li><strong>Visual distinction</strong> ??? Google content must be visually separated from non-Google content (border, background, or whitespace)</li>
+</ol>
+<h3>Wikimedia Commons Photo Attribution (CC BY-SA)</h3>
+<ol>
+<li><strong>Author name</strong> ??? linked to the original Commons file page (<code>commons.wikimedia.org/wiki/File:...</code>)</li>
+<li><strong>License name</strong> ??? linked to the license deed (e.g. <code>https://creativecommons.org/licenses/by-sa/3.0/</code>)</li>
+<li><strong>Indication of changes</strong> ??? if cropped/resized, note it. If unmodified, not required.</li>
+</ol>
+<p>Format: <code>???? [Author Name](commons-file-link) ?? [CC BY-SA 3.0](license-link)</code></p>
+<h3>Site-Wide Requirements (Google API Policy)</h3>
+<ul>
+<li>Publicly accessible <strong>Terms of Use</strong> incorporating Google&#39;s ToS</li>
+<li>Publicly accessible <strong>Privacy Policy</strong> incorporating Google&#39;s Privacy Policy</li>
+</ul>
+<h3>Cost Notes</h3>
+<ul>
+<li>Place Details Essentials: $5/1,000 requests (first 10k/month free)</li>
+<li>Place Details Photos: $7/1,000 requests (first 1k/month free)</li>
+<li>At 10k page views/month with 5 photos each: ~$340/month</li>
+<li>At 100k page views/month: ~$3,400/month</li>
+<li>Cost scales linearly with traffic. Revenue from ads should cover this at scale.</li>
+</ul>
+<hr>
+<h2>Section 5: Main Content ??? Visit Tab</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 6: Main Content ??? History Tab</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 7: Main Content ??? Guest Book Tab</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 8: Sidebar</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 9: Nearby Sites</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 10: Explore More</h2>
+<p><em>(To be completed)</em></p>
+<h2>Section 11: Mobile Sticky Bar</h2>
+<p><em>(To be completed)</em></p>
+
+
+</body>
+</html>
