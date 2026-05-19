@@ -268,26 +268,7 @@ a:hover { text-decoration: underline; }
 .pill a { color: inherit; text-decoration: none; }
 .pill a:hover { text-decoration: none; }
 
-/* === ICON CARDS === */
-.icon-cards {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: .4rem;
-}
-.icon-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 4px; padding: .6rem .5rem;
-  text-align: center; transition: all .2s;
-}
-.icon-card:hover { border-color: var(--burgundy); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
-.icon-card-emoji { font-size: 1.2rem; margin-bottom: .2rem; }
-.icon-card-label {
-  font-family: var(--sans); font-size: .7rem; font-weight: 600;
-  color: var(--ink);
-}
-.icon-card-detail {
-  font-family: var(--sans); font-size: .6rem; color: var(--ink-faded);
-  margin-top: .1rem; line-height: 1.3;
-}
+/* icon cards removed */
 
 /* === CONTENT TABS === */
 .content-tabs {
@@ -878,8 +859,7 @@ footer p {
   .gallery-strip .img-wrap img { width: 100%; max-width: 100%; height: 350px; border-radius: 0; }
   .gallery-thumbs { padding: 0 12px; }
   .gallery-nav { display: none; }
-  .icon-cards { grid-template-columns: repeat(2, 1fr); }
-  .icon-card:nth-child(n+5) { display: none; }
+/* icon cards removed */
   .mobile-sticky { display: flex; }
   footer { padding-bottom: 70px; }
   .community-buttons { flex-direction: column; }
@@ -1148,35 +1128,6 @@ footer p {
             Scotland, United Kingdom
           </div>
           <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="sidebar-directions">📍 Get Directions</a>
-        </div>
-      </div>
-
-      <!-- HIGHLIGHTS -->
-      <div class="icon-cards" style="margin-bottom:2rem;">
-        <div class="icon-card">
-          <div class="icon-card-emoji">🎟️</div>
-          <div class="icon-card-label">Guided Tours</div>
-          <div class="icon-card-detail">Free with admission</div>
-        </div>
-        <div class="icon-card">
-          <div class="icon-card-emoji">👑</div>
-          <div class="icon-card-label">Crown Jewels</div>
-          <div class="icon-card-detail">Permanent display</div>
-        </div>
-        <div class="icon-card">
-          <div class="icon-card-emoji">🍽️</div>
-          <div class="icon-card-label">Café</div>
-          <div class="icon-card-detail">Light meals & drinks</div>
-        </div>
-        <div class="icon-card">
-          <div class="icon-card-emoji">🏛️</div>
-          <div class="icon-card-label">Exhibits</div>
-          <div class="icon-card-detail">War Museum & Prisons</div>
-        </div>
-        <div class="icon-card">
-          <div class="icon-card-emoji">🛍️</div>
-          <div class="icon-card-label">Gift Shop</div>
-          <div class="icon-card-detail">At the entrance</div>
         </div>
       </div>
 
