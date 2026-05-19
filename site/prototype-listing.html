@@ -696,6 +696,12 @@ footer p {
   border-color: var(--burgundy); transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
+.gb-prompt.active {
+  border-color: var(--burgundy); background: var(--burgundy); color: #fff;
+  transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.gb-prompt.active .gb-prompt-label { color: #fff; }
+.gb-prompt.active .gb-prompt-hint { color: rgba(255,255,255,.7); }
 .gb-prompt-emoji { font-size: 1.3rem; margin-bottom: .3rem; }
 .gb-prompt-label {
   font-family: var(--sans); font-size: .72rem; font-weight: 600; color: var(--ink);
@@ -714,6 +720,10 @@ footer p {
 .gb-type-story { background: #fff3e0; color: #e65100; }
 .gb-type-knowledge { background: #e3f2fd; color: #1565c0; }
 .gb-type-photo { background: #fce4ec; color: #c62828; }
+.gb-type-family { background: #f3e5f5; color: #7b1fa2; }
+.gb-type-recommendations { background: #fff8e1; color: #f57f17; }
+.gb-type-folklore { background: #efebe9; color: #4e342e; }
+.gb-entry.gb-hidden { display: none; }
 .gb-entry-footer {
   display: flex; align-items: center; gap: 1rem; margin-top: .8rem;
   padding-top: .6rem; border-top: 1px solid rgba(224,216,200,.3);
@@ -1186,27 +1196,27 @@ footer p {
 
       <!-- CONTRIBUTION PROMPTS -->
       <div class="gb-prompts">
-        <div class="gb-prompt">
+        <div class="gb-prompt" data-category="visit" data-cta="Share a Visit">
           <div class="gb-prompt-emoji">🥾</div>
           <div class="gb-prompt-label">I've Been</div>
           <div class="gb-prompt-hint">Share your visit</div>
         </div>
-        <div class="gb-prompt">
+        <div class="gb-prompt" data-category="knowledge" data-cta="Share Local Knowledge">
           <div class="gb-prompt-emoji">📜</div>
           <div class="gb-prompt-label">I Know Something</div>
           <div class="gb-prompt-hint">History or local knowledge</div>
         </div>
-        <div class="gb-prompt">
+        <div class="gb-prompt" data-category="recommendations" data-cta="Share a Recommendation">
           <div class="gb-prompt-emoji">⭐</div>
           <div class="gb-prompt-label">Recommendations</div>
           <div class="gb-prompt-hint">Eat here, see this nearby</div>
         </div>
-        <div class="gb-prompt">
+        <div class="gb-prompt" data-category="family" data-cta="Share a Connection">
           <div class="gb-prompt-emoji">👨‍👩‍👧</div>
           <div class="gb-prompt-label">Family Ties</div>
           <div class="gb-prompt-hint">Share a personal connection</div>
         </div>
-        <div class="gb-prompt">
+        <div class="gb-prompt" data-category="folklore" data-cta="Share a Legend">
           <div class="gb-prompt-emoji">🕯️</div>
           <div class="gb-prompt-label">Folklore & Legend</div>
           <div class="gb-prompt-hint">Local tales, verbal accounts</div>
@@ -1216,7 +1226,7 @@ footer p {
       <!-- ENTRIES -->
       <div class="guestbook-entries">
 
-        <div class="gb-entry">
+        <div class="gb-entry" data-type="visit">
           <span class="gb-entry-type gb-type-visit">Visit</span>
           <div class="gb-header">
             <div class="gb-avatar">🧑</div>
@@ -1232,7 +1242,7 @@ footer p {
           </div>
         </div>
 
-        <div class="gb-entry">
+        <div class="gb-entry" data-type="knowledge">
           <span class="gb-entry-type gb-type-knowledge">Local Knowledge</span>
           <div class="gb-header">
             <div class="gb-avatar">👨</div>
@@ -1247,8 +1257,8 @@ footer p {
           </div>
         </div>
 
-        <div class="gb-entry">
-          <span class="gb-entry-type gb-type-story">Story</span>
+        <div class="gb-entry" data-type="family">
+          <span class="gb-entry-type gb-type-family">Family Ties</span>
           <div class="gb-header">
             <div class="gb-avatar">👩</div>
             <div class="gb-name">Margaret T.</div>
@@ -1262,7 +1272,7 @@ footer p {
           </div>
         </div>
 
-        <div class="gb-entry">
+        <div class="gb-entry" data-type="visit">
           <span class="gb-entry-type gb-type-visit">Visit</span>
           <div class="gb-header">
             <div class="gb-avatar">👩</div>
@@ -1281,9 +1291,49 @@ footer p {
       </div>
 
       <div style="text-align:center;margin-top:2rem;">
-        <button class="gb-write-btn" style="padding:14px 36px;font-size:.88rem;">✍️ Share Your Story</button>
-        <p style="font-family:var(--sans);font-size:.68rem;color:var(--ink-faded);margin-top:.6rem;">You don't need to have visited — all knowledge is welcome.</p>
+        <button class="gb-write-btn" id="gbWriteBtn" style="padding:14px 36px;font-size:.88rem;">✍️ Share Your Story</button>
+        <p style="font-family:var(--sans);font-size:.68rem;color:var(--ink-faded);margin-top:.6rem;" id="gbWriteHint">You don't need to have visited — all knowledge is welcome.</p>
       </div>
+
+      <script>
+      (function(){
+        var activeCategory = null;
+        var prompts = document.querySelectorAll('.gb-prompt[data-category]');
+        var entries = document.querySelectorAll('.gb-entry[data-type]');
+        var writeBtn = document.getElementById('gbWriteBtn');
+        var writeHint = document.getElementById('gbWriteHint');
+
+        prompts.forEach(function(prompt){
+          prompt.addEventListener('click', function(){
+            var cat = this.dataset.category;
+            var cta = this.dataset.cta;
+
+            if (activeCategory === cat) {
+              // Deselect — show all
+              activeCategory = null;
+              prompts.forEach(function(p){ p.classList.remove('active'); });
+              entries.forEach(function(e){ e.classList.remove('gb-hidden'); });
+              writeBtn.textContent = '✍️ Share Your Story';
+              writeHint.textContent = "You don't need to have visited — all knowledge is welcome.";
+            } else {
+              // Select — filter
+              activeCategory = cat;
+              prompts.forEach(function(p){ p.classList.remove('active'); });
+              this.classList.add('active');
+              entries.forEach(function(e){
+                if (e.dataset.type === cat) {
+                  e.classList.remove('gb-hidden');
+                } else {
+                  e.classList.add('gb-hidden');
+                }
+              });
+              writeBtn.textContent = '✍️ ' + cta;
+              writeHint.textContent = '';
+            }
+          });
+        });
+      })();
+      </script>
     </div>
 
     <div class="tab-content" id="tab-history" style="display:none;">
