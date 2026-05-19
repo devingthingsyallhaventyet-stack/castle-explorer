@@ -251,7 +251,151 @@ a { color: #8b2335; }
 </ul>
 <hr>
 <h2>Section 5: Main Content ??? Visit Tab</h2>
-<p><em>(To be completed)</em></p>
+<h3>5a. Highlights</h3>
+<p><strong>REMOVED</strong> ??? not enough reliable data across 1,163 listings.</p>
+<h3>5b. About</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description (short)</td>
+<td>Written by us</td>
+<td>???</td>
+<td>First paragraph, always visible</td>
+</tr>
+<tr>
+<td>Description (expanded)</td>
+<td>Written by us</td>
+<td>???</td>
+<td>Additional paragraphs behind &quot;Read more&quot; toggle</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Editorial descriptions based on verified source material (Wikipedia, official sites)</li>
+<li>Every claim must trace to an approved source</li>
+<li>1,163 unique descriptions needed ??? major content effort</li>
+</ul>
+<h3>5c. Google Reviews</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rating</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Live fetch, no caching</td>
+</tr>
+<tr>
+<td>Review count</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Must say &quot;Google Reviews&quot;</td>
+</tr>
+<tr>
+<td>Individual reviews (4)</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Live fetch, displayed in distinct Google-styled block</td>
+</tr>
+<tr>
+<td>Author name</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>&quot;via Google Maps&quot; under each name</td>
+</tr>
+<tr>
+<td>Review date</td>
+<td>Google Places API</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Star rating per review</td>
+<td>Google Places API</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>&quot;Read all reviews&quot; link</td>
+<td>Google Maps URL</td>
+<td>???</td>
+<td>Links to Google Maps place page</td>
+</tr>
+</tbody></table>
+<ul>
+<li>All data fetched live from API ??? nothing stored</li>
+<li>Section visually distinct from Castlecore content (white card, Google branding, Google Maps attribution)</li>
+</ul>
+<h3>5d. Terrain &amp; Accessibility</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Terrain chips</td>
+<td>Official heritage site / manual enrichment</td>
+<td>??? if available</td>
+<td>e.g. Steep Approach, Cobblestones, Wheelchair Access</td>
+</tr>
+<tr>
+<td>Description paragraph</td>
+<td>Official heritage site / manual enrichment</td>
+<td>??? if available</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Check official website (HES, English Heritage, Cadw, OPW) for accessibility info</li>
+<li>If found, show section. If not, hide entirely.</li>
+<li>Community contributions via Guest Book fill gaps over time</li>
+</ul>
+<h3>5e. Getting There</h3>
+<p><strong>Conditional ??? minimum viable version always shows, detail cards only when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Get Directions link</td>
+<td>Google Maps (coordinates)</td>
+<td>???</td>
+<td>Always available ??? we have coords for every listing</td>
+</tr>
+<tr>
+<td>Transport cards (Car/Train/Bus/Airport)</td>
+<td>Official sources / manual enrichment</td>
+<td>??? if available</td>
+<td>Only show when we have verified data</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Minimum: directions link (always shows)</li>
+<li>Enhanced: transport detail cards when data exists from official sources</li>
+<li>Never show transport info we can&#39;t verify</li>
+</ul>
 <h2>Section 6: Main Content ??? History Tab</h2>
 <p><em>(To be completed)</em></p>
 <h2>Section 7: Main Content ??? Guest Book Tab</h2>
