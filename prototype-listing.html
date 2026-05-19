@@ -860,7 +860,8 @@ footer p {
   .mobile-sticky { display: flex; }
   footer { padding-bottom: 70px; }
   .community-buttons { flex-direction: column; }
-  .sidebar-links { display: none; }
+  .sidebar-hours, .sidebar-location, .sidebar-links { display: none; }
+  .mobile-visit-info { display: block !important; }
   .mobile-links { display: block !important; }
   .gb-prompts .gb-prompt:last-child:nth-child(odd) {
     grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
@@ -1084,6 +1085,49 @@ footer p {
     </div>
 
     <div class="tab-content" id="tab-visit">
+
+      <!-- MOBILE HOURS & LOCATION (hidden on desktop) -->
+      <div class="mobile-visit-info" style="display:none;margin-bottom:1.5rem;">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;margin-bottom:.8rem;">
+          <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Hours & Admission</h3>
+          <div class="visit-status">
+            <span class="status-dot open"></span>
+            <span class="status-text open">Open Now</span>
+            <span class="status-hours">Closes 5:00 PM</span>
+          </div>
+          <div class="visit-row">
+            <span class="visit-label">Admission</span>
+            <span class="visit-value">£19.50 adult</span>
+          </div>
+          <div class="visit-row">
+            <span class="visit-label">Time needed</span>
+            <span class="visit-value">2–3 hours</span>
+          </div>
+          <div class="visit-row">
+            <span class="visit-label">Today's hours</span>
+            <span class="visit-value">9:30 AM – 5:00 PM</span>
+          </div>
+          <span class="hours-toggle" onclick="this.nextElementSibling.classList.toggle('show')">View all hours ▾</span>
+          <div class="hours-full">
+            Mon – Sun: 9:30 AM – 5:00 PM<br>
+            Last entry: 4:00 PM<br>
+            <em>Hours may vary seasonally</em>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;">
+          <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Location</h3>
+          <div style="border-radius:4px;overflow:hidden;margin-bottom:.8rem;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.4!2d-3.2!3d55.9486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c79a90c18bd3%3A0x4e6f74c02b6e445e!2sEdinburgh%20Castle!5e0!3m2!1sen!2suk!4v1" width="100%" height="180" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="address-text">
+            Castlehill<br>
+            Edinburgh EH1 2NG<br>
+            Scotland, United Kingdom
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999" target="_blank" class="sidebar-directions">📍 Get Directions</a>
+        </div>
+      </div>
+
       <!-- HIGHLIGHTS -->
       <div class="icon-cards" style="margin-bottom:2rem;">
         <div class="icon-card">
@@ -1609,7 +1653,7 @@ footer p {
   <aside class="sidebar">
 
     <!-- VISIT INFO -->
-    <div class="sidebar-card">
+    <div class="sidebar-card sidebar-hours">
       <h3>Hours & Admission</h3>
       <div class="visit-status">
         <span class="status-dot open"></span>
@@ -1637,7 +1681,7 @@ footer p {
     </div>
 
     <!-- LOCATION -->
-    <div class="sidebar-card">
+    <div class="sidebar-card sidebar-location">
       <h3>Location</h3>
       <div style="border-radius:4px;overflow:hidden;margin-bottom:.8rem;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.4!2d-3.2!3d55.9486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c79a90c18bd3%3A0x4e6f74c02b6e445e!2sEdinburgh%20Castle!5e0!3m2!1sen!2suk!4v1" width="100%" height="180" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
