@@ -418,7 +418,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       </div>
       <div class="topbar-actions">
         <button class="btn">👁 Preview</button>
-        <button class="btn btn-primary">🔄 Republish</button>
+        <button class="btn btn-primary" id="savePublishBtn" onclick="saveAndRepublish()">💾 Save & Republish</button>
       </div>
     </div>
 
@@ -498,33 +498,44 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
             <select class="field-select" id="regionSelect">
               <option value="">— Select region —</option>
               <!-- Scotland -->
-              <option selected>Edinburgh & Lothians</option>
-              <option>Highlands</option>
-              <option>Argyll & Islands</option>
-              <option>Fife & Perthshire</option>
-              <option>Borders</option>
-              <option>Dumfries & Galloway</option>
-              <option>Aberdeenshire & Moray</option>
-              <option>Stirling & Central</option>
+              <optgroup label="Scotland">
+                <option selected>Edinburgh & Lothians</option>
+                <option>Highlands</option>
+                <option>Argyll & Islands</option>
+                <option>Argyll & Western Isles</option>
+                <option>Fife & Perthshire</option>
+                <option>Borders</option>
+                <option>Dumfries & Galloway</option>
+                <option>Aberdeen & Northeast</option>
+                <option>Northeast & Tayside</option>
+                <option>Glasgow & Stirling</option>
+                <option>Southwest Scotland</option>
+              </optgroup>
               <!-- England -->
-              <option>Yorkshire</option>
-              <option>North West</option>
-              <option>North East</option>
-              <option>Midlands</option>
-              <option>East Anglia</option>
-              <option>South East</option>
-              <option>South West</option>
-              <option>London</option>
+              <optgroup label="England">
+                <option>Yorkshire</option>
+                <option>Northern England</option>
+                <option>The Midlands</option>
+                <option>East of England</option>
+                <option>South East & London</option>
+                <option>South West</option>
+              </optgroup>
               <!-- Wales -->
-              <option>North Wales</option>
-              <option>Mid Wales</option>
-              <option>South Wales</option>
-              <option>West Wales</option>
+              <optgroup label="Wales">
+                <option>Snowdonia & North</option>
+                <option>Mid Wales & Marches</option>
+                <option>South Wales</option>
+                <option>West Wales</option>
+              </optgroup>
               <!-- Ireland -->
-              <option>Leinster</option>
-              <option>Munster</option>
-              <option>Connacht</option>
-              <option>Ulster & the North</option>
+              <optgroup label="Ireland">
+                <option>Dublin & the Pale</option>
+                <option>Ireland's Ancient East</option>
+                <option>Kingdom of Munster</option>
+                <option>The Heartlands</option>
+                <option>Ulster & the North</option>
+                <option>Wild Atlantic Way</option>
+              </optgroup>
             </select>
           </div>
         </div>
@@ -1098,6 +1109,7 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
 </div>
 
 <script>
+// Tab switching
 document.querySelectorAll('.section-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
@@ -1109,6 +1121,90 @@ document.querySelectorAll('.section-tab').forEach(tab => {
     if (panel) panel.classList.add('active');
   });
 });
+
+// Timeline photo add — show upload area
+document.querySelectorAll('.btn-icon[title="Add photo"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const entry = btn.closest('.timeline-entry');
+    if (entry.querySelector('.timeline-image')) return; // already has one
+    const upload = document.createElement('div');
+    upload.className = 'timeline-image';
+    upload.innerHTML = `
+      <div style="width:60px;height:45px;border-radius:3px;border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem;color:var(--text-dim);flex-shrink:0;" onclick="this.parentElement.querySelector('input').click()">📷</div>
+      <input type="file" accept="image/*" style="display:none" onchange="handleTimelinePhoto(this)">
+      <div class="timeline-image-info">Click to upload a photo for this event</div>
+      <div class="timeline-image-actions">
+        <button class="btn-icon btn-icon-danger" title="Cancel" onclick="this.closest('.timeline-image').remove()">✕</button>
+      </div>
+    `;
+    entry.appendChild(upload);
+    btn.style.display = 'none'; // hide add photo button
+  });
+});
+
+function handleTimelinePhoto(input) {
+  if (!input.files[0]) return;
+  const file = input.files[0];
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const container = input.closest('.timeline-image');
+    container.innerHTML = `
+      <img class="timeline-image-thumb" src="${e.target.result}" alt="">
+      <div class="timeline-image-info">${file.name}<br>📷 Ready to upload on save</div>
+      <div class="timeline-image-actions">
+        <button class="btn-icon" title="Change photo" onclick="this.closest('.timeline-image').querySelector('input')?.click()">🔄</button>
+        <button class="btn-icon btn-icon-danger" title="Remove photo" onclick="removeTimelinePhoto(this)">✕</button>
+      </div>
+    `;
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeTimelinePhoto(btn) {
+  const entry = btn.closest('.timeline-entry');
+  btn.closest('.timeline-image').remove();
+  // re-show the add photo button
+  const addBtn = entry.querySelector('.btn-icon[title="Add photo"]');
+  if (addBtn) addBtn.style.display = '';
+}
+
+// Save & Republish — collects all field changes and pushes to API
+async function saveAndRepublish() {
+  const btn = document.getElementById('savePublishBtn');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ Saving...';
+  btn.disabled = true;
+
+  try {
+    // Collect all input/textarea/select values
+    const data = {};
+    document.querySelectorAll('.field-input, .field-textarea, .field-select').forEach(el => {
+      const label = el.closest('.field-group')?.querySelector('.field-label')?.textContent?.trim().toLowerCase();
+      if (label && el.value !== undefined) {
+        data[label] = el.value;
+      }
+    });
+
+    // Collect tags
+    const tagChips = document.querySelectorAll('.tag-selector .tag-chip');
+    if (tagChips.length > 0) {
+      data.tags = [...tagChips].map(chip => chip.textContent.replace('✕', '').trim());
+    }
+
+    // In real implementation: PUT /api/listings/:id with collected data
+    // then POST /api/listings/:id/publish
+    console.log('Saving listing data:', data);
+
+    // Simulate API call
+    await new Promise(r => setTimeout(r, 1000));
+
+    btn.innerHTML = '✅ Saved & Published';
+    setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+  } catch (err) {
+    btn.innerHTML = '❌ Error — try again';
+    setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+  }
+}
 </script>
 
 </body>
