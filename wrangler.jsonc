@@ -1,14 +1,30 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "castle-explorer2",
+  "main": "worker.js",
   "compatibility_date": "2025-09-27",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "not_found_handling": "none"
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "castlecore-db",
+      "database_id": "23c44507-f5ef-4a02-8fcb-a4f45cfa6271"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "castle-images"
+    }
   ]
 }
