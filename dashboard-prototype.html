@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castlecore Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface-hover: #22262f;
+  --border: #2a2e3a;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --text-dim: #52525b;
+  --accent: #8b2335;
+  --accent-hover: #a12940;
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --blue: #3b82f6;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+body { font-family: var(--sans); background: var(--bg); color: var(--text); }
+
+/* === LAYOUT === */
+.dashboard { display: flex; min-height: 100vh; }
+.sidebar-nav {
+  width: 240px; background: var(--surface); border-right: 1px solid var(--border);
+  padding: 1.5rem 0; flex-shrink: 0; position: fixed; top: 0; left: 0; bottom: 0;
+  display: flex; flex-direction: column;
+}
+.sidebar-logo {
+  font-size: 1rem; font-weight: 700; letter-spacing: 2px;
+  padding: 0 1.5rem 1.5rem; border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.sidebar-logo span { color: var(--accent); }
+.nav-section { padding: .8rem 0; }
+.nav-section-title {
+  font-size: .6rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--text-dim); padding: 0 1.5rem .4rem;
+}
+.nav-item {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .55rem 1.5rem; font-size: .8rem; font-weight: 500;
+  color: var(--text-muted); cursor: pointer; transition: all .15s;
+  border-left: 2px solid transparent;
+}
+.nav-item:hover { background: var(--surface-hover); color: var(--text); }
+.nav-item.active {
+  background: rgba(139,35,53,.1); color: var(--accent);
+  border-left-color: var(--accent); font-weight: 600;
+}
+.nav-item .badge {
+  margin-left: auto; background: var(--accent); color: #fff;
+  font-size: .6rem; font-weight: 700; padding: 1px 6px;
+  border-radius: 10px;
+}
+.nav-spacer { flex: 1; }
+.nav-footer { padding: .8rem 1.5rem; border-top: 1px solid var(--border); }
+.nav-footer-text { font-size: .65rem; color: var(--text-dim); }
+
+/* === MAIN === */
+.main { margin-left: 240px; flex: 1; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.topbar h1 { font-size: 1.1rem; font-weight: 700; }
+.topbar-actions { display: flex; gap: .5rem; }
+.btn {
+  font-family: var(--sans); font-size: .75rem; font-weight: 600;
+  padding: .5rem 1rem; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); transition: all .15s;
+}
+.btn:hover { background: var(--surface-hover); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+
+.content { padding: 1.5rem 2rem; }
+
+/* === STATS CARDS === */
+.stats-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1.2rem 1.4rem;
+}
+.stat-card-label {
+  font-size: .65rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-dim); margin-bottom: .3rem;
+}
+.stat-card-value { font-size: 1.6rem; font-weight: 700; color: var(--text); }
+.stat-card-sub { font-size: .7rem; color: var(--text-muted); margin-top: .2rem; }
+
+/* === FILTERS === */
+.filters-bar {
+  display: flex; gap: .5rem; margin-bottom: 1.2rem; flex-wrap: wrap;
+  align-items: center;
+}
+.search-input {
+  font-family: var(--sans); font-size: .8rem;
+  padding: .5rem .8rem; border-radius: 4px;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); width: 280px;
+}
+.search-input::placeholder { color: var(--text-dim); }
+.filter-select {
+  font-family: var(--sans); font-size: .75rem;
+  padding: .5rem .8rem; border-radius: 4px;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text-muted); cursor: pointer;
+}
+
+/* === TABLE === */
+.listings-table {
+  width: 100%; border-collapse: collapse;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; overflow: hidden;
+}
+.listings-table th {
+  font-size: .65rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-dim);
+  padding: .7rem 1rem; text-align: left;
+  background: rgba(255,255,255,.02); border-bottom: 1px solid var(--border);
+}
+.listings-table td {
+  font-size: .8rem; padding: .7rem 1rem;
+  border-bottom: 1px solid var(--border); color: var(--text-muted);
+}
+.listings-table tr:hover td { background: var(--surface-hover); }
+.listings-table tr:last-child td { border-bottom: none; }
+.listing-name { color: var(--text); font-weight: 600; cursor: pointer; }
+.listing-name:hover { color: var(--accent); }
+
+.tag {
+  font-size: .6rem; font-weight: 600; padding: 2px 8px;
+  border-radius: 2px; letter-spacing: .5px; display: inline-block;
+}
+.tag-open { background: rgba(34,197,94,.15); color: var(--green); }
+.tag-free { background: rgba(59,130,246,.15); color: var(--blue); }
+.tag-book { background: rgba(245,158,11,.15); color: var(--amber); }
+.tag-private { background: rgba(239,68,68,.15); color: var(--red); }
+.tag-intact { background: rgba(34,197,94,.1); color: var(--green); border: 1px solid rgba(34,197,94,.2); }
+.tag-ruin { background: rgba(245,158,11,.1); color: var(--amber); border: 1px solid rgba(245,158,11,.2); }
+
+.enrichment-bar {
+  width: 80px; height: 4px; background: var(--border);
+  border-radius: 2px; overflow: hidden; display: inline-block; vertical-align: middle;
+}
+.enrichment-fill { height: 100%; border-radius: 2px; }
+.enrichment-low { background: var(--red); }
+.enrichment-mid { background: var(--amber); }
+.enrichment-high { background: var(--green); }
+
+/* === PAGINATION === */
+.pagination {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 1rem; font-size: .75rem; color: var(--text-muted);
+}
+.page-btns { display: flex; gap: .3rem; }
+.page-btn {
+  padding: .3rem .6rem; border-radius: 3px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-muted); cursor: pointer;
+  font-family: var(--sans); font-size: .7rem;
+}
+.page-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* === VIEW SWITCHER === */
+.view-tabs {
+  display: flex; gap: 0; margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.view-tab {
+  padding: .6rem 1.2rem; font-size: .75rem; font-weight: 600;
+  color: var(--text-dim); cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all .15s;
+}
+.view-tab:hover { color: var(--text-muted); }
+.view-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+  <!-- SIDEBAR -->
+  <nav class="sidebar-nav">
+    <div class="sidebar-logo">castle<span>core</span></div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Content</div>
+      <div class="nav-item active">📋 Listings</div>
+      <div class="nav-item">📊 Enrichment</div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Moderation</div>
+      <div class="nav-item">📖 Guest Book <span class="badge">12</span></div>
+      <div class="nav-item">💡 Improvements <span class="badge">5</span></div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Pipeline</div>
+      <div class="nav-item">🆕 New Listings</div>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <div class="nav-footer">
+      <div class="nav-footer-text">1,163 approved listings</div>
+      <div class="nav-footer-text" style="margin-top:.2rem;">Last deploy: 2 hours ago</div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="topbar">
+      <h1>Listings</h1>
+      <div class="topbar-actions">
+        <button class="btn">⬇ Export</button>
+        <button class="btn btn-primary">🚀 Deploy Site</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- STATS -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-card-label">Total Listings</div>
+          <div class="stat-card-value">1,163</div>
+          <div class="stat-card-sub">All approved</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Fully Enriched</div>
+          <div class="stat-card-value">0</div>
+          <div class="stat-card-sub">Ready to publish</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Pending Review</div>
+          <div class="stat-card-value">17</div>
+          <div class="stat-card-sub">Guest book + improvements</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Countries</div>
+          <div class="stat-card-value">5</div>
+          <div class="stat-card-sub">Scotland · England · Wales · Ireland · N. Ireland</div>
+        </div>
+      </div>
+
+      <!-- VIEW TABS -->
+      <div class="view-tabs">
+        <div class="view-tab active">All Listings</div>
+        <div class="view-tab">Needs Enrichment</div>
+        <div class="view-tab">Published</div>
+        <div class="view-tab">Unpublished</div>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="filters-bar">
+        <input type="text" class="search-input" placeholder="Search listings...">
+        <select class="filter-select">
+          <option>All Countries</option>
+          <option>Scotland</option>
+          <option>England</option>
+          <option>Wales</option>
+          <option>Ireland</option>
+          <option>Northern Ireland</option>
+        </select>
+        <select class="filter-select">
+          <option>All Types</option>
+          <option>Castle</option>
+          <option>Abbey</option>
+          <option>Tower House</option>
+          <option>Priory</option>
+          <option>Fort</option>
+        </select>
+        <select class="filter-select">
+          <option>All Status</option>
+          <option>Open to Visitors</option>
+          <option>Freely Accessible</option>
+          <option>Book to Experience</option>
+          <option>Private</option>
+        </select>
+        <select class="filter-select">
+          <option>All Conditions</option>
+          <option>Intact</option>
+          <option>Ruin</option>
+        </select>
+      </div>
+
+      <!-- TABLE -->
+      <table class="listings-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Region</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Condition</th>
+            <th>Enrichment</th>
+            <th>Badge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="listing-name">Edinburgh Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-intact">Intact</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-high" style="width:85%"></div></div> 85%</td>
+            <td>⭐ Must See</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Craigmillar Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:40%"></div></div> 40%</td>
+            <td>💎 Hidden Gem</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Borthwick Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-book">Book to Experience</span></td>
+            <td><span class="tag tag-intact">Intact</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:15%"></div></div> 15%</td>
+            <td>🔮 Mysterious</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Crichton Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-free">Freely Accessible</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:10%"></div></div> 10%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Lauriston Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-intact">Intact</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:55%"></div></div> 55%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Roslin Castle</span></td>
+            <td>Scotland</td>
+            <td>Edinburgh & Lothians</td>
+            <td>Castle</td>
+            <td><span class="tag tag-private">Private</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:20%"></div></div> 20%</td>
+            <td>🔮 Mysterious</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Stirling Castle</span></td>
+            <td>Scotland</td>
+            <td>Stirlingshire</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-intact">Intact</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:45%"></div></div> 45%</td>
+            <td>⭐ Must See</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Dunnottar Castle</span></td>
+            <td>Scotland</td>
+            <td>Aberdeenshire</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:35%"></div></div> 35%</td>
+            <td>💎 Hidden Gem</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Tintern Abbey</span></td>
+            <td>Wales</td>
+            <td>Monmouthshire</td>
+            <td>Abbey</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:5%"></div></div> 5%</td>
+            <td>⭐ Must See</td>
+          </tr>
+          <tr>
+            <td><span class="listing-name">Trim Castle</span></td>
+            <td>Ireland</td>
+            <td>Co. Meath</td>
+            <td>Castle</td>
+            <td><span class="tag tag-open">Open to Visitors</span></td>
+            <td><span class="tag tag-ruin">Ruin</span></td>
+            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:5%"></div></div> 5%</td>
+            <td>💎 Hidden Gem</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <span>Showing 1–10 of 1,163</span>
+        <div class="page-btns">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">…</button>
+          <button class="page-btn">117</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
