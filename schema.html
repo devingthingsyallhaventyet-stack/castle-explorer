@@ -720,13 +720,264 @@ a { color: #8b2335; }
 <li><strong>Captcha required</strong> on submission form (e.g. reCAPTCHA, hCaptcha, Turnstile)</li>
 </ul>
 <h2>Section 8: Sidebar</h2>
-<p><em>(To be completed)</em></p>
+<p><em>Desktop only ??? collapses into Visit tab on mobile.</em></p>
+<h3>8a. Hours &amp; Admission</h3>
+<p><strong>Varies by status tag:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>What to show</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Open to Visitors</strong></td>
+<td>Full hours, admission price, time needed ??? all from Google Places API (conditional, show if available)</td>
+</tr>
+<tr>
+<td><strong>Freely Accessible</strong></td>
+<td>&quot;Open 24/7&quot; + &quot;Free admission&quot; ??? static, no other info needed</td>
+</tr>
+<tr>
+<td><strong>Book to Experience</strong></td>
+<td>&quot;Contact property directly to arrange your visit&quot; ??? static</td>
+</tr>
+<tr>
+<td><strong>Private</strong></td>
+<td>No sidebar hours/admission section at all</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Open/Closed status</td>
+<td>Google Places API</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Hours</td>
+<td>Google Places API</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Admission price</td>
+<td>Google Places API / official site</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Time needed</td>
+<td>Editorial estimate</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+</tbody></table>
+<h3>8b. Location</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Map embed</td>
+<td>Google Maps iframe (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>Google Places API / listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Get Directions link</td>
+<td>Google Maps URL (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+</tbody></table>
+<h3>8c. Links &amp; Sources</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Official website</td>
+<td>Listing data (from audit)</td>
+<td>??? if available</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Wikipedia link</td>
+<td>Listing data (from audit)</td>
+<td>???</td>
+<td>All approved listings have this</td>
+</tr>
+<tr>
+<td>Heritage body link</td>
+<td>Listing data (from audit)</td>
+<td>??? if available</td>
+<td>Conditional</td>
+</tr>
+</tbody></table>
 <h2>Section 9: Nearby Sites</h2>
-<p><em>(To be completed)</em></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4 nearest listings</td>
+<td>Calculated from coordinates</td>
+<td>???</td>
+<td>Auto-generated ??? find nearest approved listings by distance</td>
+</tr>
+<tr>
+<td>Thumbnail image</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Same photo flow as gallery/browse pages</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Meta (century + type)</td>
+<td>Listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Calculated from coordinates</td>
+<td>???</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable ??? no manual input needed</li>
+</ul>
+<hr>
 <h2>Section 10: Explore More</h2>
-<p><em>(To be completed)</em></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tag pills</td>
+<td>Derived from listing data</td>
+<td>???</td>
+<td>Country, region, type, traits</td>
+</tr>
+<tr>
+<td>Links</td>
+<td>Browse/collection page URLs</td>
+<td>???</td>
+<td>Auto-generated</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable ??? no manual input needed</li>
+</ul>
+<hr>
 <h2>Section 11: Mobile Sticky Bar</h2>
-<p><em>(To be completed)</em></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Share button</td>
+<td>Web Share API / clipboard fallback</td>
+<td>???</td>
+<td>JS only, no data needed</td>
+</tr>
+<tr>
+<td>Directions button</td>
+<td>Google Maps URL (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable</li>
+</ul>
+<hr>
+<h2>Section 12: Help Us Improve (Below Tabs)</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Title + description</td>
+<td>Template</td>
+<td>???</td>
+<td>Listing-specific copy (&quot;{Name}&quot;)</td>
+</tr>
+<tr>
+<td>Submit a Photo button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue (separate queue from Guest Book)</td>
+</tr>
+<tr>
+<td>Share a Tip button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue</td>
+</tr>
+<tr>
+<td>Report an Issue button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Same backend as Guest Book but feeds into a <strong>separate review queue</strong></li>
+<li>Captcha required on submissions</li>
+<li>Agent reviews before publishing</li>
+</ul>
 
 
 </body>
