@@ -572,7 +572,153 @@ a { color: #8b2335; }
 <li>Hide if no sources available</li>
 </ul>
 <h2>Section 7: Main Content ??? Guest Book Tab</h2>
-<p><em>(To be completed)</em></p>
+<h3>7a. Intro + Write CTA</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Title</td>
+<td>Template (&quot;The {Name} Guest Book&quot;)</td>
+<td>???</td>
+<td>Auto-generated from listing name</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Template</td>
+<td>???</td>
+<td>Static copy</td>
+</tr>
+<tr>
+<td>&quot;Sign the Guest Book&quot; button</td>
+<td>Template</td>
+<td>???</td>
+<td>Links to submission flow (built with user account system)</td>
+</tr>
+<tr>
+<td>&quot;Be the first&quot; prompt</td>
+<td>Template</td>
+<td>???</td>
+<td>Shown when listing has zero entries</td>
+</tr>
+</tbody></table>
+<h3>7b. Prompt Cards</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5 category cards</td>
+<td>Static / template</td>
+<td>???</td>
+<td>Same for every listing</td>
+</tr>
+</tbody></table>
+<p>Categories (fixed):</p>
+<ul>
+<li><p>???? I&#39;ve Been (visit)</p>
+</li>
+<li><p>???? I Know Something (knowledge)</p>
+</li>
+<li><p>??? Recommendations (recommendations)</p>
+</li>
+<li><p>?????????????????? Family Ties (family)</p>
+</li>
+<li><p>??????? Folklore &amp; Legend (folklore)</p>
+</li>
+<li><p>Click to filter entries by type + update CTA text</p>
+</li>
+<li><p>Click again to clear filter and show all</p>
+</li>
+<li><p>JS filtering already built in prototype ??? keep as-is for template</p>
+</li>
+</ul>
+<h3>7c. Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type badge</td>
+<td>User-selected category</td>
+<td>???</td>
+<td>Maps to one of the 5 prompt categories</td>
+</tr>
+<tr>
+<td>Avatar</td>
+<td>User account</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>User account</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Auto-generated</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Mood/tag</td>
+<td>Same as entry type badge</td>
+<td>???</td>
+<td>Not a separate field ??? uses the prompt card category</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>User-submitted</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Like button + count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+<tr>
+<td>Reply count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+<tr>
+<td>Report button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+</tbody></table>
+<ul>
+<li>All user-generated content ??? requires user account system + database</li>
+<li>Listings launch with empty Guest Book + &quot;Be the first&quot; CTA</li>
+<li>Submission form built as part of user account system (not in template)</li>
+</ul>
+<h3>Moderation</h3>
+<ul>
+<li>Entries go into a <strong>review queue</strong> before publishing (not auto-publish)</li>
+<li>Agent reviews for spam and offensive content</li>
+<li><strong>Captcha required</strong> on submission form (e.g. reCAPTCHA, hCaptcha, Turnstile)</li>
+</ul>
 <h2>Section 8: Sidebar</h2>
 <p><em>(To be completed)</em></p>
 <h2>Section 9: Nearby Sites</h2>
