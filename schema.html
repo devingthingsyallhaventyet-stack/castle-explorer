@@ -397,7 +397,180 @@ a { color: #8b2335; }
 <li>Never show transport info we can&#39;t verify</li>
 </ul>
 <h2>Section 6: Main Content ??? History Tab</h2>
-<p><em>(To be completed)</em></p>
+<h3>6a. Timeline</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Date</td>
+<td>Wikipedia / official sources</td>
+<td>??? if available</td>
+<td>e.g. &quot;c. 1130&quot;, &quot;1314&quot;, &quot;1573&quot;</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Bold summary of event</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Paragraph based on verified sources</td>
+</tr>
+<tr>
+<td>Image (optional)</td>
+<td>Wikimedia Commons (hosted on R2)</td>
+<td>??? if available</td>
+<td>Proper CC attribution with linked author + license</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Written by us, every claim sourced from approved links</li>
+<li>Not every listing will have a rich timeline ??? some may have 2-3 entries, some none</li>
+<li>Hide section entirely if no timeline data exists</li>
+</ul>
+<h3>6b. People</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td></td>
+</tr>
+<tr>
+<td>Dates</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td>Birth???death years</td>
+</tr>
+<tr>
+<td>Portrait image</td>
+<td>Wikimedia Commons</td>
+<td>??? if available</td>
+<td>CC attribution</td>
+</tr>
+<tr>
+<td>Role description</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Brief connection to the site</td>
+</tr>
+<tr>
+<td>Wikipedia link</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td>Card links to Wikipedia article</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Not every site has notable people ??? hide if none</li>
+</ul>
+<h3>6c. Videos</h3>
+<p><strong>Conditional ??? only shows when relevant videos found.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>YouTube embed (max 2)</td>
+<td>YouTube search</td>
+<td>??? if available</td>
+<td>Search by location name</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Prioritize tours, visits, walkthroughs</li>
+<li>If not sure of a video&#39;s relevance to the specific site, don&#39;t include it</li>
+<li>Maximum 2 videos per listing</li>
+<li>Hide section if no relevant videos found</li>
+</ul>
+<h3>6d. Architecture &amp; Construction</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description paragraph</td>
+<td>Written by us (Wikipedia / official sources)</td>
+<td>??? if available</td>
+<td>Standalone section ??? not merged into About</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Focused on building periods, construction materials, architectural style</li>
+<li>Separate from the About section</li>
+</ul>
+<h3>6e. Designations</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Designation list</td>
+<td>Heritage body records (HES, English Heritage, Cadw, OPW) / Wikipedia</td>
+<td>??? if available</td>
+<td>e.g. Scheduled Ancient Monument, Category A Listed, UNESCO</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Structured data ??? should be reliably pullable from heritage bodies</li>
+</ul>
+<h3>6f. Further Reading</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bibliography entries</td>
+<td>Wikipedia references / official sources</td>
+<td>??? if available</td>
+<td>Author, title, year</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Hide if no sources available</li>
+</ul>
 <h2>Section 7: Main Content ??? Guest Book Tab</h2>
 <p><em>(To be completed)</em></p>
 <h2>Section 8: Sidebar</h2>
