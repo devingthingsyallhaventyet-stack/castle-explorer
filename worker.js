@@ -103,7 +103,7 @@ export default {
       ).bind(slug).first();
       if (listing) {
         const countrySlug = listing.country.toLowerCase().replace(/\s+/g, '-');
-        const regionSlug = listing.region.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        const regionSlug = regionToSlug(listing.region);
         return new Response(null, {
           status: 301,
           headers: { 'Location': `/${countrySlug}/${regionSlug}/${slug}` }
@@ -126,6 +126,45 @@ export default {
     return env.ASSETS.fetch(request);
   }
 };
+
+// Region display name → URL slug mapping
+const REGION_SLUGS = {
+  'Scottish Highlands & Northern Isles': 'scottish-highlands',
+  'Scottish Highlands': 'scottish-highlands',
+  'Northeast Scotland & Tayside': 'northeast-scotland-tayside',
+  'Aberdeenshire & Moray': 'northeast-scotland-tayside',
+  'Argyll & the Western Isles': 'argyll-western-isles',
+  'Glasgow & Central Scotland': 'glasgow-central-scotland',
+  'Edinburgh & Lothians': 'edinburgh-lothians',
+  'Edinburgh & the Lothians': 'edinburgh-lothians',
+  'Fife & Perthshire': 'fife-perthshire',
+  'Borders': 'borders',
+  'Scottish Borders': 'borders',
+  'Southwest Scotland': 'southwest-scotland',
+  'South West England': 'south-west-england',
+  'East Anglia & East England': 'east-anglia',
+  'South East & London': 'south-east-london',
+  'South East': 'south-east-london',
+  'The Midlands': 'the-midlands',
+  'Yorkshire': 'yorkshire',
+  'Northern England': 'northern-england',
+  'North East': 'northern-england',
+  'North Wales & Snowdonia': 'north-wales-snowdonia',
+  'Mid Wales & Borderlands': 'mid-wales-borderlands',
+  'West Wales & Pembrokeshire': 'west-wales-pembrokeshire',
+  'South Wales': 'south-wales',
+  'The Wild Atlantic Way': 'wild-atlantic-way',
+  "Ireland's Ancient East": 'irelands-ancient-east',
+  'Southwest Ireland & Munster': 'southwest-ireland-munster',
+  'Central Ireland & the Heartlands': 'central-ireland-heartlands',
+  'Dublin & Eastern Ireland': 'dublin-eastern-ireland',
+  'Northern Ireland & Ulster': 'northern-ireland-ulster',
+  'Leinster': 'irelands-ancient-east',
+};
+
+function regionToSlug(region) {
+  return REGION_SLUGS[region] || region.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
 
 // ============================================
 // API ROUTER

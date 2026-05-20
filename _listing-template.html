@@ -1323,16 +1323,57 @@ function renderTags(listing) {
   tagsContainer.innerHTML = tagsHTML;
 }
 
-// Slugify a string for URLs
+// Region display name → URL slug mapping
+var REGION_SLUGS = {
+  // Scotland
+  'Scottish Highlands & Northern Isles': 'scottish-highlands',
+  'Northeast Scotland & Tayside': 'northeast-scotland-tayside',
+  'Argyll & the Western Isles': 'argyll-western-isles',
+  'Glasgow & Central Scotland': 'glasgow-central-scotland',
+  'Edinburgh & Lothians': 'edinburgh-lothians',
+  'Edinburgh & the Lothians': 'edinburgh-lothians',
+  'Fife & Perthshire': 'fife-perthshire',
+  'Borders': 'borders',
+  'Scottish Borders': 'borders',
+  'Southwest Scotland': 'southwest-scotland',
+  'Aberdeenshire & Moray': 'northeast-scotland-tayside',
+  // England
+  'South West England': 'south-west-england',
+  'East Anglia & East England': 'east-anglia',
+  'South East & London': 'south-east-london',
+  'South East': 'south-east-london',
+  'The Midlands': 'the-midlands',
+  'Yorkshire': 'yorkshire',
+  'Northern England': 'northern-england',
+  'North East': 'northern-england',
+  // Wales
+  'North Wales & Snowdonia': 'north-wales-snowdonia',
+  'Mid Wales & Borderlands': 'mid-wales-borderlands',
+  'West Wales & Pembrokeshire': 'west-wales-pembrokeshire',
+  'South Wales': 'south-wales',
+  // Ireland
+  'The Wild Atlantic Way': 'wild-atlantic-way',
+  "Ireland's Ancient East": 'irelands-ancient-east',
+  'Southwest Ireland & Munster': 'southwest-ireland-munster',
+  'Central Ireland & the Heartlands': 'central-ireland-heartlands',
+  'Dublin & Eastern Ireland': 'dublin-eastern-ireland',
+  'Northern Ireland & Ulster': 'northern-ireland-ulster',
+  'Leinster': 'irelands-ancient-east',
+};
+
 function slugify(str) {
   return str.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function regionSlugFor(region) {
+  return REGION_SLUGS[region] || slugify(region);
 }
 
 // Render breadcrumbs
 function renderBreadcrumbs(listing) {
   const breadcrumbs = document.getElementById('breadcrumbs');
   const countrySlug = listing.country ? slugify(listing.country) : '';
-  const regionSlug = listing.region ? slugify(listing.region) : '';
+  const regionSlug = listing.region ? regionSlugFor(listing.region) : '';
   
   let html = '<a href="/">All Sites</a><span class="sep">›</span>';
   
