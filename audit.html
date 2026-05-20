@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CastleCore Audit Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--gold:#c9a44a;--green:#238636;--red:#da3633;--blue:#58a6ff;--text:#e6edf3;--muted:#8b949e;--card-hover:#1c2129}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;overflow-x:hidden}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+
+/* Top Bar */
+.topbar{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar input[type=text]{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:14px;width:200px}
+.topbar select{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:6px;font-size:13px}
+.topbar .spacer{flex:1}
+.view-toggle{display:flex;gap:4px}
+.view-toggle button{background:var(--bg);border:1px solid var(--border);color:var(--muted);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px}
+.view-toggle button.active{color:var(--gold);border-color:var(--gold)}
+
+/* Main Tabs */
+.main-tabs{display:flex;gap:0;margin-right:12px}
+.main-tab{padding:6px 18px;background:var(--bg);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-size:14px;font-weight:600;transition:.15s}
+.main-tab:first-child{border-radius:6px 0 0 6px}
+.main-tab:last-child{border-radius:0 6px 6px 0}
+.main-tab.active{background:var(--gold);color:#0d1117;border-color:var(--gold)}
+.main-tab .tab-badge{font-size:11px;background:rgba(0,0,0,.2);padding:1px 6px;border-radius:8px;margin-left:4px}
+.main-tab.active .tab-badge{background:rgba(0,0,0,.3)}
+
+/* Progress */
+.progress-bar{height:4px;display:flex;width:100%}
+.progress-bar .seg-approved{background:var(--green)}
+.progress-bar .seg-flagged{background:var(--red)}
+.progress-bar .seg-unreviewed{background:var(--border)}
+
+/* Jump */
+.jump-bar{background:var(--card);border-bottom:1px solid var(--border);padding:4px 16px;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.jump-bar input{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;width:80px;font-size:13px}
+.jump-bar .stats span{margin-right:12px}
+.jump-bar .stats .st-approved{color:var(--green)}
+.jump-bar .stats .st-flagged{color:var(--red)}
+
+/* Card View */
+.card-container{max-width:1400px;margin:0 auto;padding:16px}
+.card-header{margin-bottom:12px}
+.card-header h1{font-size:28px;color:var(--gold);margin-bottom:4px;display:flex;align-items:baseline;gap:12px}
+.card-header h1 .counter{font-size:16px;color:var(--muted);font-weight:400}
+.card-header .meta{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.card-header .meta span{background:var(--bg);padding:2px 8px;border-radius:4px;border:1px solid var(--border)}
+.card-header .status-badge{padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;text-transform:uppercase}
+.badge-approved{background:var(--green);color:#fff}
+.badge-flagged{background:var(--red);color:#fff}
+
+.card-body{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:900px){.card-body{grid-template-columns:1fr}}
+
+.col-left .main-image{width:100%;max-height:450px;object-fit:contain;border-radius:8px;background:var(--bg);border:1px solid var(--border);cursor:pointer}
+.gallery{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.gallery-item{position:relative;display:inline-block}
+.gallery img{width:70px;height:50px;object-fit:cover;border-radius:4px;border:2px solid transparent;cursor:pointer;opacity:.7;transition:.15s}
+.gallery img:hover,.gallery img.active{opacity:1;border-color:var(--gold)}
+.gallery img.img-flagged{border-color:var(--red);opacity:1}
+.img-flag-btn{position:absolute;top:-4px;right:-4px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:10px;display:none;align-items:center;justify-content:center;z-index:5;line-height:1}
+.gallery-item:hover .img-flag-btn,.img-flag-btn.flagged{display:flex}
+.img-flag-btn.flagged{background:var(--red);opacity:1}
+.img-flag-btn:not(.flagged){background:var(--border)}
+.main-image-wrap{position:relative}
+.main-image-wrap .img-flag-btn{display:none;top:8px;right:8px;width:28px;height:28px;font-size:14px}
+.main-image-wrap:hover .img-flag-btn,.main-image-wrap .img-flag-btn.flagged{display:flex}
+.inline-flag-btn{background:var(--bg);border:1px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:6px;cursor:pointer;font-size:12px;transition:.15s}
+.inline-flag-btn:hover{border-color:var(--red);color:var(--red)}
+.inline-flag-btn.flagged{background:#1a0a0a;border-color:var(--red);color:var(--red)}
+
+.col-right iframe{width:100%;height:350px;border:1px solid var(--border);border-radius:8px}
+
+.blurb-section,.wiki-section{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px}
+.blurb-section h3,.wiki-section h3{color:var(--gold);font-size:15px;margin-bottom:8px}
+.wiki-section .wiki-content{display:flex;gap:16px}
+.wiki-section .wiki-thumb{width:120px;min-width:120px;border-radius:6px}
+.wiki-section .wiki-text{flex:1;font-size:14px;line-height:1.6;color:var(--muted)}
+.wiki-section .wiki-coords{font-size:12px;color:var(--muted);margin-top:6px}
+.wiki-section .wiki-link{margin-top:8px;display:inline-block}
+.wiki-loading{color:var(--muted);font-style:italic}
+
+/* Action Bar */
+.action-bar{position:sticky;bottom:0;background:var(--card);border-top:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:center;gap:12px;z-index:100}
+.action-bar button{padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:.15s}
+.btn-approve{background:var(--green);color:#fff}.btn-approve:hover{filter:brightness(1.2)}
+.btn-flag{background:var(--red);color:#fff}.btn-flag:hover{filter:brightness(1.2)}
+.btn-skip{background:var(--border);color:var(--text)}.btn-skip:hover{background:#444}
+.btn-prev{background:var(--bg);color:var(--muted);border:1px solid var(--border)!important}.btn-prev:hover{color:var(--text)}
+.action-bar .kbd{font-size:11px;color:var(--muted);margin-left:4px;background:var(--bg);padding:1px 5px;border-radius:3px;border:1px solid var(--border)}
+
+/* Flag Panel */
+.flag-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center}
+.flag-overlay.open{display:flex}
+.flag-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;width:460px;max-width:95vw}
+.flag-panel h3{color:var(--gold);margin-bottom:16px}
+.flag-reasons{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.flag-reasons label{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--bg);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:14px;transition:.15s}
+.flag-reasons label:hover{border-color:var(--muted)}
+.flag-reasons label.selected{border-color:var(--red);background:#1a0a0a}
+.flag-reasons label .num{color:var(--muted);font-size:12px;min-width:18px}
+.flag-reasons input[type=checkbox]{accent-color:var(--red)}
+.flag-note{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px;border-radius:6px;font-size:14px;resize:vertical;min-height:60px;margin-bottom:12px}
+.flag-actions{display:flex;gap:8px;justify-content:flex-end}
+.flag-actions button{padding:8px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600}
+
+/* Table View */
+.table-container{display:none;padding:16px;overflow-x:auto}
+.table-container table{width:100%;border-collapse:collapse;font-size:13px}
+.table-container th{background:var(--card);color:var(--gold);padding:8px 10px;text-align:left;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:10}
+.table-container td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+.table-container tr:hover td{background:var(--card-hover)}
+.table-container .tbl-img{width:60px;height:40px;object-fit:cover;border-radius:4px}
+.table-container .tbl-status{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
+
+/* Shortcuts help */
+.export-bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:8px 16px;display:flex;justify-content:space-between;align-items:center;z-index:100;font-size:13px;color:var(--muted)}
+.export-bar button{background:var(--gold);color:#000;border:none;padding:6px 14px;border-radius:6px;cursor:pointer;font-weight:600;font-size:12px;margin-left:6px}
+.export-bar button:hover{filter:brightness(1.1)}
+body{padding-bottom:50px}
+
+/* Dupes View */
+.dupes-container{max-width:1400px;margin:0 auto;padding:16px;display:none}
+.dupe-pair{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:24px;overflow:hidden}
+.dupe-pair-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;background:rgba(201,164,74,.05)}
+.dupe-pair-header h3{color:var(--gold);font-size:16px;flex:1}
+.dupe-pair-header .dupe-num{color:var(--muted);font-size:13px}
+.dupe-compare{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:900px){.dupe-compare{grid-template-columns:1fr}}
+.dupe-side{padding:16px;border-right:1px solid var(--border)}
+.dupe-side:last-child{border-right:none}
+.dupe-side h4{font-size:14px;margin-bottom:8px}
+.dupe-side .dupe-label{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.5px;margin-bottom:4px}
+.dupe-side .dupe-img{width:100%;max-height:200px;object-fit:contain;border-radius:6px;background:var(--bg);margin-bottom:8px}
+.dupe-side .dupe-field{font-size:13px;color:var(--muted);margin-bottom:4px}
+.dupe-side .dupe-field strong{color:var(--text)}
+.dupe-side .dupe-link{font-size:13px}
+.dupe-notes{padding:12px 16px;border-top:1px solid var(--border);background:rgba(0,0,0,.2)}
+.dupe-notes textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px;border-radius:6px;font-size:13px;resize:vertical;min-height:50px}
+.dupe-notes label{font-size:12px;color:var(--muted);margin-bottom:4px;display:block}
+.shortcuts-help{position:fixed;bottom:50px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:12px;color:var(--muted);z-index:50;line-height:1.8}
+.shortcuts-help kbd{background:var(--bg);padding:1px 5px;border-radius:3px;border:1px solid var(--border);color:var(--text);font-family:monospace}
+
+/* Image Picker */
+.image-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.image-picker-item{position:relative;border:3px solid transparent;border-radius:8px;cursor:pointer;transition:.15s}
+.image-picker-item img{width:100px;height:80px;object-fit:cover;border-radius:6px;display:block}
+.image-picker-item.selected-main{border-color:var(--green)}
+.image-picker-item.selected-main::after{content:'★ MAIN';position:absolute;top:2px;left:2px;background:var(--green);color:#fff;font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px}
+.image-picker-item.rejected{border-color:var(--red);opacity:.3}
+.image-picker-item .reject-btn{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:12px;display:none;align-items:center;justify-content:center;z-index:5;line-height:1}
+.image-picker-item:hover .reject-btn,.image-picker-item.rejected .reject-btn{display:flex}
+.image-picker-item .img-label{position:absolute;bottom:2px;left:2px;background:rgba(0,0,0,.7);color:var(--muted);font-size:9px;padding:1px 5px;border-radius:3px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <strong style="color:var(--gold);font-size:16px">🏰 CastleCore Audit</strong>
+  <div class="main-tabs">
+    <div class="main-tab active" id="tabReview" onclick="switchMainTab('review')">📋 Review <span class="tab-badge" id="tabReviewCount">0</span></div>
+    <div class="main-tab" id="tabFlagged" onclick="switchMainTab('flagged')">⚠️ Flagged <span class="tab-badge" id="tabFlaggedCount">0</span></div>
+    <div class="main-tab" id="tabApproved" onclick="switchMainTab('approved')">✅ Approved <span class="tab-badge" id="tabApprovedCount">0</span></div>
+    <div class="main-tab" id="tabImgReview" onclick="switchMainTab('imgReview')">🖼️ Img Review <span class="tab-badge" id="tabImgReviewCount">0</span></div>
+    <div class="main-tab" id="tabEnrich" onclick="switchMainTab('enrich')">🔧 Enrich <span class="tab-badge" id="tabEnrichCount">0</span></div>
+    <div class="main-tab" id="tabEnrichReview" onclick="switchMainTab('enrichReview')">🔍 Enrich Review <span class="tab-badge" id="tabEnrichReviewCount">0</span></div>
+    <div class="main-tab" id="tabEnriched" onclick="switchMainTab('enriched')">✨ Enriched <span class="tab-badge" id="tabEnrichedCount">0</span></div>
+    <div class="main-tab" id="tabSourceReview" onclick="switchMainTab('sourceReview')">🔗 Source Review <span class="tab-badge" id="tabSourceReviewCount">0</span></div>
+    <div class="main-tab" id="tabDead" onclick="switchMainTab('dead')">💀 Dead <span class="tab-badge" id="tabDeadCount">0</span></div>
+    <div class="main-tab" id="tabDupes" onclick="switchMainTab('dupes')">🔀 Dupes <span class="tab-badge" id="tabDupesCount">0</span></div>
+  </div>
+  <input type="text" id="searchBox" placeholder="Search castles...">
+  <select id="countryFilter"><option value="">All Countries</option></select>
+  <select id="imgSourceFilter"><option value="">All Sources</option></select>
+  <select id="statusFilter" style="display:none">
+    <option value="">All</option>
+    <option value="unreviewed" selected>Unreviewed</option>
+    <option value="approved">Approved</option>
+    <option value="flagged">Flagged</option>
+  </select>
+  <div class="spacer"></div>
+  <div class="view-toggle">
+    <button id="btnCardView" class="active" onclick="setView('card')">Card</button>
+    <button id="btnTableView" onclick="setView('table')">Table</button>
+  </div>
+</div>
+
+<div class="progress-bar">
+  <div class="seg-approved" id="progApproved"></div>
+  <div class="seg-flagged" id="progFlagged"></div>
+  <div class="seg-unreviewed" id="progUnreviewed"></div>
+</div>
+
+<div class="jump-bar">
+  <span>Go to #</span>
+  <input type="number" id="jumpInput" min="1" placeholder="#">
+  <button onclick="jumpTo()" style="background:var(--gold);color:#000;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px">Jump</button>
+  <div class="spacer" style="flex:1"></div>
+  <div class="stats" id="statsBar"></div>
+</div>
+
+<div class="card-container" id="cardView"></div>
+
+<div class="table-container" id="tableView"></div>
+<div class="dupes-container" id="dupesView"></div>
+
+<div class="action-bar" id="actionBar">
+  <button class="btn-prev" onclick="goPrev()">← Prev</button>
+  <span id="reviewButtons">
+    <button class="btn-approve" onclick="doApprove()">✓ Approve <span class="kbd">A</span></button>
+    <button class="btn-flag" onclick="quickFlag()">⚑ Flag <span class="kbd">F</span></button>
+    <button style="background:var(--border);color:var(--text);padding:10px 16px;border:none;border-radius:8px;font-size:14px;cursor:pointer" onclick="openFlagPanel()">⚑+ Detail</button>
+  </span>
+  <span id="enrichReviewButtons" style="display:none">
+    <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="markEnriched()">✨ Enriched <span class="kbd">A</span></button>
+    <button style="background:var(--gold);color:#000;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="markStillInProgress()">🔧 Still in Progress <span class="kbd">F</span></button>
+  </span>
+  <button class="btn-skip" onclick="goNext()">Skip → <span class="kbd">S</span></button>
+  <button id="btnSendToClawz" style="display:none;background:#58a6ff;color:#000;padding:10px 20px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;margin-left:12px" onclick="sendToClawz()">🦞 Send to Clawz</button>
+</div>
+
+<div class="flag-overlay" id="flagOverlay">
+  <div class="flag-panel">
+    <h3>⚑ Flag this listing</h3>
+    <div class="flag-reasons" id="flagReasons"></div>
+    <textarea class="flag-note" id="flagNote" placeholder="Optional note..."></textarea>
+    <div class="flag-actions">
+      <button style="background:var(--border);color:var(--text)" onclick="closeFlagPanel()">Cancel <span class="kbd">Esc</span></button>
+      <button style="background:var(--red);color:#fff" onclick="confirmFlag()">Confirm Flag <span class="kbd">Enter</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="export-bar">
+  <span id="exportCount"></span>
+  <div>
+    <button onclick="exportCSV('all')">📥 Export All</button>
+    <button onclick="exportCSV('flagged')" style="background:var(--red);color:#fff">⚠️ Export Flagged</button>
+    <button onclick="copyForClawz()">🦞 Copy Flagged for Clawz</button>
+    <button onclick="saveProgressToFile()" style="background:var(--green);color:#fff">💾 Save Progress</button>
+  </div>
+</div>
+
+<div class="shortcuts-help">
+  <kbd>A</kbd> Approve &nbsp; <kbd>F</kbd> Flag &nbsp; <kbd>S</kbd>/<kbd>→</kbd> Skip &nbsp; <kbd>←</kbd> Prev<br>
+  Flag panel: <kbd>1</kbd>-<kbd>8</kbd> toggle reasons &nbsp; <kbd>Enter</kbd> confirm &nbsp; <kbd>Esc</kbd> close
+</div>
+
+<script>
+let flaggedImages = {};
+try { const fi = JSON.parse(localStorage.getItem('castle-flagged-images') || '{}'); Object.keys(fi).forEach(k => flaggedImages[k] = new Set(fi[k])); } catch(e) {}
+function saveFlaggedImages() { const obj = {}; Object.keys(flaggedImages).forEach(k => obj[k] = [...flaggedImages[k]]); localStorage.setItem('castle-flagged-images', JSON.stringify(obj)); }
+function toggleImageFlag(castleKey, url, btn) { if (!flaggedImages[castleKey]) flaggedImages[castleKey] = new Set(); if (flaggedImages[castleKey].has(url)) { flaggedImages[castleKey].delete(url); } else { flaggedImages[castleKey].add(url); } saveFlaggedImages(); renderCard(); }
+
+let fieldFlags = {};
+try { fieldFlags = JSON.parse(localStorage.getItem('castle-field-flags') || '{}'); } catch(e) {}
+function saveFieldFlags() { localStorage.setItem('castle-field-flags', JSON.stringify(fieldFlags)); }
+function toggleFieldFlag(castleKey, field) { if (!fieldFlags[castleKey]) fieldFlags[castleKey] = {}; fieldFlags[castleKey][field] = !fieldFlags[castleKey][field]; if (!fieldFlags[castleKey][field]) delete fieldFlags[castleKey][field]; if (!Object.keys(fieldFlags[castleKey]).length) delete fieldFlags[castleKey]; saveFieldFlags(); renderCard(); }
+const FLAG_REASONS = [
+  { id: 'wrong-image', label: 'Wrong image — doesn\'t match castle' },
+  { id: 'wrong-name', label: 'Wrong name — incorrect/misspelled' },
+  { id: 'wrong-location', label: 'Wrong location — coordinates wrong' },
+  { id: 'wrong-blurb', label: 'Wrong blurb — description mismatch' },
+  { id: 'no-image', label: 'No image — missing entirely' },
+  { id: 'duplicate', label: 'Duplicate listing' },
+  { id: 'not-heritage', label: 'Not heritage — commercial property' },
+  { id: 'other', label: 'Other (see note)' }
+];
+
+let allData = [];
+let filtered = [];
+let currentIdx = 0;
+let reviewState = {};
+let currentView = 'card';
+let currentMainTab = 'review';
+let flagPanelOpen = false;
+const wikiCache = new Map();
+let stagingPhotos = {};
+let stagingNames = []; // for fuzzy lookup
+function getStagingPhotos(name) {
+  if (stagingPhotos[name]) return stagingPhotos[name];
+  const nl = name.toLowerCase();
+  // Try substring match first
+  let match = stagingNames.find(sn => sn.toLowerCase().includes(nl) || nl.includes(sn.toLowerCase()));
+  if (match) return stagingPhotos[match];
+  // Try word-overlap match (handles "Sween Castle" vs "Castle Sween")
+  const nWords = new Set(nl.replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(w => w.length > 2));
+  match = stagingNames.find(sn => {
+    const sWords = new Set(sn.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(w => w.length > 2));
+    let overlap = 0;
+    for (const w of nWords) { if (sWords.has(w)) overlap++; }
+    return overlap >= Math.min(nWords.size, sWords.size) && overlap >= 2;
+  });
+  return match ? stagingPhotos[match] : [];
+}
+let imageSelections = {};
+try { imageSelections = JSON.parse(localStorage.getItem('castle-image-selections') || '{}'); Object.keys(imageSelections).forEach(k => { if (imageSelections[k].rejected) imageSelections[k].rejected = new Set(imageSelections[k].rejected); else imageSelections[k].rejected = new Set(); }); } catch(e) {}
+function saveImageSelections() { const obj = {}; Object.keys(imageSelections).forEach(k => { obj[k] = { main: imageSelections[k].main, mainSource: imageSelections[k].mainSource, rejected: [...imageSelections[k].rejected] }; }); localStorage.setItem('castle-image-selections', JSON.stringify(obj)); }
+
+function switchMainTab(tab) {
+  currentMainTab = tab;
+  document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+  const tabIds = {review:'tabReview',flagged:'tabFlagged',approved:'tabApproved',imgReview:'tabImgReview',enrich:'tabEnrich',enrichReview:'tabEnrichReview',enriched:'tabEnriched',sourceReview:'tabSourceReview',dead:'tabDead',dupes:'tabDupes'};
+  document.getElementById(tabIds[tab]).classList.add('active');
+  
+  if (tab === 'dupes') {
+    document.getElementById('cardView').style.display = 'none';
+    document.getElementById('tableView').style.display = 'none';
+    document.getElementById('dupesView').style.display = 'block';
+    document.getElementById('actionBar').style.display = 'none';
+    renderDupes();
+    return;
+  }
+  document.getElementById('dupesView').style.display = 'none';
+  // Set view mode (but don't render yet — applyFilters will handle it)
+  const wantView = (tab === 'approved' || tab === 'dead' || tab === 'enrich' || tab === 'enriched') ? 'table' : (tab === 'imgReview' || tab === 'flagged' || tab === 'review' || tab === 'enrichReview' || tab === 'sourceReview') ? 'card' : 'card';
+  currentView = wantView;
+  document.getElementById('cardView').style.display = wantView === 'card' ? 'block' : 'none';
+  document.getElementById('tableView').style.display = wantView === 'table' ? 'block' : 'none';
+  document.getElementById('actionBar').style.display = wantView === 'card' ? 'flex' : 'none';
+  document.getElementById('btnCardView').classList.toggle('active', wantView === 'card');
+  document.getElementById('btnTableView').classList.toggle('active', wantView === 'table');
+  document.getElementById('btnSendToClawz').style.display = (tab === 'enrichReview') ? 'inline-block' : 'none';
+  document.getElementById('reviewButtons').style.display = (tab === 'enrichReview' || tab === 'sourceReview') ? 'none' : 'inline';
+  document.getElementById('enrichReviewButtons').style.display = (tab === 'enrichReview') ? 'inline' : 'none';
+  
+  // Show/hide source review buttons
+  let sourceReviewButtons = document.getElementById('sourceReviewButtons');
+  if (!sourceReviewButtons) {
+    sourceReviewButtons = document.createElement('span');
+    sourceReviewButtons.id = 'sourceReviewButtons';
+    sourceReviewButtons.style.display = 'none';
+    sourceReviewButtons.innerHTML = `
+      <button style="background:var(--green);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="approveSource()">✅ Approve <span class="kbd">A</span></button>
+      <button style="background:var(--red);color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer" onclick="rejectSource()">❌ Reject <span class="kbd">F</span></button>
+    `;
+    document.getElementById('enrichReviewButtons').parentNode.insertBefore(sourceReviewButtons, document.getElementById('enrichReviewButtons').nextSibling);
+  }
+  sourceReviewButtons.style.display = (tab === 'sourceReview') ? 'inline' : 'none';
+  applyFilters();
+}
+
+function updateTabCounts() {
+  let ap = 0, fl = 0, un = 0, dead = 0, enrich = 0, imgReview = 0, enrichReview = 0, enriched = 0, sourceReview = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') { ap++; if (!d.imageReviewDone) imgReview++; } else if (s === 'flagged') { if (d.enrichStatus === 'enriched') { enriched++; } else if (d.needsEnrich) { enrich++; if (!d.enrichStatus && d.enrichReviewQueued) enrichReview++; } else if (d.hasWikipedia === 'no') dead++; else fl++; } else un++; });
+  // Count pending source candidates
+  if (window.sourceCandidates) {
+    sourceReview = window.sourceCandidates.filter(c => c.status === 'pending').length;
+  }
+  document.getElementById('tabReviewCount').textContent = un;
+  document.getElementById('tabFlaggedCount').textContent = fl;
+  document.getElementById('tabApprovedCount').textContent = ap;
+  const imgEl = document.getElementById('tabImgReviewCount');
+  if (imgEl) imgEl.textContent = imgReview;
+  document.getElementById('tabEnrichCount').textContent = enrich;
+  document.getElementById('tabEnrichReviewCount').textContent = enrichReview;
+  document.getElementById('tabEnrichedCount').textContent = enriched;
+  document.getElementById('tabSourceReviewCount').textContent = sourceReview;
+  document.getElementById('tabDeadCount').textContent = dead;
+}
+
+// Review state: loaded from data file, localStorage used as write-ahead cache
+try { reviewState = JSON.parse(localStorage.getItem('castle-review-state') || '{}'); } catch(e) { reviewState = {}; }
+function saveState() { 
+  localStorage.setItem('castle-review-state', JSON.stringify(reviewState));
+  // Also update the in-memory data so exports are current
+  const d = filtered[currentIdx];
+  if (d) {
+    const st = reviewState[getKey(d)];
+    if (st) { d.reviewStatus = st.status; d.reviewReasons = st.reasons; d.reviewNote = st.note; }
+  }
+}
+function getKey(d) { return d.name + '|' + d.country; }
+function getStatus(d) { 
+  // localStorage overrides take priority, then fall back to data file
+  const ls = reviewState[getKey(d)]; 
+  if (ls) return ls.status;
+  return d.reviewStatus || 'unreviewed'; 
+}
+
+// Load data
+fetch('audit-data.json?v=' + Date.now()).then(r => r.json()).then(data => {
+  allData = data;
+  // Data file is authoritative — rebuild reviewState from it (clears stale localStorage)
+  reviewState = {};
+  data.forEach(d => {
+    const key = getKey(d);
+    if (d.reviewStatus) {
+      reviewState[key] = { status: d.reviewStatus, reasons: d.reviewReasons, note: d.reviewNote, ts: 0 };
+    }
+  });
+  saveState();
+  restoreEnrichStatuses();
+  populateFilters();
+  findDupes();
+  applyFilters();
+  updateProgress();
+  // Load staging photos asynchronously
+  fetch('google-images-staging.json').then(r=>r.json()).then(staging=>{
+    Object.values(staging).forEach(entry=>{
+      if(entry.placeName && entry.photos) { stagingPhotos[entry.placeName]=entry.photos; stagingNames.push(entry.placeName); }
+    });
+    renderCard(); // re-render to show staging photos
+  }).catch(()=>{});
+});
+
+// Load source candidates
+window.sourceCandidates = [];
+fetch('source-candidates.json?v=' + Date.now()).then(r => r.json()).then(data => {
+  window.sourceCandidates = data.candidates || [];
+  // Clear stale localStorage — server is the source of truth
+  // Only restore statuses for candidates still pending on server
+  const saved = localStorage.getItem('castle-source-candidates');
+  if (saved) {
+    try {
+      const local = JSON.parse(saved);
+      const serverNames = new Set(window.sourceCandidates.map(c => c.name + '|' + c.candidateUrl));
+      const localCandidates = (local.candidates || []).filter(c => c.status !== 'pending');
+      const stillRelevant = localCandidates.some(c => serverNames.has(c.name + '|' + c.candidateUrl));
+      if (!stillRelevant) {
+        localStorage.removeItem('castle-source-candidates');
+      }
+    } catch(e) {}
+  }
+  updateTabCounts();
+}).catch(() => {
+  console.log('No source-candidates.json found, using empty array');
+  window.sourceCandidates = [];
+});
+
+function populateFilters() {
+  const countries = [...new Set(allData.map(d => d.country))].sort();
+  const sources = [...new Set(allData.map(d => d.imgSource).filter(Boolean))].sort();
+  const cf = document.getElementById('countryFilter');
+  countries.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c.charAt(0).toUpperCase() + c.slice(1).replace(/-/g,' '); cf.appendChild(o); });
+  const sf = document.getElementById('imgSourceFilter');
+  sources.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sf.appendChild(o); });
+}
+
+function applyFilters() {
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const country = document.getElementById('countryFilter').value;
+  const imgSrc = document.getElementById('imgSourceFilter').value;
+  
+  if (currentMainTab === 'sourceReview') {
+    // For source review, filter pending source candidates that exist in audit data
+    const auditNames = new Set(allData.map(d => d.name));
+    filtered = (window.sourceCandidates || []).filter(c => {
+      if (c.status !== 'pending') return false;
+      if (!auditNames.has(c.name)) return false;
+      if (q && !c.name.toLowerCase().includes(q)) return false;
+      return true;
+    });
+  } else {
+    // Use main tab for status filtering
+    filtered = allData.filter(d => {
+      if (q && !d.name.toLowerCase().includes(q) && !(d.county||'').toLowerCase().includes(q)) return false;
+      if (country && d.country !== country) return false;
+      if (imgSrc && d.imgSource !== imgSrc) return false;
+      const s = getStatus(d);
+      if (currentMainTab === 'dead') return s === 'flagged' && d.hasWikipedia === 'no' && !d.needsEnrich;
+      if (currentMainTab === 'enriched') return s === 'flagged' && d.enrichStatus === 'enriched';
+      if (currentMainTab === 'enrich') return s === 'flagged' && d.needsEnrich === true && d.enrichStatus !== 'enriched';
+      if (currentMainTab === 'enrichReview') return s === 'flagged' && d.needsEnrich === true && !d.enrichStatus && d.enrichReviewQueued === true;
+      if (currentMainTab === 'imgReview') return s === 'approved' && !d.imageReviewDone;
+      if (currentMainTab === 'flagged') return s === 'flagged' && d.hasWikipedia !== 'no' && !d.needsEnrich;
+      if (currentMainTab === 'approved') return s === 'approved';
+      if (currentMainTab === 'review') return s === 'unreviewed';
+      return true;
+    });
+  }
+  
+  // No batch limit — show all enrich review listings at once
+  currentIdx = 0;
+  if (currentView === 'card') renderCard();
+  else renderTable();
+  updateProgress();
+}
+
+function debounce(fn, ms) { let t; return function(...a) { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
+
+document.getElementById('searchBox').addEventListener('input', debounce(applyFilters, 300));
+document.getElementById('searchBox').addEventListener('keyup', function(e) { if (e.key === 'Enter') applyFilters(); });
+document.getElementById('countryFilter').addEventListener('change', applyFilters);
+document.getElementById('imgSourceFilter').addEventListener('change', applyFilters);
+document.getElementById('statusFilter').addEventListener('change', applyFilters);
+
+function updateProgress() {
+  let ap = 0, fl = 0, un = 0;
+  allData.forEach(d => { const s = getStatus(d); if (s === 'approved') ap++; else if (s === 'flagged') fl++; else un++; });
+  const total = allData.length || 1;
+  document.getElementById('progApproved').style.width = (ap/total*100)+'%';
+  document.getElementById('progFlagged').style.width = (fl/total*100)+'%';
+  document.getElementById('progUnreviewed').style.width = (un/total*100)+'%';
+  document.getElementById('statsBar').innerHTML =
+    `<span class="st-approved">✓ ${ap} approved</span>` +
+    `<span class="st-flagged">⚑ ${fl} flagged</span>` +
+    `<span>${un} unreviewed</span>` +
+    `<span style="color:var(--muted)">${total} total</span>` +
+    `<span style="color:var(--gold);font-weight:600">${((ap+fl)/total*100).toFixed(1)}% done</span>`;
+  updateTabCounts();
+}
+
+// Source candidate rendering
+function renderSourceCandidate(el) {
+  const candidate = filtered[currentIdx];
+  
+  // Find the corresponding listing in allData
+  const listing = allData.find(d => d.name === candidate.name);
+  if (!listing) {
+    el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">Listing not found in audit data.</p>';
+    return;
+  }
+
+  const hasCoords = listing.lat && listing.lng;
+  const mapUrl = hasCoords
+    ? `https://www.openstreetmap.org/export/embed.html?bbox=${listing.lng-0.02},${listing.lat-0.015},${Number(listing.lng)+0.02},${Number(listing.lat)+0.015}&layer=mapnik&marker=${listing.lat},${listing.lng}`
+    : null;
+  const mapsSearchUrl = listing.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(listing.name+' '+(listing.county||'')+' castle')}`;
+
+  el.innerHTML = `
+    <div class="card-header">
+      <h1>${esc(candidate.name)} <span class="counter">${currentIdx+1} / ${filtered.length}</span></h1>
+      <div class="meta">
+        <span>🌍 ${esc(listing.country)}</span>
+        ${listing.region ? `<span>📍 ${esc(listing.region.replace(/-/g,' '))}</span>` : ''}
+        ${listing.county ? `<span>🏛 ${esc(listing.county)}</span>` : ''}
+        <span style="background:#1a0f00;border-color:var(--gold);color:var(--gold)">🔍 Source Review</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="col-left">
+        <div class="main-image-wrap">
+          ${listing.image ? `<img class="main-image" id="mainImg" src="${esc(listing.image)}" alt="${esc(listing.name)}" onerror="this.src='';this.alt='Image failed to load'">` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+        </div>
+      </div>
+      <div class="col-right">
+        ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
+        ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${listing.lat}, ${listing.lng} · <a href="${mapsSearchUrl}" target="_blank">Open in Google Maps</a></div>` : ''}
+      </div>
+    </div>
+    <div class="blurb-section">
+      <h3>Current Description</h3>
+      <p style="font-size:14px;line-height:1.6;color:var(--muted)">${listing.desc ? esc(listing.desc) : '<em>No description</em>'}</p>
+    </div>
+    <div class="blurb-section" style="border-color:var(--green)">
+      <h3 style="color:var(--green)">✅ Current Sources</h3>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px">
+        ${(listing.wikipediaUrl||listing.wiki) ? `<a href="${esc(listing.wikipediaUrl||listing.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
+        ${listing.mapsLink ? `<a href="${esc(listing.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
+      </div>
+    </div>
+    <div class="blurb-section" style="border-color:var(--blue)">
+      <h3 style="color:var(--blue)">🔗 Candidate Source</h3>
+      <div style="margin-bottom:12px">
+        <div style="font-size:16px;font-weight:600;margin-bottom:8px">
+          <a href="${esc(candidate.candidateUrl)}" target="_blank" style="color:var(--blue)">${esc(candidate.candidateLabel || candidate.candidateUrl)} ↗</a>
+        </div>
+        <div style="font-size:13px;color:var(--muted)">Found: ${candidate.foundDate || 'Unknown'}</div>
+      </div>
+      <iframe src="${esc(candidate.candidateUrl)}" style="width:100%;height:400px;border:1px solid var(--border);border-radius:8px;margin-bottom:12px" loading="lazy"></iframe>
+      <div style="text-align:center;margin-top:12px">
+        <a href="${esc(candidate.candidateUrl)}" target="_blank" style="display:inline-block;background:var(--blue);color:#fff;padding:8px 20px;border-radius:6px;text-decoration:none;font-weight:600">🌐 Open in New Tab</a>
+      </div>
+    </div>
+  `;
+}
+
+// Card rendering
+function renderCard() {
+  const el = document.getElementById('cardView');
+  if (!filtered.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No listings match your filters.</p>'; return; }
+  
+  // Handle source review differently
+  if (currentMainTab === 'sourceReview') {
+    renderSourceCandidate(el);
+    return;
+  }
+  
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  const st = reviewState[key];
+  const statusBadge = st ? `<span class="status-badge ${st.status==='approved'?'badge-approved':'badge-flagged'}">${st.status}${st.reasons?' — '+st.reasons.join(', '):''}</span>` : '';
+
+  const hasCoords = d.lat && d.lng;
+  const mapUrl = hasCoords
+    ? `https://www.openstreetmap.org/export/embed.html?bbox=${d.lng-0.02},${d.lat-0.015},${Number(d.lng)+0.02},${Number(d.lat)+0.015}&layer=mapnik&marker=${d.lat},${d.lng}`
+    : null;
+  const mapsSearchUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+
+  // Build gallery: main image first, then gallery images
+  const allImages = [];
+  if (d.image) allImages.push(d.image);
+  (d.gallery||[]).forEach(g => { const url = (typeof g === 'string') ? g : (g.googlePhotoUri || g.url); if (url && url !== d.image) allImages.push(url); });
+  const fi = flaggedImages[key] || new Set();
+  const galleryHtml = allImages.map((url,i) => {
+    const isFlagged = fi.has(url);
+    return `<div class="gallery-item">
+      <img src="${url}" class="gallery-thumb${i===0?' active':''}${isFlagged?' img-flagged':''}" onclick="swapMainImage(this, '${url.replace(/'/g,"\\'")}')" loading="lazy" alt="image ${i+1}">
+      <button class="img-flag-btn${isFlagged?' flagged':''}" onclick="event.stopPropagation();toggleImageFlag('${key.replace(/'/g,"\\'")}','${url.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="card-header">
+      <h1>${esc(d.name)} <span class="counter">${currentIdx+1} / ${filtered.length}</span> ${statusBadge}</h1>
+      <div class="meta">
+        <span>🌍 ${esc(d.country)}</span>
+        ${d.region ? `<span>📍 ${esc(d.region.replace(/-/g,' '))}</span>` : ''}
+        ${d.county ? `<span>🏛 ${esc(d.county)}</span>` : ''}
+        ${d.type ? `<span>${esc(d.type)}</span>` : ''}
+        ${d.period ? `<span>🕐 ${esc(d.period)}</span>` : ''}
+        ${d.rating ? `<span>⭐ ${d.rating}</span>` : ''}
+        ${d.imgSource ? `<span>📷 ${esc(d.imgSource)}</span>` : ''}
+        ${d.tags && d.tags.length ? `<span>🏷 ${d.tags.join(', ')}</span>` : ''}
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="col-left">
+        <div class="main-image-wrap">
+          ${d.image ? `<img class="main-image" id="mainImg" src="${esc(d.image)}" alt="${esc(d.name)}" onerror="this.src='';this.alt='Image failed to load'">
+          <button class="img-flag-btn${fi.has(d.image)?' flagged':''}" onclick="toggleImageFlag('${key.replace(/'/g,"\\'")}','${d.image.replace(/'/g,"\\'")}',this)" title="Flag this image">⚑</button>` : '<div style="height:300px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted)">No image</div>'}
+        </div>
+        <div class="gallery">${galleryHtml}</div>
+        ${fi.size ? `<div style="margin-top:6px;font-size:12px;color:var(--red)">⚑ ${fi.size} image(s) flagged</div>` : ''}
+      </div>
+      <div class="col-right">
+        ${mapUrl ? `<iframe src="${mapUrl}" allowfullscreen loading="lazy" style="width:100%;height:350px;border:1px solid var(--border);border-radius:8px"></iframe>` : `<div style="height:350px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:8px;border:1px solid var(--border);color:var(--muted);flex-direction:column;gap:8px"><span>No coordinates</span><a href="${mapsSearchUrl}" target="_blank">Search Google Maps →</a></div>`}
+        ${hasCoords ? `<div style="font-size:12px;color:var(--muted);margin-top:4px">📍 ${d.lat}, ${d.lng} · <a href="${mapsSearchUrl}" target="_blank">Open in Google Maps</a></div>` : ''}
+        <button class="inline-flag-btn${(fieldFlags[key]||{}).location?' flagged':''}" onclick="toggleFieldFlag('${key.replace(/'/g,"\\'")}','location')" style="margin-top:8px">⚑ ${(fieldFlags[key]||{}).location?'Location flagged — click to unflag':'Flag location'}</button>
+      </div>
+    </div>
+    <div class="blurb-section" style="position:relative">
+      <h3>Our Description <button class="inline-flag-btn${(fieldFlags[key]||{}).description?' flagged':''}" onclick="toggleFieldFlag('${key.replace(/'/g,"\\'")}','description')" style="margin-left:12px">⚑ ${(fieldFlags[key]||{}).description?'Description flagged':'Flag description'}</button></h3>
+      <p style="font-size:14px;line-height:1.6;color:var(--muted)">${d.desc ? esc(d.desc) : '<em>No description</em>'}</p>
+      ${d.source ? `<div style="margin-top:6px;font-size:12px"><a href="${esc(d.source)}" target="_blank">Source</a></div>` : ''}
+    </div>
+    <div class="blurb-section" style="border-color:var(--green)">
+      <h3 style="color:var(--green)">✅ Verified Sources</h3>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px">
+        ${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank" style="display:flex;align-items:center;gap:6px">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted)">❌ No Wikipedia</span>'}
+        ${d.mapsLink ? `<a href="${esc(d.mapsLink)}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps ↗</a>` : (hasCoords ? `<a href="${mapsSearchUrl}" target="_blank" style="display:flex;align-items:center;gap:6px">📍 Google Maps (search) ↗</a>` : '<span style="color:var(--muted)">❌ No Maps link</span>')}
+        <a href="https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}" target="_blank" style="display:flex;align-items:center;gap:6px">🔍 Google Search ↗</a>
+        <button onclick="openAllLinks()" style="background:var(--gold);color:#000;border:none;padding:4px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600">🚀 Open All</button>
+      </div>
+    </div>
+    <div class="wiki-section" id="wikiSection">
+      <h3>Wikipedia Comparison</h3>
+      <div class="wiki-loading">Loading Wikipedia data...</div>
+    </div>
+  `;
+  fetchWiki(d);
+  // Render image picker (only on review/imgReview tabs)
+  if (currentMainTab === 'review' || currentMainTab === 'imgReview' || currentMainTab === 'enrichReview') {
+    renderImagePicker(d, key);
+  }
+  // Render notes section (only on enrichReview tab)
+  if (currentMainTab === 'enrichReview') {
+    renderEnrichNotes(d, key);
+  }
+}
+
+function renderImagePicker(d, key) {
+  // Collect all available images with source labels
+  const images = [];
+  if (d.image) images.push({ url: d.image, source: 'current', label: 'current' });
+  if (d.wikiImage && (!d.image || d.wikiImage !== d.image)) images.push({ url: d.wikiImage, source: 'wikipedia', label: 'wiki' });
+  // Gallery images
+  (d.gallery||[]).forEach((g,i) => {
+    const url = typeof g === 'string' ? g : (g.url || g.googlePhotoUri || '');
+    if (url && url !== d.image && url !== d.wikiImage) images.push({ url, source: 'gallery', label: 'gallery' });
+  });
+  // Google staging photos
+  const staging = getStagingPhotos(d.name) || [];
+  staging.forEach((p,i) => {
+    const url = p.googlePhotoUri || p.url || '';
+    if (url && !images.find(x=>x.url===url)) images.push({ url, source: 'google', label: 'google' });
+  });
+
+  if (!images.length) return;
+
+  // Get or init selection state
+  if (!imageSelections[key]) imageSelections[key] = { main: d.image || null, mainSource: d.image ? 'current' : null, rejected: new Set() };
+  const sel = imageSelections[key];
+
+  const container = document.getElementById('cardView');
+  const section = document.createElement('div');
+  section.className = 'blurb-section';
+  section.innerHTML = `<h3>📷 Image Selection <span style="font-size:12px;color:var(--muted);font-weight:400">(click to set main, ✗ to reject)</span></h3>
+    <div class="image-picker">${images.map((img,i) => {
+      const isMain = sel.main === img.url;
+      const isRejected = sel.rejected.has(img.url);
+      return `<div class="image-picker-item${isMain?' selected-main':''}${isRejected?' rejected':''}" onclick="pickMainImage('${key.replace(/'/g,"\\'")}','${img.url.replace(/'/g,"\\'")}','${img.source}')">
+        <img src="${img.url}" loading="lazy" alt="${img.label}">
+        <span class="img-label">${img.label}</span>
+        <button class="reject-btn" onclick="event.stopPropagation();toggleRejectImage('${key.replace(/'/g,"\\'")}','${img.url.replace(/'/g,"\\'")}')" title="Reject">✗</button>
+      </div>`;
+    }).join('')}</div>`;
+  container.appendChild(section);
+}
+
+function pickMainImage(key, url, source) {
+  if (!imageSelections[key]) imageSelections[key] = { main: null, mainSource: null, rejected: new Set() };
+  const sel = imageSelections[key];
+  sel.rejected.delete(url); // can't reject main
+  sel.main = url;
+  sel.mainSource = source;
+  saveImageSelections();
+  renderCard();
+}
+
+function toggleRejectImage(key, url) {
+  if (!imageSelections[key]) imageSelections[key] = { main: null, mainSource: null, rejected: new Set() };
+  const sel = imageSelections[key];
+  if (sel.main === url) return; // can't reject main
+  if (sel.rejected.has(url)) sel.rejected.delete(url); else sel.rejected.add(url);
+  saveImageSelections();
+  renderCard();
+}
+
+function swapMainImage(thumb, url) {
+  document.getElementById('mainImg').src = url;
+  document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function openAllLinks() {
+  const d = filtered[currentIdx];
+  if (!d) return;
+  const wiki = d.wikipediaUrl || d.wiki;
+  const maps = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+  const google = `https://www.google.com/search?q=${encodeURIComponent(d.name + ' castle ' + (d.county||'') + ' ' + d.country)}`;
+  // All synchronous in click handler for best popup-blocker compat
+  if (wiki) window.open(wiki, '_blank');
+  window.open(maps, '_blank');
+  window.open(google, '_blank');
+}
+
+async function fetchWiki(d) {
+  const el = document.getElementById('wikiSection');
+  const wikiName = d.wiki ? d.wiki.split('/wiki/').pop() : encodeURIComponent(d.name.replace(/ /g,'_'));
+  
+  if (wikiCache.has(wikiName)) { renderWiki(el, d, wikiCache.get(wikiName)); return; }
+  
+  try {
+    const r = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${wikiName}`);
+    if (!r.ok) throw new Error('not found');
+    const data = await r.json();
+    wikiCache.set(wikiName, data);
+    renderWiki(el, d, data);
+  } catch(e) {
+    el.innerHTML = `<h3>Wikipedia Comparison</h3>
+      <p style="color:var(--muted)">No Wikipedia article found for "${esc(d.name)}"</p>
+      <a href="https://www.google.com/search?q=${encodeURIComponent(d.name+' castle wikipedia')}" target="_blank">Search Google →</a>`;
+  }
+}
+
+function renderWiki(el, d, w) {
+  const thumb = w.thumbnail ? `<img class="wiki-thumb" src="${w.thumbnail.source}" alt="Wikipedia image">` : '';
+  const coords = w.coordinates ? `<div class="wiki-coords">Wiki coords: ${w.coordinates.lat}, ${w.coordinates.lon}</div>` : '';
+  el.innerHTML = `<h3>Wikipedia Comparison</h3>
+    <div class="wiki-content">
+      ${thumb}
+      <div class="wiki-text">
+        <strong>${esc(w.title||'')}</strong>
+        <p style="margin-top:6px">${esc(w.extract||'')}</p>
+        ${coords}
+        <a class="wiki-link" href="${w.content_urls?.desktop?.page||'#'}" target="_blank">Read full article →</a>
+      </div>
+    </div>`;
+}
+
+// Navigation
+function goNext() {
+  if (currentIdx < filtered.length - 1) { currentIdx++; renderCard(); }
+}
+function goPrev() {
+  if (currentIdx > 0) { currentIdx--; renderCard(); }
+}
+function getToday() { return new Date().toISOString().split('T')[0]; }
+
+// Enrich status persistence (survives refresh via localStorage until Clawz updates the file)
+let enrichStatuses = {};
+try { enrichStatuses = JSON.parse(localStorage.getItem('castle-enrich-statuses') || '{}'); } catch(e) {}
+function saveEnrichStatuses() { localStorage.setItem('castle-enrich-statuses', JSON.stringify(enrichStatuses)); }
+// Restore enrich statuses on data load
+function restoreEnrichStatuses() {
+  Object.keys(enrichStatuses).forEach(key => {
+    const entry = allData.find(d => getKey(d) === key);
+    if (entry && !entry.enrichStatus) {
+      entry.enrichStatus = enrichStatuses[key].status;
+      entry.enrichReviewDate = enrichStatuses[key].date;
+      entry.enrichNote = enrichStatuses[key].note;
+    }
+  });
+}
+
+function markEnriched() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  d.enrichStatus = 'enriched';
+  d.enrichReviewDate = getToday();
+  if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  enrichStatuses[key] = { status: 'enriched', date: getToday(), note: enrichNotes[key] || '' };
+  saveEnrichStatuses();
+  reviewState[key] = { status: 'flagged', ts: Date.now() };
+  saveState(); updateProgress(); renderCard();
+}
+
+function markStillInProgress() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  d.enrichStatus = 'in-progress';
+  d.enrichReviewDate = getToday();
+  if (enrichNotes[key]) d.enrichNote = enrichNotes[key];
+  enrichStatuses[key] = { status: 'in-progress', date: getToday(), note: enrichNotes[key] || '' };
+  saveEnrichStatuses();
+  reviewState[key] = { status: 'flagged', ts: Date.now() };
+  saveState(); updateProgress(); renderCard();
+}
+
+function advanceToNext() {
+  if (currentMainTab === 'flagged' || currentMainTab === 'imgReview' || currentMainTab === 'enrichReview') {
+    // On flagged/image review tab, just go to next entry
+    goNext();
+    return;
+  }
+  // On review tab, skip to next unreviewed
+  for (let i = currentIdx + 1; i < filtered.length; i++) {
+    if (getStatus(filtered[i]) === 'unreviewed') { currentIdx = i; renderCard(); return; }
+  }
+  for (let i = 0; i < currentIdx; i++) {
+    if (getStatus(filtered[i]) === 'unreviewed') { currentIdx = i; renderCard(); return; }
+  }
+  goNext();
+}
+function jumpTo() {
+  const v = parseInt(document.getElementById('jumpInput').value);
+  if (v >= 1 && v <= filtered.length) { currentIdx = v - 1; renderCard(); }
+}
+
+// Actions
+function doApprove() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  if (currentMainTab === 'enrichReview') {
+    // Move to Enriched holding area instead of Approved
+    d.enrichStatus = 'enriched';
+    reviewState[key] = { status: 'flagged', ts: Date.now() };
+  } else {
+    reviewState[key] = { status: 'approved', ts: Date.now() };
+  }
+  // Save image selection if any
+  const sel = imageSelections[key];
+  const rejected = sel ? sel.rejected : new Set();
+  if (sel && sel.main) {
+    d.image = sel.main;
+    d.imgSource = sel.mainSource;
+  }
+  d.imageReviewDone = true;
+  // Always merge staging photos into gallery on approve
+  const mainImg = d.image;
+  const allImgs = [];
+  if (mainImg) allImgs.push({ url: mainImg, source: 'current' });
+  if (d.wikiImage && d.wikiImage !== mainImg) allImgs.push({ url: d.wikiImage, source: 'wikipedia' });
+  // Existing gallery items
+  (d.gallery||[]).forEach(g => {
+    const url = (typeof g === 'string') ? g : (g.googlePhotoUri || g.url);
+    if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: g.source || 'existing' });
+  });
+  // Staging photos
+  (getStagingPhotos(d.name)||[]).forEach(p => {
+    const url = p.googlePhotoUri || p.url || '';
+    if (url && !allImgs.find(x=>x.url===url)) allImgs.push({ url, source: 'google' });
+  });
+  const slug = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  let imgN = 0;
+  d.gallery = allImgs.filter(img => img.url !== mainImg && !rejected.has(img.url))
+    .map(img => ({ id: slug+'-img-'+(++imgN), url: img.url, source: img.source }));
+  saveState(); updateProgress(); advanceToNext();
+}
+
+function quickFlag() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const key = getKey(d);
+  reviewState[key] = { status: 'flagged', reasons: ['needs-review'], ts: Date.now() };
+  saveState(); updateProgress(); advanceToNext();
+}
+
+function openFlagPanel() {
+  flagPanelOpen = true;
+  const el = document.getElementById('flagReasons');
+  el.innerHTML = FLAG_REASONS.map((r,i) =>
+    `<label id="fr-${i}" onclick="toggleFlagReason(${i})"><span class="num">${i+1}</span><input type="checkbox" data-reason="${r.id}"> ${r.label}</label>`
+  ).join('');
+  document.getElementById('flagNote').value = '';
+  document.getElementById('flagOverlay').classList.add('open');
+}
+function closeFlagPanel() {
+  flagPanelOpen = false;
+  document.getElementById('flagOverlay').classList.remove('open');
+}
+function toggleFlagReason(i) {
+  const label = document.getElementById('fr-'+i);
+  const cb = label.querySelector('input');
+  cb.checked = !cb.checked;
+  label.classList.toggle('selected', cb.checked);
+}
+function confirmFlag() {
+  if (!filtered.length) return;
+  const reasons = [...document.querySelectorAll('#flagReasons input:checked')].map(c => c.dataset.reason);
+  if (!reasons.length) return;
+  const d = filtered[currentIdx];
+  const note = document.getElementById('flagNote').value.trim();
+  reviewState[getKey(d)] = { status: 'flagged', reasons, note: note || undefined, ts: Date.now() };
+  saveState(); closeFlagPanel(); updateProgress(); advanceToNext();
+}
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+  if (flagPanelOpen) {
+    if (e.key === 'Escape') { closeFlagPanel(); e.preventDefault(); }
+    else if (e.key === 'Enter') { confirmFlag(); e.preventDefault(); }
+    else if (e.key >= '1' && e.key <= '8') { toggleFlagReason(parseInt(e.key)-1); e.preventDefault(); }
+    return;
+  }
+  if (e.key === 'a' || e.key === 'A') { 
+    if (currentMainTab === 'enrichReview') markEnriched(); 
+    else if (currentMainTab === 'sourceReview') approveSource(); 
+    else doApprove(); 
+    e.preventDefault(); 
+  }
+  else if (e.key === 'f' || e.key === 'F') { 
+    if (currentMainTab === 'enrichReview') markStillInProgress(); 
+    else if (currentMainTab === 'sourceReview') rejectSource(); 
+    else quickFlag(); 
+    e.preventDefault(); 
+  }
+  else if (e.key === 's' || e.key === 'S' || e.key === 'ArrowRight') { goNext(); e.preventDefault(); }
+  else if (e.key === 'ArrowLeft') { goPrev(); e.preventDefault(); }
+});
+
+// Table View
+function renderTable() {
+  const el = document.getElementById('tableView');
+  if (!filtered.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No listings match.</p>'; return; }
+  const isFlaggedTab = currentMainTab === 'flagged';
+  const isApprovedTab = currentMainTab === 'approved';
+  const isDeadTab = currentMainTab === 'dead';
+  
+  const isEnrichTab = currentMainTab === 'enrich';
+  
+  if (isEnrichTab) {
+    let rows = filtered.map((d,i) => {
+      const wikiUrl = d.wikipediaUrl || d.wiki || '';
+      const mapsUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+      const enrichNote = d.enrichNote || enrichNotes[getKey(d)] || '';
+      const reviewDate = d.enrichReviewDate || '';
+      const statusLabel = d.enrichStatus === 'in-progress' ? '<span style="color:var(--gold);font-weight:600">🔧 In Progress</span>' : '';
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td>${esc(d.country)}</td>
+        <td>${esc(d.region||'').replace(/-/g,' ')}</td>
+        <td>${esc(d.county||'')}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖 Wiki</a>` : '—'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td>
+        <td style="font-size:12px;color:var(--muted)">${(d.reviewReasons||[]).join(', ')}</td>
+        <td>${statusLabel}</td>
+        <td style="max-width:300px;font-size:12px;color:var(--muted);white-space:pre-wrap">${esc(enrichNote) || '—'}</td>
+        <td style="font-size:11px;color:var(--muted)">${reviewDate || '—'}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Links</th><th>Flag Reasons</th><th>Status</th><th>Enrich Notes</th><th>Reviewed</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
+  const isEnrichedTab = currentMainTab === 'enriched';
+  if (isEnrichedTab) {
+    let rows = filtered.map((d,i) => {
+      const wikiUrl = d.wikipediaUrl || d.wiki || '';
+      const mapsUrl = d.mapsLink || '';
+      const gallery = Array.isArray(d.gallery) ? d.gallery : [];
+      const galleryHtml = gallery.length
+        ? gallery.map((g,gi) => { const gUrl = (typeof g === 'string') ? g : (g.url||g.googlePhotoUri||''); return `<img src="${esc(gUrl)}" style="width:36px;height:36px;object-fit:cover;border-radius:3px;border:1px solid var(--border);vertical-align:middle;margin:1px" loading="lazy">`; }).join('')
+        : '<span style="color:var(--muted);font-size:11px">none</span>';
+      const mainThumb = d.image ? `<img src="${esc(d.image)}" style="width:44px;height:44px;object-fit:cover;border-radius:4px;border:2px solid var(--green);vertical-align:middle" loading="lazy">` : '<span style="color:var(--red)">✗</span>';
+      const enrichNote = d.enrichNote || enrichNotes[getKey(d)] || '';
+      const reviewDate = d.enrichReviewDate || '';
+      const reviewTagPrefixes = ['images-need-review','needs-','review-','todo-','flag-'];
+      const allTags = d.tags && d.tags.length ? d.tags : [];
+      const contentTags = allTags.filter(t => !reviewTagPrefixes.some(p => t.startsWith(p)));
+      const reviewTags = allTags.filter(t => reviewTagPrefixes.some(p => t.startsWith(p)));
+      const contentTagsHtml = contentTags.length ? contentTags.map(t => `<span style="background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${esc(t)}</span>`).join(' ') : '<span style="color:var(--muted)">—</span>';
+      const reviewTagsHtml = reviewTags.length ? reviewTags.map(t => `<span style="background:#2a1a00;border:1px solid var(--gold);color:var(--gold);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">⚠ ${esc(t)}</span>`).join(' ') : '';
+      const sources = Array.isArray(d.source) ? d.source : [];
+      const sourcesHtml = sources.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗 ${esc(s.name||s.label||'Source')}</a>`).join(' ');
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${mainThumb}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td>${esc(d.country)}</td>
+        <td>${esc(d.county||'')}</td>
+        <td>${esc(d.type||'')}</td>
+        <td style="max-width:200px">${galleryHtml}</td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'} ${mapsUrl ? `<a href="${esc(mapsUrl)}" target="_blank">📍</a>` : ''} ${sourcesHtml}</td>
+        <td>${contentTagsHtml}</td>
+        <td>${reviewTagsHtml}</td>
+        <td style="max-width:300px;font-size:12px;color:var(--muted);white-space:pre-wrap">${esc(enrichNote) || '<span style="color:var(--muted)">—</span>'}</td>
+        <td style="font-size:11px;color:var(--muted)">${reviewDate || '—'}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>County</th><th>Type</th><th>Gallery</th><th>Links</th><th>Tags</th><th>Review</th><th>Enrich Notes</th><th>Reviewed</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
+  if (isDeadTab) {
+    let rows = filtered.map((d,i) => {
+      const mapsUrl = d.mapsLink || `https://www.google.com/maps/search/${encodeURIComponent(d.name+' '+(d.county||'')+' castle')}`;
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td>${esc(d.country)}</td>
+        <td>${esc(d.region||'').replace(/-/g,' ')}</td>
+        <td>${esc(d.county||'')}</td>
+        <td>${esc(d.type||'')}</td>
+        <td><a href="${mapsUrl}" target="_blank">📍 Maps</a></td>
+        <td style="font-size:12px;color:var(--muted)">${(d.reviewReasons||[]).join(', ')}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Flag Reasons</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
+  if (isApprovedTab) {
+    let rows = filtered.map((d,i) => {
+      const listingUrl = `https://castlecore.uk/site/${d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}.html`;
+      const wikiUrl = d.wiki || '';
+      const mainId = d.name.toLowerCase().replace(/[^a-z0-9]+/g,'-') + '-main';
+      const mainThumb = d.image ? `<img src="${esc(d.image)}" style="width:40px;height:40px;object-fit:cover;border-radius:4px;border:2px solid var(--green);vertical-align:middle" loading="lazy" title="${esc(mainId)}">` : '<span style="color:var(--red)">✗</span>';
+      const gallery = Array.isArray(d.gallery) ? d.gallery : [];
+      const galleryHtml = gallery.length
+        ? gallery.map((g,gi) => { const gUrl = (typeof g === 'string') ? g : (g.url||g.googlePhotoUri||''); const gId = (typeof g === 'string') ? '' : (g.id||''); return `<span style="display:inline-block;position:relative;margin:2px" title="${esc(gId)}"><img src="${esc(gUrl)}" style="width:32px;height:32px;object-fit:cover;border-radius:3px;border:1px solid var(--border);vertical-align:middle" loading="lazy"><span style="position:absolute;bottom:-2px;right:-2px;background:var(--bg);color:var(--muted);font-size:8px;padding:0 2px;border-radius:2px;border:1px solid var(--border)">${gId ? gId.split('-img-')[1]||'' : gi+1}</span></span>`; }).join('')
+        : '<span style="color:var(--muted);font-size:11px">none</span>';
+      const totalImgs = (d.image ? 1 : 0) + gallery.length;
+      const imgCountStyle = totalImgs >= 3 ? 'color:var(--green)' : totalImgs === 0 ? 'color:var(--red)' : 'color:var(--gold)';
+      return `<tr>
+        <td>${i+1}</td>
+        <td><strong>${esc(d.name)}</strong></td>
+        <td><a href="${listingUrl}" target="_blank">↗</a></td>
+        <td>${wikiUrl ? `<a href="${esc(wikiUrl)}" target="_blank">📖</a>` : '—'}${d.mapsLink ? ` <a href="${esc(d.mapsLink)}" target="_blank">📍</a>` : ''}${(Array.isArray(d.source) && d.source.length) ? ' ' + d.source.map(s => `<a href="${esc(s.url)}" target="_blank" style="font-size:11px">🔗 ${esc(s.name||'Source')}</a>`).join(' ') : ''}</td>
+        <td>${mainThumb} <span style="font-size:10px;color:var(--muted)">${esc(mainId)}</span></td>
+        <td style="max-width:250px">${galleryHtml}</td>
+        <td style="${imgCountStyle};font-weight:600">${totalImgs}</td>
+        <td>${d.imageReviewDone ? '<span style="color:var(--green)">✓</span>' : '<span style="color:var(--gold)">—</span>'}</td>
+        <td>${(Array.isArray(d.tags) && d.tags.length) ? d.tags.map(t => `<span style="background:var(--bg);border:1px solid var(--border);padding:1px 6px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${esc(t)}</span>`).join(' ') : '<span style="color:var(--muted)">—</span>'}</td>
+        <td style="font-size:11px;color:var(--muted)">${d.enrichReviewDate || '—'}</td>
+        <td>${(d.enrichNote || d.auditNote) ? `<span style="background:#2a1f00;color:var(--gold);padding:2px 6px;border-radius:3px;font-size:10px">${esc(d.enrichNote || d.auditNote)}</span>` : ''}</td>
+      </tr>`;
+    }).join('');
+    el.innerHTML = `<table><thead><tr><th>#</th><th>Name</th><th>Page</th><th>Links</th><th>Main Image</th><th>Gallery</th><th>Total</th><th>Reviewed</th><th>Tags</th><th>Date</th><th>Notes</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return;
+  }
+  
+  let rows = filtered.map((d,i) => {
+    const k = getKey(d);
+    const st = reviewState[k] || {};
+    const fi = flaggedImages[k];
+    const ff = fieldFlags[k];
+    const statusHtml = st.status
+      ? `<span class="tbl-status" style="background:${st.status==='approved'?'var(--green)':'var(--red)'};color:#fff">${st.status}</span>`
+      : '<span class="tbl-status" style="background:var(--border);color:var(--muted)">unreviewed</span>';
+    const reasonsHtml = st.reasons ? st.reasons.map(r => `<span style="background:#1a0a0a;border:1px solid var(--red);color:var(--red);padding:1px 5px;border-radius:3px;font-size:10px;margin:1px;display:inline-block">${r}</span>`).join(' ') : '';
+    const noteHtml = st.note ? `<div style="font-size:11px;color:var(--muted);margin-top:2px;font-style:italic">${esc(st.note)}</div>` : '';
+    const imgFlags = fi && fi.size ? `<span style="color:var(--red);font-size:11px">📷 ${fi.size} img flagged</span>` : '';
+    const fieldFlagHtml = ff ? Object.keys(ff).filter(f=>ff[f]).map(f => `<span style="color:var(--red);font-size:11px">⚑ ${f}</span>`).join(' ') : '';
+    
+    return `<tr style="cursor:pointer" onclick="switchMainTab('review');currentIdx=${allData.indexOf(d)};filtered=allData.filter(x=>getStatus(x)==='flagged');currentIdx=${i};setView('card')">
+      <td>${i+1}</td>
+      <td>${d.image?`<img class="tbl-img" src="${esc(d.image)}" loading="lazy">`:'—'}</td>
+      <td><strong>${esc(d.name)}</strong></td>
+      <td>${esc(d.country)}</td>
+      <td>${esc(d.region||'').replace(/-/g,' ')}</td>
+      <td>${esc(d.county||'')}</td>
+      <td>${esc(d.type||'')}</td>
+      ${isFlaggedTab ? `<td style="font-size:12px">${(d.wikipediaUrl||d.wiki) ? `<a href="${esc(d.wikipediaUrl||d.wiki)}" target="_blank">📖 Wiki</a>` : '<span style="color:var(--muted)">—</span>'}${d.mapsLink ? ` · <a href="${esc(d.mapsLink)}" target="_blank">📍 Maps</a>` : ''}</td><td>${reasonsHtml}${noteHtml}</td><td>${imgFlags} ${fieldFlagHtml}</td><td style="font-size:11px;color:var(--muted)">${d.lastReviewed || '—'}</td>` : `<td>${statusHtml}</td><td style="font-size:11px;color:var(--muted)">${st.reasons?st.reasons.join(', '):''}</td>`}
+    </tr>`;
+  }).join('');
+  const headers = isFlaggedTab 
+    ? '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Links</th><th>Flag Reasons</th><th>Other Flags</th><th>Last Reviewed</th>'
+    : '<th>#</th><th>Image</th><th>Name</th><th>Country</th><th>Region</th><th>County</th><th>Type</th><th>Status</th><th>Flags</th>';
+  el.innerHTML = `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+// Dupes detection & rendering
+let dupePairs = [];
+function findDupes() {
+  const approved = allData.filter(x => x.reviewStatus === 'approved');
+  const flagged = allData.filter(x => x.reviewStatus === 'flagged');
+  dupePairs = [];
+  
+  // Build lookup maps for approved entries
+  const wikiMap = {};
+  const nameMap = {};
+  const mapsMap = {};
+  approved.forEach(a => {
+    const w = (a.wikipediaUrl || a.wiki || '').toLowerCase();
+    if (w) wikiMap[w] = a;
+    nameMap[a.name.toLowerCase().trim()] = a;
+    const m = (a.mapsLink || '').toLowerCase();
+    if (m) mapsMap[m] = a;
+  });
+  
+  // Also check within flagged for internal dupes
+  const flaggedWikiMap = {};
+  const flaggedNameMap = {};
+  
+  // Use a map keyed by "flaggedName|matchName" to consolidate reasons
+  const pairMap = {};
+  function addPair(f, match, reason) {
+    const key = f.name + '|' + match.name;
+    if (pairMap[key]) {
+      if (!pairMap[key].reasons.includes(reason)) pairMap[key].reasons.push(reason);
+    } else {
+      pairMap[key] = { flagged: f, approved: match, reasons: [reason] };
+    }
+  }
+  
+  flagged.forEach(f => {
+    const w = (f.wikipediaUrl || f.wiki || '').toLowerCase();
+    const n = f.name.toLowerCase().trim();
+    const m = (f.mapsLink || '').toLowerCase();
+    
+    // Check against approved
+    if (w && wikiMap[w]) addPair(f, wikiMap[w], 'Same Wikipedia link');
+    if (nameMap[n]) addPair(f, nameMap[n], 'Same name');
+    if (m && mapsMap[m]) addPair(f, mapsMap[m], 'Same Google Maps link');
+    
+    // Check within flagged
+    if (w && flaggedWikiMap[w]) addPair(f, flaggedWikiMap[w], 'Same Wikipedia link (both flagged)');
+    else if (w) flaggedWikiMap[w] = f;
+    if (flaggedNameMap[n]) addPair(f, flaggedNameMap[n], 'Same name (both flagged)');
+    else flaggedNameMap[n] = f;
+  });
+  
+  dupePairs = Object.values(pairMap);
+  
+  document.getElementById('tabDupesCount').textContent = dupePairs.length;
+}
+
+// Load/save dupe notes from localStorage
+let dupeNotes = {};
+try { dupeNotes = JSON.parse(localStorage.getItem('castle-dupe-notes') || '{}'); } catch(e) {}
+function saveDupeNote(key, val) { dupeNotes[key] = val; localStorage.setItem('castle-dupe-notes', JSON.stringify(dupeNotes)); }
+
+function renderDupes() {
+  const el = document.getElementById('dupesView');
+  if (!dupePairs.length) { el.innerHTML = '<p style="padding:40px;text-align:center;color:var(--muted)">No duplicates found.</p>'; return; }
+  
+  el.innerHTML = `<h2 style="color:var(--gold);margin-bottom:16px">🔀 Duplicate Entries (${dupePairs.length})</h2>
+    <p style="color:var(--muted);margin-bottom:24px;font-size:14px">Flagged entries that share a Wikipedia link, name, or Google Maps link with another entry. Review each pair and note your decision.</p>
+    <button onclick="copyDupeDecisions()" style="background:var(--gold);color:#000;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:600;font-size:14px;margin-bottom:20px">📋 Copy Decisions to Clipboard</button>` +
+    dupePairs.map((pair, i) => {
+      const f = pair.flagged;
+      const a = pair.approved;
+      const key = f.name + '|' + a.name;
+      const note = dupeNotes[key] || '';
+      const aStatus = a.reviewStatus === 'approved' ? '<span style="color:var(--green)">✅ Approved</span>' : '<span style="color:var(--red)">⚠️ Flagged</span>';
+      const fWiki = f.wikipediaUrl || f.wiki || '';
+      const aWiki = a.wikipediaUrl || a.wiki || '';
+      const mapsSearchF = `https://www.google.com/maps/search/${encodeURIComponent(f.name+' '+(f.county||'')+' castle')}`;
+      const mapsSearchA = `https://www.google.com/maps/search/${encodeURIComponent(a.name+' '+(a.county||'')+' castle')}`;
+      
+      return `<div class="dupe-pair">
+        <div class="dupe-pair-header">
+          <span class="dupe-num">#${i+1}</span>
+          <h3>${esc(f.name)} ↔ ${esc(a.name)}</h3>
+          <span style="font-size:12px;color:var(--red);background:#1a0a0a;padding:2px 8px;border-radius:4px">${pair.reasons.join(', ')}</span>
+        </div>
+        <div class="dupe-compare">
+          <div class="dupe-side">
+            <div class="dupe-label" style="color:var(--red)">⚠️ FLAGGED ENTRY</div>
+            <h4>${esc(f.name)}</h4>
+            ${f.image ? `<img class="dupe-img" src="${esc(f.image)}" loading="lazy">` : '<div style="height:100px;background:var(--bg);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-bottom:8px">No image</div>'}
+            <div class="dupe-field"><strong>Location:</strong> ${esc(f.country)} · ${esc((f.region||'').replace(/-/g,' '))} · ${esc(f.county||'')}</div>
+            <div class="dupe-field"><strong>Type:</strong> ${esc(f.type||'—')} · <strong>Era:</strong> ${esc(f.period||'—')}</div>
+            <div class="dupe-field"><strong>Coords:</strong> ${f.lat ? f.lat+', '+f.lng : '—'}</div>
+            <div class="dupe-field" style="margin-top:6px">${esc((f.desc||'').slice(0,200))}${(f.desc||'').length>200?'…':''}</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              ${fWiki ? `<a href="${esc(fWiki)}" target="_blank" class="dupe-link">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted);font-size:13px">❌ No Wikipedia</span>'}
+              ${f.mapsLink ? `<a href="${esc(f.mapsLink)}" target="_blank" class="dupe-link">📍 Maps ↗</a>` : `<a href="${mapsSearchF}" target="_blank" class="dupe-link" style="color:var(--muted)">📍 Search Maps ↗</a>`}
+            </div>
+          </div>
+          <div class="dupe-side">
+            <div class="dupe-label" style="color:var(--green)">${aStatus}</div>
+            <h4>${esc(a.name)}</h4>
+            ${a.image ? `<img class="dupe-img" src="${esc(a.image)}" loading="lazy">` : '<div style="height:100px;background:var(--bg);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-bottom:8px">No image</div>'}
+            <div class="dupe-field"><strong>Location:</strong> ${esc(a.country)} · ${esc((a.region||'').replace(/-/g,' '))} · ${esc(a.county||'')}</div>
+            <div class="dupe-field"><strong>Type:</strong> ${esc(a.type||'—')} · <strong>Era:</strong> ${esc(a.period||'—')}</div>
+            <div class="dupe-field"><strong>Coords:</strong> ${a.lat ? a.lat+', '+a.lng : '—'}</div>
+            <div class="dupe-field" style="margin-top:6px">${esc((a.desc||'').slice(0,200))}${(a.desc||'').length>200?'…':''}</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              ${aWiki ? `<a href="${esc(aWiki)}" target="_blank" class="dupe-link">📖 Wikipedia ↗</a>` : '<span style="color:var(--muted);font-size:13px">❌ No Wikipedia</span>'}
+              ${a.mapsLink ? `<a href="${esc(a.mapsLink)}" target="_blank" class="dupe-link">📍 Maps ↗</a>` : `<a href="${mapsSearchA}" target="_blank" class="dupe-link" style="color:var(--muted)">📍 Search Maps ↗</a>`}
+            </div>
+          </div>
+        </div>
+        <div class="dupe-notes">
+          <label>📝 Your decision / notes:</label>
+          <textarea placeholder="e.g. Keep approved, kill flagged / These are different castles / Merge into one..." oninput="saveDupeNote('${esc(key).replace(/'/g,"\\'")}',this.value)">${esc(note)}</textarea>
+        </div>
+      </div>`;
+    }).join('');
+}
+
+function copyDupeDecisions() {
+  const lines = dupePairs.map((pair, i) => {
+    const key = pair.flagged.name + '|' + pair.approved.name;
+    const note = dupeNotes[key] || '(no decision yet)';
+    return `#${i+1} ${pair.flagged.name} ↔ ${pair.approved.name}\nReason: ${pair.reasons.join(', ')}\nDecision: ${note}`;
+  });
+  const text = `Dupe Decisions (${dupePairs.length} pairs):\n\n` + lines.join('\n\n');
+  navigator.clipboard.writeText(text).then(() => alert('Copied!')).catch(() => prompt('Copy this:', text));
+}
+
+function setView(v) {
+  currentView = v;
+  document.getElementById('cardView').style.display = v === 'card' ? 'block' : 'none';
+  document.getElementById('tableView').style.display = v === 'table' ? 'block' : 'none';
+  document.getElementById('actionBar').style.display = v === 'card' ? 'flex' : 'none';
+  document.getElementById('btnCardView').classList.toggle('active', v === 'card');
+  document.getElementById('btnTableView').classList.toggle('active', v === 'table');
+  if (v === 'card') renderCard(); else renderTable();
+}
+
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function exportCSV(which) {
+  let rows = allData;
+  if (which === 'flagged') rows = allData.filter(d => (reviewState[getKey(d)]||{}).status === 'flagged');
+  const headers = ['Name','Country','Region','County','Lat','Lng','Image','ImgSource','Description','Type','Period','Rating','Status','Flag Reasons','Note','Flagged Images','Flagged Fields'];
+  const csv = [headers.join(','), ...rows.map(d => {
+    const k = getKey(d); const st = reviewState[k] || {}; const fi = flaggedImages[k] ? [...flaggedImages[k]] : []; const ff = fieldFlags[k] ? Object.keys(fieldFlags[k]).filter(f=>fieldFlags[k][f]) : [];
+    return [JSON.stringify(d.name),d.country,d.region,JSON.stringify(d.county||''),d.lat,d.lng,d.image,d.imgSource,JSON.stringify((d.desc||'').slice(0,200)),d.type,d.period,d.rating,st.status||'unreviewed',JSON.stringify((st.reasons||[]).join('; ')),JSON.stringify(st.note||''),JSON.stringify(fi.join('; ')),JSON.stringify(ff.join('; '))].join(',');
+  })].join('\n');
+  const blob = new Blob([csv], {type:'text/csv'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `castlecore-${which}.csv`; a.click();
+}
+
+function copyForClawz() {
+  // Check if we're on source review tab
+  if (currentMainTab === 'sourceReview') {
+    const reviewed = (window.sourceCandidates || []).filter(c => c.status === 'approved' || c.status === 'rejected');
+    if (!reviewed.length) { alert('No source reviews yet! Use A to approve or F to reject.'); return; }
+    const lines = reviewed.map((c, i) => `${i+1}. ${c.name} — ${c.status === 'approved' ? 'A' : 'R'} — ${c.candidateUrl}`);
+    const text = `Source Review (${reviewed.length} reviewed):\n(A = approve source, R = reject/delete)\n\n` + lines.join('\n');
+    navigator.clipboard.writeText(text).then(() => alert(`Copied ${reviewed.length} source reviews!`)).catch(() => prompt('Copy this:', text));
+    return;
+  }
+  // Only copy entries that have been reviewed (changed from their original state)
+  const reviewed = [];
+  filtered.forEach((d, i) => {
+    const k = getKey(d);
+    const ls = reviewState[k];
+    if (!ls || ls.ts === 0) return; // skip entries not touched this session
+    const action = ls.status === 'approved' ? 'A' : 'F';
+    reviewed.push(`${reviewed.length + 1}. ${d.name} — ${action}`);
+  });
+  if (!reviewed.length) { alert('No reviewed entries yet! Use A to approve or F to keep flagged.'); return; }
+  const text = `Reviewed ${reviewed.length} listings:\n(A = move to approved, F = keep flagged)\n\n` + reviewed.join('\n');
+  navigator.clipboard.writeText(text).then(() => alert(`Copied ${reviewed.length} reviewed entries!`)).catch(() => prompt('Copy this:', text));
+}
+
+// Enrich notes
+let enrichNotes = {};
+try { enrichNotes = JSON.parse(localStorage.getItem('castle-enrich-notes') || '{}'); } catch(e) {}
+function saveEnrichNotes() { localStorage.setItem('castle-enrich-notes', JSON.stringify(enrichNotes)); }
+
+function renderEnrichNotes(d, key) {
+  const container = document.getElementById('cardView');
+  const note = enrichNotes[key] || '';
+  const section = document.createElement('div');
+  section.className = 'blurb-section';
+  section.style.borderColor = 'var(--blue)';
+  section.innerHTML = `<h3 style="color:var(--blue)">📝 Enrich Notes</h3>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Add notes about what needs fixing, what you changed, or instructions for enrichment. These are saved locally and included when sending to Clawz.</p>
+    <textarea id="enrichNoteInput" style="width:100%;min-height:100px;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:6px;font-size:14px;resize:vertical;font-family:inherit;line-height:1.5" placeholder="e.g. Needs better image, description is wrong, coordinates off...">${esc(note)}</textarea>`;
+  container.appendChild(section);
+  
+  // Save on input
+  document.getElementById('enrichNoteInput').addEventListener('input', function() {
+    enrichNotes[key] = this.value;
+    saveEnrichNotes();
+  });
+}
+
+const CLAWZ_RELAY = 'https://castlecore-enrich-relay.devingthingsyallhaventyet.workers.dev';
+async function sendToClawz() {
+  if (!filtered.length) return;
+  const d = filtered[currentIdx];
+  const btn = document.getElementById('btnSendToClawz');
+  btn.textContent = '🦞 Sending...';
+  btn.disabled = true;
+  
+  const wikiUrl = d.wikipediaUrl || d.wiki || 'none';
+  const mapsUrl = d.mapsLink || 'none';
+  const gallery = (d.gallery || []).map(g => typeof g === 'string' ? g : (g.url || g.googlePhotoUri || '')).filter(Boolean);
+  const reasons = d.reviewReasons || [];
+  const note = d.reviewNote || '';
+  
+  const statusLabel = d.enrichStatus === 'enriched' ? '✨ ENRICHED' : d.enrichStatus === 'in-progress' ? '🔧 STILL IN PROGRESS' : '🔍 PENDING';
+  const text = `🔍 *ENRICH REVIEW*  \\[${statusLabel}\\]\n\n` +
+    `*Name:* ${d.name}\n` +
+    `*Country:* ${d.country}\n` +
+    `*Region:* ${(d.region || '').replace(/-/g, ' ')}\n` +
+    `*County:* ${d.county || 'unknown'}\n` +
+    `*Type:* ${d.type || 'unknown'}\n` +
+    `*Period:* ${d.period || 'unknown'}\n` +
+    `*Coords:* ${d.lat || '?'}, ${d.lng || '?'}\n` +
+    `*Wikipedia:* ${wikiUrl}\n` +
+    `*Maps:* ${mapsUrl}\n` +
+    `*Main Image:* ${d.image || 'none'}\n` +
+    `*Gallery:* ${gallery.length} images\n` +
+    `*Image Source:* ${d.imgSource || 'unknown'}\n` +
+    `*Has Wikipedia:* ${d.hasWikipedia || 'unknown'}\n` +
+    `*Has Google Places:* ${d.hasGooglePlaces || 'unknown'}\n` +
+    (reasons.length ? `*Flag Reasons:* ${reasons.join(', ')}\n` : '') +
+    (note ? `*Flag Note:* ${note}\n` : '') +
+    (enrichNotes[getKey(d)] ? `*Enrich Notes:* ${enrichNotes[getKey(d)]}\n` : '') +
+    `\n*Description:*\n${d.desc || 'No description'}\n` +
+    `\n_Listing ${currentIdx + 1} of ${filtered.length}_`;
+  
+  try {
+    const resp = await fetch(CLAWZ_RELAY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, listing: { ...d, enrichNotes: enrichNotes[getKey(d)] || '' } })
+    });
+    const result = await resp.json();
+    console.log('Clawz relay response:', result);
+    if (result.ok) {
+      btn.textContent = '✅ Sent!';
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; advanceToNext(); }, 1500);
+    } else {
+      console.error('Clawz relay failed:', JSON.stringify(result));
+      btn.textContent = '❌ Failed';
+      btn.title = result.error || 'Unknown error';
+      setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; btn.title = ''; }, 5000);
+    }
+  } catch (e) {
+    console.error('Clawz relay error:', e);
+    btn.textContent = '❌ Error: ' + e.message;
+    setTimeout(() => { btn.textContent = '🦞 Send to Clawz'; btn.disabled = false; }, 5000);
+  }
+}
+
+function saveProgressToFile() {
+  // Update all entries with current review state
+  const updated = allData.map(d => {
+    const k = getKey(d);
+    const st = reviewState[k];
+    const copy = {...d};
+    if (st) {
+      copy.reviewStatus = st.status;
+      if (st.reasons) copy.reviewReasons = st.reasons;
+      else delete copy.reviewReasons;
+      if (st.note) copy.reviewNote = st.note;
+      else delete copy.reviewNote;
+    }
+    // Include image flags
+    const fi = flaggedImages[k];
+    if (fi && fi.size) copy.flaggedImages = [...fi];
+    else delete copy.flaggedImages;
+    // Include field flags
+    const ff = fieldFlags[k];
+    if (ff && Object.keys(ff).length) copy.flaggedFields = Object.keys(ff).filter(f=>ff[f]);
+    else delete copy.flaggedFields;
+    return copy;
+  });
+  
+  // Prepare combined export with source candidates
+  const exportData = {
+    'audit-data.json': updated,
+    'source-candidates.json': { candidates: (window.sourceCandidates || []).filter(c => c.status !== 'rejected') }
+  };
+  
+  const json = JSON.stringify(exportData, null, 2);
+  navigator.clipboard.writeText(json).then(() => {
+    alert('Copied audit-data.json and source-candidates.json to clipboard! Paste it to Clawz to deploy.');
+  }).catch(() => {
+    // Fallback: show in a textarea for manual copy
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:999;display:flex;align-items:center;justify-content:center';
+    overlay.innerHTML = `<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;width:600px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column;gap:12px">
+      <h3 style="color:var(--gold)">📋 Copy this JSON</h3>
+      <textarea style="flex:1;min-height:300px;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px;border-radius:6px;font-family:monospace;font-size:12px;resize:none" readonly>${json.replace(/</g,'&lt;')}</textarea>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button onclick="this.closest('div[style]').remove()" style="background:var(--border);color:var(--text);border:none;padding:8px 16px;border-radius:6px;cursor:pointer">Close</button>
+        <button onclick="this.closest('div').querySelector('textarea').select();document.execCommand('copy');alert('Copied!')" style="background:var(--gold);color:#000;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-weight:600">Select All & Copy</button>
+      </div>
+    </div>`;
+    document.body.appendChild(overlay);
+  });
+}
+
+function updateExportCount() {
+  const ct = allData.filter(d => { const k=getKey(d); const st=reviewState[k]; return (st&&st.status==='flagged')||(flaggedImages[k]&&flaggedImages[k].size)||(fieldFlags[k]&&Object.keys(fieldFlags[k]).length); }).length;
+  const el = document.getElementById('exportCount'); if(el) el.textContent = ct ? `${ct} flagged entries` : '';
+}
+const _origUpdateProgress = updateProgress;
+updateProgress = function() { _origUpdateProgress(); updateExportCount(); };
+
+// Source review functions
+function approveSource() {
+  if (!filtered.length || currentMainTab !== 'sourceReview') return;
+  
+  const candidate = filtered[currentIdx];
+  const listing = allData.find(d => d.name === candidate.name);
+  if (!listing) return;
+  
+  // Update candidate status
+  candidate.status = 'approved';
+  
+  // Add to listing's sources arrays
+  if (!listing.sources) listing.sources = [];
+  if (!listing.verifiedSources) listing.verifiedSources = [];
+  
+  const sourceEntry = {
+    label: candidate.candidateLabel || 'Official Website',
+    url: candidate.candidateUrl
+  };
+  
+  // Avoid duplicates
+  if (!listing.sources.find(s => s.url === sourceEntry.url)) {
+    listing.sources.push(sourceEntry);
+  }
+  if (!listing.verifiedSources.find(s => s.url === sourceEntry.url)) {
+    listing.verifiedSources.push(sourceEntry);
+  }
+  
+  // Save source candidates
+  saveSourceCandidates();
+  
+  // Update counts and advance
+  updateTabCounts();
+  advanceToNext();
+}
+
+function rejectSource() {
+  if (!filtered.length || currentMainTab !== 'sourceReview') return;
+  
+  const candidate = filtered[currentIdx];
+  
+  // Update candidate status
+  candidate.status = 'rejected';
+  
+  // Save source candidates
+  saveSourceCandidates();
+  
+  // Update counts and advance
+  updateTabCounts();
+  advanceToNext();
+}
+
+function saveSourceCandidates() {
+  const data = { candidates: window.sourceCandidates || [] };
+  const json = JSON.stringify(data, null, 2);
+  localStorage.setItem('castle-source-candidates', json);
+}
+
+// Restore is now handled inline after fetch to avoid race conditions
+</script>
+</body>
+</html>

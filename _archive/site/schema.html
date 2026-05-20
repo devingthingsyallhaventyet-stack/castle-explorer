@@ -1,0 +1,984 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Castlecore Schema — Phase 1.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #faf8f4; color: #2a1f14; line-height: 1.7; padding: 2rem clamp(1.5rem, 5vw, 4rem); max-width: 900px; margin: 0 auto; }
+h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: .3rem; }
+h2 { font-size: 1.3rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: .8rem; padding-bottom: .4rem; border-bottom: 2px solid #8b2335; }
+h3 { font-size: 1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: .5rem; }
+h4 { font-size: .85rem; font-weight: 600; margin-top: 1rem; margin-bottom: .4rem; }
+p { margin-bottom: .8rem; font-size: .9rem; }
+em { color: #8a7e6e; }
+hr { border: none; border-top: 1px solid #e0d8c8; margin: 1.5rem 0; }
+ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; font-size: .9rem; }
+li { margin-bottom: .3rem; }
+strong { color: #2a1f14; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: .82rem; }
+th { background: #8b2335; color: #fff; padding: .6rem .8rem; text-align: left; font-weight: 600; letter-spacing: .5px; }
+td { padding: .5rem .8rem; border-bottom: 1px solid #e0d8c8; }
+tr:nth-child(even) td { background: #f0ebe0; }
+code { background: #f0ebe0; padding: 2px 6px; border-radius: 3px; font-size: .82rem; }
+a { color: #8b2335; }
+</style>
+</head>
+<body>
+<h1>Castlecore Listing Page ??? Data Schema &amp; Functionality Audit</h1>
+<p><em>Phase 1, Step 2 ??? In Progress</em>
+<em>Started: 2026-05-19</em></p>
+<hr>
+<h2>Rule #1: No Filler. Ever.</h2>
+<p>See <code>castlecore-clean-slate.md</code> for full rule. Every field must be sourced from approved links only (Wikipedia, Google Places, official heritage/government pages). If we can&#39;t source it, it doesn&#39;t show.</p>
+<hr>
+<h2>Section 1: Breadcrumbs</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Country</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+<tr>
+<td>Castle Name</td>
+<td>Listing data</td>
+<td>???</td>
+<td>Already exists</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Section 2: Header</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type tag</td>
+<td>Listing data (<code>type</code>)</td>
+<td>???</td>
+<td>Castle, Abbey, etc.</td>
+</tr>
+<tr>
+<td>Status tag</td>
+<td>Inferred from sources</td>
+<td>???</td>
+<td>See status rules below</td>
+</tr>
+<tr>
+<td>Condition tag</td>
+<td>Inferred from sources</td>
+<td>???</td>
+<td>See condition rules below</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Listing data (<code>name</code>)</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Subtitle</td>
+<td>Written by us</td>
+<td>???</td>
+<td>Editorial one-liner based on verified source material. Every claim must trace to an approved source. 1,163 unique lines needed.</td>
+</tr>
+<tr>
+<td>Location label</td>
+<td>Listing data (town/county)</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Badge</td>
+<td>Calculated from Google Places</td>
+<td>???</td>
+<td>See badge rules below</td>
+</tr>
+</tbody></table>
+<h3>Status Tag Rules</h3>
+<p>Only these 4 values. If unsure, hide the tag.</p>
+<ul>
+<li><strong>Open to Visitors</strong> ??? large well-maintained properties with admission cost, gift shops, guided tours, set hours</li>
+<li><strong>Book to Experience</strong> ??? hotels, event venues, tours by appointment only</li>
+<li><strong>Freely Accessible</strong> ??? places that can be accessed for free at any time (open ruins, free buildings, listed as free)</li>
+<li><strong>Private</strong> ??? privately owned, not open to visitors, listed to preserve history. Only used if explicitly stated on Wikipedia or a dedicated website.</li>
+</ul>
+<h3>Condition Tag Rules</h3>
+<p>Only these 2 values. If unsure, hide the tag.</p>
+<ul>
+<li><strong>Intact</strong> ??? has a roof, well preserved, people living in it or actively maintaining it</li>
+<li><strong>Ruin</strong> ??? no roof, partially standing, regardless of whether free or managed</li>
+</ul>
+<h3>Badge Rules</h3>
+<p>Mutually exclusive, highest tier match wins. Data from Google Places.</p>
+<ul>
+<li><strong>??? Must See</strong> ??? 4.5+ stars AND 5,000+ reviews</li>
+<li><strong>???? Hidden Gem</strong> ??? 4.0+ stars AND 20???100 reviews</li>
+<li><strong>???? Mysterious</strong> ??? any rating, fewer than 10 reviews</li>
+<li><strong>No badge</strong> ??? everything else</li>
+</ul>
+<hr>
+<h2>Section 3: Stats Bar</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Been Here count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires backend (user system)</td>
+</tr>
+<tr>
+<td>Been Here button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Toggle, per-user state</td>
+</tr>
+<tr>
+<td>Favorites count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires backend (user system)</td>
+</tr>
+<tr>
+<td>Favorite button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Toggle, per-user state</td>
+</tr>
+<tr>
+<td>Google Rating</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>e.g. &quot;4.6 ???&quot;</td>
+</tr>
+<tr>
+<td>Google Review Count</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Must say &quot;Google Reviews&quot; for policy compliance</td>
+</tr>
+</tbody></table>
+<h3>Backend Required</h3>
+<p>Been Here, Favorites, and Guest Book (Section 5) all require user accounts with authentication. This is v1 infrastructure.</p>
+<hr>
+<h2>Section 4: Image Gallery</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Images (up to 5)</td>
+<td>Google Places API (priority) + Wikimedia Commons (fills gaps)</td>
+<td>???</td>
+<td>See rules below</td>
+</tr>
+<tr>
+<td>Alt text</td>
+<td>Generated from place name + photo context</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Attribution</td>
+<td>Per-source rules below</td>
+<td>???</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3>Gallery Rules</h3>
+<ul>
+<li><strong>5 images per gallery</strong></li>
+<li><strong>Google Places photos are the primary source</strong> ??? fetched live via API on every page load. Cannot be stored on R2/CDN. Cannot cache photo names (they expire). No curation possible ??? we display whatever Google returns.</li>
+<li><strong>Wikimedia Commons fills gaps</strong> ??? if a listing has fewer than 5 Google photos, remaining slots filled with Wikimedia images hosted on R2</li>
+<li><strong>Browse/collection pages</strong> also use Google Places photos for listing thumbnails</li>
+<li><strong>Future: curated galleries</strong> ??? as the site grows, we can replace Google photos with hand-picked images (our own, CC-licensed, heritage body press images, etc.) on a case-by-case basis for key listings</li>
+</ul>
+<h3>Google Places Photo Attribution (Required)</h3>
+<ol>
+<li><strong>Author name</strong> displayed from <code>authorAttributions.displayName</code>, linked to <code>authorAttributions.uri</code> when available</li>
+<li><strong>Google Maps logo or &quot;Google Maps&quot; text</strong> must appear near the photos<ul>
+<li>Logo: official assets, 16???19dp height, 10dp clearspace (left/right/top), 5dp bottom</li>
+<li>Text alternative: Roboto font, 12???16sp, normal weight, color white/#1F1F1F/#5E5E5E</li>
+</ul>
+</li>
+<li><strong>Visual distinction</strong> ??? Google content must be visually separated from non-Google content (border, background, or whitespace)</li>
+</ol>
+<h3>Wikimedia Commons Photo Attribution (CC BY-SA)</h3>
+<ol>
+<li><strong>Author name</strong> ??? linked to the original Commons file page (<code>commons.wikimedia.org/wiki/File:...</code>)</li>
+<li><strong>License name</strong> ??? linked to the license deed (e.g. <code>https://creativecommons.org/licenses/by-sa/3.0/</code>)</li>
+<li><strong>Indication of changes</strong> ??? if cropped/resized, note it. If unmodified, not required.</li>
+</ol>
+<p>Format: <code>???? [Author Name](commons-file-link) ?? [CC BY-SA 3.0](license-link)</code></p>
+<h3>Site-Wide Requirements (Google API Policy)</h3>
+<ul>
+<li>Publicly accessible <strong>Terms of Use</strong> incorporating Google&#39;s ToS</li>
+<li>Publicly accessible <strong>Privacy Policy</strong> incorporating Google&#39;s Privacy Policy</li>
+</ul>
+<hr>
+<h2>Section 5: Main Content ??? Visit Tab</h2>
+<h3>5a. Highlights</h3>
+<p><strong>REMOVED</strong> ??? not enough reliable data across 1,163 listings.</p>
+<h3>5b. About</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description (short)</td>
+<td>Written by us</td>
+<td>???</td>
+<td>First paragraph, always visible</td>
+</tr>
+<tr>
+<td>Description (expanded)</td>
+<td>Written by us</td>
+<td>???</td>
+<td>Additional paragraphs behind &quot;Read more&quot; toggle</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Editorial descriptions based on verified source material (Wikipedia, official sites)</li>
+<li>Every claim must trace to an approved source</li>
+<li>1,163 unique descriptions needed ??? major content effort</li>
+</ul>
+<h3>5c. Google Reviews</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rating</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Live fetch, no caching</td>
+</tr>
+<tr>
+<td>Review count</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Must say &quot;Google Reviews&quot;</td>
+</tr>
+<tr>
+<td>Individual reviews (4)</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Live fetch, displayed in distinct Google-styled block</td>
+</tr>
+<tr>
+<td>Author name</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>&quot;via Google Maps&quot; under each name</td>
+</tr>
+<tr>
+<td>Review date</td>
+<td>Google Places API</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Star rating per review</td>
+<td>Google Places API</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>&quot;Read all reviews&quot; link</td>
+<td>Google Maps URL</td>
+<td>???</td>
+<td>Links to Google Maps place page</td>
+</tr>
+</tbody></table>
+<ul>
+<li>All data fetched live from API ??? nothing stored</li>
+<li>Section visually distinct from Castlecore content (white card, Google branding, Google Maps attribution)</li>
+</ul>
+<h3>5d. Terrain &amp; Accessibility</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Terrain chips</td>
+<td>Official heritage site / manual enrichment</td>
+<td>??? if available</td>
+<td>e.g. Steep Approach, Cobblestones, Wheelchair Access</td>
+</tr>
+<tr>
+<td>Description paragraph</td>
+<td>Official heritage site / manual enrichment</td>
+<td>??? if available</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Check official website (HES, English Heritage, Cadw, OPW) for accessibility info</li>
+<li>If found, show section. If not, hide entirely.</li>
+<li>Community contributions via Guest Book fill gaps over time</li>
+</ul>
+<h3>5e. Getting There</h3>
+<p><strong>Conditional ??? minimum viable version always shows, detail cards only when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Get Directions link</td>
+<td>Google Maps (coordinates)</td>
+<td>???</td>
+<td>Always available ??? we have coords for every listing</td>
+</tr>
+<tr>
+<td>Transport cards (Car/Train/Bus/Airport)</td>
+<td>Official sources / manual enrichment</td>
+<td>??? if available</td>
+<td>Only show when we have verified data</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Minimum: directions link (always shows)</li>
+<li>Enhanced: transport detail cards when data exists from official sources</li>
+<li>Never show transport info we can&#39;t verify</li>
+</ul>
+<h2>Section 6: Main Content ??? History Tab</h2>
+<h3>6a. Timeline</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Date</td>
+<td>Wikipedia / official sources</td>
+<td>??? if available</td>
+<td>e.g. &quot;c. 1130&quot;, &quot;1314&quot;, &quot;1573&quot;</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Bold summary of event</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Paragraph based on verified sources</td>
+</tr>
+<tr>
+<td>Image (optional)</td>
+<td>Wikimedia Commons (hosted on R2)</td>
+<td>??? if available</td>
+<td>Proper CC attribution with linked author + license</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Written by us, every claim sourced from approved links</li>
+<li>Not every listing will have a rich timeline ??? some may have 2-3 entries, some none</li>
+<li>Hide section entirely if no timeline data exists</li>
+</ul>
+<h3>6b. People</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td></td>
+</tr>
+<tr>
+<td>Dates</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td>Birth???death years</td>
+</tr>
+<tr>
+<td>Portrait image</td>
+<td>Wikimedia Commons</td>
+<td>??? if available</td>
+<td>CC attribution</td>
+</tr>
+<tr>
+<td>Role description</td>
+<td>Written by us</td>
+<td>??? if available</td>
+<td>Brief connection to the site</td>
+</tr>
+<tr>
+<td>Wikipedia link</td>
+<td>Wikipedia</td>
+<td>??? if available</td>
+<td>Card links to Wikipedia article</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Not every site has notable people ??? hide if none</li>
+</ul>
+<h3>6c. Videos</h3>
+<p><strong>Conditional ??? only shows when relevant videos found.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>YouTube embed (max 2)</td>
+<td>YouTube search</td>
+<td>??? if available</td>
+<td>Search by location name</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Prioritize tours, visits, walkthroughs</li>
+<li>If not sure of a video&#39;s relevance to the specific site, don&#39;t include it</li>
+<li>Maximum 2 videos per listing</li>
+<li>Hide section if no relevant videos found</li>
+</ul>
+<h3>6d. Architecture &amp; Construction</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description paragraph</td>
+<td>Written by us (Wikipedia / official sources)</td>
+<td>??? if available</td>
+<td>Standalone section ??? not merged into About</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Focused on building periods, construction materials, architectural style</li>
+<li>Separate from the About section</li>
+</ul>
+<h3>6e. Designations</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Designation list</td>
+<td>Heritage body records (HES, English Heritage, Cadw, OPW) / Wikipedia</td>
+<td>??? if available</td>
+<td>e.g. Scheduled Ancient Monument, Category A Listed, UNESCO</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Structured data ??? should be reliably pullable from heritage bodies</li>
+</ul>
+<h3>6f. Further Reading</h3>
+<p><strong>Conditional ??? only shows when data exists.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bibliography entries</td>
+<td>Wikipedia references / official sources</td>
+<td>??? if available</td>
+<td>Author, title, year</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Hide if no sources available</li>
+</ul>
+<h2>Section 7: Main Content ??? Guest Book Tab</h2>
+<h3>7a. Intro + Write CTA</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Title</td>
+<td>Template (&quot;The {Name} Guest Book&quot;)</td>
+<td>???</td>
+<td>Auto-generated from listing name</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Template</td>
+<td>???</td>
+<td>Static copy</td>
+</tr>
+<tr>
+<td>&quot;Sign the Guest Book&quot; button</td>
+<td>Template</td>
+<td>???</td>
+<td>Links to submission flow (built with user account system)</td>
+</tr>
+<tr>
+<td>&quot;Be the first&quot; prompt</td>
+<td>Template</td>
+<td>???</td>
+<td>Shown when listing has zero entries</td>
+</tr>
+</tbody></table>
+<h3>7b. Prompt Cards</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5 category cards</td>
+<td>Static / template</td>
+<td>???</td>
+<td>Same for every listing</td>
+</tr>
+</tbody></table>
+<p>Categories (fixed):</p>
+<ul>
+<li><p>???? I&#39;ve Been (visit)</p>
+</li>
+<li><p>???? I Know Something (knowledge)</p>
+</li>
+<li><p>??? Recommendations (recommendations)</p>
+</li>
+<li><p>?????????????????? Family Ties (family)</p>
+</li>
+<li><p>??????? Folklore &amp; Legend (folklore)</p>
+</li>
+<li><p>Click to filter entries by type + update CTA text</p>
+</li>
+<li><p>Click again to clear filter and show all</p>
+</li>
+<li><p>JS filtering already built in prototype ??? keep as-is for template</p>
+</li>
+</ul>
+<h3>7c. Entries</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type badge</td>
+<td>User-selected category</td>
+<td>???</td>
+<td>Maps to one of the 5 prompt categories</td>
+</tr>
+<tr>
+<td>Avatar</td>
+<td>User account</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>User account</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Auto-generated</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Mood/tag</td>
+<td>Same as entry type badge</td>
+<td>???</td>
+<td>Not a separate field ??? uses the prompt card category</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>User-submitted</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Like button + count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+<tr>
+<td>Reply count</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+<tr>
+<td>Report button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Requires auth</td>
+</tr>
+</tbody></table>
+<ul>
+<li>All user-generated content ??? requires user account system + database</li>
+<li>Listings launch with empty Guest Book + &quot;Be the first&quot; CTA</li>
+<li>Submission form built as part of user account system (not in template)</li>
+</ul>
+<h3>Moderation</h3>
+<ul>
+<li>Entries go into a <strong>review queue</strong> before publishing (not auto-publish)</li>
+<li>Agent reviews for spam and offensive content</li>
+<li><strong>Captcha required</strong> on submission form (e.g. reCAPTCHA, hCaptcha, Turnstile)</li>
+</ul>
+<h2>Section 8: Sidebar</h2>
+<p><em>Desktop only ??? collapses into Visit tab on mobile.</em></p>
+<h3>8a. Hours &amp; Admission</h3>
+<p><strong>Varies by status tag:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>What to show</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Open to Visitors</strong></td>
+<td>Full hours, admission price, time needed ??? all from Google Places API (conditional, show if available)</td>
+</tr>
+<tr>
+<td><strong>Freely Accessible</strong></td>
+<td>&quot;Open 24/7&quot; + &quot;Free admission&quot; ??? static, no other info needed</td>
+</tr>
+<tr>
+<td><strong>Book to Experience</strong></td>
+<td>&quot;Contact property directly to arrange your visit&quot; ??? static</td>
+</tr>
+<tr>
+<td><strong>Private</strong></td>
+<td>No sidebar hours/admission section at all</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Open/Closed status</td>
+<td>Google Places API</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Hours</td>
+<td>Google Places API</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Admission price</td>
+<td>Google Places API / official site</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+<tr>
+<td>Time needed</td>
+<td>Editorial estimate</td>
+<td>??? if available</td>
+<td>Only for &quot;Open to Visitors&quot;</td>
+</tr>
+</tbody></table>
+<h3>8b. Location</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Map embed</td>
+<td>Google Maps iframe (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>Google Places API / listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Get Directions link</td>
+<td>Google Maps URL (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+</tbody></table>
+<h3>8c. Links &amp; Sources</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Official website</td>
+<td>Listing data (from audit)</td>
+<td>??? if available</td>
+<td>Conditional</td>
+</tr>
+<tr>
+<td>Wikipedia link</td>
+<td>Listing data (from audit)</td>
+<td>???</td>
+<td>All approved listings have this</td>
+</tr>
+<tr>
+<td>Heritage body link</td>
+<td>Listing data (from audit)</td>
+<td>??? if available</td>
+<td>Conditional</td>
+</tr>
+</tbody></table>
+<h2>Section 9: Nearby Sites</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4 nearest listings</td>
+<td>Calculated from coordinates</td>
+<td>???</td>
+<td>Auto-generated ??? find nearest approved listings by distance</td>
+</tr>
+<tr>
+<td>Thumbnail image</td>
+<td>Google Places API</td>
+<td>???</td>
+<td>Same photo flow as gallery/browse pages</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Meta (century + type)</td>
+<td>Listing data</td>
+<td>???</td>
+<td></td>
+</tr>
+<tr>
+<td>Distance</td>
+<td>Calculated from coordinates</td>
+<td>???</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable ??? no manual input needed</li>
+</ul>
+<hr>
+<h2>Section 10: Explore More</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tag pills</td>
+<td>Derived from listing data</td>
+<td>???</td>
+<td>Country, region, type, traits</td>
+</tr>
+<tr>
+<td>Links</td>
+<td>Browse/collection page URLs</td>
+<td>???</td>
+<td>Auto-generated</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable ??? no manual input needed</li>
+</ul>
+<hr>
+<h2>Section 11: Mobile Sticky Bar</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Share button</td>
+<td>Web Share API / clipboard fallback</td>
+<td>???</td>
+<td>JS only, no data needed</td>
+</tr>
+<tr>
+<td>Directions button</td>
+<td>Google Maps URL (coordinates)</td>
+<td>???</td>
+<td>Available for all listings</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Fully automatable</li>
+</ul>
+<hr>
+<h2>Section 12: Help Us Improve (Below Tabs)</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+<th>v1?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Title + description</td>
+<td>Template</td>
+<td>???</td>
+<td>Listing-specific copy (&quot;{Name}&quot;)</td>
+</tr>
+<tr>
+<td>Submit a Photo button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue (separate queue from Guest Book)</td>
+</tr>
+<tr>
+<td>Share a Tip button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue</td>
+</tr>
+<tr>
+<td>Report an Issue button</td>
+<td>User accounts + API</td>
+<td>???</td>
+<td>Submission ??? review queue</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Same backend as Guest Book but feeds into a <strong>separate review queue</strong></li>
+<li>Captcha required on submissions</li>
+<li>Agent reviews before publishing</li>
+</ul>
+
+
+</body>
+</html>
