@@ -32,6 +32,51 @@ export default {
       return new Response(object.body, { headers });
     }
 
+    // Public API for listing pages (not behind Cloudflare Access)
+    const publicSlugMatch = path.match(/^\/public\/listing\/(.+)$/);
+    if (publicSlugMatch && request.method === 'GET') {
+      try {
+        const response = await getListingBySlug(publicSlugMatch[1], env);
+        return addCors(response);
+      } catch (err) {
+        return addCors(json({ error: err.message }, 500));
+      }
+    }
+
+    // Public Google Places proxy (keeps API key server-side)
+    const placesMatch = path.match(/^\/public\/places\/(.+)$/);
+    if (placesMatch && request.method === 'GET') {
+      try {
+        return addCors(await getGooglePlacesData(placesMatch[1], env));
+      } catch (err) {
+        return addCors(json({ error: err.message }, 500));
+      }
+    }
+
+    // Public Google Places photo proxy
+    const photoMatch = path.match(/^\/public\/places-photo\/(.+)$/);
+    if (photoMatch && request.method === 'GET') {
+      try {
+        return await getGooglePlacesPhoto(decodeURIComponent(photoMatch[1]), env);
+      } catch (err) {
+        return new Response('Photo error', { status: 500 });
+      }
+    }
+
+    // Dynamic listing pages: /listing/{slug} → serve listing.html
+    if (path.match(/^\/listing\/[a-z0-9-]+$/)) {
+      const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
+      const html = await asset.text();
+      return new Response(html, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
+    }
+
+    // /site/* — resolve without .html extension
+    if (path.startsWith('/site/') && !path.includes('.')) {
+      const withHtml = new Request(new URL(path + '.html', url.origin));
+      const asset = await env.ASSETS.fetch(withHtml);
+      if (asset.status === 200) return asset;
+    }
+
     // Everything else: static assets
     return env.ASSETS.fetch(request);
   }
@@ -52,6 +97,10 @@ async function handleAPI(path, request, env) {
   }
   if (path.match(/^\/api\/listings\/(\d+)$/) && method === 'GET') {
     return getListing(path.split('/')[3], env);
+  }
+  const slugMatch = path.match(/^\/api\/listings\/by-slug\/(.+)$/);
+  if (slugMatch && method === 'GET') {
+    return getListingBySlug(slugMatch[1], env);
   }
   if (path.match(/^\/api\/listings\/(\d+)$/) && method === 'PUT') {
     return updateListing(path.split('/')[3], request, env);
@@ -80,6 +129,11 @@ async function handleAPI(path, request, env) {
   // --- PUBLISH ---
   if (path.match(/^\/api\/listings\/(\d+)\/publish$/) && method === 'POST') {
     return publishListing(path.split('/')[3], env);
+  }
+
+  // --- CACHE GOOGLE PLACES DATA ---
+  if (path.match(/^\/api\/listings\/(\d+)\/cache-places$/) && method === 'POST') {
+    return cacheGooglePlacesData(path.split('/')[3], env);
   }
 
   // --- STATS ---
@@ -186,6 +240,12 @@ async function getListings(request, env) {
   });
 }
 
+async function getListingBySlug(slug, env) {
+  const listing = await env.DB.prepare('SELECT id FROM listings WHERE slug = ?').bind(slug).first();
+  if (!listing) return json({ error: 'Not found' }, 404);
+  return getListing(listing.id, env);
+}
+
 async function getListing(id, env) {
   const listing = await env.DB.prepare('SELECT * FROM listings WHERE id = ?').bind(id).first();
   if (!listing) return json({ error: 'Not found' }, 404);
@@ -246,9 +306,18 @@ async function updateListing(id, request, env) {
 
   for (const key of allowed) {
     if (key in data) {
+      let val = data[key];
+      // Coerce empty strings to null (prevents CHECK constraint failures)
+      if (val === '') val = null;
       fields.push(`${key} = ?`);
-      values.push(data[key]);
+      values.push(val);
     }
+  }
+
+  // Auto-update slug when name changes
+  if ('name' in data && !('slug' in data)) {
+    fields.push('slug = ?');
+    values.push(slugify(data.name));
   }
 
   if (fields.length === 0) return json({ error: 'No fields to update' }, 400);
@@ -632,4 +701,130 @@ function slugify(text) {
   return text.toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+// ============================================
+// GOOGLE PLACES
+// ============================================
+async function getGooglePlacesData(placeId, env) {
+  const apiKey = env.GOOGLE_PLACES_KEY;
+  if (!apiKey) return json({ error: 'Google Places API key not configured' }, 500);
+
+  // LIVE fields only: photos, reviews, rating (change frequently / need freshness)
+  const fields = 'rating,userRatingCount,reviews,photos,currentOpeningHours';
+  const res = await fetch(
+    `https://places.googleapis.com/v1/places/${placeId}?fields=${fields}&languageCode=en`, {
+      headers: {
+        'X-Goog-Api-Key': apiKey,
+        'Content-Type': 'application/json'
+      }
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.text();
+    return json({ error: 'Google Places API error', status: res.status, detail: err }, 502);
+  }
+
+  const data = await res.json();
+
+  // Transform photos to include proxied URLs (can't expose raw photo references to client)
+  const photos = (data.photos || []).slice(0, 6).map((p, i) => ({
+    url: `/public/places-photo/${encodeURIComponent(p.name)}`,
+    attribution: p.authorAttributions?.[0]?.displayName || 'Google Maps',
+    attributionUrl: p.authorAttributions?.[0]?.uri || null,
+    width: p.widthPx,
+    height: p.heightPx
+  }));
+
+  // Transform reviews
+  const reviews = (data.reviews || []).slice(0, 4).map(r => ({
+    author: r.authorAttribution?.displayName || 'Anonymous',
+    rating: r.rating,
+    text: r.text?.text || '',
+    time: r.relativePublishTimeDescription || '',
+    profilePhoto: r.authorAttribution?.photoUri || null
+  }));
+
+  // Get cached data from DB (hours, address, etc. stored during enrichment)
+  const listing = await env.DB.prepare(
+    'SELECT google_hours, google_address, google_editorial_summary, google_price_level FROM listings WHERE google_place_id = ?'
+  ).bind(placeId).first();
+
+  return json({
+    rating: data.rating || null,
+    reviewCount: data.userRatingCount || null,
+    isOpen: data.currentOpeningHours?.openNow ?? null,
+    photos,
+    reviews,
+    // Cached from DB (stored during enrichment)
+    hours: listing?.google_hours ? JSON.parse(listing.google_hours) : null,
+    address: listing?.google_address || null,
+    editorialSummary: listing?.google_editorial_summary || null,
+    priceLevel: listing?.google_price_level || null,
+  });
+}
+
+// Cache Google Places static data (called during enrichment, behind auth)
+async function cacheGooglePlacesData(listingId, env) {
+  const listing = await env.DB.prepare('SELECT google_place_id FROM listings WHERE id = ?').bind(listingId).first();
+  if (!listing?.google_place_id) return json({ error: 'No google_place_id for this listing' }, 400);
+
+  const apiKey = env.GOOGLE_PLACES_KEY;
+  if (!apiKey) return json({ error: 'Google Places API key not configured' }, 500);
+
+  // Fetch ONLY the fields we want to cache (one-time cost)
+  const fields = 'regularOpeningHours,formattedAddress,editorialSummary,priceLevel';
+  const res = await fetch(
+    `https://places.googleapis.com/v1/places/${listing.google_place_id}?fields=${fields}&languageCode=en`, {
+      headers: { 'X-Goog-Api-Key': apiKey, 'Content-Type': 'application/json' }
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.text();
+    return json({ error: 'Google Places API error', detail: err }, 502);
+  }
+
+  const data = await res.json();
+
+  await env.DB.prepare(
+    `UPDATE listings SET 
+      google_hours = ?, google_address = ?, google_editorial_summary = ?, google_price_level = ?,
+      updated_at = datetime('now')
+    WHERE id = ?`
+  ).bind(
+    data.regularOpeningHours?.weekdayDescriptions ? JSON.stringify(data.regularOpeningHours.weekdayDescriptions) : null,
+    data.formattedAddress || null,
+    data.editorialSummary?.text || null,
+    data.priceLevel || null,
+    listingId
+  ).run();
+
+  return json({
+    cached: true,
+    hours: data.regularOpeningHours?.weekdayDescriptions || null,
+    address: data.formattedAddress || null,
+    editorialSummary: data.editorialSummary?.text || null,
+    priceLevel: data.priceLevel || null,
+  });
+}
+
+// Proxy Google Places photos (keeps API key server-side)
+async function getGooglePlacesPhoto(photoName, env) {
+  const apiKey = env.GOOGLE_PLACES_KEY;
+  if (!apiKey) return new Response('No API key', { status: 500 });
+
+  const res = await fetch(
+    `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&skipHttpRedirect=true`, {
+      headers: { 'X-Goog-Api-Key': apiKey }
+    }
+  );
+
+  if (!res.ok) return new Response('Photo not found', { status: 404 });
+  const data = await res.json();
+  if (!data.photoUri) return new Response('No photo URI', { status: 404 });
+
+  // Redirect to the actual photo
+  return Response.redirect(data.photoUri, 302);
 }

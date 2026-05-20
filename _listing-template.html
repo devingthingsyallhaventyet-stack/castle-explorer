@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title id="page-title">Loading... — castlecore</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #faf8f4;
+  --cream-mid: #f0ebe0;
+  --ink: #2a1f14;
+  --ink-light: #4a3928;
+  --ink-faded: #8a7e6e;
+  --burgundy: #8b2335;
+  --burgundy-glow: #a12940;
+  --gold: #9a7b30;
+  --border: #e0d8c8;
+  --white: #fff;
+  --green: #2e7d32;
+  --red: #c62828;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --display: 'Playfair Display', serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+a { color: var(--burgundy); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === NAV === */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,248,244,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px clamp(1.5rem, 5vw, 4rem);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: var(--display); font-size: 1.1rem;
+  color: var(--ink); letter-spacing: 2px; font-weight: 700;
+}
+.nav-logo span { color: var(--burgundy); }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a {
+  font-family: var(--sans); font-size: .75rem; font-weight: 500;
+  color: var(--ink-faded); letter-spacing: 1px; text-transform: uppercase;
+  text-decoration: none;
+}
+.nav-links a:hover { color: var(--burgundy); text-decoration: none; }
+
+/* === BREADCRUMBS === */
+.breadcrumbs {
+  max-width: 1300px; margin: 0 auto;
+  padding: 1rem 20px 0;
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+  letter-spacing: .5px;
+}
+.breadcrumbs a { color: var(--ink-faded); }
+.breadcrumbs a:hover { color: var(--burgundy); }
+.breadcrumbs .sep { margin: 0 6px; opacity: .4; }
+
+/* === HEADER === */
+.listing-header {
+  max-width: 1300px; margin: 0 auto;
+  padding: 1rem 20px 0;
+}
+.listing-tags { display: flex; gap: .5rem; margin-bottom: .6rem; flex-wrap: wrap; }
+.tag {
+  font-family: var(--sans); font-size: .6rem; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 2px;
+}
+.tag-type { background: var(--burgundy); color: #fff; }
+.tag-status { background: var(--green); color: #fff; }
+.tag-condition { background: var(--cream-mid); color: var(--ink-faded); border: 1px solid var(--border); }
+.tag-century { background: rgba(154,123,48,.12); color: var(--gold); border: 1px solid rgba(154,123,48,.25); }
+.tag-custom { background: rgba(139,35,53,.08); color: var(--burgundy); border: 1px solid rgba(139,35,53,.2); }
+
+.listing-header h1 {
+  font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: .4rem;
+}
+.listing-subtitle {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  color: var(--ink-light); line-height: 1.5; max-width: 700px;
+}
+.listing-meta {
+  display: flex; gap: 1.5rem; margin-top: .8rem; flex-wrap: wrap; align-items: center;
+}
+.listing-meta span {
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-faded);
+}
+
+/* === STATS BAR === */
+.stats-bar {
+  max-width: 1300px; margin: 0 auto;
+  padding: .8rem 20px;
+  display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+.stat {
+  display: flex; flex-direction: column; align-items: center;
+}
+.stat-num { font-family: var(--sans); font-weight: 600; font-size: .95rem; color: var(--ink); }
+.stat-label { font-family: var(--sans); font-size: .6rem; color: var(--ink-faded); text-transform: uppercase; letter-spacing: 1px; }
+.stat-divider { width: 1px; height: 30px; background: var(--border); }
+
+.action-buttons { display: flex; gap: .5rem; margin-left: auto; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 2px;
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .5px; cursor: pointer; transition: all .2s;
+  border: 1px solid var(--border); background: var(--white); color: var(--ink);
+  text-decoration: none;
+}
+.btn:hover { border-color: var(--ink-faded); text-decoration: none; }
+.btn-primary { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
+.btn-primary:hover { background: var(--burgundy-glow); color: #fff; }
+.btn-interact.active { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
+.btn-interact.active:hover { background: var(--burgundy-glow); }
+
+/* === GALLERY STRIP === */
+.gallery { max-width: 1600px; margin: 0 auto; padding: 1rem 20px;
+  position: relative;
+}
+.gallery-strip-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.gallery-strip {
+  display: flex; gap: 8px;
+  overflow-x: auto; scroll-behavior: smooth;
+  -ms-overflow-style: none; scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+.gallery-strip::-webkit-scrollbar { display: none; }
+.gallery-strip img {
+  flex: 0 0 auto;
+  height: 500px; width: auto; max-width: 80%;
+  object-fit: cover; border-radius: 4px;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.gallery-strip img:hover { opacity: .92; }
+.gallery-strip .img-wrap {
+  flex: 0 0 auto; position: relative;
+}
+.gallery-strip .img-wrap img {
+  height: 500px; width: auto; max-width: 80vw;
+  object-fit: cover; border-radius: 4px;
+  scroll-snap-align: start; cursor: pointer;
+  transition: opacity .2s; flex: initial;
+}
+.gallery-strip .img-wrap:hover .img-credit {
+  opacity: 1;
+}
+.img-credit {
+  position: absolute; bottom: 8px; left: 8px; right: 8px;
+  background: rgba(0,0,0,.7); color: #fff;
+  padding: 5px 10px; border-radius: 3px;
+  font-family: var(--sans); font-size: .68rem;
+  opacity: 0; transition: opacity .25s;
+  pointer-events: none;
+}
+.gallery-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.9); border: none;
+  width: 44px; height: 44px; border-radius: 50%;
+  font-size: 1.2rem; cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2); transition: all .2s;
+  color: var(--ink); z-index: 2;
+}
+.gallery-nav:hover { background: #fff; box-shadow: 0 3px 14px rgba(0,0,0,.3); }
+.gallery-prev { left: 12px; }
+.gallery-next { right: 12px; }
+.gallery-credit {
+  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
+  margin-top: .4rem; text-align: right;
+}
+.gallery-thumbs {
+  display: flex; gap: 6px; margin-top: 8px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.gallery-thumbs::-webkit-scrollbar { display: none; }
+.gallery-thumbs img {
+  flex: 0 0 auto;
+  width: 80px; height: 56px; object-fit: cover;
+  border-radius: 3px; cursor: pointer;
+  border: 2px solid transparent;
+  opacity: .6; transition: all .2s;
+}
+.gallery-thumbs img:hover { opacity: 1; }
+.gallery-thumbs img.active { border-color: var(--burgundy); opacity: 1; }
+
+/* === LIGHTBOX === */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.92); align-items: center; justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 92vh; object-fit: contain;
+  border-radius: 4px; cursor: default;
+}
+.lightbox-close {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; color: #fff;
+  font-size: 2rem; cursor: pointer; opacity: .7;
+  font-family: var(--sans); line-height: 1;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.15); border: none;
+  width: 48px; height: 48px; border-radius: 50%;
+  font-size: 1.4rem; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.3); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-attribution {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  font-family: var(--sans); font-size: .75rem; color: rgba(255,255,255,.8);
+  background: rgba(0,0,0,.6); padding: 6px 14px; border-radius: 4px;
+  white-space: nowrap; max-width: 90vw; overflow: hidden; text-overflow: ellipsis;
+}
+.lightbox-attribution a { color: rgba(255,255,255,.9); text-decoration: underline; }
+.lightbox-counter {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  font-family: var(--sans); font-size: .75rem; color: rgba(255,255,255,.6);
+}
+
+/* === MAIN LAYOUT === */
+.content-layout {
+  max-width: 1300px; margin: 0 auto;
+  padding: 1.5rem 20px 2rem;
+  display: grid; grid-template-columns: 1fr 320px; gap: 3.5rem;
+  align-items: start;
+}
+.main-content { min-width: 0; }
+
+/* === ABOUT === */
+/* === PILL STRIP === */
+.pill-strip {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+}
+.pill {
+  display: inline-flex; align-items: center;
+  padding: 8px 16px; border-radius: 50px;
+  background: var(--white); border: 1px solid var(--border);
+  font-family: var(--sans); font-size: .8rem; font-weight: 500;
+  color: var(--ink); white-space: nowrap;
+  transition: all .2s;
+}
+.pill:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.pill a { color: inherit; text-decoration: none; }
+.pill a:hover { text-decoration: none; }
+
+/* icon cards removed */
+
+/* === CONTENT TABS === */
+.content-tabs {
+  display: flex; gap: 0; margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+.content-tab {
+  font-family: var(--sans); font-size: .85rem; font-weight: 600;
+  color: var(--ink-faded); background: none; border: none;
+  padding: .7rem 1.5rem; cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+  transition: all .2s;
+}
+.content-tab:hover { color: var(--ink); }
+.content-tab.active {
+  color: var(--burgundy); border-bottom-color: var(--burgundy);
+}
+
+.about-section { margin-bottom: 2.5rem; padding-top: .5rem; }
+.about-read-more { display: none; }
+.about-more.expanded { display: block !important; }
+
+/* === HISTORY TAB === */
+.history-section { margin-bottom: 2.5rem; padding-top: .5rem; }
+.history-timeline { position: relative; padding-left: 2rem; }
+.history-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 4px; bottom: 4px;
+  width: 2px; background: var(--border);
+}
+.timeline-item {
+  position: relative; margin-bottom: 1.8rem;
+}
+.timeline-item::before {
+  content: ''; position: absolute; left: -2rem; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--burgundy); border: 2px solid var(--cream);
+  z-index: 1;
+}
+.timeline-date {
+  font-family: var(--sans); font-size: .72rem; font-weight: 700;
+  color: var(--burgundy); letter-spacing: .5px; margin-bottom: .2rem;
+}
+.timeline-body strong {
+  font-family: var(--sans); font-size: .9rem; color: var(--ink);
+  display: block; margin-bottom: .3rem;
+}
+.timeline-body p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.8;
+  color: var(--ink-light); margin: 0;
+}
+.timeline-img {
+  width: 100%; border-radius: 4px; margin-top: .6rem;
+  border: 1px solid var(--border);
+}
+.history-subsection {
+  margin-top: 2rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.history-subsection h3 {
+  font-family: var(--sans); font-size: .82rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .6rem; text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.history-subsection p {
+  font-family: var(--serif); font-size: 16px; line-height: 1.8;
+  color: var(--ink-light);
+}
+.history-subsection ul {
+  list-style: none; padding: 0;
+}
+.history-subsection li {
+  font-family: var(--serif); font-size: 15px; line-height: 1.7;
+  color: var(--ink-light); padding: .3rem 0;
+  border-bottom: 1px solid rgba(224,216,200,.4);
+}
+.history-subsection li:last-child { border-bottom: none; }
+.about-section p {
+  font-family: var(--serif); font-size: 18px; line-height: 1.9; color: var(--ink-light);
+  margin-top: 0; margin-bottom: 2rem; padding-bottom: 0;
+}
+.about-section p + p {
+  margin-top: 2rem;
+}
+.about-photo {
+  width: 100%; border-radius: 4px;
+  object-fit: cover; max-height: 360px;
+  margin-top: 2rem; margin-bottom: .5rem;
+}
+.about-photo-caption {
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+  margin-bottom: 2rem; font-style: italic;
+}
+/* drop cap removed */
+
+/* === PEOPLE TAB === */
+.people-grid {
+  display: flex; flex-direction: column; gap: .8rem;
+  padding-top: .5rem;
+}
+.person-card {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1rem 1.2rem;
+  text-decoration: none; transition: all .2s;
+}
+.person-card:hover {
+  border-color: var(--burgundy); transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06); text-decoration: none;
+}
+.person-photo {
+  width: 64px; height: 64px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.person-info { min-width: 0; }
+.person-name {
+  font-family: var(--sans); font-size: .9rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .1rem;
+}
+.person-dates {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+  margin-bottom: .4rem;
+}
+.person-role {
+  font-family: var(--serif); font-size: 15px; line-height: 1.7;
+  color: var(--ink-light);
+}
+
+/* === SECTIONS === */
+.section { margin-bottom: 2rem; }
+.section h2 {
+  font-family: var(--sans); font-size: 1.3rem; font-weight: 700;
+  margin-bottom: .8rem; padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* === KEY FACTS === */
+.key-facts {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; margin-top: .5rem;
+}
+.kf-item {
+  padding: .7rem .9rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.kf-item:nth-child(even) { border-right: none; }
+.kf-item:nth-last-child(-n+2) { border-bottom: none; }
+.kf-label {
+  font-family: var(--sans); font-size: .55rem; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--ink-faded); margin-bottom: 2px;
+}
+.kf-value {
+  font-family: var(--serif); font-size: .95rem; color: var(--ink);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  position: sticky; top: 70px;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.sidebar-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 4px; padding: 1.2rem;
+}
+.sidebar-card h3 {
+  font-family: var(--sans); font-size: .65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-faded); margin-bottom: .8rem;
+}
+
+/* Visit info */
+.visit-status {
+  display: flex; align-items: center; gap: .5rem;
+  margin-bottom: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border);
+}
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.status-dot.open { background: var(--green); }
+.status-dot.closed { background: var(--red); }
+.status-text {
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+}
+.status-text.open { color: var(--green); }
+.status-text.closed { color: var(--red); }
+.status-hours {
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-faded);
+  margin-left: auto;
+}
+
+.visit-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: .4rem 0; border-bottom: 1px solid rgba(224,216,200,.5);
+}
+.visit-row:last-child { border-bottom: none; }
+.visit-label {
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+}
+.visit-value {
+  font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--ink);
+}
+.visit-value.free { color: var(--green); font-weight: 600; }
+
+.hours-toggle {
+  font-family: var(--sans); font-size: .68rem; color: var(--burgundy);
+  cursor: pointer; margin-top: .3rem; display: inline-block;
+}
+.hours-full {
+  display: none; margin-top: .4rem;
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+  line-height: 1.8;
+}
+.hours-full.show { display: block; }
+
+.sidebar-directions {
+  display: block; text-align: center; margin-top: .8rem;
+  background: var(--burgundy); color: #fff; padding: 11px;
+  border-radius: 3px; font-family: var(--sans); font-weight: 600;
+  font-size: .72rem; letter-spacing: 1px; text-transform: uppercase;
+  transition: all .2s; text-decoration: none;
+}
+.sidebar-directions:hover { background: var(--burgundy-glow); color: #fff; text-decoration: none; }
+
+/* Address */
+.address-text {
+  font-family: var(--sans); font-size: .82rem; color: var(--ink-light);
+  line-height: 1.5;
+}
+
+/* Terrain chips */
+.terrain-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chip {
+  padding: 4px 10px; border-radius: 2px;
+  font-family: var(--sans); font-size: .65rem; font-weight: 500;
+}
+.chip-green { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.chip-amber { background: #fff8e1; color: #e65100; border: 1px solid #fff0b3; }
+.chip-red { background: #fce4ec; color: #c62828; border: 1px solid #f8bbd0; }
+
+/* Time needed */
+.time-needed {
+  display: flex; align-items: center; gap: .5rem;
+  padding: .8rem 0; font-family: var(--sans); font-size: .82rem; color: var(--ink);
+}
+.time-needed .icon { font-size: 1rem; }
+
+/* === NEARBY === */
+.nearby-section {
+  max-width: 1300px; margin: 0 auto;
+  padding: 0 20px 2rem;
+}
+.nearby-section h2 {
+  font-family: var(--sans); font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 1rem;
+}
+.nearby-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .8rem;
+}
+.nearby-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 4px;
+  overflow: hidden; text-decoration: none; display: block; transition: all .2s;
+}
+.nearby-card:hover { border-color: var(--ink-faded); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.06); text-decoration: none; }
+.nearby-card img { width: 100%; height: 140px; object-fit: cover; }
+.nearby-body { padding: .8rem; }
+.nearby-name {
+  font-family: var(--sans); font-size: .9rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .2rem;
+}
+.nearby-meta {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+}
+.nearby-distance {
+  font-family: var(--sans); font-size: .65rem; color: var(--burgundy);
+  font-weight: 600; margin-top: .3rem;
+}
+
+/* === EXPLORE MORE === */
+.explore-section {
+  max-width: 1300px; margin: 0 auto;
+  padding: 1rem 20px 2rem;
+  border-top: 1px solid var(--border);
+}
+.explore-section h2 {
+  font-family: var(--sans); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: .8rem;
+}
+.explore-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+.explore-tag {
+  padding: 8px 16px; border: 1px solid var(--border); border-radius: 3px;
+  font-family: var(--sans); font-size: .75rem; color: var(--ink-light);
+  text-decoration: none; transition: all .2s;
+}
+.explore-tag:hover { border-color: var(--burgundy); color: var(--burgundy); text-decoration: none; }
+
+/* === SOURCES === */
+.sources {
+  max-width: 1300px; margin: 0 auto;
+  padding: 1rem 20px 2rem;
+}
+.sources h3 {
+  font-family: var(--sans); font-size: .65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-faded); margin-bottom: .5rem;
+}
+.sources a {
+  font-family: var(--sans); font-size: .78rem; color: var(--ink-faded);
+  display: block; line-height: 1.8;
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--border); padding: 1.5rem;
+  text-align: center; background: var(--cream-mid);
+  margin-top: 2rem;
+}
+footer p {
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+}
+
+/* === RESPONSIVE === */
+/* === GOOGLE REVIEWS === */
+.google-reviews-block {
+  background: #fff; border: 1px solid #dadce0; border-radius: 8px;
+  padding: 1.4rem 1.5rem; margin-bottom: 2.5rem;
+}
+.google-reviews-title {
+  display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem;
+}
+.google-reviews-title svg { width: 20px; height: 20px; flex-shrink: 0; }
+.google-reviews-title span {
+  font-family: Roboto, var(--sans); font-size: .82rem; font-weight: 500;
+  color: #5E5E5E; letter-spacing: .3px;
+}
+.google-reviews-header {
+  display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem;
+}
+.google-reviews-logo {
+  width: 24px; height: 24px;
+}
+.google-reviews-summary {
+  display: flex; align-items: center; gap: .4rem;
+}
+.google-rating-num {
+  font-family: var(--sans); font-size: 1.4rem; font-weight: 700; color: var(--ink);
+}
+.google-stars { color: #fbbc04; font-size: .9rem; letter-spacing: 1px; }
+.google-review-count {
+  font-family: var(--sans); font-size: .72rem; color: var(--ink-faded);
+}
+.google-review {
+  padding: 1rem 0; border-bottom: 1px solid #e8eaed;
+}
+.google-review:last-child { border-bottom: none; }
+.google-review-header {
+  display: flex; align-items: center; gap: .6rem; margin-bottom: .4rem;
+}
+.google-review-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #e8eaed; display: flex; align-items: center;
+  justify-content: center; font-family: var(--sans); font-size: .75rem;
+  font-weight: 600; color: #5E5E5E; flex-shrink: 0;
+}
+.google-review-meta {
+  display: flex; flex-direction: column;
+}
+.google-review-name {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600; color: var(--ink);
+}
+.google-review-source {
+  font-family: Roboto, var(--sans); font-size: .6rem; color: #5E5E5E;
+}
+.google-review-date {
+  font-family: var(--sans); font-size: .65rem; color: var(--ink-faded);
+}
+.google-review-stars { color: #fbbc04; font-size: .72rem; margin-bottom: .3rem; }
+.google-review-text {
+  font-family: var(--serif); font-size: 15px; line-height: 1.7;
+  color: var(--ink-light);
+}
+.google-reviews-link {
+  display: inline-block; margin-top: 1rem;
+  font-family: var(--sans); font-size: .75rem; font-weight: 500;
+  color: #1a73e8;
+}
+.google-reviews-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: .5rem;
+}
+.google-reviews-attribution {
+  font-family: Roboto, sans-serif; font-size: 12px; font-weight: 400;
+  color: #5E5E5E; letter-spacing: normal;
+}
+
+/* === GUEST BOOK TAB BADGE === */
+.gb-tab { position: relative; }
+.gb-tab-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 9px; background: var(--burgundy); color: #fff;
+  font-size: .6rem; font-weight: 700; margin-left: 4px;
+  vertical-align: middle; line-height: 1;
+}
+
+/* === GUEST BOOK === */
+.gb-intro {
+  text-align: center; margin-bottom: 2rem; padding: 1.5rem 0;
+}
+.gb-intro-icon { font-size: 2.4rem; margin-bottom: .6rem; }
+.gb-intro h3 {
+  font-family: var(--display); font-size: 1.6rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .4rem;
+}
+.gb-intro p {
+  font-family: var(--serif); font-size: 17px; line-height: 1.8;
+  color: var(--ink-light); max-width: 560px; margin: 0 auto;
+}
+.gb-prompts {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .5rem; margin-bottom: 2rem;
+}
+.gb-prompt {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 6px; padding: .8rem; text-align: center;
+  cursor: pointer; transition: all .2s;
+}
+.gb-prompt:hover {
+  border-color: var(--burgundy); transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.gb-prompt.active {
+  border-color: var(--burgundy); background: var(--burgundy); color: #fff;
+  transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.gb-prompt.active .gb-prompt-label { color: #fff; }
+.gb-prompt.active .gb-prompt-hint { color: rgba(255,255,255,.7); }
+.gb-prompt-emoji { font-size: 1.3rem; margin-bottom: .3rem; }
+.gb-prompt-label {
+  font-family: var(--sans); font-size: .72rem; font-weight: 600; color: var(--ink);
+}
+.gb-prompt-hint {
+  font-family: var(--sans); font-size: .6rem; color: var(--ink-faded);
+  margin-top: .15rem;
+}
+.gb-entry-type {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-family: var(--sans); font-size: .6rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+.gb-type-visit { background: #e8f5e9; color: #2e7d32; }
+.gb-type-story { background: #fff3e0; color: #e65100; }
+.gb-type-knowledge { background: #e3f2fd; color: #1565c0; }
+.gb-type-photo { background: #fce4ec; color: #c62828; }
+.gb-type-family { background: #f3e5f5; color: #7b1fa2; }
+.gb-type-recommendations { background: #fff8e1; color: #f57f17; }
+.gb-type-folklore { background: #efebe9; color: #4e342e; }
+.gb-entry.gb-hidden { display: none; }
+.gb-entry-footer {
+  display: flex; align-items: center; gap: 1rem; margin-top: .8rem;
+  padding-top: .6rem; border-top: 1px solid rgba(224,216,200,.3);
+}
+.gb-like {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--sans); font-size: .7rem; color: var(--ink-faded);
+  cursor: pointer; background: none; border: none; padding: 0;
+  transition: color .2s;
+}
+.gb-like:hover { color: var(--burgundy); }
+.gb-like.liked { color: var(--burgundy); }
+.gb-reply-count {
+  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
+}
+.gb-report {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-family: var(--sans); font-size: .65rem; color: var(--ink-faded);
+  cursor: pointer; background: none; border: none; padding: 0;
+  margin-left: auto; transition: color .2s; opacity: .5;
+}
+.gb-report:hover { opacity: 1; color: var(--red); }
+.guestbook-entries { display: flex; flex-direction: column; gap: 1rem; }
+.gb-entry {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 6px; padding: 1.2rem 1.4rem;
+}
+.gb-header {
+  display: flex; align-items: center; gap: .6rem; margin-bottom: .6rem;
+}
+.gb-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--cream-mid); display: flex; align-items: center;
+  justify-content: center; font-size: .85rem; flex-shrink: 0;
+}
+.gb-name {
+  font-family: var(--sans); font-size: .82rem; font-weight: 600; color: var(--ink);
+}
+.gb-date {
+  font-family: var(--sans); font-size: .68rem; color: var(--ink-faded);
+  margin-left: auto;
+}
+.gb-mood {
+  display: inline-block; padding: 3px 10px; border-radius: 50px;
+  font-family: var(--sans); font-size: .65rem; font-weight: 500;
+  background: var(--cream-mid); color: var(--ink-light);
+  margin-bottom: .5rem;
+}
+.gb-text {
+  font-family: var(--serif); font-size: 16px; line-height: 1.8;
+  color: var(--ink-light);
+}
+.gb-photo {
+  width: 100%; max-height: 240px; object-fit: cover;
+  border-radius: 4px; margin-top: .8rem;
+}
+.gb-write {
+  margin-top: 1rem; text-align: center;
+}
+.gb-write-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 3px;
+  background: var(--white); border: 1px solid var(--border);
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+  color: var(--ink); cursor: pointer; transition: all .2s;
+}
+.gb-write-btn:hover { border-color: var(--burgundy); color: var(--burgundy); }
+
+/* === COMMUNITY SUBMIT === */
+.community-section {
+  max-width: 1300px; margin: 0 auto;
+  padding: 2rem 20px;
+  border-top: 1px solid var(--border);
+}
+.community-inner {
+  background: var(--cream-mid); border: 1px solid var(--border);
+  border-radius: 6px; padding: 2rem; text-align: center;
+}
+.community-inner h2 {
+  font-family: var(--sans); font-size: 1.1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: .4rem;
+}
+.community-inner p {
+  font-family: var(--sans); font-size: .85rem; color: var(--ink-faded);
+  margin-bottom: 1.2rem;
+}
+.community-buttons { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+.community-btn {
+  background: var(--white) !important; font-size: .78rem !important;
+}
+.community-btn:hover { border-color: var(--burgundy) !important; color: var(--burgundy) !important; }
+
+/* === MOBILE STICKY BAR === */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(250,248,244,.98); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 10px 16px; gap: .5rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+}
+.mobile-sticky-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 12px 16px; border-radius: 4px;
+  font-family: var(--sans); font-size: .82rem; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+  border: 1px solid var(--border); background: var(--white); color: var(--ink);
+}
+.mobile-sticky-primary {
+  background: var(--burgundy); color: #fff; border-color: var(--burgundy);
+}
+.mobile-sticky-primary:hover { text-decoration: none; color: #fff; }
+
+/* === LOADING STATE === */
+.loading {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 50vh; font-family: var(--sans); color: var(--ink-faded);
+}
+
+/* === ERROR STATE === */
+.error {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 50vh; font-family: var(--sans); text-align: center;
+  max-width: 600px; margin: 0 auto; padding: 2rem;
+}
+.error h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--ink); }
+.error p { color: var(--ink-faded); margin-bottom: 1.5rem; }
+
+@media (max-width: 768px) {
+  .content-layout { grid-template-columns: 1fr; gap: 1.5rem; padding-top: .5rem; }
+  .sidebar { position: static; order: -1; }
+  .main-content { display: flex; flex-direction: column; }
+  .main-content .highlights-section { order: 2; }
+  .main-content .about-section { order: 1; }
+  .main-content .section { order: 3; }
+  .stats-bar { flex-wrap: wrap; }
+  .action-buttons { margin-left: 0; width: 100%; }
+  .nav-links a:not(:last-child) { display: none; }
+  .gallery { padding: 1rem 0; }
+  .gallery-strip { scroll-snap-type: x mandatory; gap: 0; }
+  .gallery-strip .img-wrap { flex: 0 0 100%; }
+  .gallery-strip .img-wrap img { width: 100%; max-width: 100%; height: 350px; border-radius: 0; }
+  .gallery-thumbs { padding: 0 12px; }
+  .gallery-nav { display: none; }
+/* icon cards removed */
+  .mobile-sticky { display: flex; }
+  footer { padding-bottom: 70px; }
+  .community-buttons { flex-direction: column; }
+  .sidebar-hours, .sidebar-location, .sidebar-links { display: none; }
+  .mobile-visit-info { display: block !important; }
+  .mobile-links { display: block !important; }
+  .gb-prompts .gb-prompt:last-child:nth-child(odd) {
+    grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
+  }
+  .about-more { display: none; }
+  .about-read-more {
+    display: inline-block; background: none; border: none;
+    font-family: var(--sans); font-size: .8rem; font-weight: 600;
+    color: var(--burgundy); cursor: pointer; padding: .6rem 0 0;
+  }
+  #videos-content { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- Loading state -->
+<div id="loading-state" class="loading">Loading...</div>
+
+<!-- Error state -->
+<div id="error-state" class="error" style="display: none;">
+  <h2>Listing Not Found</h2>
+  <p>We couldn't find the listing you're looking for. It might have been moved or doesn't exist.</p>
+  <a href="/" class="btn btn-primary">← Back to Home</a>
+</div>
+
+<!-- Main content (initially hidden) -->
+<div id="main-content" style="display: none;">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo" style="text-decoration:none">castle<span>core</span></a>
+  <div class="nav-links">
+    <a href="#">Scotland</a>
+    <a href="#">England</a>
+    <a href="#">Wales</a>
+    <a href="#">Ireland</a>
+    <a href="#" style="background:var(--burgundy);color:#fff;padding:6px 14px;border-radius:2px;">Explore Map</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumbs" id="breadcrumbs">
+  <!-- Will be populated dynamically -->
+</div>
+
+<!-- HEADER -->
+<div class="listing-header">
+  <div class="listing-tags" id="listing-tags">
+    <!-- Will be populated dynamically -->
+  </div>
+  <h1 id="listing-name"></h1>
+  <p class="listing-subtitle" id="listing-subtitle"></p>
+  <div class="listing-meta">
+    <span id="listing-location"></span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar" id="stats-bar">
+  <!-- Will be populated dynamically -->
+</div>
+
+<!-- GALLERY PLACEHOLDER -->
+<div class="gallery" style="display: none;" id="gallery">
+  <div class="gallery-strip-wrapper">
+    <div class="gallery-strip" id="galleryStrip">
+      <!-- Will be populated if photos exist -->
+    </div>
+    <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
+    <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
+  </div>
+  <div class="gallery-thumbs" id="galleryThumbs">
+    <!-- Will be populated if photos exist -->
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();navLightbox(-1)">‹</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation();navLightbox(1)">›</button>
+  <div class="lightbox-attribution" id="lightboxAttribution"></div>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- MAIN CONTENT + SIDEBAR -->
+<div class="content-layout">
+  <div class="main-content">
+
+    <!-- VISIT / HISTORY TABS -->
+    <div class="content-tabs">
+      <button class="content-tab active" onclick="switchTab('visit')">Visit</button>
+      <button class="content-tab" onclick="switchTab('history')">History</button>
+      <button class="content-tab gb-tab" onclick="switchTab('guestbook')">Guest Book</button>
+    </div>
+
+    <div class="tab-content" id="tab-visit">
+
+      <!-- MOBILE HOURS & LOCATION (hidden on desktop) -->
+      <div class="mobile-visit-info" style="display:none;margin-bottom:1.5rem;" id="mobile-visit-info">
+        <!-- Will be populated dynamically -->
+      </div>
+
+      <!-- ABOUT -->
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">About</h3>
+      <div style="margin-bottom:2rem;" id="about-content">
+        <!-- Will be populated dynamically -->
+      </div>
+
+      <!-- GOOGLE REVIEWS (populated by Places API) -->
+      <div id="google-reviews"></div>
+
+      <!-- TERRAIN & ACCESSIBILITY -->
+      <div id="terrain-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Terrain & Accessibility</h3>
+        <div style="margin-bottom:2rem;" id="terrain-content">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+
+      <!-- GETTING THERE -->
+      <div id="getting-there-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Getting There</h3>
+        <div style="margin-bottom:2.5rem;display:flex;flex-direction:column;gap:.6rem;" id="getting-there-content">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-content" id="tab-guestbook" style="display:none;">
+      <!-- INTRO -->
+      <div class="gb-intro">
+        <div class="gb-intro-icon">📖</div>
+        <h3 id="gb-title">Guest Book</h3>
+        <p>Every place has stories that don't make it into the guidebooks — Sign the Guest Book to share a visit, pass on local knowledge, recommend somewhere nearby to eat, tell us about a family connection, or keep a local legend alive.</p>
+        <div style="margin-top:1rem;">
+          <button class="gb-write-btn" id="gbWriteBtn" style="padding:14px 36px;font-size:.88rem;">✍️ Sign the Guest Book</button>
+        </div>
+        <p style="font-family:var(--sans);font-size:.68rem;color:var(--ink-faded);margin-top:.5rem;" id="gbWriteHint">You don't need to have visited — all knowledge is welcome.</p>
+      </div>
+
+      <!-- CONTRIBUTION PROMPTS -->
+      <p style="font-family:var(--sans);font-size:.72rem;font-weight:600;color:var(--ink-faded);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;">What would you like to share?</p>
+      <div class="gb-prompts">
+        <div class="gb-prompt" data-category="visit" data-cta="Share a Visit">
+          <div class="gb-prompt-emoji">🥾</div>
+          <div class="gb-prompt-label">I've Been</div>
+          <div class="gb-prompt-hint">Share your visit</div>
+        </div>
+        <div class="gb-prompt" data-category="knowledge" data-cta="Share Local Knowledge">
+          <div class="gb-prompt-emoji">📜</div>
+          <div class="gb-prompt-label">I Know Something</div>
+          <div class="gb-prompt-hint">History or local knowledge</div>
+        </div>
+        <div class="gb-prompt" data-category="recommendations" data-cta="Share a Recommendation">
+          <div class="gb-prompt-emoji">⭐</div>
+          <div class="gb-prompt-label">Recommendations</div>
+          <div class="gb-prompt-hint">Eat here, see this nearby</div>
+        </div>
+        <div class="gb-prompt" data-category="family" data-cta="Share a Connection">
+          <div class="gb-prompt-emoji">👨‍👩‍👧</div>
+          <div class="gb-prompt-label">Family Ties</div>
+          <div class="gb-prompt-hint">Share a personal connection</div>
+        </div>
+        <div class="gb-prompt" data-category="folklore" data-cta="Share a Legend">
+          <div class="gb-prompt-emoji">🕯️</div>
+          <div class="gb-prompt-label">Folklore & Legend</div>
+          <div class="gb-prompt-hint">Local tales, verbal accounts</div>
+        </div>
+      </div>
+
+      <!-- SUBMISSION FORM (hidden until prompt clicked) -->
+      <div id="gb-submit-form" style="display:none;margin-top:1rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem;">
+          <span style="font-family:var(--sans);font-size:.82rem;font-weight:600;color:var(--ink);" id="gb-form-title">Share your story</span>
+          <button onclick="document.getElementById('gb-submit-form').style.display='none';document.querySelectorAll('.gb-prompt').forEach(p=>p.classList.remove('active'))" style="background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--ink-faded);">✕</button>
+        </div>
+        <input type="text" id="gb-name-input" placeholder="Your name (or initials)" style="width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:4px;font-family:var(--sans);font-size:.82rem;margin-bottom:.5rem;">
+        <textarea id="gb-text-input" rows="4" placeholder="Write your entry..." style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:4px;font-family:var(--serif);font-size:16px;resize:vertical;"></textarea>
+        <div style="display:flex;justify-content:flex-end;margin-top:.5rem;">
+          <button class="btn btn-primary" onclick="submitGuestBookEntry()">Submit Entry</button>
+        </div>
+      </div>
+
+      <!-- ENTRIES (from API, if any) -->
+      <div class="guestbook-entries" id="guestbook-entries" style="margin-top:1.5rem;"></div>
+    </div>
+
+    <div class="tab-content" id="tab-history" style="display:none;">
+      
+      <!-- TIMELINE -->
+      <div id="timeline-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Timeline</h3>
+        <div class="history-timeline" style="margin-bottom:2rem;" id="timeline-content">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+
+      <!-- PEOPLE -->
+      <div id="people-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">People</h3>
+        <div class="people-grid" style="margin-bottom:2rem;" id="people-content">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+
+      <!-- VIDEOS -->
+      <div id="videos-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Videos</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:2rem;" id="videos-content">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
+
+      <!-- ARCHITECTURE & DESIGNATIONS -->
+      <div id="architecture-section" style="display: none;">
+        <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Architecture & Construction</h3>
+        <p style="font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink-light);margin-bottom:1.5rem;" id="architecture-content"></p>
+      </div>
+
+      <!-- DESIGNATIONS -->
+      <div id="designations-section" style="display: none;">
+        <div style="padding-top:1.5rem;border-top:1px solid var(--border);margin-bottom:1.5rem;">
+          <h4 style="font-family:var(--sans);font-size:.75rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Designations</h4>
+          <div id="designations-content"></div>
+        </div>
+      </div>
+
+      <!-- FURTHER READING -->
+      <div id="further-reading-section" style="display: none;">
+        <div style="padding-top:1.5rem;border-top:1px solid var(--border);">
+          <h4 style="font-family:var(--sans);font-size:.75rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Further Reading</h4>
+          <ul style="list-style:none;padding:0;" id="further-reading-content">
+            <!-- Will be populated dynamically -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+    function switchTab(tab) {
+      document.getElementById('tab-visit').style.display = tab === 'visit' ? 'block' : 'none';
+      document.getElementById('tab-history').style.display = tab === 'history' ? 'block' : 'none';
+      document.getElementById('tab-guestbook').style.display = tab === 'guestbook' ? 'block' : 'none';
+      document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Guest book prompts
+    (function(){
+      var activeCategory = null;
+      var prompts = document.querySelectorAll('.gb-prompt[data-category]');
+      var writeBtn = document.getElementById('gbWriteBtn');
+      var writeHint = document.getElementById('gbWriteHint');
+      var submitForm = document.getElementById('gb-submit-form');
+      var formTitle = document.getElementById('gb-form-title');
+
+      prompts.forEach(function(prompt){
+        prompt.addEventListener('click', function(){
+          var cat = this.dataset.category;
+          var cta = this.dataset.cta;
+
+          if (activeCategory === cat) {
+            activeCategory = null;
+            prompts.forEach(function(p){ p.classList.remove('active'); });
+            submitForm.style.display = 'none';
+            writeBtn.textContent = '✍️ Sign the Guest Book';
+            writeHint.textContent = "You don't need to have visited — all knowledge is welcome.";
+          } else {
+            activeCategory = cat;
+            prompts.forEach(function(p){ p.classList.remove('active'); });
+            this.classList.add('active');
+            submitForm.style.display = 'block';
+            formTitle.textContent = cta;
+            writeBtn.textContent = '✍️ ' + cta;
+            writeHint.textContent = '';
+          }
+        });
+      });
+
+      writeBtn.addEventListener('click', function(){
+        if (!activeCategory) {
+          // No category selected, just show the form generically
+          submitForm.style.display = 'block';
+          formTitle.textContent = 'Sign the Guest Book';
+          submitForm.querySelector('textarea').focus();
+        } else {
+          submitForm.style.display = 'block';
+          submitForm.querySelector('textarea').focus();
+        }
+      });
+    })();
+
+    window.submitGuestBookEntry = function() {
+      var name = document.getElementById('gb-name-input').value.trim();
+      var text = document.getElementById('gb-text-input').value.trim();
+      if (!text) { alert('Please write something before submitting.'); return; }
+      // For now, show a thank you message (actual API integration later)
+      var form = document.getElementById('gb-submit-form');
+      form.innerHTML = '<div style="text-align:center;padding:1rem;"><div style="font-size:1.5rem;margin-bottom:.5rem;">✅</div><p style="font-family:var(--sans);font-size:.85rem;color:var(--ink);">Thanks for your submission! It will appear after review.</p></div>';
+    };
+    </script>
+
+    <!-- MOBILE LINKS & SOURCES -->
+    <div class="mobile-links" style="display:none;margin-top:2.5rem;padding:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:6px;" id="mobile-links">
+      <h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Links & Sources</h3>
+      <div style="display:flex;flex-direction:column;gap:.3rem;" id="mobile-links-content">
+        <!-- Will be populated dynamically -->
+      </div>
+    </div>
+
+    <!-- COMMUNITY / HELP IMPROVE -->
+    <div class="community-section" id="community-section" style="margin-top:1rem;padding:2rem;background:var(--white);border:1px solid var(--border);border-radius:6px;">
+      <h3 style="font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;">Help us improve this page</h3>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink-light);margin-bottom:1.2rem;" id="community-desc">If you spot a mistake, have a photo to share, or know something we've missed, we'd love to hear from you.</p>
+      <div class="community-buttons" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+        <button class="btn community-btn">📸 Submit a Photo</button>
+        <button class="btn community-btn">📝 Share a Tip</button>
+        <button class="btn community-btn">⚠️ Report an Issue</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- LOCATION -->
+    <div class="sidebar-card sidebar-hours" id="sidebar-hours" style="display: none;">
+      <!-- Populated by Google Places API -->
+    </div>
+
+    <div class="sidebar-card sidebar-location" id="sidebar-location" style="display: none;">
+      <h3>Location</h3>
+      <div style="border-radius:4px;overflow:hidden;margin-bottom:.8rem;" id="map-container">
+        <!-- Map will be populated dynamically -->
+      </div>
+      <div class="address-text" id="address-text">
+        <!-- Address will be populated dynamically -->
+      </div>
+      <a href="#" target="_blank" class="sidebar-directions" id="directions-link">📍 Get Directions</a>
+    </div>
+
+    <!-- LINKS & SOURCES -->
+    <div class="sidebar-card sidebar-links" id="sidebar-links" style="display: none;">
+      <h3>Links & Sources</h3>
+      <div style="display:flex;flex-direction:column;gap:.3rem;" id="sidebar-links-content">
+        <!-- Will be populated dynamically -->
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>castlecore — every castle, abbey & ruin in Britain & Ireland</p>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-sticky" id="mobile-sticky" style="display: none;">
+  <button class="mobile-sticky-btn" onclick="navigator.share ? navigator.share({title:window.listingName,url:location.href}) : navigator.clipboard.writeText(location.href)">↗ Share</button>
+  <a href="#" target="_blank" class="mobile-sticky-btn mobile-sticky-primary" id="mobile-directions">📍 Directions</a>
+</div>
+
+</div>
+
+<script>
+// Extract slug from URL path
+function getSlugFromPath() {
+  const path = window.location.pathname;
+  const match = path.match(/\/listing\/(.+?)(?:\/|$)/);
+  return match ? match[1] : null;
+}
+
+// Parse JSON safely
+function parseJSON(str) {
+  try {
+    return JSON.parse(str);
+  } catch (e) {
+    return [];
+  }
+}
+
+// Show error state
+function showError() {
+  document.getElementById('loading-state').style.display = 'none';
+  document.getElementById('error-state').style.display = 'block';
+  document.getElementById('main-content').style.display = 'none';
+}
+
+// Show main content
+function showContent() {
+  document.getElementById('loading-state').style.display = 'none';
+  document.getElementById('error-state').style.display = 'none';
+  document.getElementById('main-content').style.display = 'block';
+}
+
+// Render tags
+function renderTags(listing) {
+  const tagsContainer = document.getElementById('listing-tags');
+  let tagsHTML = '';
+  
+  if (listing.type) {
+    tagsHTML += `<span class="tag tag-type">${listing.type}</span>`;
+  }
+  if (listing.status) {
+    tagsHTML += `<span class="tag tag-status">${listing.status}</span>`;
+  }
+  if (listing.condition) {
+    tagsHTML += `<span class="tag tag-condition">${listing.condition}</span>`;
+  }
+  if (listing.century) {
+    tagsHTML += `<span class="tag tag-century">${listing.century}</span>`;
+  }
+  
+  // Parse custom tags from JSON
+  const customTags = parseJSON(listing.tags || '[]');
+  customTags.forEach(tag => {
+    tagsHTML += `<span class="tag tag-custom">${tag}</span>`;
+  });
+  
+  tagsContainer.innerHTML = tagsHTML;
+}
+
+// Render breadcrumbs
+function renderBreadcrumbs(listing) {
+  const breadcrumbs = document.getElementById('breadcrumbs');
+  let html = '<a href="#">All Sites</a><span class="sep">›</span>';
+  
+  if (listing.country) {
+    html += `<a href="#">${listing.country}</a><span class="sep">›</span>`;
+  }
+  if (listing.region) {
+    html += `<a href="#">${listing.region}</a><span class="sep">›</span>`;
+  }
+  if (listing.name) {
+    html += listing.name;
+  }
+  
+  breadcrumbs.innerHTML = html;
+}
+
+// Render header
+function renderHeader(listing) {
+  document.getElementById('listing-name').textContent = listing.name || '';
+  
+  const subtitle = document.getElementById('listing-subtitle');
+  if (listing.subtitle) {
+    subtitle.textContent = listing.subtitle;
+    subtitle.style.display = 'block';
+  } else {
+    subtitle.style.display = 'none';
+  }
+  
+  const location = document.getElementById('listing-location');
+  const locationParts = [];
+  if (listing.town) locationParts.push(listing.town);
+  if (listing.country) locationParts.push(listing.country);
+  location.textContent = locationParts.length ? `📍 ${locationParts.join(', ')}` : '';
+}
+
+// Render stats bar (simplified without user features)
+function renderStatsBar(listing) {
+  const statsBar = document.getElementById('stats-bar');
+  let html = '';
+  
+  // Google rating if available
+  if (listing.google_rating) {
+    html += `
+      <div class="stat">
+        <span class="stat-num" style="display:flex;align-items:center;gap:4px;">${listing.google_rating} <span style="color:#fbbc04;font-size:.75rem;">★</span></span>
+        <span class="stat-label">${listing.google_review_count || 0} Google Reviews</span>
+      </div>`;
+  }
+  
+  // Action buttons (always show)
+  html += `
+    <div class="action-buttons">
+      <button class="btn btn-interact" onclick="this.classList.toggle('active')">✓ Been Here</button>
+      <button class="btn btn-interact" onclick="this.classList.toggle('active')">♡ Favorite</button>
+    </div>`;
+  
+  statsBar.innerHTML = html;
+  statsBar.style.display = 'flex';
+}
+
+// Render about section
+function renderAbout(listing) {
+  const aboutContent = document.getElementById('about-content');
+  let html = '';
+  
+  if (listing.description_expanded) {
+    html += `<p style="font-family:var(--serif);font-size:18px;line-height:1.9;color:var(--ink-light);margin-top:0;margin-bottom:0;padding-bottom:0;">${listing.description_expanded}</p>`;
+  }
+  
+  aboutContent.innerHTML = html;
+}
+
+// Render terrain section
+function renderTerrain(listing) {
+  const terrainSection = document.getElementById('terrain-section');
+  const terrainTags = parseJSON(listing.terrain_tags || '[]');
+  
+  if (terrainTags.length > 0 || listing.terrain_description) {
+    let html = '';
+    
+    if (terrainTags.length > 0) {
+      html += '<div class="terrain-chips">';
+      terrainTags.forEach(tag => {
+        // Simple color coding based on tag content
+        let chipClass = 'chip-green';
+        if (tag.toLowerCase().includes('steep') || tag.toLowerCase().includes('difficult')) {
+          chipClass = 'chip-red';
+        } else if (tag.toLowerCase().includes('cobble') || tag.toLowerCase().includes('exposed')) {
+          chipClass = 'chip-amber';
+        }
+        html += `<span class="chip ${chipClass}">${tag}</span>`;
+      });
+      html += '</div>';
+    }
+    
+    if (listing.terrain_description) {
+      html += `<p style="font-family:var(--serif);font-size:18px;color:var(--ink-light);line-height:1.9;margin-top:.6rem;">${listing.terrain_description}</p>`;
+    }
+    
+    document.getElementById('terrain-content').innerHTML = html;
+    terrainSection.style.display = 'block';
+  }
+}
+
+// Render getting there section
+function renderGettingThere(listing) {
+  const gettingThereSection = document.getElementById('getting-there-section');
+  const content = document.getElementById('getting-there-content');
+  let html = '';
+  
+  if (listing.getting_there_car) {
+    html += `
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;">
+        <div style="font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;">🚗 By Car</div>
+        <p style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);margin:0;">${listing.getting_there_car}</p>
+      </div>`;
+  }
+  
+  if (listing.getting_there_train) {
+    html += `
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;">
+        <div style="font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;">🚂 By Train</div>
+        <p style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);margin:0;">${listing.getting_there_train}</p>
+      </div>`;
+  }
+  
+  if (listing.getting_there_bus) {
+    html += `
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;">
+        <div style="font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;">🚌 By Bus</div>
+        <p style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);margin:0;">${listing.getting_there_bus}</p>
+      </div>`;
+  }
+  
+  if (listing.getting_there_airport) {
+    html += `
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:.8rem 1rem;">
+        <div style="font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;">✈️ Nearest Airports</div>
+        <p style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);margin:0;">${listing.getting_there_airport}</p>
+      </div>`;
+  }
+  
+  if (html) {
+    content.innerHTML = html;
+    gettingThereSection.style.display = 'block';
+  }
+}
+
+// Render timeline
+function renderTimeline(listing) {
+  const timelineSection = document.getElementById('timeline-section');
+  const timelineContent = document.getElementById('timeline-content');
+  
+  if (listing.timeline && listing.timeline.length > 0) {
+    let html = '';
+    
+    listing.timeline.forEach(item => {
+      html += `
+        <div class="timeline-item">
+          <div class="timeline-date">${item.date_label}</div>
+          <div class="timeline-body">
+            <strong>${item.title}</strong>
+            <p>${item.description}</p>
+          </div>
+        </div>`;
+    });
+    
+    timelineContent.innerHTML = html;
+    timelineSection.style.display = 'block';
+  }
+}
+
+// Render people
+function renderPeople(listing) {
+  const peopleSection = document.getElementById('people-section');
+  const peopleContent = document.getElementById('people-content');
+  
+  if (listing.people && listing.people.length > 0) {
+    let html = '';
+    
+    listing.people.forEach(person => {
+      const hasLink = person.wikipedia_url;
+      const cardTag = hasLink ? 'a' : 'div';
+      const linkAttrs = hasLink ? `href="${person.wikipedia_url}" target="_blank"` : '';
+      const cardClass = hasLink ? 'person-card' : 'person-card';
+      
+      html += `
+        <${cardTag} ${linkAttrs} class="${cardClass}" ${hasLink ? '' : 'style="cursor: default;"'}>
+          ${person.portrait_url ? 
+            `<img src="${person.portrait_url}" alt="${person.name}" class="person-photo">` :
+            `<div class="person-photo" style="background: var(--cream-mid); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">👤</div>`
+          }
+          <div class="person-info">
+            <div class="person-name">${person.name}</div>
+            ${person.dates ? `<div class="person-dates">${person.dates}</div>` : ''}
+            <div class="person-role">${person.role_description || ''}</div>
+          </div>
+        </${cardTag}>`;
+    });
+    
+    peopleContent.innerHTML = html;
+    peopleSection.style.display = 'block';
+  }
+}
+
+// Render videos
+function renderVideos(listing) {
+  const videosSection = document.getElementById('videos-section');
+  const videosContent = document.getElementById('videos-content');
+  
+  if (listing.videos && listing.videos.length > 0) {
+    let html = '';
+    
+    // Show max 2 videos in grid layout
+    const videosToShow = listing.videos.slice(0, 2);
+    
+    videosToShow.forEach(video => {
+      const safeTitle = (video.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+      html += `<div style="position:relative;"><iframe width="100%" height="100%" style="aspect-ratio:16/9;border:1px solid var(--border);border-radius:3px;display:block;" src="https://www.youtube-nocookie.com/embed/${video.youtube_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="${safeTitle}"></iframe></div>`;
+    });
+    
+    videosContent.innerHTML = html;
+    videosSection.style.display = 'block';
+  }
+}
+
+// Render architecture
+function renderArchitecture(listing) {
+  const architectureSection = document.getElementById('architecture-section');
+  const architectureContent = document.getElementById('architecture-content');
+  
+  if (listing.architecture) {
+    architectureContent.textContent = listing.architecture;
+    architectureSection.style.display = 'block';
+  }
+}
+
+// Render designations
+function renderDesignations(listing) {
+  const designationsSection = document.getElementById('designations-section');
+  const designationsContent = document.getElementById('designations-content');
+  
+  if (listing.designations && listing.designations.length > 0) {
+    const designationTexts = listing.designations.map(d => {
+      return d.url ? `<a href="${d.url}" target="_blank">${d.title}</a>` : d.title;
+    });
+    
+    designationsContent.innerHTML = `<p style="font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink-light);">${designationTexts.join(' · ')}</p>`;
+    designationsSection.style.display = 'block';
+  }
+}
+
+// Render further reading
+function renderFurtherReading(listing) {
+  const furtherReadingSection = document.getElementById('further-reading-section');
+  const furtherReadingContent = document.getElementById('further-reading-content');
+  
+  if (listing.further_reading && listing.further_reading.length > 0) {
+    let html = '';
+    
+    listing.further_reading.forEach((item, index) => {
+      const isLast = index === listing.further_reading.length - 1;
+      const borderStyle = isLast ? 'border-bottom:none;' : 'border-bottom:1px solid rgba(224,216,200,.4);';
+      
+      let text = '';
+      if (item.author) text += item.author + ' — ';
+      if (item.title) text += `<em>${item.title}</em>`;
+      if (item.year) text += ` (${item.year})`;
+      
+      if (item.url) {
+        html += `<li style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);padding:.3rem 0;${borderStyle}"><a href="${item.url}" target="_blank" style="color: inherit;">${text}</a></li>`;
+      } else {
+        html += `<li style="font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--ink-light);padding:.3rem 0;${borderStyle}">${text}</li>`;
+      }
+    });
+    
+    furtherReadingContent.innerHTML = html;
+    furtherReadingSection.style.display = 'block';
+  }
+}
+
+// Render location sidebar
+function renderLocation(listing) {
+  const sidebarLocation = document.getElementById('sidebar-location');
+  
+  if (listing.latitude && listing.longitude) {
+    const mapContainer = document.getElementById('map-container');
+    const addressText = document.getElementById('address-text');
+    const directionsLink = document.getElementById('directions-link');
+    const mobileDirections = document.getElementById('mobile-directions');
+    
+    // Create Google Maps embed
+    const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.4!2d${listing.longitude}!3d${listing.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z${listing.latitude},${listing.longitude}!5e0!3m2!1sen!2suk!4v1`;
+    mapContainer.innerHTML = `<iframe src="${mapSrc}" width="100%" height="180" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    
+    // Build address
+    const addressParts = [];
+    if (listing.town) addressParts.push(listing.town);
+    if (listing.county) addressParts.push(listing.county);
+    if (listing.country) addressParts.push(listing.country);
+    
+    addressText.innerHTML = addressParts.join('<br>');
+    
+    // Set directions links
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${listing.latitude},${listing.longitude}`;
+    directionsLink.href = directionsUrl;
+    mobileDirections.href = directionsUrl;
+    
+    sidebarLocation.style.display = 'block';
+  }
+}
+
+// Render links
+function renderLinks(listing) {
+  const sidebarLinks = document.getElementById('sidebar-links');
+  const sidebarLinksContent = document.getElementById('sidebar-links-content');
+  const mobileLinksContent = document.getElementById('mobile-links-content');
+  
+  if (listing.links && listing.links.length > 0) {
+    let html = '';
+    
+    listing.links.forEach(link => {
+      html += `<a href="${link.url}" target="_blank" style="font-family:var(--sans);font-size:.8rem;">${link.label} →</a>`;
+    });
+    
+    sidebarLinksContent.innerHTML = html;
+    mobileLinksContent.innerHTML = html;
+    sidebarLinks.style.display = 'block';
+  }
+}
+
+// Render cached Google Places data from DB (instant, no API call)
+function renderCachedPlacesData(listing) {
+  // Hours from DB cache
+  if (listing.google_hours) {
+    try {
+      const hours = JSON.parse(listing.google_hours);
+      if (hours && hours.length) {
+        const hoursCard = document.getElementById('sidebar-hours');
+        let hoursHtml = '<h3>Hours</h3>';
+        hoursHtml += '<div style="margin-top:.6rem;">';
+        hours.forEach(h => {
+          hoursHtml += `<div style="font-family:var(--sans);font-size:.75rem;color:var(--ink-faded);padding:.15rem 0;">${h}</div>`;
+        });
+        hoursHtml += '</div>';
+        hoursCard.innerHTML = hoursHtml;
+        hoursCard.style.display = 'block';
+      }
+    } catch(e) {}
+  }
+  // Address from DB cache
+  if (listing.google_address) {
+    const addressEl = document.getElementById('address-text');
+    if (addressEl) addressEl.innerHTML = listing.google_address;
+  }
+}
+
+// Render guest book title
+function renderGuestBook(listing) {
+  const gbTitle = document.getElementById('gb-title');
+  gbTitle.textContent = `The ${listing.name} Guest Book`;
+}
+
+// Main render function
+function renderListing(listing) {
+  // Update page title
+  document.getElementById('page-title').textContent = `${listing.name} — castlecore`;
+  window.listingName = listing.name; // For sharing
+  
+  // Render all sections
+  renderTags(listing);
+  renderBreadcrumbs(listing);
+  renderHeader(listing);
+  renderStatsBar(listing);
+  renderAbout(listing);
+  renderTerrain(listing);
+  renderGettingThere(listing);
+  renderTimeline(listing);
+  renderPeople(listing);
+  renderVideos(listing);
+  renderArchitecture(listing);
+  renderDesignations(listing);
+  renderFurtherReading(listing);
+  renderLocation(listing);
+  renderCachedPlacesData(listing);
+  renderLinks(listing);
+  renderGuestBook(listing);
+  
+  // Update community section description
+  var communityDesc = document.getElementById('community-desc');
+  if (communityDesc) communityDesc.textContent = 'Our ' + listing.name + ' listing is always growing. We rely on a mix of historical sources, open data, and community contributions — but we know we don\'t always get it right. If you spot a mistake, have a photo to share, or know something we\'ve missed, we\'d love to hear from you.';
+  
+  // Mobile sticky bar display is handled by CSS media query
+  
+  showContent();
+}
+
+// Fetch listing data
+async function fetchListing() {
+  const slug = getSlugFromPath();
+  
+  if (!slug) {
+    showError();
+    return;
+  }
+  
+  try {
+    const response = await fetch(`/public/listing/${encodeURIComponent(slug)}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    const listing = await response.json();
+    renderListing(listing);
+    
+    // Fetch Google Places data if we have a place_id
+    if (listing.google_place_id) {
+      fetchGooglePlaces(listing.google_place_id, listing);
+    }
+    
+  } catch (error) {
+    console.error('Error fetching listing:', error);
+    showError();
+  }
+}
+
+async function fetchGooglePlaces(placeId, listing) {
+  try {
+    const res = await fetch(`/public/places/${encodeURIComponent(placeId)}`);
+    if (!res.ok) return;
+    const places = await res.json();
+    
+    // Render Google rating in stats bar (insert before action buttons)
+    if (places.rating) {
+      const actionBtns = document.querySelector('.action-buttons');
+      if (actionBtns) {
+        const ratingDiv = document.createElement('div');
+        ratingDiv.className = 'stat';
+        ratingDiv.innerHTML = `<span class="stat-num" style="display:flex;align-items:center;gap:4px;">${places.rating} <span style="color:#fbbc04;font-size:.75rem;">★</span></span><span class="stat-label">${(places.reviewCount || 0).toLocaleString()} Google Reviews</span>`;
+        actionBtns.parentNode.insertBefore(ratingDiv, actionBtns);
+      }
+    }
+    
+    // Render hours in sidebar
+    if (places.hours && places.hours.length) {
+      const hoursCard = document.getElementById('sidebar-hours');
+      let hoursHtml = '<h3>Hours</h3>';
+      if (places.isOpen !== null) {
+        hoursHtml += `<div class="visit-status"><span class="status-dot ${places.isOpen ? 'open' : ''}" style="background:${places.isOpen ? 'var(--green)' : 'var(--red)'};"></span><span class="status-text" style="color:${places.isOpen ? 'var(--green)' : 'var(--red)'};">${places.isOpen ? 'Open Now' : 'Closed'}</span></div>`;
+      }
+      hoursHtml += '<div style="margin-top:.6rem;">';
+      places.hours.forEach(h => {
+        hoursHtml += `<div style="font-family:var(--sans);font-size:.75rem;color:var(--ink-faded);padding:.15rem 0;">${h}</div>`;
+      });
+      hoursHtml += '</div>';
+      hoursCard.innerHTML = hoursHtml;
+      hoursCard.style.display = 'block';
+    }
+    
+    // Render Google reviews
+    if (places.reviews && places.reviews.length) {
+      const reviewsContainer = document.getElementById('google-reviews');
+      let html = `
+        <div class="google-reviews-block">
+          <div class="google-reviews-title">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span translate="no">Reviews from Google Maps</span>
+          </div>
+          <div class="google-reviews-header">
+            <div class="google-reviews-summary">
+              <span class="google-rating-num">${places.rating}</span>
+              <span class="google-stars">${'★'.repeat(Math.round(places.rating))}</span>
+              <span class="google-review-count">${(places.reviewCount || 0).toLocaleString()} Google reviews</span>
+            </div>
+          </div>`;
+      
+      places.reviews.forEach(r => {
+        const initials = r.author.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+        const starHtml = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        html += `
+          <div class="google-review">
+            <div class="google-review-header">
+              <div class="google-review-avatar">${initials}</div>
+              <div class="google-review-meta">
+                <span class="google-review-name">${r.author}</span>
+                <span class="google-review-date">${r.time}</span>
+              </div>
+            </div>
+            <div class="google-review-stars">${starHtml}</div>
+            <div class="google-review-text">${r.text}</div>
+          </div>`;
+      });
+      
+      html += '</div>';
+      reviewsContainer.innerHTML = html;
+    }
+    
+    // Render Google Photos in gallery
+    if (places.photos && places.photos.length) {
+      const gallery = document.getElementById('gallery');
+      let stripHtml = '';
+      let thumbsHtml = '';
+      places.photos.forEach((p, i) => {
+        stripHtml += `<div class="img-wrap"><img src="${p.url}" alt="Photo by ${p.attribution}" loading="lazy"><div class="img-credit">📷 ${p.attribution}</div></div>`;
+        thumbsHtml += `<img src="${p.url}" alt="Thumb ${i+1}" ${i===0?'class="active"':''} onclick="goToSlide(${i})">`;
+      });
+      
+      gallery.innerHTML = `
+        <div class="gallery-strip-wrapper">
+          <div class="gallery-strip" id="galleryStrip">${stripHtml}</div>
+          <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
+          <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">${thumbsHtml}</div>`;
+      gallery.style.display = 'block';
+      
+      // Re-init gallery scroll tracking
+      const strip = document.getElementById('galleryStrip');
+      const imgs = strip.querySelectorAll('img');
+      const thumbs = document.querySelectorAll('#galleryThumbs img');
+      window.goToSlide = function(i) {
+        imgs[i]?.scrollIntoView({ behavior:'smooth', inline:'start', block:'nearest' });
+        thumbs.forEach((t,j) => t.classList.toggle('active', j===i));
+      };
+
+      // Lightbox
+      var lbEl = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightboxImg');
+      var lbCounter = document.getElementById('lightboxCounter');
+      var lbAttribution = document.getElementById('lightboxAttribution');
+      var lbPhotos = []; // {src, attribution, attributionUrl}
+      var lbIdx = 0;
+
+      places.photos.forEach(function(p){
+        lbPhotos.push({
+          src: p.url,
+          attribution: p.attribution || 'Google Maps',
+          attributionUrl: p.attributionUrl || null
+        });
+      });
+
+      function updateLightbox() {
+        var photo = lbPhotos[lbIdx];
+        lbImg.src = photo.src;
+        lbCounter.textContent = (lbIdx+1) + ' / ' + lbPhotos.length;
+        if (photo.attributionUrl) {
+          lbAttribution.innerHTML = '📷 Photo by <a href="' + photo.attributionUrl + '" target="_blank">' + photo.attribution + '</a>';
+        } else {
+          lbAttribution.textContent = '📷 Photo by ' + photo.attribution;
+        }
+      }
+
+      window.openLightbox = function(i) {
+        lbIdx = i;
+        updateLightbox();
+        lbEl.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+      window.closeLightbox = function() {
+        lbEl.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+      window.navLightbox = function(dir) {
+        lbIdx = (lbIdx + dir + lbPhotos.length) % lbPhotos.length;
+        updateLightbox();
+      };
+
+      // Click on gallery images opens lightbox
+      var touchStartX = 0, touchMoved = false;
+      var stripEl = document.getElementById('galleryStrip');
+      stripEl.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; touchMoved = false; }, {passive:true});
+      stripEl.addEventListener('touchmove', function(e){ if(Math.abs(e.touches[0].clientX - touchStartX) > 10) touchMoved = true; }, {passive:true});
+
+      document.querySelectorAll('#galleryStrip img').forEach(function(img, i){
+        img.addEventListener('click', function(e){
+          if(touchMoved) return;
+          e.stopPropagation();
+          if(i < lbPhotos.length) openLightbox(i);
+        });
+      });
+
+      document.querySelectorAll('#galleryThumbs img').forEach(function(thumb, i){
+        thumb.addEventListener('click', function(){ if(i < lbPhotos.length) openLightbox(i); });
+      });
+
+      document.addEventListener('keydown', function(e){
+        if(!lbEl.classList.contains('active')) return;
+        if(e.key === 'Escape') closeLightbox();
+        if(e.key === 'ArrowLeft') navLightbox(-1);
+        if(e.key === 'ArrowRight') navLightbox(1);
+      });
+
+      var lbTouchX = 0;
+      lbEl.addEventListener('touchstart', function(e){ lbTouchX = e.touches[0].clientX; }, {passive:true});
+      lbEl.addEventListener('touchend', function(e){
+        var dx = e.changedTouches[0].clientX - lbTouchX;
+        if(Math.abs(dx) > 50) navLightbox(dx > 0 ? -1 : 1);
+      });
+    }
+
+    // Update address if available
+    if (places.address) {
+      var addressEl = document.getElementById('address-text');
+      if (addressEl) addressEl.innerHTML = places.address;
+    }
+    
+  } catch (err) {
+    console.error('Google Places error:', err);
+  }
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', fetchListing);
+</script>
+
+</body>
+</html>

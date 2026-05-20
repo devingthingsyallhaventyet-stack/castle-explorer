@@ -488,6 +488,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       <div class="topbar-actions">
         <button class="btn" id="saveBtn" onclick="saveListing()">💾 Save</button>
         <button class="btn btn-primary" id="savePublishBtn" onclick="saveAndRepublish()">💾 Save & Republish</button>
+        <button class="btn" id="viewSiteBtn" onclick="window.open('https://castlecore.uk/listing/' + (listing && listing.slug ? listing.slug : ''), '_blank')" style="background:var(--bg-hover);border-color:var(--border);">🌐 View on Website</button>
       </div>
     </div>
 
@@ -744,12 +745,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <span class="section-badge badge-manual">Editorial</span>
         </div>
         <div class="field-group">
-          <div class="field-label">Short Description <span class="source-tag">Always visible</span></div>
-          <textarea class="field-textarea" rows="3" id="fieldDescShort"></textarea>
-        </div>
-        <div class="field-group" style="margin-top:1rem">
-          <div class="field-label">Expanded Description <span class="source-tag">Behind "Read more"</span></div>
-          <textarea class="field-textarea" rows="5" id="fieldDescExpanded"></textarea>
+          <div class="field-label">Description</div>
+          <textarea class="field-textarea" rows="8" id="fieldDescExpanded"></textarea>
         </div>
       </div>
 
@@ -1063,7 +1060,7 @@ function populateForm() {
   document.getElementById('lastPublished').textContent = listing.published_at ? `Published ${new Date(listing.published_at).toLocaleDateString()}` : 'Never published';
 
   // Completeness
-  const fields = [listing.name, listing.subtitle, listing.description_short, listing.description_expanded, listing.latitude, listing.longitude, listing.country, listing.region, listing.type, listing.century, listing.status, listing.condition, listing.google_place_id, listing.architecture];
+  const fields = [listing.name, listing.subtitle, listing.description_expanded, listing.latitude, listing.longitude, listing.country, listing.region, listing.type, listing.century, listing.status, listing.condition, listing.google_place_id, listing.architecture];
   const filled = fields.filter(f => f != null && f !== '').length;
   const pct = Math.round((filled / fields.length) * 100);
   document.getElementById('completenessFill').style.width = pct + '%';
@@ -1110,7 +1107,7 @@ function populateForm() {
   document.getElementById('fieldGoogleRating').textContent = rating ? `${rating} ★ · ${(reviews||0).toLocaleString()} reviews` : '—';
 
   // Visit tab
-  document.getElementById('fieldDescShort').value = listing.description_short || '';
+  // description_short removed
   document.getElementById('fieldDescExpanded').value = listing.description_expanded || '';
   document.getElementById('visitStatusDisplay').textContent = listing.status || '—';
   const lat = listing.latitude, lng = listing.longitude;
@@ -1356,10 +1353,51 @@ function renderPeople(items) {
         ${p.wikipedia_url ? `<a href="${esc(p.wikipedia_url)}" target="_blank" style="font-size:.65rem; color:var(--blue); text-decoration:none;">🔗 Wikipedia</a>` : ''}
       </div>
       <div class="person-actions">
+        <button class="btn-icon" title="Edit" onclick="editPerson(${p.id})">✏️</button>
         <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('people',${p.id})">🗑</button>
       </div>
     </div>
   `).join('');
+}
+
+function editPerson(id) {
+  const card = document.querySelector(`.person-card[data-id="${id}"]`);
+  const items = listing.people || [];
+  const p = items.find(x => x.id === id);
+  if (!p) return;
+  card.innerHTML = `
+    <div style="width:100%; display:flex; flex-direction:column; gap:.4rem;">
+      <input type="text" class="field-input" id="editPersonName_${id}" value="${esc(p.name || '')}" placeholder="Name">
+      <input type="text" class="field-input" id="editPersonDates_${id}" value="${esc(p.dates || '')}" placeholder="Dates (e.g. 1542-1587)">
+      <input type="text" class="field-input" id="editPersonRole_${id}" value="${esc(p.role_description || '')}" placeholder="Role / Description">
+      <input type="text" class="field-input" id="editPersonPortrait_${id}" value="${esc(p.portrait_url || '')}" placeholder="Portrait URL">
+      <input type="text" class="field-input" id="editPersonWiki_${id}" value="${esc(p.wikipedia_url || '')}" placeholder="Wikipedia URL">
+      <div style="display:flex; gap:.4rem; margin-top:.2rem;">
+        <button class="btn btn-primary" style="font-size:.7rem; padding:.3rem .6rem;" onclick="savePersonEdit(${id})">Save</button>
+        <button class="btn" style="font-size:.7rem; padding:.3rem .6rem;" onclick="renderPeople(listing.people)">Cancel</button>
+      </div>
+    </div>`;
+}
+
+async function savePersonEdit(id) {
+  const data = {
+    name: document.getElementById(`editPersonName_${id}`).value,
+    dates: document.getElementById(`editPersonDates_${id}`).value,
+    role_description: document.getElementById(`editPersonRole_${id}`).value,
+    portrait_url: document.getElementById(`editPersonPortrait_${id}`).value,
+    wikipedia_url: document.getElementById(`editPersonWiki_${id}`).value,
+  };
+  try {
+    const res = await fetch(`/api/listings/${listingId}/people/${id}`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const idx = listing.people.findIndex(x => x.id === id);
+    if (idx >= 0) Object.assign(listing.people[idx], data);
+    renderPeople(listing.people);
+    toast('Person updated');
+  } catch (err) { toast('Update failed: ' + err.message, 'error'); }
 }
 
 function renderDesignations(items) {
@@ -1671,7 +1709,6 @@ function collectMainFields() {
     condition: document.getElementById('fieldCondition').value,
     google_place_id: document.getElementById('fieldGooglePlaceId').value || null,
     tags: JSON.stringify(getTagsFromSelector('tagSelector')),
-    description_short: document.getElementById('fieldDescShort').value,
     description_expanded: document.getElementById('fieldDescExpanded').value,
     architecture: document.getElementById('fieldArchitecture').value,
     terrain_description: document.getElementById('fieldTerrainDesc').value,
@@ -1740,3 +1777,4 @@ async function saveAndRepublish() {
 
 </body>
 </html>
+
