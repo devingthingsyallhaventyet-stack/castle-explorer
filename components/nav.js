@@ -334,9 +334,9 @@
                   <a href="/england/northern-england">Northern England</a>
                   <a href="/england/yorkshire">Yorkshire</a>
                   <a href="/england/the-midlands">The Midlands</a>
-                  <a href="/england/east-of-england">East of England</a>
+                  <a href="/england/east-anglia">East Anglia & East England</a>
                   <a href="/england/south-east-london">South East &amp; London</a>
-                  <a href="/england/south-west">South West</a>
+                  <a href="/england/south-west-england">South West England</a>
                 </div>
                 <div class="mega-panel" data-country="scotland">
                   <a href="/scotland/scottish-highlands">Scottish Highlands &amp; Northern Isles</a>
@@ -399,9 +399,9 @@
         <a href="/england/northern-england">Northern England</a>
         <a href="/england/yorkshire">Yorkshire</a>
         <a href="/england/the-midlands">The Midlands</a>
-        <a href="/england/east-of-england">East of England</a>
+        <a href="/england/east-anglia">East Anglia & East England</a>
         <a href="/england/south-east-london">South East &amp; London</a>
-        <a href="/england/south-west">South West</a>
+        <a href="/england/south-west-england">South West England</a>
       </div>
       <a href="/scotland" class="mob-heading" style="text-decoration:none">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
       <div class="mob-sub">
