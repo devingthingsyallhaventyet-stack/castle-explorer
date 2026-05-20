@@ -296,6 +296,10 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   color: var(--text-dim); font-size: .8rem;
 }
 .empty-state .icon { font-size: 1.5rem; margin-bottom: .5rem; }
+
+/* === TAB PANELS === */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
 </style>
 </head>
 <body>
@@ -361,6 +365,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       </div>
 
       <!-- ==================== CORE INFO TAB ==================== -->
+      <div class="tab-panel active" data-tab="core">
 
       <!-- IDENTITY -->
       <div class="edit-section">
@@ -528,6 +533,11 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
       </div>
 
+      </div><!-- /core tab -->
+
+      <!-- ==================== PHOTOS TAB ==================== -->
+      <div class="tab-panel" data-tab="photos">
+
       <!-- PHOTOS PREVIEW -->
       <div class="edit-section">
         <div class="edit-section-header">
@@ -562,6 +572,45 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
           📡 No own photos — gallery will show Google Places images at runtime
         </div>
       </div>
+
+      </div><!-- /photos tab -->
+
+      <!-- ==================== VISIT TAB ==================== -->
+      <div class="tab-panel" data-tab="visit">
+
+      <!-- GETTING THERE (duplicated from below for correct tab) -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Getting There</div>
+            <div class="edit-section-subtitle">Directions link auto-generated from coordinates</div>
+          </div>
+          <span class="section-badge badge-auto">Auto</span>
+        </div>
+        <div class="field-group">
+          <div class="field-label">Google Maps Link</div>
+          <div class="field-readonly" style="font-size:.75rem;">https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999</div>
+          <div class="field-hint">Auto-generated from coordinates. Always available.</div>
+        </div>
+      </div>
+
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Terrain & Accessibility</div>
+            <div class="edit-section-subtitle">Hidden until data exists — populated via community contributions</div>
+          </div>
+        </div>
+        <div class="empty-state">
+          <div class="icon">♿</div>
+          No terrain or accessibility data yet. This section will be hidden on the live page.
+        </div>
+      </div>
+
+      </div><!-- /visit tab -->
+
+      <!-- ==================== HISTORY TAB ==================== -->
+      <div class="tab-panel" data-tab="history">
 
       <!-- TIMELINE -->
       <div class="edit-section">
@@ -676,22 +725,6 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
       </div>
 
-      <!-- GETTING THERE -->
-      <div class="edit-section">
-        <div class="edit-section-header">
-          <div>
-            <div class="edit-section-title">Getting There</div>
-            <div class="edit-section-subtitle">Directions link auto-generated from coordinates</div>
-          </div>
-          <span class="section-badge badge-auto">Auto</span>
-        </div>
-        <div class="field-group">
-          <div class="field-label">Google Maps Link</div>
-          <div class="field-readonly" style="font-size:.75rem;">https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999</div>
-          <div class="field-hint">Auto-generated from coordinates. Always available.</div>
-        </div>
-      </div>
-
       <!-- DESIGNATIONS -->
       <div class="edit-section">
         <div class="edit-section-header">
@@ -714,6 +747,11 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
           </div>
         </div>
       </div>
+
+      </div><!-- /history tab -->
+
+      <!-- ==================== LINKS & SOURCES TAB ==================== -->
+      <div class="tab-panel" data-tab="links">
 
       <!-- LINKS & SOURCES -->
       <div class="edit-section">
@@ -748,9 +786,25 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
       </div>
 
+      </div><!-- /links tab -->
+
     </div>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.section-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const tabs = ['core','photos','visit','history','links'];
+    const idx = [...tab.parentElement.children].indexOf(tab);
+    const panel = document.querySelector(`.tab-panel[data-tab="${tabs[idx]}"]`);
+    if (panel) panel.classList.add('active');
+  });
+});
+</script>
 
 </body>
 </html>
