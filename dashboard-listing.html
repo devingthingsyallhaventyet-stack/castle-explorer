@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edinburgh Castle — Castlecore Dashboard</title>
+<title>Edit Listing — Castlecore Dashboard</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -380,6 +380,75 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 /* === TAB PANELS === */
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
+
+/* === LOADING === */
+.loading-overlay {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 300px; color: var(--text-muted); font-size: .9rem;
+}
+/* === TOAST === */
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; padding: .75rem 1.25rem;
+  border-radius: 6px; font-size: .8rem; font-weight: 600; z-index: 100;
+  animation: toastIn .3s ease; font-family: var(--sans);
+}
+.toast-success { background: var(--green); color: #fff; }
+.toast-error { background: var(--red); color: #fff; }
+@keyframes toastIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+
+/* === ADD FORM (inline) === */
+.add-form {
+  padding: .75rem; background: var(--bg); border-radius: 4px;
+  border: 1px solid var(--border); margin-top: .75rem;
+}
+.add-form .field-row { margin-bottom: .5rem; }
+.add-form .btn { margin-top: .5rem; }
+
+/* === TIMELINE EDIT MODE === */
+.timeline-entry-view { display: block; }
+.timeline-entry-edit { display: none; }
+.timeline-entry.editing .timeline-entry-view { display: none; }
+.timeline-entry.editing .timeline-entry-edit { display: block; }
+.timeline-entry-edit .field-row { margin-bottom: .5rem; }
+.timeline-entry-edit .field-group { margin-bottom: .5rem; }
+.timeline-entry-edit .edit-actions { display: flex; gap: .4rem; margin-top: .6rem; }
+.timeline-image-thumb {
+  width: 60px; height: 45px; border-radius: 3px; object-fit: cover;
+  border: 1px solid var(--border); flex-shrink: 0;
+}
+.timeline-drop-zone {
+  width: 60px; height: 45px; border-radius: 3px;
+  border: 2px dashed var(--border); display: flex;
+  align-items: center; justify-content: center;
+  font-size: .6rem; color: var(--text-dim); cursor: pointer;
+  flex-shrink: 0; transition: border-color .15s;
+}
+.timeline-drop-zone:hover, .timeline-drop-zone.drag-over {
+  border-color: var(--accent); color: var(--text-muted);
+}
+.timeline-edit-image-area {
+  display: flex; align-items: center; gap: .5rem; margin-top: .5rem;
+}
+.timeline-edit-drop-zone {
+  width: 80px; height: 60px; border-radius: 4px;
+  border: 2px dashed var(--border); display: flex;
+  align-items: center; justify-content: center;
+  font-size: .55rem; color: var(--text-dim); cursor: pointer;
+  flex-shrink: 0; text-align: center; line-height: 1.2;
+}
+.timeline-edit-drop-zone:hover, .timeline-edit-drop-zone.drag-over {
+  border-color: var(--accent);
+}
+.timeline-edit-drop-zone img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 2px;
+}
+
+/* === DRAG & DROP === */
+.photo-grid.drag-over {
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+  background: rgba(139,35,53,.06);
+}
 </style>
 </head>
 <body>
@@ -414,31 +483,32 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
     <div class="topbar">
       <div class="topbar-left">
         <a class="back" href="dashboard-prototype.html">← Back to Listings</a>
-        <h1>Edinburgh Castle</h1>
+        <h1 id="topbarTitle">Loading…</h1>
       </div>
       <div class="topbar-actions">
-        <button class="btn">👁 Preview</button>
+        <button class="btn" id="saveBtn" onclick="saveListing()">💾 Save</button>
         <button class="btn btn-primary" id="savePublishBtn" onclick="saveAndRepublish()">💾 Save & Republish</button>
       </div>
     </div>
 
-    <div class="content">
+    <div class="content" id="mainContent">
+      <div class="loading-overlay" id="loadingOverlay">⏳ Loading listing…</div>
+
       <!-- STATUS BAR -->
-      <div class="listing-status-bar">
-        <span class="status-pill status-unpublished">Unpublished</span>
-        <span class="tag tag-open">Open to Visitors</span>
-        <span class="tag tag-intact">Intact</span>
-        <span class="tag tag-century">12th century</span>
-        <span class="tag tag-custom">As Seen on Screen</span>
+      <div class="listing-status-bar" id="statusBar" style="display:none;">
+        <span class="status-pill" id="publishPill">—</span>
+        <span class="tag tag-open" id="statusTag"></span>
+        <span class="tag tag-intact" id="conditionTag"></span>
+        <span class="tag tag-century" id="centuryTag"></span>
         <div class="completeness-inline">
-          <div class="completeness-bar"><div class="completeness-fill" style="width:85%"></div></div>
-          85% complete
+          <div class="completeness-bar"><div class="completeness-fill" id="completenessFill" style="width:0%"></div></div>
+          <span id="completenessText">0%</span>
         </div>
-        <span class="last-published">Never published</span>
+        <span class="last-published" id="lastPublished"></span>
       </div>
 
       <!-- SECTION TABS -->
-      <div class="section-tabs">
+      <div class="section-tabs" id="sectionTabs" style="display:none;">
         <div class="section-tab active">Core Info</div>
         <div class="section-tab">Photos</div>
         <div class="section-tab">Visit</div>
@@ -460,16 +530,16 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="field-row">
           <div class="field-group">
             <div class="field-label">Name</div>
-            <input type="text" class="field-input" value="Edinburgh Castle">
+            <input type="text" class="field-input" id="fieldName">
           </div>
           <div class="field-group">
             <div class="field-label">Slug</div>
-            <div class="field-readonly">edinburgh-castle</div>
+            <div class="field-readonly" id="fieldSlug">—</div>
           </div>
         </div>
         <div class="field-group" style="margin-top:1rem">
           <div class="field-label">Subtitle <span class="source-tag">Editorial</span></div>
-          <input type="text" class="field-input" value="Scotland's most iconic fortress, dominating Edinburgh's skyline from an ancient volcanic rock">
+          <input type="text" class="field-input" id="fieldSubtitle">
           <div class="field-hint">One-liner summary. Every claim must trace to an approved source.</div>
         </div>
       </div>
@@ -485,8 +555,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="field-row">
           <div class="field-group">
             <div class="field-label">Country</div>
-            <select class="field-select">
-              <option selected>Scotland</option>
+            <select class="field-select" id="fieldCountry" onchange="updateRegions()">
+              <option value="">— Select —</option>
+              <option>Scotland</option>
               <option>England</option>
               <option>Wales</option>
               <option>Ireland</option>
@@ -495,66 +566,34 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           </div>
           <div class="field-group">
             <div class="field-label">Region</div>
-            <select class="field-select" id="regionSelect">
+            <select class="field-select" id="fieldRegion">
               <option value="">— Select region —</option>
-              <optgroup label="Scotland">
-                <option>Highlands & Northern Isles</option>
-                <option selected>Edinburgh & the Lothians</option>
-                <option>Northeast & Tayside</option>
-                <option>Argyll & Western Isles</option>
-                <option>Fife & Perthshire</option>
-                <option>Scottish Borders</option>
-                <option>Southwest Scotland</option>
-                <option>Glasgow & Stirling</option>
-              </optgroup>
-              <optgroup label="England">
-                <option>Northern England</option>
-                <option>Yorkshire</option>
-                <option>The Midlands</option>
-                <option>South East & London</option>
-                <option>South West</option>
-                <option>East of England</option>
-              </optgroup>
-              <optgroup label="Wales">
-                <option>Snowdonia & North Wales</option>
-                <option>Mid Wales & the Marches</option>
-                <option>West Wales</option>
-                <option>South Wales</option>
-              </optgroup>
-              <optgroup label="Ireland">
-                <option>The Wild Atlantic Way</option>
-                <option>The Kingdom of Munster</option>
-                <option>Ireland's Ancient East</option>
-                <option>The Heartlands</option>
-                <option>Dublin & The Pale</option>
-                <option>Ulster & the North</option>
-              </optgroup>
             </select>
           </div>
         </div>
         <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">Town / Area</div>
-            <input type="text" class="field-input" value="Edinburgh">
+            <input type="text" class="field-input" id="fieldTown">
           </div>
           <div class="field-group">
             <div class="field-label">County</div>
-            <input type="text" class="field-input" value="City of Edinburgh">
+            <input type="text" class="field-input" id="fieldCounty">
           </div>
         </div>
         <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">Latitude</div>
-            <input type="text" class="field-input" value="55.9486">
+            <input type="text" class="field-input" id="fieldLatitude">
           </div>
           <div class="field-group">
             <div class="field-label">Longitude</div>
-            <input type="text" class="field-input" value="-3.1999">
+            <input type="text" class="field-input" id="fieldLongitude">
           </div>
         </div>
       </div>
 
-      <!-- CLASSIFICATION (now includes Type, Century, Status, Condition, Badge, Tags) -->
+      <!-- CLASSIFICATION -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
@@ -565,8 +604,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="field-row-4">
           <div class="field-group">
             <div class="field-label">Type</div>
-            <select class="field-select">
-              <option selected>Castle</option>
+            <select class="field-select" id="fieldType">
+              <option value="">— Select —</option>
+              <option>Castle</option>
               <option>Abbey</option>
               <option>Tower House</option>
               <option>Priory</option>
@@ -575,16 +615,43 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
               <option>Country House</option>
               <option>Cathedral</option>
               <option>Friary</option>
+              <option>Historical Place</option>
             </select>
           </div>
           <div class="field-group">
             <div class="field-label">Century</div>
-            <input type="text" class="field-input" value="12th century">
+            <select class="field-select" id="fieldCentury">
+              <option value=""></option>
+              <option>Pre-Roman (before 1st century)</option>
+              <option>1st Century</option>
+              <option>2nd Century</option>
+              <option>3rd Century</option>
+              <option>4th Century</option>
+              <option>5th Century</option>
+              <option>6th Century</option>
+              <option>7th Century</option>
+              <option>8th Century</option>
+              <option>9th Century</option>
+              <option>10th Century</option>
+              <option>11th Century</option>
+              <option>12th Century</option>
+              <option>13th Century</option>
+              <option>14th Century</option>
+              <option>15th Century</option>
+              <option>16th Century</option>
+              <option>17th Century</option>
+              <option>18th Century</option>
+              <option>19th Century</option>
+              <option>20th Century</option>
+              <option>21st Century</option>
+              <option>Unknown</option>
+            </select>
           </div>
           <div class="field-group">
             <div class="field-label">Status</div>
-            <select class="field-select">
-              <option selected>Open to Visitors</option>
+            <select class="field-select" id="fieldStatus">
+              <option value="">— Select —</option>
+              <option>Open to Visitors</option>
               <option>Freely Accessible</option>
               <option>Book to Experience</option>
               <option>Private</option>
@@ -593,8 +660,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           </div>
           <div class="field-group">
             <div class="field-label">Condition</div>
-            <select class="field-select">
-              <option selected>Intact</option>
+            <select class="field-select" id="fieldCondition">
+              <option value="">— Select —</option>
+              <option>Intact</option>
               <option>Ruin</option>
               <option>— Hidden —</option>
             </select>
@@ -603,17 +671,16 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">Badge <span class="source-tag">Auto from Google</span></div>
-            <div class="field-readonly">⭐ Must See</div>
-            <div class="field-hint">4.6★ · 52,418 reviews → auto-assigned</div>
+            <div class="field-readonly" id="fieldBadge">—</div>
+            <div class="field-hint" id="fieldBadgeHint"></div>
           </div>
           <div class="field-group">
             <div class="field-label">Tags <span class="source-tag">Multi-select</span></div>
-            <div class="tag-selector">
-              <div class="tag-chip">As Seen on Screen <span class="remove">✕</span></div>
-              <input type="text" class="tag-input" placeholder="Type to add tag...">
+            <div class="tag-selector" id="tagSelector">
+              <input type="text" class="tag-input" id="tagInput" placeholder="Type to add tag...">
             </div>
             <div class="tag-suggestions">
-              Suggestions: <span>Hotel</span> · <span>As Seen on Screen</span> · <span>Haunted</span> · <span>Wedding Venue</span> · <span>Dog Friendly</span> · <span>Cliffside</span> · <span>Lakeside</span> · <span>Hilltop</span> · <span>Filming Location</span> · <span>Dark & Brooding</span>
+              Suggestions: <span onclick="addTag('Hotel')">Hotel</span> · <span onclick="addTag('As Seen on Screen')">As Seen on Screen</span> · <span onclick="addTag('Haunted')">Haunted</span> · <span onclick="addTag('Wedding Venue')">Wedding Venue</span> · <span onclick="addTag('Dog Friendly')">Dog Friendly</span> · <span onclick="addTag('Cliffside')">Cliffside</span> · <span onclick="addTag('Lakeside')">Lakeside</span> · <span onclick="addTag('Hilltop')">Hilltop</span> · <span onclick="addTag('Filming Location')">Filming Location</span> · <span onclick="addTag('Dark & Brooding')">Dark & Brooding</span>
             </div>
           </div>
         </div>
@@ -631,12 +698,12 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="field-row">
           <div class="field-group">
             <div class="field-label">Place ID</div>
-            <input type="text" class="field-input" value="ChIJd_Y_0WDHh0gRDjJkXq_BGLY" style="font-family: monospace; font-size: .75rem;">
+            <input type="text" class="field-input" id="fieldGooglePlaceId" style="font-family: monospace; font-size: .75rem;">
             <div class="field-hint">Used for reviews, photos, hours — all fetched live from Google API.</div>
           </div>
           <div class="field-group">
             <div class="field-label">Google Rating</div>
-            <div class="field-readonly">4.6 ★ · 52,418 reviews</div>
+            <div class="field-readonly" id="fieldGoogleRating">—</div>
           </div>
         </div>
       </div>
@@ -653,31 +720,13 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
             <div class="edit-section-subtitle">Own photos take priority over Google Places</div>
           </div>
         </div>
-        <div class="photo-grid">
-          <div class="photo-upload-slot">
-            <div class="icon">📷</div>
-            <div class="label">Upload</div>
-          </div>
-          <div class="photo-upload-slot">
-            <div class="icon">📷</div>
-            <div class="label">Upload</div>
-          </div>
-          <div class="photo-upload-slot">
-            <div class="icon">📷</div>
-            <div class="label">Upload</div>
-          </div>
-          <div class="photo-upload-slot">
-            <div class="icon">📷</div>
-            <div class="label">Upload</div>
-          </div>
-          <div class="photo-upload-slot">
-            <div class="icon">📷</div>
-            <div class="label">Upload</div>
-          </div>
+        <div class="photo-grid" id="photoGrid">
+          <!-- Photos rendered by JS -->
         </div>
-        <div class="photo-source-note">
+        <div class="photo-source-note" id="photoSourceNote">
           📡 No own photos — gallery will show Google Places images at runtime
         </div>
+        <input type="file" id="photoFileInput" accept="image/*" style="display:none" onchange="uploadPhoto(this)">
       </div>
 
       </div><!-- /photos tab -->
@@ -685,7 +734,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       <!-- ==================== VISIT TAB ==================== -->
       <div class="tab-panel" data-tab="visit">
 
-      <!-- ABOUT (moved here from Core Info — matches website layout) -->
+      <!-- ABOUT -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
@@ -696,13 +745,11 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         </div>
         <div class="field-group">
           <div class="field-label">Short Description <span class="source-tag">Always visible</span></div>
-          <textarea class="field-textarea" rows="3">Edinburgh Castle is a historic fortress which dominates the skyline of Edinburgh, the capital city of Scotland, from its position on the Castle Rock. Archaeologists have established human occupation of the rock since at least the Iron Age, although the nature of the early settlement is unclear.</textarea>
+          <textarea class="field-textarea" rows="3" id="fieldDescShort"></textarea>
         </div>
         <div class="field-group" style="margin-top:1rem">
           <div class="field-label">Expanded Description <span class="source-tag">Behind "Read more"</span></div>
-          <textarea class="field-textarea" rows="5">There has been a royal castle on the rock since at least the reign of David I in the 12th century, and the site continued at times to be a royal residence until 1633. From the 15th century, the castle's residential role declined, and by the 17th century it was principally used as military barracks with a large garrison.
-
-Its importance as a part of Scotland's national heritage was increasingly recognised from the early 19th century onwards, and various restoration programmes have been carried out over the past century and a half.</textarea>
+          <textarea class="field-textarea" rows="5" id="fieldDescExpanded"></textarea>
         </div>
       </div>
 
@@ -723,7 +770,7 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <li><strong>Book to Experience</strong> → shows "Contact property directly"</li>
             <li><strong>Private</strong> → no hours/admission shown</li>
           </ul>
-          <p style="margin-top:.5rem; font-size:.75rem; color:var(--text-dim);">Current status: <strong style="color:var(--green);">Open to Visitors</strong> — hours will be fetched from Google Places at runtime.</p>
+          <p style="margin-top:.5rem; font-size:.75rem; color:var(--text-dim);">Current status: <strong id="visitStatusDisplay" style="color:var(--green);">—</strong> — hours will be fetched from Google Places at runtime.</p>
         </div>
       </div>
 
@@ -736,28 +783,28 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
           </div>
         </div>
         <div class="field-group">
-          <div class="field-label">Google Maps Link <span class="source-tag">Auto from coordinates</span></div>
-          <div class="field-readonly" style="font-size:.75rem;">https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999</div>
-          <div class="field-hint">Always available — generated from coordinates.</div>
+          <div class="field-label">Google Maps Link <span class="source-tag">Auto from approved sources</span></div>
+          <div class="field-readonly" id="fieldMapsLink" style="font-size:.75rem;">—</div>
+          <div class="field-hint">Google Maps link from approved audit sources.</div>
         </div>
         <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">By Car</div>
-            <textarea class="field-textarea" rows="2" placeholder="Driving directions, parking info..."></textarea>
+            <textarea class="field-textarea" rows="2" id="fieldGetCar" placeholder="Driving directions, parking info..."></textarea>
           </div>
           <div class="field-group">
             <div class="field-label">By Train</div>
-            <textarea class="field-textarea" rows="2" placeholder="Nearest station, walk time...">Waverley Station is a 10-minute uphill walk.</textarea>
+            <textarea class="field-textarea" rows="2" id="fieldGetTrain" placeholder="Nearest station, walk time..."></textarea>
           </div>
         </div>
         <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">By Bus</div>
-            <textarea class="field-textarea" rows="2" placeholder="Bus routes, stops..."></textarea>
+            <textarea class="field-textarea" rows="2" id="fieldGetBus" placeholder="Bus routes, stops..."></textarea>
           </div>
           <div class="field-group">
             <div class="field-label">By Airport</div>
-            <textarea class="field-textarea" rows="2" placeholder="Nearest airport, transport links...">Edinburgh Airport (EDI) — 30 min by tram or bus to city centre.</textarea>
+            <textarea class="field-textarea" rows="2" id="fieldGetAirport" placeholder="Nearest airport, transport links..."></textarea>
           </div>
         </div>
       </div>
@@ -772,13 +819,13 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
         <div class="field-group">
           <div class="field-label">Terrain Tags</div>
-          <div class="tag-selector">
-            <input type="text" class="tag-input" placeholder="e.g. Steep Approach, Cobblestones, Wheelchair Access...">
+          <div class="tag-selector" id="terrainTagSelector">
+            <input type="text" class="tag-input" id="terrainTagInput" placeholder="e.g. Steep Approach, Cobblestones, Wheelchair Access...">
           </div>
         </div>
         <div class="field-group" style="margin-top:1rem">
           <div class="field-label">Accessibility Description</div>
-          <textarea class="field-textarea" rows="3" placeholder="Describe terrain, accessibility features, mobility considerations..."></textarea>
+          <textarea class="field-textarea" rows="3" id="fieldTerrainDesc" placeholder="Describe terrain, accessibility features, mobility considerations..."></textarea>
         </div>
       </div>
 
@@ -794,92 +841,29 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Timeline</div>
             <div class="edit-section-subtitle">Key historical events — shown on History tab</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add Entry</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('timeline')">+ Add Entry</button>
         </div>
-        <div class="timeline-entries">
-          <div class="timeline-entry">
-            <div class="timeline-entry-top">
-              <div class="timeline-date">c. 900 BC</div>
-              <div class="timeline-content">
-                <strong>Iron Age Fort</strong><br>
-                Archaeological evidence shows human occupation of Castle Rock dating to the late Bronze Age.
+        <div id="addTimelineForm" style="display:none;" class="add-form">
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">Date</div><input type="text" class="field-input" id="newTimelineDate" placeholder="e.g. 1314"></div>
+            <div class="field-group"><div class="field-label">Title</div><input type="text" class="field-input" id="newTimelineTitle" placeholder="Event title"></div>
+          </div>
+          <div class="field-group"><div class="field-label">Description</div><textarea class="field-textarea" rows="2" id="newTimelineDesc" placeholder="What happened..."></textarea></div>
+          <div class="field-group">
+            <div class="field-label">Image (optional)</div>
+            <div class="timeline-edit-image-area">
+              <div class="timeline-edit-drop-zone" id="newTimelineDropZone" onclick="document.getElementById('newTimelineFileInput').click()" title="Drop image or click to upload">
+                📷<br>Drop or click
               </div>
-              <div class="timeline-actions">
-                <button class="btn-icon" title="Edit">✏️</button>
-                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-              </div>
+              <input type="text" class="field-input" id="newTimelineImage" placeholder="https://... or drop a file" style="flex:1">
+              <input type="file" id="newTimelineFileInput" accept="image/*" style="display:none">
             </div>
           </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-top">
-              <div class="timeline-date">1130s</div>
-              <div class="timeline-content">
-                <strong>Royal Castle Established</strong><br>
-                David I held his court at the castle and his mother Saint Margaret's Chapel was built, the oldest surviving building in Edinburgh.
-              </div>
-              <div class="timeline-actions">
-                <button class="btn-icon" title="Edit">✏️</button>
-                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-              </div>
-            </div>
-            <div class="timeline-image">
-              <img class="timeline-image-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Edinburgh_Castle_from_the_south_east.JPG/120px-Edinburgh_Castle_from_the_south_east.JPG" alt="">
-              <div class="timeline-image-info">
-                St Margaret's Chapel<br>
-                📷 Kim Traynor · CC BY-SA 3.0
-              </div>
-              <div class="timeline-image-actions">
-                <button class="btn-icon" title="Change photo">🔄</button>
-                <button class="btn-icon btn-icon-danger" title="Remove photo">✕</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-top">
-              <div class="timeline-date">1314</div>
-              <div class="timeline-content">
-                <strong>Recaptured by the Scots</strong><br>
-                Thomas Randolph, Earl of Moray, scaled the castle walls with 30 men and recaptured it from English forces.
-              </div>
-              <div class="timeline-actions">
-                <button class="btn-icon" title="Add photo">📷</button>
-                <button class="btn-icon" title="Edit">✏️</button>
-                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-top">
-              <div class="timeline-date">1573</div>
-              <div class="timeline-content">
-                <strong>Lang Siege</strong><br>
-                The castle was bombarded in a siege lasting almost two years, the longest in its history.
-              </div>
-              <div class="timeline-actions">
-                <button class="btn-icon" title="Add photo">📷</button>
-                <button class="btn-icon" title="Edit">✏️</button>
-                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-top">
-              <div class="timeline-date">1927</div>
-              <div class="timeline-content">
-                <strong>Scottish National War Memorial</strong><br>
-                The memorial was opened within the castle, designed by Sir Robert Lorimer.
-              </div>
-              <div class="timeline-actions">
-                <button class="btn-icon" title="Add photo">📷</button>
-                <button class="btn-icon" title="Edit">✏️</button>
-                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-              </div>
-            </div>
-          </div>
+          <button class="btn btn-primary" onclick="addTimelineEntry()">Add Entry</button>
+          <button class="btn" onclick="toggleAddForm('timeline')">Cancel</button>
+        </div>
+        <div class="timeline-entries" id="timelineList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -890,53 +874,20 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Notable People</div>
             <div class="edit-section-subtitle">Historical figures connected to this site</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add Person</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('people')">+ Add Person</button>
         </div>
-        <div class="people-grid">
-          <div class="person-card">
-            <div class="person-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mary_Queen_of_Scots_after_Fran%C3%A7ois_Clouet.jpg/96px-Mary_Queen_of_Scots_after_Fran%C3%A7ois_Clouet.jpg" alt=""></div>
-            <div class="person-info">
-              <div class="person-name">Mary, Queen of Scots</div>
-              <div class="person-role">1542–1587 · Gave birth to James VI here</div>
-            </div>
-            <div class="person-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
+        <div id="addPeopleForm" style="display:none;" class="add-form">
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">Name</div><input type="text" class="field-input" id="newPersonName" placeholder="Full name"></div>
+            <div class="field-group"><div class="field-label">Role / Description</div><input type="text" class="field-input" id="newPersonRole" placeholder="e.g. 1542–1587 · Gave birth to James VI here"></div>
           </div>
-          <div class="person-card">
-            <div class="person-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/David_I%2C_King_of_Scotland.jpg/96px-David_I%2C_King_of_Scotland.jpg" alt=""></div>
-            <div class="person-info">
-              <div class="person-name">David I</div>
-              <div class="person-role">c. 1084–1153 · Established the royal castle</div>
-            </div>
-            <div class="person-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
-          <div class="person-card">
-            <div class="person-avatar" style="background:var(--border)"></div>
-            <div class="person-info">
-              <div class="person-name">Thomas Randolph</div>
-              <div class="person-role">d. 1332 · Earl of Moray, recaptured the castle</div>
-            </div>
-            <div class="person-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
-          <div class="person-card">
-            <div class="person-avatar" style="background:var(--border)"></div>
-            <div class="person-info">
-              <div class="person-name">William Kirkcaldy</div>
-              <div class="person-role">c. 1520–1573 · Held the castle during the Lang Siege</div>
-            </div>
-            <div class="person-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
+          <div class="field-group"><div class="field-label">Image URL (optional)</div><input type="text" class="field-input" id="newPersonImage" placeholder="https://..."></div>
+          <div class="field-group"><div class="field-label">Wikipedia URL (optional)</div><input type="text" class="field-input" id="newPersonWiki" placeholder="https://en.wikipedia.org/wiki/..."></div>
+          <button class="btn btn-primary" onclick="addPersonEntry()">Add Person</button>
+          <button class="btn" onclick="toggleAddForm('people')">Cancel</button>
+        </div>
+        <div class="people-grid" id="peopleList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -947,27 +898,22 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Videos</div>
             <div class="edit-section-subtitle">YouTube videos — max 2 per listing, prioritise tours & visits</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add Video</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('videos')">+ Add Video</button>
         </div>
-        <div class="video-list">
-          <div class="video-item">
-            <div class="video-thumb">
-              <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="">
-              <div class="play-icon">▶</div>
-            </div>
-            <div class="video-info">
-              <div class="video-title">Edinburgh Castle — Full Tour & History</div>
-              <div class="video-id">youtube.com/watch?v=dQw4w9WgXcQ</div>
-            </div>
-            <div class="person-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
+        <div id="addVideosForm" style="display:none;" class="add-form">
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">YouTube ID</div><input type="text" class="field-input" id="newVideoId" placeholder="e.g. dQw4w9WgXcQ"></div>
+            <div class="field-group"><div class="field-label">Title</div><input type="text" class="field-input" id="newVideoTitle" placeholder="Video title"></div>
           </div>
+          <button class="btn btn-primary" onclick="addVideoEntry()">Add Video</button>
+          <button class="btn" onclick="toggleAddForm('videos')">Cancel</button>
+        </div>
+        <div class="video-list" id="videoList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
-      <!-- ARCHITECTURE & CONSTRUCTION -->
+      <!-- ARCHITECTURE -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
@@ -978,7 +924,7 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
         <div class="field-group">
           <div class="field-label">Architecture Description</div>
-          <textarea class="field-textarea" rows="5" placeholder="Describe the building's architectural history, construction periods, materials, and style...">The castle complex is built on several levels across the summit of Castle Rock, an extinct volcanic plug. The oldest surviving building is St Margaret's Chapel from the early 12th century. The castle's defences evolved over centuries, from medieval curtain walls to the distinctive Half Moon Battery built in the 1570s after the Lang Siege. Major building campaigns occurred under David II (David's Tower, 1370s), James IV (Great Hall, 1511), and during the military period (barracks and vaults, 18th century).</textarea>
+          <textarea class="field-textarea" rows="5" id="fieldArchitecture" placeholder="Describe the building's architectural history, construction periods, materials, and style..."></textarea>
         </div>
       </div>
 
@@ -989,27 +935,18 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Designations</div>
             <div class="edit-section-subtitle">Heritage and protection status</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('designations')">+ Add</button>
         </div>
-        <div class="links-list">
-          <div class="link-item">
-            <span class="link-icon">🏛</span>
-            <span style="font-size:.8rem; color:var(--text); flex:1;">Scheduled Ancient Monument</span>
-            <span class="link-label">Historic Environment Scotland</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
+        <div id="addDesignationsForm" style="display:none;" class="add-form">
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">Title</div><input type="text" class="field-input" id="newDesignationTitle" placeholder="e.g. Scheduled Ancient Monument"></div>
+            <div class="field-group"><div class="field-label">Body</div><input type="text" class="field-input" id="newDesignationBody" placeholder="e.g. Historic Environment Scotland"></div>
           </div>
-          <div class="link-item">
-            <span class="link-icon">🏛</span>
-            <span style="font-size:.8rem; color:var(--text); flex:1;">Category A Listed Building</span>
-            <span class="link-label">Historic Environment Scotland</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
+          <button class="btn btn-primary" onclick="addDesignationEntry()">Add</button>
+          <button class="btn" onclick="toggleAddForm('designations')">Cancel</button>
+        </div>
+        <div class="links-list" id="designationsList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -1020,25 +957,22 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Further Reading</div>
             <div class="edit-section-subtitle">Books and references — shown at bottom of History tab</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('reading')">+ Add</button>
         </div>
-        <div class="reading-list">
-          <div class="reading-item">
-            <span style="font-size:.75rem; color:var(--text-dim);">📚</span>
-            <div class="reading-item-text"><strong>Gifford, J.</strong> — <em>Edinburgh: The Buildings of Scotland</em> (1984)</div>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
+        <div id="addReadingForm" style="display:none;" class="add-form">
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">Author</div><input type="text" class="field-input" id="newReadingAuthor" placeholder="Author name"></div>
+            <div class="field-group"><div class="field-label">Title</div><input type="text" class="field-input" id="newReadingTitle" placeholder="Book title"></div>
           </div>
-          <div class="reading-item">
-            <span style="font-size:.75rem; color:var(--text-dim);">📚</span>
-            <div class="reading-item-text"><strong>Ewart, G.</strong> — <em>Edinburgh Castle: The Governor's House</em> (2014)</div>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
+          <div class="field-row">
+            <div class="field-group"><div class="field-label">Year</div><input type="text" class="field-input" id="newReadingYear" placeholder="e.g. 1984"></div>
+            <div class="field-group"><div class="field-label">URL (optional)</div><input type="text" class="field-input" id="newReadingUrl" placeholder="https://..."></div>
           </div>
+          <button class="btn btn-primary" onclick="addReadingEntry()">Add</button>
+          <button class="btn" onclick="toggleAddForm('reading')">Cancel</button>
+        </div>
+        <div class="reading-list" id="readingList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -1053,45 +987,23 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <div class="edit-section-title">Links & Sources</div>
             <div class="edit-section-subtitle">Approved source links for this listing</div>
           </div>
-          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add Link</button>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;" onclick="toggleAddForm('links')">+ Add Link</button>
         </div>
-        <div class="links-list">
-          <div class="link-item">
-            <span class="link-icon">🌐</span>
-            <a class="link-url" href="#">https://www.edinburghcastle.scot/</a>
-            <span class="link-label">Official Website</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+        <div id="addLinksForm" style="display:none;" class="add-form">
+          <div class="field-row-3">
+            <div class="field-group"><div class="field-label">Type</div>
+              <select class="field-select" id="newLinkType">
+                <option>Official Website</option><option>Wikipedia</option><option>Heritage Body</option><option>Google Places</option><option>Other</option>
+              </select>
             </div>
+            <div class="field-group"><div class="field-label">URL</div><input type="text" class="field-input" id="newLinkUrl" placeholder="https://..."></div>
+            <div class="field-group"><div class="field-label">Label</div><input type="text" class="field-input" id="newLinkLabel" placeholder="Display label"></div>
           </div>
-          <div class="link-item">
-            <span class="link-icon">📖</span>
-            <a class="link-url" href="#">https://en.wikipedia.org/wiki/Edinburgh_Castle</a>
-            <span class="link-label">Wikipedia</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
-          <div class="link-item">
-            <span class="link-icon">🏛</span>
-            <a class="link-url" href="#">https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/</a>
-            <span class="link-label">Heritage Body</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
-          <div class="link-item">
-            <span class="link-icon">📍</span>
-            <a class="link-url" href="#">https://maps.google.com/?cid=...</a>
-            <span class="link-label">Google Places</span>
-            <div class="link-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
-            </div>
-          </div>
+          <button class="btn btn-primary" onclick="addLinkEntry()">Add Link</button>
+          <button class="btn" onclick="toggleAddForm('links')">Cancel</button>
+        </div>
+        <div class="links-list" id="linksList">
+          <!-- Rendered by JS -->
         </div>
       </div>
 
@@ -1102,7 +1014,205 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
 </div>
 
 <script>
-// Tab switching
+// ===== GLOBALS =====
+let listingId = null;
+let listing = null;
+
+const REGIONS = {
+  'Scotland': ['Highlands & Northern Isles','Edinburgh & the Lothians','Northeast & Tayside','Argyll & Western Isles','Fife & Perthshire','Scottish Borders','Southwest Scotland','Glasgow & Stirling'],
+  'England': ['Northern England','Yorkshire','The Midlands','South East & London','South West','East of England'],
+  'Wales': ['Snowdonia & North Wales','Mid Wales & the Marches','West Wales','South Wales'],
+  'Ireland': ['The Wild Atlantic Way','The Kingdom of Munster','Ireland\'s Ancient East','The Heartlands','Dublin & The Pale','Ulster & the North'],
+  'Northern Ireland': ['Ulster & the North']
+};
+
+const LINK_ICONS = { 'Official Website':'🌐', 'Wikipedia':'📖', 'Heritage Body':'🏛', 'Google Places':'📍', 'Other':'🔗' };
+
+// ===== INIT =====
+(async function init() {
+  const params = new URLSearchParams(window.location.search);
+  listingId = params.get('id');
+  if (!listingId) { window.location.href = 'dashboard-prototype.html'; return; }
+
+  try {
+    const res = await fetch(`/api/listings/${listingId}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    listing = await res.json();
+    populateForm();
+  } catch (err) {
+    document.getElementById('loadingOverlay').textContent = `❌ Failed to load listing: ${err.message}`;
+  }
+})();
+
+function populateForm() {
+  document.getElementById('loadingOverlay').style.display = 'none';
+  document.getElementById('statusBar').style.display = '';
+  document.getElementById('sectionTabs').style.display = '';
+  document.title = `${listing.name} — Castlecore Dashboard`;
+
+  // Topbar
+  document.getElementById('topbarTitle').textContent = listing.name || 'Untitled';
+
+  // Status bar
+  const pill = document.getElementById('publishPill');
+  if (listing.published) { pill.textContent = 'Published'; pill.className = 'status-pill status-published'; }
+  else { pill.textContent = 'Unpublished'; pill.className = 'status-pill status-unpublished'; }
+  document.getElementById('statusTag').textContent = listing.status || '';
+  document.getElementById('conditionTag').textContent = listing.condition || '';
+  document.getElementById('centuryTag').textContent = listing.century || '';
+  document.getElementById('lastPublished').textContent = listing.published_at ? `Published ${new Date(listing.published_at).toLocaleDateString()}` : 'Never published';
+
+  // Completeness
+  const fields = [listing.name, listing.subtitle, listing.description_short, listing.description_expanded, listing.latitude, listing.longitude, listing.country, listing.region, listing.type, listing.century, listing.status, listing.condition, listing.google_place_id, listing.architecture];
+  const filled = fields.filter(f => f != null && f !== '').length;
+  const pct = Math.round((filled / fields.length) * 100);
+  document.getElementById('completenessFill').style.width = pct + '%';
+  document.getElementById('completenessText').textContent = pct + '% complete';
+
+  // Identity
+  document.getElementById('fieldName').value = listing.name || '';
+  document.getElementById('fieldSlug').textContent = listing.slug || '—';
+  document.getElementById('fieldSubtitle').value = listing.subtitle || '';
+
+  // Location
+  setSelect('fieldCountry', listing.country);
+  updateRegions(listing.region);
+  document.getElementById('fieldTown').value = listing.town || '';
+  document.getElementById('fieldCounty').value = listing.county || '';
+  document.getElementById('fieldLatitude').value = listing.latitude ?? '';
+  document.getElementById('fieldLongitude').value = listing.longitude ?? '';
+
+  // Classification
+  setSelect('fieldType', listing.type);
+  setSelect('fieldCentury', listing.century);
+  setSelect('fieldStatus', listing.status);
+  setSelect('fieldCondition', listing.condition);
+
+  // Badge
+  const rating = listing.google_rating;
+  const reviews = listing.google_review_count;
+  if (rating && rating >= 4.5 && reviews >= 1000) {
+    document.getElementById('fieldBadge').textContent = '⭐ Must See';
+  } else {
+    document.getElementById('fieldBadge').textContent = '—';
+  }
+  document.getElementById('fieldBadgeHint').textContent = rating ? `${rating}★ · ${(reviews||0).toLocaleString()} reviews` : '';
+
+  // Tags
+  let tags = [];
+  try { tags = JSON.parse(listing.tags || '[]'); } catch(e) {}
+  const selector = document.getElementById('tagSelector');
+  selector.querySelectorAll('.tag-chip').forEach(c => c.remove());
+  tags.forEach(t => insertTagChip(t, selector));
+
+  // Google Places
+  document.getElementById('fieldGooglePlaceId').value = listing.google_place_id || '';
+  document.getElementById('fieldGoogleRating').textContent = rating ? `${rating} ★ · ${(reviews||0).toLocaleString()} reviews` : '—';
+
+  // Visit tab
+  document.getElementById('fieldDescShort').value = listing.description_short || '';
+  document.getElementById('fieldDescExpanded').value = listing.description_expanded || '';
+  document.getElementById('visitStatusDisplay').textContent = listing.status || '—';
+  const lat = listing.latitude, lng = listing.longitude;
+  document.getElementById('fieldMapsLink').textContent = lat && lng ? `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}` : '—';
+  document.getElementById('fieldGetCar').value = listing.getting_there_car || '';
+  document.getElementById('fieldGetTrain').value = listing.getting_there_train || '';
+  document.getElementById('fieldGetBus').value = listing.getting_there_bus || '';
+  document.getElementById('fieldGetAirport').value = listing.getting_there_airport || '';
+
+  // Terrain
+  let terrainTags = [];
+  try { terrainTags = JSON.parse(listing.terrain_tags || '[]'); } catch(e) {}
+  const tSelector = document.getElementById('terrainTagSelector');
+  tSelector.querySelectorAll('.tag-chip').forEach(c => c.remove());
+  terrainTags.forEach(t => insertTagChip(t, tSelector));
+  document.getElementById('fieldTerrainDesc').value = listing.terrain_description || '';
+
+  // Architecture
+  document.getElementById('fieldArchitecture').value = listing.architecture || '';
+
+  // Sub-resources
+  renderTimeline(listing.timeline || []);
+  renderPeople(listing.people || []);
+  renderDesignations(listing.designations || []);
+  renderLinks(listing.links || []);
+  renderVideos(listing.videos || []);
+  renderReading(listing.further_reading || []);
+  renderPhotos(listing.photos || []);
+  setupPhotoDragDrop();
+  setupNewTimelineDropZone();
+}
+
+// ===== HELPERS =====
+function setSelect(id, val) {
+  const sel = document.getElementById(id);
+  if (!val) return;
+  for (const opt of sel.options) {
+    if (opt.value === val || opt.textContent === val) { opt.selected = true; return; }
+  }
+}
+
+function updateRegions(selectedRegion) {
+  const country = document.getElementById('fieldCountry').value;
+  const sel = document.getElementById('fieldRegion');
+  sel.innerHTML = '<option value="">— Select region —</option>';
+  const regions = REGIONS[country] || [];
+  regions.forEach(r => {
+    const opt = document.createElement('option');
+    opt.textContent = r; opt.value = r;
+    if (r === selectedRegion) opt.selected = true;
+    sel.appendChild(opt);
+  });
+}
+
+function insertTagChip(text, container) {
+  const input = container.querySelector('.tag-input');
+  const chip = document.createElement('div');
+  chip.className = 'tag-chip';
+  chip.innerHTML = `${esc(text)} <span class="remove" onclick="this.parentElement.remove()">✕</span>`;
+  container.insertBefore(chip, input);
+}
+
+function addTag(text) {
+  const sel = document.getElementById('tagSelector');
+  const existing = [...sel.querySelectorAll('.tag-chip')].map(c => c.textContent.replace('✕','').trim());
+  if (existing.includes(text)) return;
+  insertTagChip(text, sel);
+}
+
+function getTagsFromSelector(selectorId) {
+  return [...document.getElementById(selectorId).querySelectorAll('.tag-chip')]
+    .map(c => c.textContent.replace('✕','').trim());
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function toast(msg, type='success') {
+  const t = document.createElement('div');
+  t.className = `toast toast-${type}`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3000);
+}
+
+function toggleAddForm(name) {
+  const form = document.getElementById(`add${name.charAt(0).toUpperCase()+name.slice(1)}Form`);
+  form.style.display = form.style.display === 'none' ? '' : 'none';
+}
+
+// ===== TAG INPUT (Enter key) =====
+document.getElementById('tagInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.value.trim()) { e.preventDefault(); addTag(e.target.value.trim()); e.target.value = ''; }
+});
+document.getElementById('terrainTagInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.value.trim()) {
+    e.preventDefault();
+    insertTagChip(e.target.value.trim(), document.getElementById('terrainTagSelector'));
+    e.target.value = '';
+  }
+});
+
+// ===== TAB SWITCHING =====
 document.querySelectorAll('.section-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
@@ -1115,87 +1225,515 @@ document.querySelectorAll('.section-tab').forEach(tab => {
   });
 });
 
-// Timeline photo add — show upload area
-document.querySelectorAll('.btn-icon[title="Add photo"]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const entry = btn.closest('.timeline-entry');
-    if (entry.querySelector('.timeline-image')) return; // already has one
-    const upload = document.createElement('div');
-    upload.className = 'timeline-image';
-    upload.innerHTML = `
-      <div style="width:60px;height:45px;border-radius:3px;border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem;color:var(--text-dim);flex-shrink:0;" onclick="this.parentElement.querySelector('input').click()">📷</div>
-      <input type="file" accept="image/*" style="display:none" onchange="handleTimelinePhoto(this)">
-      <div class="timeline-image-info">Click to upload a photo for this event</div>
-      <div class="timeline-image-actions">
-        <button class="btn-icon btn-icon-danger" title="Cancel" onclick="this.closest('.timeline-image').remove()">✕</button>
+// ===== RENDER SUB-RESOURCES =====
+function renderTimeline(items) {
+  const c = document.getElementById('timelineList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">📅</div>No timeline entries yet</div>'; return; }
+  c.innerHTML = items.map(e => `
+    <div class="timeline-entry" data-id="${e.id}">
+      <div class="timeline-entry-view">
+        <div class="timeline-entry-top">
+          ${e.image_url ? `<img class="timeline-image-thumb" src="${esc(e.image_url)}" alt="">` : ''}
+          <div class="timeline-date">${esc(e.date_label || '')}</div>
+          <div class="timeline-content"><strong>${esc(e.title || '')}</strong><br>${esc(e.description || '')}</div>
+          <div class="timeline-actions">
+            <button class="btn-icon" title="Edit" onclick="startEditTimeline(${e.id})">✏️</button>
+            <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('timeline',${e.id})">🗑</button>
+          </div>
+        </div>
       </div>
-    `;
-    entry.appendChild(upload);
-    btn.style.display = 'none'; // hide add photo button
-  });
-});
-
-function handleTimelinePhoto(input) {
-  if (!input.files[0]) return;
-  const file = input.files[0];
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const container = input.closest('.timeline-image');
-    container.innerHTML = `
-      <img class="timeline-image-thumb" src="${e.target.result}" alt="">
-      <div class="timeline-image-info">${file.name}<br>📷 Ready to upload on save</div>
-      <div class="timeline-image-actions">
-        <button class="btn-icon" title="Change photo" onclick="this.closest('.timeline-image').querySelector('input')?.click()">🔄</button>
-        <button class="btn-icon btn-icon-danger" title="Remove photo" onclick="removeTimelinePhoto(this)">✕</button>
+      <div class="timeline-entry-edit">
+        <div class="field-row">
+          <div class="field-group"><div class="field-label">Date</div><input type="text" class="field-input tl-edit-date" value="${esc(e.date_label || '')}"></div>
+          <div class="field-group"><div class="field-label">Title</div><input type="text" class="field-input tl-edit-title" value="${esc(e.title || '')}"></div>
+        </div>
+        <div class="field-group"><div class="field-label">Description</div><textarea class="field-textarea tl-edit-desc" rows="2">${esc(e.description || '')}</textarea></div>
+        <div class="field-group">
+          <div class="field-label">Image URL</div>
+          <div class="timeline-edit-image-area">
+            <div class="timeline-edit-drop-zone" data-entry-id="${e.id}" onclick="triggerTimelineFileUpload(${e.id})" title="Drop image or click to upload">
+              ${e.image_url ? `<img src="${esc(e.image_url)}" alt="">` : '📷<br>Drop'}
+            </div>
+            <input type="text" class="field-input tl-edit-image" value="${esc(e.image_url || '')}" style="flex:1" placeholder="https://... or drop a file">
+          </div>
+        </div>
+        <div class="edit-actions">
+          <button class="btn btn-primary" onclick="saveEditTimeline(${e.id})">💾 Save</button>
+          <button class="btn" onclick="cancelEditTimeline(${e.id})">Cancel</button>
+        </div>
       </div>
-    `;
-  };
-  reader.readAsDataURL(file);
-}
-
-function removeTimelinePhoto(btn) {
-  const entry = btn.closest('.timeline-entry');
-  btn.closest('.timeline-image').remove();
-  // re-show the add photo button
-  const addBtn = entry.querySelector('.btn-icon[title="Add photo"]');
-  if (addBtn) addBtn.style.display = '';
-}
-
-// Save & Republish — collects all field changes and pushes to API
-async function saveAndRepublish() {
-  const btn = document.getElementById('savePublishBtn');
-  const originalText = btn.innerHTML;
-  btn.innerHTML = '⏳ Saving...';
-  btn.disabled = true;
-
-  try {
-    // Collect all input/textarea/select values
-    const data = {};
-    document.querySelectorAll('.field-input, .field-textarea, .field-select').forEach(el => {
-      const label = el.closest('.field-group')?.querySelector('.field-label')?.textContent?.trim().toLowerCase();
-      if (label && el.value !== undefined) {
-        data[label] = el.value;
+    </div>
+  `).join('');
+  // Setup drag-drop on each timeline edit drop zone
+  c.querySelectorAll('.timeline-edit-drop-zone').forEach(zone => {
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+    zone.addEventListener('drop', e => {
+      e.preventDefault(); zone.classList.remove('drag-over');
+      if (e.dataTransfer.files.length) {
+        uploadTimelineImage(parseInt(zone.dataset.entryId), e.dataTransfer.files[0], zone);
       }
     });
+  });
+}
 
-    // Collect tags
-    const tagChips = document.querySelectorAll('.tag-selector .tag-chip');
-    if (tagChips.length > 0) {
-      data.tags = [...tagChips].map(chip => chip.textContent.replace('✕', '').trim());
+function startEditTimeline(entryId) {
+  const el = document.querySelector(`.timeline-entry[data-id="${entryId}"]`);
+  if (el) el.classList.add('editing');
+}
+
+function cancelEditTimeline(entryId) {
+  const el = document.querySelector(`.timeline-entry[data-id="${entryId}"]`);
+  if (el) el.classList.remove('editing');
+  // Re-render to discard changes
+  renderTimeline(listing.timeline || []);
+}
+
+async function saveEditTimeline(entryId) {
+  const el = document.querySelector(`.timeline-entry[data-id="${entryId}"]`);
+  if (!el) return;
+  const date_label = el.querySelector('.tl-edit-date').value.trim();
+  const title = el.querySelector('.tl-edit-title').value.trim();
+  const description = el.querySelector('.tl-edit-desc').value.trim();
+  const image_url = el.querySelector('.tl-edit-image').value.trim() || null;
+  if (!date_label || !title) { toast('Date and title required', 'error'); return; }
+  try {
+    const res = await fetch(`/api/listings/${listingId}/timeline/${entryId}`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ date_label, title, description, image_url })
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const r2 = await fetch(`/api/listings/${listingId}`);
+    listing = await r2.json();
+    renderTimeline(listing.timeline || []);
+    toast('Timeline entry updated');
+  } catch (err) { toast('Update failed: ' + err.message, 'error'); }
+}
+
+function triggerTimelineFileUpload(entryId) {
+  const input = document.createElement('input');
+  input.type = 'file'; input.accept = 'image/*';
+  input.onchange = () => {
+    if (input.files[0]) {
+      const zone = document.querySelector(`.timeline-edit-drop-zone[data-entry-id="${entryId}"]`);
+      uploadTimelineImage(entryId, input.files[0], zone);
     }
+  };
+  input.click();
+}
 
-    // In real implementation: PUT /api/listings/:id with collected data
-    // then POST /api/listings/:id/publish
-    console.log('Saving listing data:', data);
-
-    // Simulate API call
-    await new Promise(r => setTimeout(r, 1000));
-
-    btn.innerHTML = '✅ Saved & Published';
-    setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+async function uploadTimelineImage(entryId, file, zone) {
+  const formData = new FormData();
+  formData.append('photo', file);
+  try {
+    if (zone) zone.innerHTML = '⏳';
+    const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const imageUrl = `/img/${data.r2_key}`;
+    // Fill in the URL input
+    const el = document.querySelector(`.timeline-entry[data-id="${entryId}"]`);
+    if (el) {
+      el.querySelector('.tl-edit-image').value = imageUrl;
+      if (zone) zone.innerHTML = `<img src="${imageUrl}" alt="">`;
+    }
+    toast('Image uploaded — click Save to apply');
   } catch (err) {
-    btn.innerHTML = '❌ Error — try again';
-    setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+    toast('Image upload failed: ' + err.message, 'error');
+    if (zone) zone.innerHTML = '📷<br>Drop';
+  }
+}
+
+function renderPeople(items) {
+  const c = document.getElementById('peopleList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">👤</div>No people yet</div>'; return; }
+  c.innerHTML = items.map(p => `
+    <div class="person-card" data-id="${p.id}">
+      <div class="person-avatar">${p.portrait_url ? `<img src="${esc(p.portrait_url)}" alt="">` : ''}</div>
+      <div class="person-info">
+        <div class="person-name">${esc(p.name || '')}</div>
+        <div class="person-role">${esc(p.role_description || '')}</div>
+        ${p.wikipedia_url ? `<a href="${esc(p.wikipedia_url)}" target="_blank" style="font-size:.65rem; color:var(--blue); text-decoration:none;">🔗 Wikipedia</a>` : ''}
+      </div>
+      <div class="person-actions">
+        <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('people',${p.id})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderDesignations(items) {
+  const c = document.getElementById('designationsList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">🏛</div>No designations yet</div>'; return; }
+  c.innerHTML = items.map(d => `
+    <div class="link-item" data-id="${d.id}">
+      <span class="link-icon">🏛</span>
+      <span style="font-size:.8rem; color:var(--text); flex:1;">${esc(d.title || d.name || '')}</span>
+      <span class="link-label">${esc(d.body || d.organisation || '')}</span>
+      <div class="link-actions">
+        <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('designations',${d.id})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderLinks(items) {
+  const c = document.getElementById('linksList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">🔗</div>No links yet</div>'; return; }
+  c.innerHTML = items.map(l => `
+    <div class="link-item" data-id="${l.id}">
+      <span class="link-icon">${LINK_ICONS[l.type] || LINK_ICONS[l.label] || '🔗'}</span>
+      <a class="link-url" href="${esc(l.url || '')}" target="_blank">${esc(l.url || '')}</a>
+      <span class="link-label">${esc(l.label || l.type || '')}</span>
+      <div class="link-actions">
+        <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('links',${l.id})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderVideos(items) {
+  const c = document.getElementById('videoList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">🎬</div>No videos yet</div>'; return; }
+  c.innerHTML = items.map(v => `
+    <div class="video-item" data-id="${v.id}">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/${esc(v.youtube_id || '')}/mqdefault.jpg" alt="">
+        <div class="play-icon">▶</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">${esc(v.title || '')}</div>
+        <div class="video-id">youtube.com/watch?v=${esc(v.youtube_id || '')}</div>
+      </div>
+      <div class="person-actions">
+        <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('videos',${v.id})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderReading(items) {
+  const c = document.getElementById('readingList');
+  if (!items.length) { c.innerHTML = '<div class="empty-state"><div class="icon">📚</div>No further reading yet</div>'; return; }
+  c.innerHTML = items.map(r => `
+    <div class="reading-item" data-id="${r.id}">
+      <span style="font-size:.75rem; color:var(--text-dim);">📚</span>
+      <div class="reading-item-text"><strong>${esc(r.author || '')}</strong> — <em>${esc(r.title || '')}</em>${r.year ? ` (${esc(String(r.year))})` : ''}</div>
+      <div class="link-actions">
+        <button class="btn-icon btn-icon-danger" title="Delete" onclick="deleteSubResource('further-reading',${r.id})">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderPhotos(items) {
+  const grid = document.getElementById('photoGrid');
+  grid.innerHTML = '';
+  items.forEach((p, i) => {
+    const isHero = p.is_hero === 1 || (items.every(x => !x.is_hero) && i === 0);
+    const imgSrc = p.r2_key ? `/img/${p.r2_key}` : esc(p.url || p.path || '');
+    const slot = document.createElement('div');
+    slot.className = 'photo-slot';
+    slot.innerHTML = `
+      <img src="${imgSrc}" alt="${esc(p.alt_text || p.filename || '')}">
+      ${isHero ? '<div class="hero-badge">★ Featured</div>' : ''}
+      <div class="photo-actions">
+        ${!isHero ? `<button class="photo-action-btn" title="Set as Featured" onclick="setHeroPhoto(${p.id})">⭐</button>` : ''}
+        <button class="photo-action-btn" title="Delete" onclick="deleteSubResource('photos',${p.id})">🗑</button>
+      </div>
+    `;
+    grid.appendChild(slot);
+  });
+  // Upload slot
+  const upload = document.createElement('div');
+  upload.className = 'photo-upload-slot';
+  upload.innerHTML = '<div class="icon">📷</div><div class="label">Upload</div>';
+  upload.onclick = () => document.getElementById('photoFileInput').click();
+  grid.appendChild(upload);
+
+  document.getElementById('photoSourceNote').textContent = items.length
+    ? `${items.length} photo${items.length > 1 ? 's' : ''} uploaded`
+    : '📡 No own photos — gallery will show Google Places images at runtime';
+}
+
+// Setup drag-and-drop once (not inside renderPhotos)
+function setupPhotoDragDrop() {
+  const grid = document.getElementById('photoGrid');
+  grid.addEventListener('dragover', e => { e.preventDefault(); grid.classList.add('drag-over'); });
+  grid.addEventListener('dragleave', e => { if (!grid.contains(e.relatedTarget)) grid.classList.remove('drag-over'); });
+  grid.addEventListener('drop', e => {
+    e.preventDefault(); grid.classList.remove('drag-over');
+    if (e.dataTransfer.files.length) {
+      uploadPhotoFile(e.dataTransfer.files[0]);
+    }
+  });
+}
+
+// ===== SUB-RESOURCE CRUD =====
+async function deleteSubResource(type, itemId) {
+  if (!confirm('Delete this item?')) return;
+  try {
+    const res = await fetch(`/api/listings/${listingId}/${type}/${itemId}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    // Reload listing
+    const r2 = await fetch(`/api/listings/${listingId}`);
+    listing = await r2.json();
+    const renderMap = { timeline: renderTimeline, people: renderPeople, designations: renderDesignations, links: renderLinks, videos: renderVideos, 'further-reading': renderReading, photos: renderPhotos };
+    const dataKey = type === 'further-reading' ? 'further_reading' : type;
+    renderMap[type](listing[dataKey] || []);
+    toast('Deleted');
+  } catch (err) { toast('Delete failed: ' + err.message, 'error'); }
+}
+
+async function addSubResource(type, body) {
+  try {
+    const res = await fetch(`/api/listings/${listingId}/${type}`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const r2 = await fetch(`/api/listings/${listingId}`);
+    listing = await r2.json();
+    const renderMap = { timeline: renderTimeline, people: renderPeople, designations: renderDesignations, links: renderLinks, videos: renderVideos, 'further-reading': renderReading };
+    const dataKey = type === 'further-reading' ? 'further_reading' : type;
+    renderMap[type](listing[dataKey] || []);
+    toast('Added');
+    return true;
+  } catch (err) { toast('Add failed: ' + err.message, 'error'); return false; }
+}
+
+function setupNewTimelineDropZone() {
+  const zone = document.getElementById('newTimelineDropZone');
+  const fileInput = document.getElementById('newTimelineFileInput');
+  
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', async e => {
+    e.preventDefault(); zone.classList.remove('drag-over');
+    if (e.dataTransfer.files.length) {
+      zone.innerHTML = '⏳ Uploading...';
+      const formData = new FormData();
+      formData.append('photo', e.dataTransfer.files[0]);
+      try {
+        const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
+        if (!res.ok) throw new Error('Upload failed');
+        const data = await res.json();
+        const url = `/img/${data.r2_key}`;
+        document.getElementById('newTimelineImage').value = url;
+        zone.innerHTML = `<img src="${url}" alt="">`;
+        toast('Image uploaded');
+      } catch(err) { zone.innerHTML = '📷<br>Drop or click'; toast('Upload failed', 'error'); }
+    }
+  });
+  
+  fileInput.addEventListener('change', async () => {
+    if (!fileInput.files[0]) return;
+    zone.innerHTML = '⏳ Uploading...';
+    const formData = new FormData();
+    formData.append('photo', fileInput.files[0]);
+    try {
+      const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
+      if (!res.ok) throw new Error('Upload failed');
+      const data = await res.json();
+      const url = `/img/${data.r2_key}`;
+      document.getElementById('newTimelineImage').value = url;
+      zone.innerHTML = `<img src="${url}" alt="">`;
+      toast('Image uploaded');
+    } catch(err) { zone.innerHTML = '📷<br>Drop or click'; toast('Upload failed', 'error'); }
+    fileInput.value = '';
+  });
+}
+
+async function addTimelineEntry() {
+  const date = document.getElementById('newTimelineDate').value.trim();
+  const title = document.getElementById('newTimelineTitle').value.trim();
+  const desc = document.getElementById('newTimelineDesc').value.trim();
+  const image_url = document.getElementById('newTimelineImage').value.trim();
+  if (!date || !title) { toast('Date and title required', 'error'); return; }
+  if (await addSubResource('timeline', { date_label: date, title, description: desc, image_url: image_url || null })) {
+    document.getElementById('newTimelineDate').value = '';
+    document.getElementById('newTimelineTitle').value = '';
+    document.getElementById('newTimelineDesc').value = '';
+    document.getElementById('newTimelineImage').value = '';
+    document.getElementById('newTimelineDropZone').innerHTML = '📷<br>Drop or click';
+    toggleAddForm('timeline');
+  }
+}
+
+async function addPersonEntry() {
+  const name = document.getElementById('newPersonName').value.trim();
+  const role_description = document.getElementById('newPersonRole').value.trim();
+  const portrait_url = document.getElementById('newPersonImage').value.trim();
+  const wikipedia_url = document.getElementById('newPersonWiki').value.trim();
+  if (!name) { toast('Name required', 'error'); return; }
+  if (await addSubResource('people', { name, role_description, portrait_url: portrait_url || null, wikipedia_url: wikipedia_url || null })) {
+    document.getElementById('newPersonName').value = '';
+    document.getElementById('newPersonRole').value = '';
+    document.getElementById('newPersonImage').value = '';
+    document.getElementById('newPersonWiki').value = '';
+    toggleAddForm('people');
+  }
+}
+
+async function addVideoEntry() {
+  const youtube_id = document.getElementById('newVideoId').value.trim();
+  const title = document.getElementById('newVideoTitle').value.trim();
+  if (!youtube_id || !title) { toast('YouTube ID and title required', 'error'); return; }
+  if (await addSubResource('videos', { youtube_id, title })) {
+    document.getElementById('newVideoId').value = '';
+    document.getElementById('newVideoTitle').value = '';
+    toggleAddForm('videos');
+  }
+}
+
+async function addDesignationEntry() {
+  const title = document.getElementById('newDesignationTitle').value.trim();
+  const body = document.getElementById('newDesignationBody').value.trim();
+  if (!title) { toast('Title required', 'error'); return; }
+  if (await addSubResource('designations', { title, body })) {
+    document.getElementById('newDesignationTitle').value = '';
+    document.getElementById('newDesignationBody').value = '';
+    toggleAddForm('designations');
+  }
+}
+
+async function addReadingEntry() {
+  const author = document.getElementById('newReadingAuthor').value.trim();
+  const title = document.getElementById('newReadingTitle').value.trim();
+  const year = document.getElementById('newReadingYear').value.trim();
+  const url = document.getElementById('newReadingUrl').value.trim();
+  if (!author || !title) { toast('Author and title required', 'error'); return; }
+  if (await addSubResource('further-reading', { author, title, year: year || null, url: url || null })) {
+    document.getElementById('newReadingAuthor').value = '';
+    document.getElementById('newReadingTitle').value = '';
+    document.getElementById('newReadingYear').value = '';
+    document.getElementById('newReadingUrl').value = '';
+    toggleAddForm('reading');
+  }
+}
+
+async function addLinkEntry() {
+  const type = document.getElementById('newLinkType').value;
+  const url = document.getElementById('newLinkUrl').value.trim();
+  const label = document.getElementById('newLinkLabel').value.trim();
+  if (!url) { toast('URL required', 'error'); return; }
+  if (await addSubResource('links', { type, url, label: label || type })) {
+    document.getElementById('newLinkUrl').value = '';
+    document.getElementById('newLinkLabel').value = '';
+    toggleAddForm('links');
+  }
+}
+
+// ===== PHOTO UPLOAD =====
+async function uploadPhoto(input) {
+  if (!input.files[0]) return;
+  await uploadPhotoFile(input.files[0]);
+  input.value = '';
+}
+
+async function uploadPhotoFile(file) {
+  const formData = new FormData();
+  formData.append('photo', file);
+  try {
+    const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const r2 = await fetch(`/api/listings/${listingId}`);
+    listing = await r2.json();
+    renderPhotos(listing.photos || []);
+    toast('Photo uploaded');
+  } catch (err) { toast('Upload failed: ' + err.message, 'error'); }
+}
+
+async function setHeroPhoto(photoId) {
+  try {
+    const res = await fetch(`/api/listings/${listingId}/photos/${photoId}/hero`, { method: 'POST' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const r2 = await fetch(`/api/listings/${listingId}`);
+    listing = await r2.json();
+    renderPhotos(listing.photos || []);
+    toast('Featured image updated');
+  } catch (err) { toast('Failed to set featured image: ' + err.message, 'error'); }
+}
+
+// ===== COLLECT MAIN FIELDS =====
+function collectMainFields() {
+  return {
+    name: document.getElementById('fieldName').value,
+    subtitle: document.getElementById('fieldSubtitle').value,
+    type: document.getElementById('fieldType').value,
+    century: document.getElementById('fieldCentury').value,
+    country: document.getElementById('fieldCountry').value,
+    region: document.getElementById('fieldRegion').value,
+    town: document.getElementById('fieldTown').value,
+    county: document.getElementById('fieldCounty').value || null,
+    latitude: parseFloat(document.getElementById('fieldLatitude').value) || null,
+    longitude: parseFloat(document.getElementById('fieldLongitude').value) || null,
+    status: document.getElementById('fieldStatus').value,
+    condition: document.getElementById('fieldCondition').value,
+    google_place_id: document.getElementById('fieldGooglePlaceId').value || null,
+    tags: JSON.stringify(getTagsFromSelector('tagSelector')),
+    description_short: document.getElementById('fieldDescShort').value,
+    description_expanded: document.getElementById('fieldDescExpanded').value,
+    architecture: document.getElementById('fieldArchitecture').value,
+    terrain_description: document.getElementById('fieldTerrainDesc').value,
+    terrain_tags: JSON.stringify(getTagsFromSelector('terrainTagSelector')),
+    getting_there_car: document.getElementById('fieldGetCar').value,
+    getting_there_train: document.getElementById('fieldGetTrain').value,
+    getting_there_bus: document.getElementById('fieldGetBus').value,
+    getting_there_airport: document.getElementById('fieldGetAirport').value,
+  };
+}
+
+// ===== SAVE =====
+async function saveListing() {
+  const btn = document.getElementById('saveBtn');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '⏳ Saving…'; btn.disabled = true;
+  try {
+    const res = await fetch(`/api/listings/${listingId}`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(collectMainFields())
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    toast('Saved');
+    btn.innerHTML = '✅ Saved';
+    // Update topbar title
+    document.getElementById('topbarTitle').textContent = document.getElementById('fieldName').value;
+    setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 2000);
+  } catch (err) {
+    toast('Save failed: ' + err.message, 'error');
+    btn.innerHTML = '❌ Error'; setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 2000);
+  }
+}
+
+async function saveAndRepublish() {
+  const btn = document.getElementById('savePublishBtn');
+  const orig = btn.innerHTML;
+  btn.innerHTML = '⏳ Saving…'; btn.disabled = true;
+  try {
+    // Save first
+    const res = await fetch(`/api/listings/${listingId}`, {
+      method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(collectMainFields())
+    });
+    if (!res.ok) throw new Error(`Save failed: HTTP ${res.status}`);
+
+    // Then publish
+    const res2 = await fetch(`/api/listings/${listingId}/publish`, { method: 'POST' });
+    if (!res2.ok) throw new Error(`Publish failed: HTTP ${res2.status}`);
+
+    toast('Saved & Published');
+    document.getElementById('topbarTitle').textContent = document.getElementById('fieldName').value;
+
+    // Update status pill
+    const pill = document.getElementById('publishPill');
+    pill.textContent = 'Published'; pill.className = 'status-pill status-published';
+    document.getElementById('lastPublished').textContent = `Published ${new Date().toLocaleDateString()}`;
+
+    btn.innerHTML = '✅ Published';
+    setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 2000);
+  } catch (err) {
+    toast('Failed: ' + err.message, 'error');
+    btn.innerHTML = '❌ Error'; setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 2000);
   }
 }
 </script>

@@ -47,7 +47,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   display: flex; align-items: center; gap: .6rem;
   padding: .55rem 1.5rem; font-size: .8rem; font-weight: 500;
   color: var(--text-muted); cursor: pointer; transition: all .15s;
-  border-left: 2px solid transparent;
+  border-left: 2px solid transparent; text-decoration: none;
 }
 .nav-item:hover { background: var(--surface-hover); color: var(--text); }
 .nav-item.active {
@@ -131,13 +131,16 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   padding: .7rem 1rem; text-align: left;
   background: rgba(255,255,255,.02); border-bottom: 1px solid var(--border);
 }
+.listings-table th.sortable { cursor: pointer; user-select: none; }
+.listings-table th.sortable:hover { color: var(--text-muted); }
+.listings-table th .sort-arrow { font-size: .55rem; margin-left: .3rem; }
 .listings-table td {
   font-size: .8rem; padding: .7rem 1rem;
   border-bottom: 1px solid var(--border); color: var(--text-muted);
 }
 .listings-table tr:hover td { background: var(--surface-hover); }
 .listings-table tr:last-child td { border-bottom: none; }
-.listing-name { color: var(--text); font-weight: 600; cursor: pointer; }
+.listing-name { color: var(--text); font-weight: 600; cursor: pointer; text-decoration: none; }
 .listing-name:hover { color: var(--accent); }
 
 .tag {
@@ -197,26 +200,26 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 
     <div class="nav-section">
       <div class="nav-section-title">Content</div>
-      <div class="nav-item active">📋 Listings</div>
-      <div class="nav-item">📊 Enrichment</div>
+      <a class="nav-item active" href="dashboard-prototype.html">📋 Listings</a>
+      <a class="nav-item" href="dashboard-prototype.html">📊 Enrichment</a>
     </div>
 
     <div class="nav-section">
       <div class="nav-section-title">Moderation</div>
-      <div class="nav-item">📖 Guest Book <span class="badge">12</span></div>
-      <div class="nav-item">💡 Improvements <span class="badge">5</span></div>
+      <a class="nav-item" href="dashboard-moderation.html">📖 Guest Book <span class="badge" id="badge-guestbook">0</span></a>
+      <a class="nav-item" href="dashboard-improvements.html">💡 Improvements <span class="badge" id="badge-improvements">0</span></a>
     </div>
 
     <div class="nav-section">
       <div class="nav-section-title">Pipeline</div>
-      <div class="nav-item">🆕 New Listings</div>
+      <a class="nav-item" href="dashboard-pipeline.html">🆕 New Listings</a>
     </div>
 
     <div class="nav-spacer"></div>
 
     <div class="nav-footer">
-      <div class="nav-footer-text">1,163 approved listings</div>
-      <div class="nav-footer-text" style="margin-top:.2rem;">Last deploy: 2 hours ago</div>
+      <div class="nav-footer-text" id="footer-total">Loading...</div>
+      <div class="nav-footer-text" style="margin-top:.2rem;">Castlecore Dashboard</div>
     </div>
   </nav>
 
@@ -225,7 +228,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
     <div class="topbar">
       <h1>Listings</h1>
       <div class="topbar-actions">
-        <button class="btn">⬇ Export</button>
+        <button class="btn" id="btn-export">⬇ Export</button>
       </div>
     </div>
 
@@ -234,62 +237,63 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       <div class="stats-row">
         <div class="stat-card">
           <div class="stat-card-label">Total Listings</div>
-          <div class="stat-card-value">1,163</div>
+          <div class="stat-card-value" id="stat-total">—</div>
           <div class="stat-card-sub">All approved</div>
         </div>
         <div class="stat-card">
           <div class="stat-card-label">Published</div>
-          <div class="stat-card-value">0</div>
-          <div class="stat-card-sub">of 1,163 listings</div>
+          <div class="stat-card-value" id="stat-published">—</div>
+          <div class="stat-card-sub" id="stat-published-sub">of — listings</div>
         </div>
         <div class="stat-card">
           <div class="stat-card-label">Pending Review</div>
-          <div class="stat-card-value">17</div>
+          <div class="stat-card-value" id="stat-pending">—</div>
           <div class="stat-card-sub">Guest book + improvements</div>
         </div>
         <div class="stat-card">
           <div class="stat-card-label">Avg Completeness</div>
-          <div class="stat-card-value">31%</div>
-          <div class="stat-card-sub"><div class="enrichment-bar" style="width:100px;display:inline-block;vertical-align:middle"><div class="enrichment-fill enrichment-mid" style="width:31%"></div></div></div>
+          <div class="stat-card-value" id="stat-completeness">—</div>
+          <div class="stat-card-sub" id="stat-completeness-bar"><div class="enrichment-bar" style="width:100px;display:inline-block;vertical-align:middle"><div class="enrichment-fill enrichment-mid" id="completeness-fill" style="width:0%"></div></div></div>
         </div>
       </div>
 
       <!-- VIEW TABS -->
-      <div class="view-tabs">
-        <div class="view-tab active">All Listings</div>
-        <div class="view-tab">Incomplete</div>
-        <div class="view-tab">Published</div>
-        <div class="view-tab">Unpublished</div>
+      <div class="view-tabs" id="view-tabs">
+        <div class="view-tab active" data-view="all">All Listings</div>
+        <div class="view-tab" data-view="incomplete">Incomplete</div>
+        <div class="view-tab" data-view="published">Published</div>
+        <div class="view-tab" data-view="unpublished">Unpublished</div>
       </div>
 
       <!-- FILTERS -->
       <div class="filters-bar">
-        <input type="text" class="search-input" placeholder="Search listings...">
-        <select class="filter-select">
-          <option>All Countries</option>
+        <input type="text" class="search-input" id="search-input" placeholder="Search listings...">
+        <select class="filter-select" id="filter-country">
+          <option value="">All Countries</option>
           <option>Scotland</option>
           <option>England</option>
           <option>Wales</option>
           <option>Ireland</option>
           <option>Northern Ireland</option>
         </select>
-        <select class="filter-select">
-          <option>All Types</option>
+        <select class="filter-select" id="filter-type">
+          <option value="">All Types</option>
           <option>Castle</option>
           <option>Abbey</option>
           <option>Tower House</option>
           <option>Priory</option>
           <option>Fort</option>
+          <option>Historical Place</option>
         </select>
-        <select class="filter-select">
-          <option>All Status</option>
+        <select class="filter-select" id="filter-status">
+          <option value="">All Status</option>
           <option>Open to Visitors</option>
           <option>Freely Accessible</option>
           <option>Book to Experience</option>
           <option>Private</option>
         </select>
-        <select class="filter-select">
-          <option>All Conditions</option>
+        <select class="filter-select" id="filter-condition">
+          <option value="">All Conditions</option>
           <option>Intact</option>
           <option>Ruin</option>
         </select>
@@ -299,133 +303,260 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       <table class="listings-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Country</th>
-            <th>Region</th>
-            <th>Type</th>
+            <th class="sortable" data-sort="name">Name <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="country">Country <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="region">Region <span class="sort-arrow"></span></th>
+            <th class="sortable" data-sort="type">Type <span class="sort-arrow"></span></th>
             <th>Status</th>
             <th>Condition</th>
             <th>Completeness</th>
             <th>Badge</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><span class="listing-name">Edinburgh Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-intact">Intact</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-high" style="width:85%"></div></div> 85%</td>
-            <td>⭐ Must See</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Craigmillar Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:40%"></div></div> 40%</td>
-            <td>💎 Hidden Gem</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Borthwick Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-book">Book to Experience</span></td>
-            <td><span class="tag tag-intact">Intact</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:15%"></div></div> 15%</td>
-            <td>🔮 Mysterious</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Crichton Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-free">Freely Accessible</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:10%"></div></div> 10%</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Lauriston Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-intact">Intact</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:55%"></div></div> 55%</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Roslin Castle</span></td>
-            <td>Scotland</td>
-            <td>Edinburgh & Lothians</td>
-            <td>Castle</td>
-            <td><span class="tag tag-private">Private</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:20%"></div></div> 20%</td>
-            <td>🔮 Mysterious</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Stirling Castle</span></td>
-            <td>Scotland</td>
-            <td>Stirlingshire</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-intact">Intact</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:45%"></div></div> 45%</td>
-            <td>⭐ Must See</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Dunnottar Castle</span></td>
-            <td>Scotland</td>
-            <td>Aberdeenshire</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-mid" style="width:35%"></div></div> 35%</td>
-            <td>💎 Hidden Gem</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Tintern Abbey</span></td>
-            <td>Wales</td>
-            <td>Monmouthshire</td>
-            <td>Abbey</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:5%"></div></div> 5%</td>
-            <td>⭐ Must See</td>
-          </tr>
-          <tr>
-            <td><span class="listing-name">Trim Castle</span></td>
-            <td>Ireland</td>
-            <td>Co. Meath</td>
-            <td>Castle</td>
-            <td><span class="tag tag-open">Open to Visitors</span></td>
-            <td><span class="tag tag-ruin">Ruin</span></td>
-            <td><div class="enrichment-bar"><div class="enrichment-fill enrichment-low" style="width:5%"></div></div> 5%</td>
-            <td>💎 Hidden Gem</td>
-          </tr>
+        <tbody id="listings-tbody">
+          <tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim)">Loading...</td></tr>
         </tbody>
       </table>
 
-      <div class="pagination">
-        <span>Showing 1–10 of 1,163</span>
-        <div class="page-btns">
-          <button class="page-btn active">1</button>
-          <button class="page-btn">2</button>
-          <button class="page-btn">3</button>
-          <button class="page-btn">…</button>
-          <button class="page-btn">117</button>
-        </div>
+      <div class="pagination" id="pagination">
+        <span id="pagination-info"></span>
+        <div class="page-btns" id="page-btns"></div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+(function() {
+  // State
+  let currentPage = 1;
+  const limit = 20;
+  let currentSort = 'name';
+  let currentOrder = 'asc';
+  let currentView = 'all';
+  let searchTimeout = null;
+
+  // Elements
+  const tbody = document.getElementById('listings-tbody');
+  const searchInput = document.getElementById('search-input');
+  const filterCountry = document.getElementById('filter-country');
+  const filterType = document.getElementById('filter-type');
+  const filterStatus = document.getElementById('filter-status');
+  const filterCondition = document.getElementById('filter-condition');
+  const paginationInfo = document.getElementById('pagination-info');
+  const pageBtns = document.getElementById('page-btns');
+
+  // --- Stats ---
+  async function loadStats() {
+    try {
+      const res = await fetch('/api/stats');
+      const data = await res.json();
+      document.getElementById('stat-total').textContent = data.total.toLocaleString();
+      document.getElementById('stat-published').textContent = data.published.toLocaleString();
+      document.getElementById('stat-published-sub').textContent = `of ${data.total.toLocaleString()} listings`;
+      document.getElementById('stat-pending').textContent = data.pending_review.toLocaleString();
+      const avg = Math.round(data.avg_completeness);
+      document.getElementById('stat-completeness').textContent = avg + '%';
+      const fill = document.getElementById('completeness-fill');
+      fill.style.width = avg + '%';
+      fill.className = 'enrichment-fill ' + (avg < 30 ? 'enrichment-low' : avg < 70 ? 'enrichment-mid' : 'enrichment-high');
+      // Sidebar
+      document.getElementById('footer-total').textContent = data.total.toLocaleString() + ' approved listings';
+      document.getElementById('badge-guestbook').textContent = data.pending_review;
+    } catch(e) { console.error('Stats error:', e); }
+  }
+
+  // --- Completeness calc ---
+  const completenessFields = ['subtitle','status','condition','description_short','description_expanded','google_place_id','architecture','century','terrain_description'];
+  function calcCompleteness(listing) {
+    let filled = 0;
+    for (const f of completenessFields) {
+      if (listing[f] != null && listing[f] !== '') filled++;
+    }
+    return Math.round((filled / 13) * 100);
+  }
+
+  // --- Status tag ---
+  function statusTag(status) {
+    if (!status) return '';
+    const map = {
+      'Open to Visitors': 'tag-open',
+      'Freely Accessible': 'tag-free',
+      'Book to Experience': 'tag-book',
+      'Private': 'tag-private'
+    };
+    const cls = map[status] || '';
+    return `<span class="tag ${cls}">${status}</span>`;
+  }
+
+  function conditionTag(cond) {
+    if (!cond) return '';
+    const cls = cond.toLowerCase() === 'intact' ? 'tag-intact' : cond.toLowerCase() === 'ruin' ? 'tag-ruin' : '';
+    return `<span class="tag ${cls}">${cond}</span>`;
+  }
+
+  function enrichmentBar(pct) {
+    const cls = pct < 30 ? 'enrichment-low' : pct < 70 ? 'enrichment-mid' : 'enrichment-high';
+    return `<div class="enrichment-bar"><div class="enrichment-fill ${cls}" style="width:${pct}%"></div></div> ${pct}%`;
+  }
+
+  // --- Load listings ---
+  async function loadListings() {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim)">Loading...</td></tr>';
+    const params = new URLSearchParams();
+    params.set('page', currentPage);
+    params.set('limit', limit);
+    params.set('sort', currentSort);
+    params.set('order', currentOrder);
+
+    const search = searchInput.value.trim();
+    if (search) params.set('search', search);
+    if (filterCountry.value) params.set('country', filterCountry.value);
+    if (filterType.value) params.set('type', filterType.value);
+    if (filterStatus.value) params.set('status', filterStatus.value);
+    if (filterCondition.value) params.set('condition', filterCondition.value);
+
+    // View tab filters
+    if (currentView === 'published') params.set('published', '1');
+    else if (currentView === 'unpublished') params.set('published', '0');
+
+    try {
+      const res = await fetch('/api/listings?' + params.toString());
+      const data = await res.json();
+      let listings = data.listings || [];
+
+      // Client-side completeness filter for "incomplete" view
+      if (currentView === 'incomplete') {
+        listings = listings.filter(l => calcCompleteness(l) < 100);
+      }
+
+      if (listings.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim)">No listings found</td></tr>';
+      } else {
+        tbody.innerHTML = listings.map(l => {
+          const pct = calcCompleteness(l);
+          return `<tr>
+            <td><a class="listing-name" href="dashboard-listing.html?id=${l.id}">${esc(l.name)}</a></td>
+            <td>${esc(l.country || '')}</td>
+            <td>${esc(l.region || '')}</td>
+            <td>${esc(l.type || '')}</td>
+            <td>${statusTag(l.status)}</td>
+            <td>${conditionTag(l.condition)}</td>
+            <td>${enrichmentBar(pct)}</td>
+            <td>—</td>
+          </tr>`;
+        }).join('');
+      }
+
+      // Pagination
+      const total = data.total || 0;
+      const pages = data.pages || 1;
+      const start = (currentPage - 1) * limit + 1;
+      const end = Math.min(currentPage * limit, total);
+      paginationInfo.textContent = total > 0 ? `Showing ${start}–${end} of ${total.toLocaleString()}` : '';
+
+      renderPagination(pages);
+    } catch(e) {
+      console.error('Listings error:', e);
+      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim)">Error loading listings</td></tr>';
+    }
+  }
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  // --- Pagination ---
+  function renderPagination(pages) {
+    pageBtns.innerHTML = '';
+    if (pages <= 1) return;
+    const btns = [];
+    // Always show first, last, current ± 2
+    for (let i = 1; i <= pages; i++) {
+      if (i === 1 || i === pages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+        btns.push(i);
+      } else if (btns[btns.length - 1] !== '…') {
+        btns.push('…');
+      }
+    }
+    for (const b of btns) {
+      const el = document.createElement('button');
+      el.className = 'page-btn' + (b === currentPage ? ' active' : '');
+      el.textContent = b;
+      if (b !== '…') {
+        el.onclick = () => { currentPage = b; loadListings(); };
+      } else {
+        el.style.cursor = 'default';
+      }
+      pageBtns.appendChild(el);
+    }
+  }
+
+  // --- View tabs ---
+  document.getElementById('view-tabs').addEventListener('click', e => {
+    const tab = e.target.closest('.view-tab');
+    if (!tab) return;
+    document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentView = tab.dataset.view;
+    currentPage = 1;
+    loadListings();
+  });
+
+  // --- Filters ---
+  searchInput.addEventListener('input', () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => { currentPage = 1; loadListings(); }, 300);
+  });
+  [filterCountry, filterType, filterStatus, filterCondition].forEach(el => {
+    el.addEventListener('change', () => { currentPage = 1; loadListings(); });
+  });
+
+  // --- Sort ---
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const sort = th.dataset.sort;
+      if (currentSort === sort) {
+        currentOrder = currentOrder === 'asc' ? 'desc' : 'asc';
+      } else {
+        currentSort = sort;
+        currentOrder = 'asc';
+      }
+      // Update arrows
+      document.querySelectorAll('th.sortable .sort-arrow').forEach(s => s.textContent = '');
+      th.querySelector('.sort-arrow').textContent = currentOrder === 'asc' ? ' ▲' : ' ▼';
+      currentPage = 1;
+      loadListings();
+    });
+  });
+
+  // --- Export ---
+  document.getElementById('btn-export').addEventListener('click', async () => {
+    try {
+      const res = await fetch('/api/listings?limit=9999');
+      const data = await res.json();
+      const listings = data.listings || [];
+      if (!listings.length) return alert('No listings to export');
+      const cols = ['id','name','country','region','type','status','condition','published'];
+      const csvRows = [cols.join(',')];
+      for (const l of listings) {
+        csvRows.push(cols.map(c => '"' + String(l[c] || '').replace(/"/g, '""') + '"').join(','));
+      }
+      const blob = new Blob([csvRows.join('\n')], { type: 'text/csv' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'castlecore-listings.csv';
+      a.click();
+    } catch(e) { alert('Export failed: ' + e.message); }
+  });
+
+  // --- Init ---
+  loadStats();
+  loadListings();
+})();
+</script>
 
 </body>
 </html>

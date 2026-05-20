@@ -21,6 +21,17 @@ export default {
       }
     }
 
+    // Serve R2 images
+    if (path.startsWith('/img/')) {
+      const key = path.slice(5); // remove /img/
+      const object = await env.R2.get(key);
+      if (!object) return new Response('Not found', { status: 404 });
+      const headers = new Headers();
+      object.writeHttpMetadata(headers);
+      headers.set('Cache-Control', 'public, max-age=31536000');
+      return new Response(object.body, { headers });
+    }
+
     // Everything else: static assets
     return env.ASSETS.fetch(request);
   }
@@ -113,6 +124,12 @@ async function handleAPI(path, request, env) {
   // --- PHOTO UPLOAD ---
   if (path.match(/^\/api\/listings\/(\d+)\/photos\/upload$/) && method === 'POST') {
     return uploadPhoto(path.split('/')[3], request, env);
+  }
+
+  // --- PHOTO SET HERO ---
+  if (path.match(/^\/api\/listings\/(\d+)\/photos\/(\d+)\/hero$/) && method === 'POST') {
+    const parts = path.split('/');
+    return setHeroPhoto(parts[3], parts[5], env);
   }
 
   return json({ error: 'Not found' }, 404);
@@ -578,6 +595,13 @@ async function uploadPhoto(listingId, request, env) {
   `).bind(listingId, key, file.name, listingId).run();
 
   return json({ id: result.meta.last_row_id, r2_key: key }, 201);
+}
+
+async function setHeroPhoto(listingId, photoId, env) {
+  // Clear all hero flags for this listing, then set the chosen one
+  await env.DB.prepare('UPDATE photos SET is_hero = 0 WHERE listing_id = ?').bind(listingId).run();
+  await env.DB.prepare('UPDATE photos SET is_hero = 1 WHERE id = ? AND listing_id = ?').bind(photoId, listingId).run();
+  return json({ ok: true });
 }
 
 // ============================================
