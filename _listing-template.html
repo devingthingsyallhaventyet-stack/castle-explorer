@@ -1677,26 +1677,19 @@ function renderCachedPlacesData(listing) {
   }
 }
 
-// Render mobile visit info (hours & admission + location inside Visit tab)
+// Render mobile visit info (hours + location inside Visit tab)
 function renderMobileVisitInfo(listing) {
   const container = document.getElementById('mobile-visit-info');
   if (!container) return;
   let html = '';
 
-  // Hours & Admission card
+  // Hours card
   const hasHours = listing.google_hours;
-  const hasAdmission = listing.admission_price || listing.time_needed;
-  if (hasHours || hasAdmission || listing.status) {
+  if (hasHours || listing.status) {
     html += '<div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;margin-bottom:.8rem;">';
-    html += '<h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Hours & Admission</h3>';
+    html += '<h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Hours</h3>';
     // Open/closed status will be injected by fetchGooglePlaces if applicable
     html += '<div id="mobile-visit-status"></div>';
-    if (listing.admission_price) {
-      html += `<div class="visit-row"><span class="visit-label">Admission</span><span class="visit-value">${listing.admission_price}</span></div>`;
-    }
-    if (listing.time_needed) {
-      html += `<div class="visit-row"><span class="visit-label">Time needed</span><span class="visit-value">${listing.time_needed}</span></div>`;
-    }
     // Cached hours from DB
     if (hasHours) {
       try {
