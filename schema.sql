@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS improvements (
   author_name TEXT NOT NULL,
   author_id TEXT,
   body TEXT,
-  status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending', 'approved', 'rejected')),
+  status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending', 'kept', 'deleted')),
   submitted_at TEXT NOT NULL DEFAULT (datetime('now')),
   reviewed_at TEXT
 );

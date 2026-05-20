@@ -85,7 +85,7 @@ async function handleAPI(path, request, env) {
   if (path === '/api/guestbook' && method === 'GET') {
     return getGuestbook(request, env);
   }
-  if (path.match(/^\/api\/guestbook\/(\d+)\/(approve|reject|flag)$/) && method === 'POST') {
+  if (path.match(/^\/api\/guestbook\/(\d+)\/(approve|reject)$/) && method === 'POST') {
     const parts = path.split('/');
     return moderateGuestbook(parts[3], parts[4], env);
   }
@@ -94,7 +94,7 @@ async function handleAPI(path, request, env) {
   if (path === '/api/improvements' && method === 'GET') {
     return getImprovements(request, env);
   }
-  if (path.match(/^\/api\/improvements\/(\d+)\/(approve|reject)$/) && method === 'POST') {
+  if (path.match(/^\/api\/improvements\/(\d+)\/(keep|delete)$/) && method === 'POST') {
     const parts = path.split('/');
     return moderateImprovement(parts[3], parts[4], env);
   }
@@ -473,7 +473,7 @@ async function getGuestbook(request, env) {
 }
 
 async function moderateGuestbook(id, action, env) {
-  const statusMap = { approve: 'approved', reject: 'rejected', flag: 'flagged' };
+  const statusMap = { approve: 'approved', reject: 'rejected' };
   await env.DB.prepare(
     "UPDATE guestbook_entries SET status = ?, reviewed_at = datetime('now') WHERE id = ?"
   ).bind(statusMap[action], id).run();
@@ -499,7 +499,7 @@ async function getImprovements(request, env) {
 }
 
 async function moderateImprovement(id, action, env) {
-  const statusMap = { approve: 'approved', reject: 'rejected' };
+  const statusMap = { keep: 'kept', delete: 'deleted' };
   await env.DB.prepare(
     "UPDATE improvements SET status = ?, reviewed_at = datetime('now') WHERE id = ?"
   ).bind(statusMap[action], id).run();
