@@ -1830,9 +1830,8 @@ async function fetchListing() {
     const listing = await response.json();
     renderListing(listing);
     
-    // Fetch live Google Places data only for "Open to Visitors" listings
-    // (other statuses like Freely Accessible, Private, Ruin don't need live open/closed checks)
-    if (listing.google_place_id && listing.status === 'Open to Visitors') {
+    // Fetch Google Places data (ratings, reviews, photos, hours) if we have a place_id
+    if (listing.google_place_id) {
       fetchGooglePlaces(listing.google_place_id, listing);
     }
     

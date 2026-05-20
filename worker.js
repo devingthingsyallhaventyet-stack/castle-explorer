@@ -53,6 +53,27 @@ export default {
       }
     }
 
+    // Public Google Places text search (find place_id by name)
+    if (path === '/public/places-search' && request.method === 'GET') {
+      try {
+        const query = url.searchParams.get('query');
+        if (!query) return addCors(json({ error: 'query param required' }, 400));
+        const apiKey = env.GOOGLE_PLACES_KEY;
+        if (!apiKey) return addCors(json({ error: 'No API key' }, 500));
+        const res = await fetch(
+          `https://places.googleapis.com/v1/places:searchText`, {
+            method: 'POST',
+            headers: { 'X-Goog-Api-Key': apiKey, 'Content-Type': 'application/json', 'X-Goog-FieldMask': 'places.id,places.displayName,places.formattedAddress' },
+            body: JSON.stringify({ textQuery: query, maxResultCount: 3 })
+          }
+        );
+        const data = await res.json();
+        return addCors(json(data));
+      } catch (err) {
+        return addCors(json({ error: err.message }, 500));
+      }
+    }
+
     // Public Google Places photo proxy
     const photoMatch = path.match(/^\/public\/places-photo\/(.+)$/);
     if (photoMatch && request.method === 'GET') {
@@ -704,14 +725,62 @@ function slugify(text) {
 }
 
 // ============================================
+// HOURS FORMATTING
+// ============================================
+function condenseHours(hoursArray) {
+  if (!hoursArray || !Array.isArray(hoursArray) || hoursArray.length === 0) return null;
+
+  // Parse each line: "Monday: 10:00 AM – 5:00 PM" → { day, hours }
+  const parsed = hoursArray.map(line => {
+    const colonIdx = line.indexOf(':');
+    if (colonIdx === -1) return { day: line, hours: '' };
+    return { day: line.substring(0, colonIdx).trim(), hours: line.substring(colonIdx + 1).trim() };
+  });
+
+  // Check if all days have the same hours
+  const uniqueHours = [...new Set(parsed.map(p => p.hours))];
+  if (uniqueHours.length === 1 && parsed.length === 7) {
+    if (uniqueHours[0].toLowerCase() === 'closed') return ['Closed'];
+    return [`Open daily: ${uniqueHours[0]}`];
+  }
+
+  // Group consecutive days with the same hours
+  const groups = [];
+  let current = { start: parsed[0].day, end: parsed[0].day, hours: parsed[0].hours };
+
+  for (let i = 1; i < parsed.length; i++) {
+    if (parsed[i].hours === current.hours) {
+      current.end = parsed[i].day;
+    } else {
+      groups.push({ ...current });
+      current = { start: parsed[i].day, end: parsed[i].day, hours: parsed[i].hours };
+    }
+  }
+  groups.push(current);
+
+  // Format output
+  const shortDay = d => d.substring(0, 3);
+  return groups.map(g => {
+    const dayRange = g.start === g.end ? shortDay(g.start) : `${shortDay(g.start)} – ${shortDay(g.end)}`;
+    return `${dayRange}: ${g.hours}`;
+  });
+}
+
+// ============================================
 // GOOGLE PLACES
 // ============================================
 async function getGooglePlacesData(placeId, env) {
   const apiKey = env.GOOGLE_PLACES_KEY;
   if (!apiKey) return json({ error: 'Google Places API key not configured' }, 500);
 
-  // LIVE fields only: photos, reviews, rating (change frequently / need freshness)
-  const fields = 'rating,userRatingCount,reviews,photos,currentOpeningHours';
+  // Check listing status — only fetch live currentOpeningHours for "Open to Visitors"
+  const listingRow = await env.DB.prepare(
+    'SELECT status FROM listings WHERE google_place_id = ?'
+  ).bind(placeId).first();
+  const needsLiveHours = listingRow?.status === 'Open to Visitors';
+  const fields = needsLiveHours
+    ? 'rating,userRatingCount,reviews,photos,currentOpeningHours'
+    : 'rating,userRatingCount,reviews,photos';
   const res = await fetch(
     `https://places.googleapis.com/v1/places/${placeId}?fields=${fields}&languageCode=en`, {
       headers: {
@@ -748,7 +817,7 @@ async function getGooglePlacesData(placeId, env) {
 
   // Get cached data from DB (hours, address, etc. stored during enrichment)
   const listing = await env.DB.prepare(
-    'SELECT google_hours, google_address, google_editorial_summary, google_price_level FROM listings WHERE google_place_id = ?'
+    'SELECT google_hours, google_address FROM listings WHERE google_place_id = ?'
   ).bind(placeId).first();
 
   return json({
@@ -758,10 +827,8 @@ async function getGooglePlacesData(placeId, env) {
     photos,
     reviews,
     // Cached from DB (stored during enrichment)
-    hours: listing?.google_hours ? JSON.parse(listing.google_hours) : null,
+    hours: listing?.google_hours ? condenseHours(JSON.parse(listing.google_hours)) : null,
     address: listing?.google_address || null,
-    editorialSummary: listing?.google_editorial_summary || null,
-    priceLevel: listing?.google_price_level || null,
   });
 }
 
@@ -774,7 +841,7 @@ async function cacheGooglePlacesData(listingId, env) {
   if (!apiKey) return json({ error: 'Google Places API key not configured' }, 500);
 
   // Fetch ONLY the fields we want to cache (one-time cost)
-  const fields = 'regularOpeningHours,formattedAddress,editorialSummary,priceLevel';
+  const fields = 'regularOpeningHours,formattedAddress';
   const res = await fetch(
     `https://places.googleapis.com/v1/places/${listing.google_place_id}?fields=${fields}&languageCode=en`, {
       headers: { 'X-Goog-Api-Key': apiKey, 'Content-Type': 'application/json' }
@@ -790,14 +857,12 @@ async function cacheGooglePlacesData(listingId, env) {
 
   await env.DB.prepare(
     `UPDATE listings SET 
-      google_hours = ?, google_address = ?, google_editorial_summary = ?, google_price_level = ?,
+      google_hours = ?, google_address = ?,
       updated_at = datetime('now')
     WHERE id = ?`
   ).bind(
     data.regularOpeningHours?.weekdayDescriptions ? JSON.stringify(data.regularOpeningHours.weekdayDescriptions) : null,
     data.formattedAddress || null,
-    data.editorialSummary?.text || null,
-    data.priceLevel || null,
     listingId
   ).run();
 
@@ -805,8 +870,6 @@ async function cacheGooglePlacesData(listingId, env) {
     cached: true,
     hours: data.regularOpeningHours?.weekdayDescriptions || null,
     address: data.formattedAddress || null,
-    editorialSummary: data.editorialSummary?.text || null,
-    priceLevel: data.priceLevel || null,
   });
 }
 
