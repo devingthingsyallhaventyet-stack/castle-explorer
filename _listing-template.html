@@ -1654,11 +1654,42 @@ function renderLinks(listing) {
 }
 
 // Render cached Google Places data from DB (instant, no API call)
+// Condense hours client-side (mirrors worker.js condenseHours)
+function condenseHoursClient(hoursArray) {
+  if (!hoursArray || !Array.isArray(hoursArray) || hoursArray.length === 0) return null;
+  const parsed = hoursArray.map(line => {
+    const colonIdx = line.indexOf(':');
+    if (colonIdx === -1) return { day: line, hours: '' };
+    return { day: line.substring(0, colonIdx).trim(), hours: line.substring(colonIdx + 1).trim() };
+  });
+  const uniqueHours = [...new Set(parsed.map(p => p.hours))];
+  if (uniqueHours.length === 1 && parsed.length === 7) {
+    if (uniqueHours[0].toLowerCase() === 'closed') return ['Closed'];
+    return ['Open daily: ' + uniqueHours[0]];
+  }
+  const groups = [];
+  let current = { start: parsed[0].day, end: parsed[0].day, hours: parsed[0].hours };
+  for (let i = 1; i < parsed.length; i++) {
+    if (parsed[i].hours === current.hours) {
+      current.end = parsed[i].day;
+    } else {
+      groups.push(current);
+      current = { start: parsed[i].day, end: parsed[i].day, hours: parsed[i].hours };
+    }
+  }
+  groups.push(current);
+  return groups.map(g => {
+    const dayRange = g.start === g.end ? g.start : g.start + ' – ' + g.end;
+    return dayRange + ': ' + g.hours;
+  });
+}
+
 function renderCachedPlacesData(listing) {
-  // Hours from DB cache
+  // Hours from DB cache (condensed)
   if (listing.google_hours) {
     try {
-      const hours = JSON.parse(listing.google_hours);
+      const rawHours = JSON.parse(listing.google_hours);
+      const hours = condenseHoursClient(rawHours) || rawHours;
       if (hours && hours.length) {
         const hoursCard = document.getElementById('sidebar-hours');
         let hoursHtml = '<h3>Hours</h3>';
