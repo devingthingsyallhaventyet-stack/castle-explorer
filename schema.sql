@@ -36,6 +36,9 @@ CREATE TABLE IF NOT EXISTS listings (
   -- Architecture
   architecture TEXT,
 
+  -- Tags (multi-select, JSON array)
+  tags TEXT,  -- JSON array e.g. ["As Seen on Screen","Haunted","Wedding Venue"]
+
   -- Terrain & Accessibility
   terrain_description TEXT,
   terrain_tags TEXT,  -- JSON array e.g. ["Steep Approach","Cobblestones","Wheelchair Access"]

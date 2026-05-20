@@ -201,8 +201,8 @@ async function createListing(request, env) {
   const slug = data.slug || slugify(data.name);
 
   const result = await env.DB.prepare(`
-    INSERT INTO listings (slug, name, subtitle, type, century, country, region, town, county, latitude, longitude, status, condition, google_place_id, description_short, description_expanded, architecture, terrain_description, terrain_tags, getting_there_car, getting_there_train, getting_there_bus, getting_there_airport)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO listings (slug, name, subtitle, type, century, country, region, town, county, latitude, longitude, status, condition, google_place_id, description_short, description_expanded, architecture, tags, terrain_description, terrain_tags, getting_there_car, getting_there_train, getting_there_bus, getting_there_airport)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).bind(
     slug, data.name, data.subtitle || null, data.type || 'Castle', data.century || null,
     data.country, data.region, data.town || null, data.county || null,
@@ -211,6 +211,7 @@ async function createListing(request, env) {
     data.google_place_id || null,
     data.description_short || null, data.description_expanded || null,
     data.architecture || null,
+    data.tags ? JSON.stringify(data.tags) : null,
     data.terrain_description || null, data.terrain_tags ? JSON.stringify(data.terrain_tags) : null,
     data.getting_there_car || null, data.getting_there_train || null,
     data.getting_there_bus || null, data.getting_there_airport || null
@@ -224,7 +225,7 @@ async function updateListing(id, request, env) {
   const fields = [];
   const values = [];
 
-  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture', 'terrain_description', 'terrain_tags', 'getting_there_car', 'getting_there_train', 'getting_there_bus', 'getting_there_airport'];
+  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture', 'tags', 'terrain_description', 'terrain_tags', 'getting_there_car', 'getting_there_train', 'getting_there_bus', 'getting_there_airport'];
 
   for (const key of allowed) {
     if (key in data) {

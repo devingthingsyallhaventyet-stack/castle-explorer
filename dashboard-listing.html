@@ -89,6 +89,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 .btn-primary:hover { background: var(--accent-hover); }
 .btn-success { background: var(--green); border-color: var(--green); color: #fff; }
 .btn-success:hover { opacity: .9; }
+.btn-danger { background: transparent; border-color: var(--red); color: var(--red); }
+.btn-danger:hover { background: rgba(239,68,68,.1); }
 
 .content { padding: 1.5rem 2rem; max-width: 1100px; }
 
@@ -103,7 +105,6 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 }
 .status-published { background: rgba(34,197,94,.15); color: var(--green); }
 .status-unpublished { background: rgba(245,158,11,.15); color: var(--amber); }
-.status-draft { background: rgba(113,113,122,.15); color: var(--text-muted); }
 .completeness-inline {
   display: flex; align-items: center; gap: .5rem;
   font-size: .75rem; color: var(--text-muted);
@@ -124,12 +125,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 1rem;
 }
-.edit-section-title {
-  font-size: .85rem; font-weight: 700; color: var(--text);
-}
-.edit-section-subtitle {
-  font-size: .65rem; color: var(--text-dim); margin-top: .2rem;
-}
+.edit-section-title { font-size: .85rem; font-weight: 700; color: var(--text); }
+.edit-section-subtitle { font-size: .65rem; color: var(--text-dim); margin-top: .2rem; }
 .section-badge {
   font-size: .6rem; font-weight: 600; padding: 2px 8px;
   border-radius: 2px; letter-spacing: .3px;
@@ -163,12 +160,44 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 .field-textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.field-row-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; }
 .field-hint { font-size: .65rem; color: var(--text-dim); margin-top: .3rem; }
 .field-readonly {
   font-size: .8rem; padding: .5rem .8rem; border-radius: 4px;
   background: rgba(255,255,255,.03); border: 1px solid var(--border);
   color: var(--text-muted); cursor: not-allowed;
 }
+
+/* === TAG SELECTOR === */
+.tag-selector {
+  display: flex; flex-wrap: wrap; gap: .4rem;
+  padding: .5rem; background: var(--bg); border-radius: 4px;
+  border: 1px solid var(--border); min-height: 42px;
+}
+.tag-chip {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .65rem; font-weight: 600; padding: 3px 8px;
+  border-radius: 3px; background: rgba(139,35,53,.2); color: #d4475b;
+  cursor: default;
+}
+.tag-chip .remove {
+  cursor: pointer; opacity: .6; font-size: .55rem;
+  margin-left: 2px;
+}
+.tag-chip .remove:hover { opacity: 1; }
+.tag-input {
+  border: none; background: transparent; color: var(--text);
+  font-family: var(--sans); font-size: .75rem; outline: none;
+  flex: 1; min-width: 120px;
+}
+.tag-input::placeholder { color: var(--text-dim); }
+.tag-suggestions {
+  font-size: .65rem; color: var(--text-dim); margin-top: .3rem;
+}
+.tag-suggestions span {
+  cursor: pointer; padding: 1px 4px; border-radius: 2px;
+}
+.tag-suggestions span:hover { background: var(--surface-hover); color: var(--text-muted); }
 
 /* === PHOTO UPLOAD === */
 .photo-grid {
@@ -180,9 +209,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   border: 1px solid var(--border); position: relative;
   background: var(--bg);
 }
-.photo-slot img {
-  width: 100%; height: 100%; object-fit: cover;
-}
+.photo-slot img { width: 100%; height: 100%; object-fit: cover; }
 .photo-slot .hero-badge {
   position: absolute; top: 6px; left: 6px;
   font-size: .55rem; font-weight: 700; padding: 2px 6px;
@@ -218,14 +245,30 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 /* === TIMELINE === */
 .timeline-entries { display: flex; flex-direction: column; gap: .75rem; }
 .timeline-entry {
-  display: grid; grid-template-columns: 100px 1fr auto; gap: 1rem;
   padding: .75rem; background: var(--bg); border-radius: 4px;
-  border: 1px solid var(--border); align-items: start;
+  border: 1px solid var(--border);
+}
+.timeline-entry-top {
+  display: grid; grid-template-columns: 100px 1fr auto; gap: 1rem;
+  align-items: start;
 }
 .timeline-date { font-size: .75rem; font-weight: 600; color: var(--text); }
 .timeline-content { font-size: .8rem; color: var(--text-muted); }
 .timeline-content strong { color: var(--text); }
 .timeline-actions { display: flex; gap: .3rem; }
+.timeline-image {
+  margin-top: .6rem; display: flex; align-items: center; gap: .6rem;
+  padding-top: .6rem; border-top: 1px solid var(--border);
+}
+.timeline-image-thumb {
+  width: 60px; height: 45px; border-radius: 3px; object-fit: cover;
+  border: 1px solid var(--border);
+}
+.timeline-image-info {
+  flex: 1; font-size: .65rem; color: var(--text-dim);
+}
+.timeline-image-actions { display: flex; gap: .3rem; }
+
 .btn-icon {
   width: 28px; height: 28px; border-radius: 3px;
   background: transparent; border: 1px solid var(--border);
@@ -233,6 +276,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   display: flex; align-items: center; justify-content: center;
 }
 .btn-icon:hover { background: var(--surface-hover); color: var(--text); }
+.btn-icon-danger:hover { background: rgba(239,68,68,.1); color: var(--red); border-color: var(--red); }
 
 /* === PEOPLE === */
 .people-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
@@ -249,6 +293,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 .person-info { flex: 1; min-width: 0; }
 .person-name { font-size: .8rem; font-weight: 600; color: var(--text); }
 .person-role { font-size: .7rem; color: var(--text-muted); margin-top: .1rem; }
+.person-actions { display: flex; gap: .3rem; }
 
 /* === LINKS LIST === */
 .links-list { display: flex; flex-direction: column; gap: .5rem; }
@@ -264,8 +309,41 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   flex: 1;
 }
 .link-label { font-size: .7rem; color: var(--text-muted); flex-shrink: 0; }
+.link-actions { display: flex; gap: .3rem; flex-shrink: 0; }
 
-/* === TAG === */
+/* === VIDEOS === */
+.video-list { display: flex; flex-direction: column; gap: .75rem; }
+.video-item {
+  display: flex; gap: .75rem; padding: .75rem;
+  background: var(--bg); border-radius: 4px;
+  border: 1px solid var(--border); align-items: center;
+}
+.video-thumb {
+  width: 120px; height: 68px; border-radius: 3px;
+  background: var(--border); flex-shrink: 0; overflow: hidden;
+  position: relative;
+}
+.video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.video-thumb .play-icon {
+  position: absolute; inset: 0; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 1.5rem; background: rgba(0,0,0,.3);
+}
+.video-info { flex: 1; min-width: 0; }
+.video-title { font-size: .8rem; font-weight: 600; color: var(--text); }
+.video-id { font-size: .65rem; color: var(--text-dim); margin-top: .2rem; font-family: monospace; }
+
+/* === FURTHER READING === */
+.reading-list { display: flex; flex-direction: column; gap: .5rem; }
+.reading-item {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .5rem .75rem; background: var(--bg); border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.reading-item-text { flex: 1; font-size: .8rem; color: var(--text-muted); }
+.reading-item-text strong { color: var(--text); }
+
+/* === TAGS === */
 .tag {
   font-size: .6rem; font-weight: 600; padding: 2px 8px;
   border-radius: 2px; letter-spacing: .5px; display: inline-block;
@@ -276,6 +354,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 .tag-private { background: rgba(239,68,68,.15); color: var(--red); }
 .tag-intact { background: rgba(34,197,94,.1); color: var(--green); border: 1px solid rgba(34,197,94,.2); }
 .tag-ruin { background: rgba(245,158,11,.1); color: var(--amber); border: 1px solid rgba(245,158,11,.2); }
+.tag-century { background: rgba(139,35,53,.1); color: #d4475b; border: 1px solid rgba(139,35,53,.2); }
+.tag-custom { background: rgba(59,130,246,.1); color: var(--blue); border: 1px solid rgba(59,130,246,.2); }
 
 /* === SECTION TABS === */
 .section-tabs {
@@ -310,17 +390,17 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
     <div class="sidebar-logo">castle<span>core</span></div>
     <div class="nav-section">
       <div class="nav-section-title">Content</div>
-      <div class="nav-item active">📋 Listings</div>
-      <div class="nav-item">📊 Enrichment</div>
+      <a class="nav-item active" href="dashboard-prototype.html" style="text-decoration:none;">📋 Listings</a>
+      <a class="nav-item" href="dashboard-enrichment.html" style="text-decoration:none;">📊 Enrichment</a>
     </div>
     <div class="nav-section">
       <div class="nav-section-title">Moderation</div>
-      <div class="nav-item">📖 Guest Book <span class="badge">12</span></div>
-      <div class="nav-item">💡 Improvements <span class="badge">5</span></div>
+      <a class="nav-item" href="dashboard-moderation.html" style="text-decoration:none;">📖 Guest Book <span class="badge">12</span></a>
+      <a class="nav-item" href="dashboard-improvements.html" style="text-decoration:none;">💡 Improvements <span class="badge">5</span></a>
     </div>
     <div class="nav-section">
       <div class="nav-section-title">Pipeline</div>
-      <div class="nav-item">🆕 New Listings</div>
+      <a class="nav-item" href="dashboard-pipeline.html" style="text-decoration:none;">🆕 New Listings</a>
     </div>
     <div class="nav-spacer"></div>
     <div class="nav-footer">
@@ -348,6 +428,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <span class="status-pill status-unpublished">Unpublished</span>
         <span class="tag tag-open">Open to Visitors</span>
         <span class="tag tag-intact">Intact</span>
+        <span class="tag tag-century">12th century</span>
+        <span class="tag tag-custom">As Seen on Screen</span>
         <div class="completeness-inline">
           <div class="completeness-bar"><div class="completeness-fill" style="width:85%"></div></div>
           85% complete
@@ -390,23 +472,6 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <input type="text" class="field-input" value="Scotland's most iconic fortress, dominating Edinburgh's skyline from an ancient volcanic rock">
           <div class="field-hint">One-liner summary. Every claim must trace to an approved source.</div>
         </div>
-        <div class="field-row" style="margin-top:1rem">
-          <div class="field-group">
-            <div class="field-label">Type</div>
-            <select class="field-select">
-              <option selected>Castle</option>
-              <option>Abbey</option>
-              <option>Tower House</option>
-              <option>Priory</option>
-              <option>Fort</option>
-              <option>Palace</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <div class="field-label">Century</div>
-            <input type="text" class="field-input" value="12th century">
-          </div>
-        </div>
       </div>
 
       <!-- LOCATION -->
@@ -430,7 +495,37 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           </div>
           <div class="field-group">
             <div class="field-label">Region</div>
-            <input type="text" class="field-input" value="Edinburgh & Lothians">
+            <select class="field-select" id="regionSelect">
+              <option value="">— Select region —</option>
+              <!-- Scotland -->
+              <option selected>Edinburgh & Lothians</option>
+              <option>Highlands</option>
+              <option>Argyll & Islands</option>
+              <option>Fife & Perthshire</option>
+              <option>Borders</option>
+              <option>Dumfries & Galloway</option>
+              <option>Aberdeenshire & Moray</option>
+              <option>Stirling & Central</option>
+              <!-- England -->
+              <option>Yorkshire</option>
+              <option>North West</option>
+              <option>North East</option>
+              <option>Midlands</option>
+              <option>East Anglia</option>
+              <option>South East</option>
+              <option>South West</option>
+              <option>London</option>
+              <!-- Wales -->
+              <option>North Wales</option>
+              <option>Mid Wales</option>
+              <option>South Wales</option>
+              <option>West Wales</option>
+              <!-- Ireland -->
+              <option>Leinster</option>
+              <option>Munster</option>
+              <option>Connacht</option>
+              <option>Ulster & the North</option>
+            </select>
           </div>
         </div>
         <div class="field-row" style="margin-top:1rem">
@@ -455,15 +550,33 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         </div>
       </div>
 
-      <!-- CLASSIFICATION -->
+      <!-- CLASSIFICATION (now includes Type, Century, Status, Condition, Badge, Tags) -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
             <div class="edit-section-title">Classification</div>
-            <div class="edit-section-subtitle">Status, condition, and badge</div>
+            <div class="edit-section-subtitle">Type, period, status, condition, badge, and tags</div>
           </div>
         </div>
-        <div class="field-row-3">
+        <div class="field-row-4">
+          <div class="field-group">
+            <div class="field-label">Type</div>
+            <select class="field-select">
+              <option selected>Castle</option>
+              <option>Abbey</option>
+              <option>Tower House</option>
+              <option>Priory</option>
+              <option>Fort</option>
+              <option>Palace</option>
+              <option>Country House</option>
+              <option>Cathedral</option>
+              <option>Friary</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <div class="field-label">Century</div>
+            <input type="text" class="field-input" value="12th century">
+          </div>
           <div class="field-group">
             <div class="field-label">Status</div>
             <select class="field-select">
@@ -482,10 +595,22 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
               <option>— Hidden —</option>
             </select>
           </div>
+        </div>
+        <div class="field-row" style="margin-top:1rem">
           <div class="field-group">
             <div class="field-label">Badge <span class="source-tag">Auto from Google</span></div>
             <div class="field-readonly">⭐ Must See</div>
             <div class="field-hint">4.6★ · 52,418 reviews → auto-assigned</div>
+          </div>
+          <div class="field-group">
+            <div class="field-label">Tags <span class="source-tag">Multi-select</span></div>
+            <div class="tag-selector">
+              <div class="tag-chip">As Seen on Screen <span class="remove">✕</span></div>
+              <input type="text" class="tag-input" placeholder="Type to add tag...">
+            </div>
+            <div class="tag-suggestions">
+              Suggestions: <span>Hotel</span> · <span>As Seen on Screen</span> · <span>Haunted</span> · <span>Wedding Venue</span> · <span>Dog Friendly</span> · <span>Cliffside</span> · <span>Lakeside</span> · <span>Hilltop</span> · <span>Filming Location</span> · <span>Dark & Brooding</span>
+            </div>
           </div>
         </div>
       </div>
@@ -503,7 +628,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <div class="field-group">
             <div class="field-label">Place ID</div>
             <input type="text" class="field-input" value="ChIJd_Y_0WDHh0gRDjJkXq_BGLY" style="font-family: monospace; font-size: .75rem;">
-            <div class="field-hint">Cached indefinitely. Used for reviews, photos, hours.</div>
+            <div class="field-hint">Used for reviews, photos, hours — all fetched live from Google API.</div>
           </div>
           <div class="field-group">
             <div class="field-label">Google Rating</div>
@@ -512,33 +637,11 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         </div>
       </div>
 
-      <!-- ABOUT / DESCRIPTION -->
-      <div class="edit-section">
-        <div class="edit-section-header">
-          <div>
-            <div class="edit-section-title">About</div>
-            <div class="edit-section-subtitle">Description shown on the Visit tab</div>
-          </div>
-          <span class="section-badge badge-manual">Editorial</span>
-        </div>
-        <div class="field-group">
-          <div class="field-label">Short Description <span class="source-tag">Always visible</span></div>
-          <textarea class="field-textarea" rows="3">Edinburgh Castle is a historic fortress which dominates the skyline of Edinburgh, the capital city of Scotland, from its position on the Castle Rock. Archaeologists have established human occupation of the rock since at least the Iron Age, although the nature of the early settlement is unclear.</textarea>
-        </div>
-        <div class="field-group" style="margin-top:1rem">
-          <div class="field-label">Expanded Description <span class="source-tag">Behind "Read more"</span></div>
-          <textarea class="field-textarea" rows="5">There has been a royal castle on the rock since at least the reign of David I in the 12th century, and the site continued at times to be a royal residence until 1633. From the 15th century, the castle's residential role declined, and by the 17th century it was principally used as military barracks with a large garrison.
-
-Its importance as a part of Scotland's national heritage was increasingly recognised from the early 19th century onwards, and various restoration programmes have been carried out over the past century and a half.</textarea>
-        </div>
-      </div>
-
       </div><!-- /core tab -->
 
       <!-- ==================== PHOTOS TAB ==================== -->
       <div class="tab-panel" data-tab="photos">
 
-      <!-- PHOTOS PREVIEW -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
@@ -578,32 +681,100 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
       <!-- ==================== VISIT TAB ==================== -->
       <div class="tab-panel" data-tab="visit">
 
-      <!-- GETTING THERE (duplicated from below for correct tab) -->
+      <!-- ABOUT (moved here from Core Info — matches website layout) -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">About</div>
+            <div class="edit-section-subtitle">Description shown on the Visit tab of the listing page</div>
+          </div>
+          <span class="section-badge badge-manual">Editorial</span>
+        </div>
+        <div class="field-group">
+          <div class="field-label">Short Description <span class="source-tag">Always visible</span></div>
+          <textarea class="field-textarea" rows="3">Edinburgh Castle is a historic fortress which dominates the skyline of Edinburgh, the capital city of Scotland, from its position on the Castle Rock. Archaeologists have established human occupation of the rock since at least the Iron Age, although the nature of the early settlement is unclear.</textarea>
+        </div>
+        <div class="field-group" style="margin-top:1rem">
+          <div class="field-label">Expanded Description <span class="source-tag">Behind "Read more"</span></div>
+          <textarea class="field-textarea" rows="5">There has been a royal castle on the rock since at least the reign of David I in the 12th century, and the site continued at times to be a royal residence until 1633. From the 15th century, the castle's residential role declined, and by the 17th century it was principally used as military barracks with a large garrison.
+
+Its importance as a part of Scotland's national heritage was increasingly recognised from the early 19th century onwards, and various restoration programmes have been carried out over the past century and a half.</textarea>
+        </div>
+      </div>
+
+      <!-- HOURS & ADMISSION -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Hours & Admission</div>
+            <div class="edit-section-subtitle">Auto-populated from Google Places based on status</div>
+          </div>
+          <span class="section-badge badge-api">Auto from Google</span>
+        </div>
+        <div style="font-size:.8rem; color:var(--text-muted); line-height:1.6;">
+          <p>This section is <strong>automatically handled</strong> based on the listing's Status:</p>
+          <ul style="margin:.5rem 0 0 1.5rem; font-size:.75rem; color:var(--text-dim);">
+            <li><strong>Open to Visitors</strong> → hours, admission price, and time needed pulled live from Google Places API</li>
+            <li><strong>Freely Accessible</strong> → shows "Open 24/7" + "Free admission"</li>
+            <li><strong>Book to Experience</strong> → shows "Contact property directly"</li>
+            <li><strong>Private</strong> → no hours/admission shown</li>
+          </ul>
+          <p style="margin-top:.5rem; font-size:.75rem; color:var(--text-dim);">Current status: <strong style="color:var(--green);">Open to Visitors</strong> — hours will be fetched from Google Places at runtime.</p>
+        </div>
+      </div>
+
+      <!-- GETTING THERE -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
             <div class="edit-section-title">Getting There</div>
-            <div class="edit-section-subtitle">Directions link auto-generated from coordinates</div>
+            <div class="edit-section-subtitle">Directions link auto-generated; transport details manual</div>
           </div>
-          <span class="section-badge badge-auto">Auto</span>
         </div>
         <div class="field-group">
-          <div class="field-label">Google Maps Link</div>
+          <div class="field-label">Google Maps Link <span class="source-tag">Auto from coordinates</span></div>
           <div class="field-readonly" style="font-size:.75rem;">https://www.google.com/maps/dir/?api=1&destination=55.9486,-3.1999</div>
-          <div class="field-hint">Auto-generated from coordinates. Always available.</div>
+          <div class="field-hint">Always available — generated from coordinates.</div>
+        </div>
+        <div class="field-row" style="margin-top:1rem">
+          <div class="field-group">
+            <div class="field-label">By Car</div>
+            <textarea class="field-textarea" rows="2" placeholder="Driving directions, parking info..."></textarea>
+          </div>
+          <div class="field-group">
+            <div class="field-label">By Train</div>
+            <textarea class="field-textarea" rows="2" placeholder="Nearest station, walk time...">Waverley Station is a 10-minute uphill walk.</textarea>
+          </div>
+        </div>
+        <div class="field-row" style="margin-top:1rem">
+          <div class="field-group">
+            <div class="field-label">By Bus</div>
+            <textarea class="field-textarea" rows="2" placeholder="Bus routes, stops..."></textarea>
+          </div>
+          <div class="field-group">
+            <div class="field-label">By Airport</div>
+            <textarea class="field-textarea" rows="2" placeholder="Nearest airport, transport links...">Edinburgh Airport (EDI) — 30 min by tram or bus to city centre.</textarea>
+          </div>
         </div>
       </div>
 
+      <!-- TERRAIN & ACCESSIBILITY -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
             <div class="edit-section-title">Terrain & Accessibility</div>
-            <div class="edit-section-subtitle">Hidden until data exists — populated via community contributions</div>
+            <div class="edit-section-subtitle">Hidden on live page until data exists</div>
           </div>
         </div>
-        <div class="empty-state">
-          <div class="icon">♿</div>
-          No terrain or accessibility data yet. This section will be hidden on the live page.
+        <div class="field-group">
+          <div class="field-label">Terrain Tags</div>
+          <div class="tag-selector">
+            <input type="text" class="tag-input" placeholder="e.g. Steep Approach, Cobblestones, Wheelchair Access...">
+          </div>
+        </div>
+        <div class="field-group" style="margin-top:1rem">
+          <div class="field-label">Accessibility Description</div>
+          <textarea class="field-textarea" rows="3" placeholder="Describe terrain, accessibility features, mobility considerations..."></textarea>
         </div>
       </div>
 
@@ -623,58 +794,86 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         </div>
         <div class="timeline-entries">
           <div class="timeline-entry">
-            <div class="timeline-date">c. 900 BC</div>
-            <div class="timeline-content">
-              <strong>Iron Age Fort</strong><br>
-              Archaeological evidence shows human occupation of Castle Rock dating to the late Bronze Age.
-            </div>
-            <div class="timeline-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon" title="Delete">🗑</button>
-            </div>
-          </div>
-          <div class="timeline-entry">
-            <div class="timeline-date">1130s</div>
-            <div class="timeline-content">
-              <strong>Royal Castle Established</strong><br>
-              David I held his court at the castle and his mother Saint Margaret's Chapel was built, the oldest surviving building in Edinburgh.
-            </div>
-            <div class="timeline-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon" title="Delete">🗑</button>
+            <div class="timeline-entry-top">
+              <div class="timeline-date">c. 900 BC</div>
+              <div class="timeline-content">
+                <strong>Iron Age Fort</strong><br>
+                Archaeological evidence shows human occupation of Castle Rock dating to the late Bronze Age.
+              </div>
+              <div class="timeline-actions">
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+              </div>
             </div>
           </div>
+
           <div class="timeline-entry">
-            <div class="timeline-date">1314</div>
-            <div class="timeline-content">
-              <strong>Recaptured by the Scots</strong><br>
-              Thomas Randolph, Earl of Moray, scaled the castle walls with 30 men and recaptured it from English forces.
+            <div class="timeline-entry-top">
+              <div class="timeline-date">1130s</div>
+              <div class="timeline-content">
+                <strong>Royal Castle Established</strong><br>
+                David I held his court at the castle and his mother Saint Margaret's Chapel was built, the oldest surviving building in Edinburgh.
+              </div>
+              <div class="timeline-actions">
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+              </div>
             </div>
-            <div class="timeline-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon" title="Delete">🗑</button>
+            <div class="timeline-image">
+              <img class="timeline-image-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Edinburgh_Castle_from_the_south_east.JPG/120px-Edinburgh_Castle_from_the_south_east.JPG" alt="">
+              <div class="timeline-image-info">
+                St Margaret's Chapel<br>
+                📷 Kim Traynor · CC BY-SA 3.0
+              </div>
+              <div class="timeline-image-actions">
+                <button class="btn-icon" title="Change photo">🔄</button>
+                <button class="btn-icon btn-icon-danger" title="Remove photo">✕</button>
+              </div>
             </div>
           </div>
+
           <div class="timeline-entry">
-            <div class="timeline-date">1573</div>
-            <div class="timeline-content">
-              <strong>Lang Siege</strong><br>
-              The castle was bombarded in a siege lasting almost two years, the longest in its history.
-            </div>
-            <div class="timeline-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon" title="Delete">🗑</button>
+            <div class="timeline-entry-top">
+              <div class="timeline-date">1314</div>
+              <div class="timeline-content">
+                <strong>Recaptured by the Scots</strong><br>
+                Thomas Randolph, Earl of Moray, scaled the castle walls with 30 men and recaptured it from English forces.
+              </div>
+              <div class="timeline-actions">
+                <button class="btn-icon" title="Add photo">📷</button>
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+              </div>
             </div>
           </div>
+
           <div class="timeline-entry">
-            <div class="timeline-date">1927</div>
-            <div class="timeline-content">
-              <strong>Scottish National War Memorial</strong><br>
-              The memorial was opened within the castle, designed by Sir Robert Lorimer.
+            <div class="timeline-entry-top">
+              <div class="timeline-date">1573</div>
+              <div class="timeline-content">
+                <strong>Lang Siege</strong><br>
+                The castle was bombarded in a siege lasting almost two years, the longest in its history.
+              </div>
+              <div class="timeline-actions">
+                <button class="btn-icon" title="Add photo">📷</button>
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+              </div>
             </div>
-            <div class="timeline-actions">
-              <button class="btn-icon" title="Edit">✏️</button>
-              <button class="btn-icon" title="Delete">🗑</button>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-entry-top">
+              <div class="timeline-date">1927</div>
+              <div class="timeline-content">
+                <strong>Scottish National War Memorial</strong><br>
+                The memorial was opened within the castle, designed by Sir Robert Lorimer.
+              </div>
+              <div class="timeline-actions">
+                <button class="btn-icon" title="Add photo">📷</button>
+                <button class="btn-icon" title="Edit">✏️</button>
+                <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+              </div>
             </div>
           </div>
         </div>
@@ -696,7 +895,10 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
               <div class="person-name">Mary, Queen of Scots</div>
               <div class="person-role">1542–1587 · Gave birth to James VI here</div>
             </div>
-            <button class="btn-icon" title="Edit">✏️</button>
+            <div class="person-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="person-card">
             <div class="person-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/David_I%2C_King_of_Scotland.jpg/96px-David_I%2C_King_of_Scotland.jpg" alt=""></div>
@@ -704,7 +906,10 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
               <div class="person-name">David I</div>
               <div class="person-role">c. 1084–1153 · Established the royal castle</div>
             </div>
-            <button class="btn-icon" title="Edit">✏️</button>
+            <div class="person-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="person-card">
             <div class="person-avatar" style="background:var(--border)"></div>
@@ -712,7 +917,10 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
               <div class="person-name">Thomas Randolph</div>
               <div class="person-role">d. 1332 · Earl of Moray, recaptured the castle</div>
             </div>
-            <button class="btn-icon" title="Edit">✏️</button>
+            <div class="person-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="person-card">
             <div class="person-avatar" style="background:var(--border)"></div>
@@ -720,8 +928,53 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
               <div class="person-name">William Kirkcaldy</div>
               <div class="person-role">c. 1520–1573 · Held the castle during the Lang Siege</div>
             </div>
-            <button class="btn-icon" title="Edit">✏️</button>
+            <div class="person-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- VIDEOS -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Videos</div>
+            <div class="edit-section-subtitle">YouTube videos — max 2 per listing, prioritise tours & visits</div>
+          </div>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add Video</button>
+        </div>
+        <div class="video-list">
+          <div class="video-item">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="">
+              <div class="play-icon">▶</div>
+            </div>
+            <div class="video-info">
+              <div class="video-title">Edinburgh Castle — Full Tour & History</div>
+              <div class="video-id">youtube.com/watch?v=dQw4w9WgXcQ</div>
+            </div>
+            <div class="person-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARCHITECTURE & CONSTRUCTION -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Architecture & Construction</div>
+            <div class="edit-section-subtitle">Building periods, materials, architectural style — shown on History tab</div>
+          </div>
+          <span class="section-badge badge-manual">Editorial</span>
+        </div>
+        <div class="field-group">
+          <div class="field-label">Architecture Description</div>
+          <textarea class="field-textarea" rows="5" placeholder="Describe the building's architectural history, construction periods, materials, and style...">The castle complex is built on several levels across the summit of Castle Rock, an extinct volcanic plug. The oldest surviving building is St Margaret's Chapel from the early 12th century. The castle's defences evolved over centuries, from medieval curtain walls to the distinctive Half Moon Battery built in the 1570s after the Lang Siege. Major building campaigns occurred under David II (David's Tower, 1370s), James IV (Great Hall, 1511), and during the military period (barracks and vaults, 18th century).</textarea>
         </div>
       </div>
 
@@ -737,13 +990,50 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
         <div class="links-list">
           <div class="link-item">
             <span class="link-icon">🏛</span>
-            <span style="font-size:.8rem; color:var(--text);">Scheduled Ancient Monument</span>
+            <span style="font-size:.8rem; color:var(--text); flex:1;">Scheduled Ancient Monument</span>
             <span class="link-label">Historic Environment Scotland</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="link-item">
             <span class="link-icon">🏛</span>
-            <span style="font-size:.8rem; color:var(--text);">Category A Listed Building</span>
+            <span style="font-size:.8rem; color:var(--text); flex:1;">Category A Listed Building</span>
             <span class="link-label">Historic Environment Scotland</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FURTHER READING -->
+      <div class="edit-section">
+        <div class="edit-section-header">
+          <div>
+            <div class="edit-section-title">Further Reading</div>
+            <div class="edit-section-subtitle">Books and references — shown at bottom of History tab</div>
+          </div>
+          <button class="btn" style="font-size:.7rem; padding:.35rem .75rem;">+ Add</button>
+        </div>
+        <div class="reading-list">
+          <div class="reading-item">
+            <span style="font-size:.75rem; color:var(--text-dim);">📚</span>
+            <div class="reading-item-text"><strong>Gifford, J.</strong> — <em>Edinburgh: The Buildings of Scotland</em> (1984)</div>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
+          </div>
+          <div class="reading-item">
+            <span style="font-size:.75rem; color:var(--text-dim);">📚</span>
+            <div class="reading-item-text"><strong>Ewart, G.</strong> — <em>Edinburgh Castle: The Governor's House</em> (2014)</div>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
         </div>
       </div>
@@ -753,7 +1043,6 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
       <!-- ==================== LINKS & SOURCES TAB ==================== -->
       <div class="tab-panel" data-tab="links">
 
-      <!-- LINKS & SOURCES -->
       <div class="edit-section">
         <div class="edit-section-header">
           <div>
@@ -767,21 +1056,37 @@ Its importance as a part of Scotland's national heritage was increasingly recogn
             <span class="link-icon">🌐</span>
             <a class="link-url" href="#">https://www.edinburghcastle.scot/</a>
             <span class="link-label">Official Website</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="link-item">
             <span class="link-icon">📖</span>
             <a class="link-url" href="#">https://en.wikipedia.org/wiki/Edinburgh_Castle</a>
             <span class="link-label">Wikipedia</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="link-item">
             <span class="link-icon">🏛</span>
             <a class="link-url" href="#">https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/</a>
             <span class="link-label">Heritage Body</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
           <div class="link-item">
             <span class="link-icon">📍</span>
             <a class="link-url" href="#">https://maps.google.com/?cid=...</a>
             <span class="link-label">Google Places</span>
+            <div class="link-actions">
+              <button class="btn-icon" title="Edit">✏️</button>
+              <button class="btn-icon btn-icon-danger" title="Delete">🗑</button>
+            </div>
           </div>
         </div>
       </div>
