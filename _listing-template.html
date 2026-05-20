@@ -1623,8 +1623,10 @@ function renderLocation(listing) {
     
     addressText.innerHTML = addressParts.join('<br>');
     
-    // Set maps links (open location, not directions)
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
+    // Set maps links (open actual listing, fallback to coordinates)
+    const mapsUrl = listing.google_place_id
+      ? `https://www.google.com/maps/place/?q=place_id:${listing.google_place_id}`
+      : `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
     directionsLink.href = mapsUrl;
     mobileDirections.href = mapsUrl;
     
@@ -1727,8 +1729,10 @@ function renderMobileVisitInfo(listing) {
       if (listing.country) addressParts.push(listing.country);
       if (addressParts.length) html += `<div class="address-text">${addressParts.join('<br>')}</div>`;
     }
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
-    html += `<a href="${mapsUrl}" target="_blank" class="sidebar-directions" style="display:block;text-align:center;background:var(--burgundy);color:#fff;padding:.7rem;border-radius:4px;font-family:var(--sans);font-size:.8rem;font-weight:600;margin-top:.8rem;text-decoration:none;">📍 Open in Maps</a>`;
+    const mapsUrl2 = listing.google_place_id
+      ? `https://www.google.com/maps/place/?q=place_id:${listing.google_place_id}`
+      : `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
+    html += `<a href="${mapsUrl2}" target="_blank" class="sidebar-directions" style="display:block;text-align:center;background:var(--burgundy);color:#fff;padding:.7rem;border-radius:4px;font-family:var(--sans);font-size:.8rem;font-weight:600;margin-top:.8rem;text-decoration:none;">📍 Open in Maps</a>`;
     html += '</div>';
   }
 
