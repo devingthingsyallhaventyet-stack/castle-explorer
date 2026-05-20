@@ -488,7 +488,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
       <div class="topbar-actions">
         <button class="btn" id="saveBtn" onclick="saveListing()">💾 Save</button>
         <button class="btn btn-primary" id="savePublishBtn" onclick="saveAndRepublish()">💾 Save & Republish</button>
-        <button class="btn" id="viewSiteBtn" onclick="window.open('https://castlecore.uk/listing/' + (listing && listing.slug ? listing.slug : ''), '_blank')" style="background:var(--bg-hover);border-color:var(--border);">🌐 View on Website</button>
+        <button class="btn" id="viewSiteBtn" onclick="if(listing){var cs=listing.country.toLowerCase().replace(/\s+/g,'-'),rs=listing.region.toLowerCase().replace(/&amp;/g,'').replace(/&/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');window.open('https://castlecore.uk/'+cs+'/'+rs+'/'+listing.slug,'_blank')}" style="background:var(--bg-hover);border-color:var(--border);">🌐 View on Website</button>
       </div>
     </div>
 

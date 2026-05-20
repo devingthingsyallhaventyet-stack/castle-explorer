@@ -84,8 +84,32 @@ export default {
       }
     }
 
-    // Dynamic listing pages: /listing/{slug} → serve listing.html
-    if (path.match(/^\/listing\/[a-z0-9-]+$/)) {
+    // Dynamic listing pages: /:country/:region/:slug → serve listing template
+    const countries = ['scotland','england','wales','ireland','northern-ireland'];
+    const listingMatch = path.match(/^\/([a-z-]+)\/([a-z0-9-]+)\/([a-z0-9-]+)$/);
+    if (listingMatch && countries.includes(listingMatch[1])) {
+      // Check this isn't a static asset (region pages are /:country/:region)
+      const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
+      const html = await asset.text();
+      return new Response(html, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
+    }
+
+    // Legacy listing URLs: /listing/{slug} → 301 redirect to new structure
+    const legacyMatch = path.match(/^\/listing\/([a-z0-9-]+)$/);
+    if (legacyMatch) {
+      const slug = legacyMatch[1];
+      const listing = await env.DB.prepare(
+        'SELECT country, region FROM listings WHERE slug = ?'
+      ).bind(slug).first();
+      if (listing) {
+        const countrySlug = listing.country.toLowerCase().replace(/\s+/g, '-');
+        const regionSlug = listing.region.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        return new Response(null, {
+          status: 301,
+          headers: { 'Location': `/${countrySlug}/${regionSlug}/${slug}` }
+        });
+      }
+      // Fallback: serve template anyway for unpublished/missing listings
       const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
       const html = await asset.text();
       return new Response(html, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });

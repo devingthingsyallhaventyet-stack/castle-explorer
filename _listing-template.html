@@ -1262,10 +1262,15 @@ footer p {
 
 <script>
 // Extract slug from URL path
+// Supports: /country/region/slug (new) and /listing/slug (legacy)
 function getSlugFromPath() {
   const path = window.location.pathname;
-  const match = path.match(/\/listing\/(.+?)(?:\/|$)/);
-  return match ? match[1] : null;
+  // New format: /country/region/slug
+  const newMatch = path.match(/^\/[a-z-]+\/[a-z0-9-]+\/([a-z0-9-]+)$/);
+  if (newMatch) return newMatch[1];
+  // Legacy format: /listing/slug
+  const legacyMatch = path.match(/\/listing\/(.+?)(?:\/|$)/);
+  return legacyMatch ? legacyMatch[1] : null;
 }
 
 // Parse JSON safely
@@ -1318,16 +1323,24 @@ function renderTags(listing) {
   tagsContainer.innerHTML = tagsHTML;
 }
 
+// Slugify a string for URLs
+function slugify(str) {
+  return str.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 // Render breadcrumbs
 function renderBreadcrumbs(listing) {
   const breadcrumbs = document.getElementById('breadcrumbs');
-  let html = '<a href="#">All Sites</a><span class="sep">›</span>';
+  const countrySlug = listing.country ? slugify(listing.country) : '';
+  const regionSlug = listing.region ? slugify(listing.region) : '';
+  
+  let html = '<a href="/">All Sites</a><span class="sep">›</span>';
   
   if (listing.country) {
-    html += `<a href="#">${listing.country}</a><span class="sep">›</span>`;
+    html += `<a href="/${countrySlug}">${listing.country}</a><span class="sep">›</span>`;
   }
   if (listing.region) {
-    html += `<a href="#">${listing.region}</a><span class="sep">›</span>`;
+    html += `<a href="/${countrySlug}/${regionSlug}">${listing.region}</a><span class="sep">›</span>`;
   }
   if (listing.name) {
     html += listing.name;

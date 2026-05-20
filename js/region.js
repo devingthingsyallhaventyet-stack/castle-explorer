@@ -16,6 +16,8 @@
     .catch(err => { console.error('Failed to load region data:', err); });
 
   function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
+  var countrySlug = (CONFIG.country || 'Scotland').toLowerCase().replace(/\s+/g, '-');
+  function listingUrl(name) { return '/' + countrySlug + '/' + regionSlug + '/' + slug(name); }
   
   // Cloudflare Image Transformations — resize + auto-format on the fly
   function optImg(url, width, quality) {
@@ -51,7 +53,7 @@
       lastPicks = top5;
       picksEl.innerHTML = top5.map((c, i) => {
         const img = getImg(c);
-        return '<a class="pick-card" href="/site/' + slug(c.name) + '.html" data-idx="' + i + '">' +
+        return '<a class="pick-card" href="' + listingUrl(c.name) + '" data-idx="' + i + '">' +
           '<img src="' + optImg(img, 600) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
           '<div class="pick-card-body"><h3>' + c.name + '</h3><span>★ ' + c.rating + '</span></div></a>';
       }).join('');
@@ -146,7 +148,7 @@
         
         const mobActions = '<div class="mob-actions" style="display:none;justify-content:space-between;align-items:center;padding:0 16px 14px;gap:12px">' +
           '<button class="mob-save-btn" style="background:none;border:1px solid #3a3a3a;border-radius:20px;padding:8px 16px;color:#ccc;font-size:.85rem;cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0">♡ Save</button>' +
-          '<a href="/site/' + slug(c.name) + '.html" style="background:var(--burgundy);border:1px solid var(--burgundy);border-radius:20px;padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;text-align:center;flex:1;text-decoration:none">Explore</a>' +
+          '<a href="' + listingUrl(c.name) + '" style="background:var(--burgundy);border:1px solid var(--burgundy);border-radius:20px;padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;text-align:center;flex:1;text-decoration:none">Explore</a>' +
           '</div>';
         
         return '<div class="site-card" data-idx="' + i + '">' +
@@ -197,7 +199,7 @@
       if (card && window.innerWidth > 768) {
         const idx = parseInt(card.dataset.idx);
         const castle = lastRendered[idx];
-        if (castle) window.location = '/site/' + slug(castle.name) + '.html';
+        if (castle) window.location = listingUrl(castle.name);
       }
     });
 
@@ -238,7 +240,7 @@
         '<div class="hp-summary">' + summary + '</div>' +
         '<div class="hp-actions">' +
         '<button class="hp-heart">♡ Save</button>' +
-        '<a class="hp-explore" href="/site/' + slug(castle.name) + '.html" target="_blank">Explore</a>' +
+        '<a class="hp-explore" href="' + listingUrl(castle.name) + '" target="_blank">Explore</a>' +
         '</div>';
       const rect = card.getBoundingClientRect();
       const isPick = card.classList.contains('pick-card');
