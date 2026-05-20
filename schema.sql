@@ -36,6 +36,16 @@ CREATE TABLE IF NOT EXISTS listings (
   -- Architecture
   architecture TEXT,
 
+  -- Terrain & Accessibility
+  terrain_description TEXT,
+  terrain_tags TEXT,  -- JSON array e.g. ["Steep Approach","Cobblestones","Wheelchair Access"]
+
+  -- Getting There
+  getting_there_car TEXT,
+  getting_there_train TEXT,
+  getting_there_bus TEXT,
+  getting_there_airport TEXT,
+
   -- State
   published INTEGER NOT NULL DEFAULT 0,
   published_at TEXT,
@@ -109,6 +119,30 @@ CREATE TABLE IF NOT EXISTS photos (
 );
 
 -- ============================================
+-- VIDEOS
+-- ============================================
+CREATE TABLE IF NOT EXISTS videos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  listing_id INTEGER NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+  youtube_id TEXT NOT NULL,
+  title TEXT,
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+-- ============================================
+-- FURTHER READING
+-- ============================================
+CREATE TABLE IF NOT EXISTS further_reading (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  listing_id INTEGER NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+  author TEXT,
+  title TEXT NOT NULL,
+  year TEXT,
+  url TEXT,
+  sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+-- ============================================
 -- GUEST BOOK ENTRIES
 -- ============================================
 CREATE TABLE IF NOT EXISTS guestbook_entries (
@@ -172,3 +206,5 @@ CREATE INDEX IF NOT EXISTS idx_guestbook_listing ON guestbook_entries(listing_id
 CREATE INDEX IF NOT EXISTS idx_guestbook_status ON guestbook_entries(status);
 CREATE INDEX IF NOT EXISTS idx_improvements_status ON improvements(status);
 CREATE INDEX IF NOT EXISTS idx_pipeline_stage ON pipeline(stage);
+CREATE INDEX IF NOT EXISTS idx_videos_listing ON videos(listing_id);
+CREATE INDEX IF NOT EXISTS idx_further_reading_listing ON further_reading(listing_id);

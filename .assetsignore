@@ -4,3 +4,9 @@ node_modules
 tmp-images
 _archive
 *.md
+worker.js
+schema.sql
+wrangler.jsonc
+package.json
+package-lock.json
+*.sql

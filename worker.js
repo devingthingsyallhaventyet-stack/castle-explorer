@@ -50,7 +50,7 @@ async function handleAPI(path, request, env) {
   }
 
   // --- LISTING SUB-RESOURCES ---
-  const subMatch = path.match(/^\/api\/listings\/(\d+)\/(timeline|people|designations|links|photos)$/);
+  const subMatch = path.match(/^\/api\/listings\/(\d+)\/(timeline|people|designations|links|photos|videos|further-reading)$/);
   if (subMatch && method === 'GET') {
     return getSubResource(subMatch[1], subMatch[2], env);
   }
@@ -58,7 +58,7 @@ async function handleAPI(path, request, env) {
     return createSubResource(subMatch[1], subMatch[2], request, env);
   }
 
-  const subItemMatch = path.match(/^\/api\/listings\/(\d+)\/(timeline|people|designations|links|photos)\/(\d+)$/);
+  const subItemMatch = path.match(/^\/api\/listings\/(\d+)\/(timeline|people|designations|links|photos|videos|further-reading)\/(\d+)$/);
   if (subItemMatch && method === 'PUT') {
     return updateSubResource(subItemMatch[2], subItemMatch[3], request, env);
   }
@@ -174,12 +174,14 @@ async function getListing(id, env) {
   if (!listing) return json({ error: 'Not found' }, 404);
 
   // Fetch all sub-resources
-  const [timeline, people, designations, links, photos] = await Promise.all([
+  const [timeline, people, designations, links, photos, videos, furtherReading] = await Promise.all([
     env.DB.prepare('SELECT * FROM timeline_entries WHERE listing_id = ? ORDER BY sort_order').bind(id).all(),
     env.DB.prepare('SELECT * FROM people WHERE listing_id = ? ORDER BY sort_order').bind(id).all(),
     env.DB.prepare('SELECT * FROM designations WHERE listing_id = ?').bind(id).all(),
     env.DB.prepare('SELECT * FROM links WHERE listing_id = ?').bind(id).all(),
     env.DB.prepare('SELECT * FROM photos WHERE listing_id = ? ORDER BY sort_order').bind(id).all(),
+    env.DB.prepare('SELECT * FROM videos WHERE listing_id = ? ORDER BY sort_order').bind(id).all(),
+    env.DB.prepare('SELECT * FROM further_reading WHERE listing_id = ? ORDER BY sort_order').bind(id).all(),
   ]);
 
   return json({
@@ -189,6 +191,8 @@ async function getListing(id, env) {
     designations: designations.results,
     links: links.results,
     photos: photos.results,
+    videos: videos.results,
+    further_reading: furtherReading.results,
   });
 }
 
@@ -197,8 +201,8 @@ async function createListing(request, env) {
   const slug = data.slug || slugify(data.name);
 
   const result = await env.DB.prepare(`
-    INSERT INTO listings (slug, name, subtitle, type, century, country, region, town, county, latitude, longitude, status, condition, google_place_id, description_short, description_expanded, architecture)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO listings (slug, name, subtitle, type, century, country, region, town, county, latitude, longitude, status, condition, google_place_id, description_short, description_expanded, architecture, terrain_description, terrain_tags, getting_there_car, getting_there_train, getting_there_bus, getting_there_airport)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).bind(
     slug, data.name, data.subtitle || null, data.type || 'Castle', data.century || null,
     data.country, data.region, data.town || null, data.county || null,
@@ -206,7 +210,10 @@ async function createListing(request, env) {
     data.status || null, data.condition || null,
     data.google_place_id || null,
     data.description_short || null, data.description_expanded || null,
-    data.architecture || null
+    data.architecture || null,
+    data.terrain_description || null, data.terrain_tags ? JSON.stringify(data.terrain_tags) : null,
+    data.getting_there_car || null, data.getting_there_train || null,
+    data.getting_there_bus || null, data.getting_there_airport || null
   ).run();
 
   return json({ id: result.meta.last_row_id, slug }, 201);
@@ -217,7 +224,7 @@ async function updateListing(id, request, env) {
   const fields = [];
   const values = [];
 
-  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture'];
+  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture', 'terrain_description', 'terrain_tags', 'getting_there_car', 'getting_there_train', 'getting_there_bus', 'getting_there_airport'];
 
   for (const key of allowed) {
     if (key in data) {
@@ -251,12 +258,14 @@ const tableMap = {
   people: 'people',
   designations: 'designations',
   links: 'links',
-  photos: 'photos'
+  photos: 'photos',
+  videos: 'videos',
+  'further-reading': 'further_reading'
 };
 
 async function getSubResource(listingId, resource, env) {
   const table = tableMap[resource];
-  const orderBy = ['timeline', 'people', 'photos'].includes(resource) ? ' ORDER BY sort_order' : '';
+  const orderBy = ['timeline', 'people', 'photos', 'videos', 'further-reading'].includes(resource) ? ' ORDER BY sort_order' : '';
   const rows = await env.DB.prepare(
     `SELECT * FROM ${table} WHERE listing_id = ?${orderBy}`
   ).bind(listingId).all();
@@ -288,6 +297,14 @@ async function createSubResource(listingId, resource, request, env) {
     case 'photos':
       sql = `INSERT INTO photos (listing_id, r2_key, filename, is_hero, alt_text, sort_order) VALUES (?, ?, ?, ?, ?, ?)`;
       params = [listingId, data.r2_key, data.filename, data.is_hero || 0, data.alt_text || null, data.sort_order || 0];
+      break;
+    case 'videos':
+      sql = `INSERT INTO videos (listing_id, youtube_id, title, sort_order) VALUES (?, ?, ?, ?)`;
+      params = [listingId, data.youtube_id, data.title || null, data.sort_order || 0];
+      break;
+    case 'further-reading':
+      sql = `INSERT INTO further_reading (listing_id, author, title, year, url, sort_order) VALUES (?, ?, ?, ?, ?, ?)`;
+      params = [listingId, data.author || null, data.title, data.year || null, data.url || null, data.sort_order || 0];
       break;
   }
 
@@ -351,16 +368,24 @@ async function getStats(env) {
       .then(gb => env.DB.prepare("SELECT COUNT(*) as count FROM improvements WHERE status = 'pending'").first()
         .then(imp => gb + imp.count)),
     env.DB.prepare(`
-      SELECT AVG(
-        (CASE WHEN subtitle IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN status IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN condition IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN description_short IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN description_expanded IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN google_place_id IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN architecture IS NOT NULL THEN 1 ELSE 0 END +
-         CASE WHEN century IS NOT NULL THEN 1 ELSE 0 END) * 100.0 / 8
-      ) as avg FROM listings
+      SELECT AVG(completeness) as avg FROM (
+        SELECT l.id,
+          (CASE WHEN l.subtitle IS NOT NULL AND l.subtitle != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.status IS NOT NULL THEN 1 ELSE 0 END +
+           CASE WHEN l.condition IS NOT NULL THEN 1 ELSE 0 END +
+           CASE WHEN l.description_short IS NOT NULL AND l.description_short != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.description_expanded IS NOT NULL AND l.description_expanded != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.google_place_id IS NOT NULL AND l.google_place_id != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.architecture IS NOT NULL AND l.architecture != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.century IS NOT NULL AND l.century != '' THEN 1 ELSE 0 END +
+           CASE WHEN l.terrain_description IS NOT NULL AND l.terrain_description != '' THEN 1 ELSE 0 END +
+           CASE WHEN (SELECT COUNT(*) FROM timeline_entries t WHERE t.listing_id = l.id) > 0 THEN 1 ELSE 0 END +
+           CASE WHEN (SELECT COUNT(*) FROM people p WHERE p.listing_id = l.id) > 0 THEN 1 ELSE 0 END +
+           CASE WHEN (SELECT COUNT(*) FROM photos ph WHERE ph.listing_id = l.id) > 0 THEN 1 ELSE 0 END +
+           CASE WHEN (SELECT COUNT(*) FROM videos v WHERE v.listing_id = l.id) > 0 THEN 1 ELSE 0 END
+          ) * 100.0 / 13 as completeness
+        FROM listings l
+      )
     `).first()
   ]);
 
@@ -385,6 +410,8 @@ async function getEnrichmentCoverage(env) {
     { name: 'google_place_id', col: 'google_place_id' },
     { name: 'architecture', col: 'architecture' },
     { name: 'century', col: 'century' },
+    { name: 'terrain_description', col: 'terrain_description' },
+    { name: 'getting_there_car', col: 'getting_there_car' },
   ];
 
   const total = await env.DB.prepare('SELECT COUNT(*) as count FROM listings').first();
@@ -412,6 +439,16 @@ async function getEnrichmentCoverage(env) {
     'SELECT COUNT(DISTINCT listing_id) as count FROM photos'
   ).first();
   coverage.push({ field: 'own_photos', filled: withPhotos.count, total: total.count, percent: total.count > 0 ? Math.round(withPhotos.count / total.count * 100) : 0 });
+
+  const withVideos = await env.DB.prepare(
+    'SELECT COUNT(DISTINCT listing_id) as count FROM videos'
+  ).first();
+  coverage.push({ field: 'videos', filled: withVideos.count, total: total.count, percent: total.count > 0 ? Math.round(withVideos.count / total.count * 100) : 0 });
+
+  const withFurtherReading = await env.DB.prepare(
+    'SELECT COUNT(DISTINCT listing_id) as count FROM further_reading'
+  ).first();
+  coverage.push({ field: 'further_reading', filled: withFurtherReading.count, total: total.count, percent: total.count > 0 ? Math.round(withFurtherReading.count / total.count * 100) : 0 });
 
   return json(coverage);
 }
