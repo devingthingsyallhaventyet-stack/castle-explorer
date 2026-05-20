@@ -356,11 +356,11 @@
                 </div>
                 <div class="mega-panel" data-country="ireland">
                   <a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a>
-                  <a href="/ireland/kingdom-of-munster">Kingdom of Munster</a>
+                  <a href="/ireland/southwest-ireland-munster">Kingdom of Munster</a>
                   <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
-                  <a href="/ireland/the-heartlands">The Heartlands</a>
-                  <a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a>
-                  <a href="/ireland/ulster-and-the-north">Ulster &amp; the North</a>
+                  <a href="/ireland/central-ireland-heartlands">Central Ireland & the Heartlands</a>
+                  <a href="/ireland/dublin-eastern-ireland">Dublin &amp; Eastern Ireland</a>
+                  <a href="/ireland/northern-ireland-ulster">Northern Ireland &amp; Ulster</a>
                 </div>
               </div>
             </div>
@@ -424,11 +424,11 @@
       <a href="/ireland" class="mob-heading" style="text-decoration:none">🍀 Ireland</a>
       <div class="mob-sub">
         <a href="/ireland/wild-atlantic-way">Wild Atlantic Way</a>
-        <a href="/ireland/kingdom-of-munster">Kingdom of Munster</a>
+        <a href="/ireland/southwest-ireland-munster">Kingdom of Munster</a>
         <a href="/ireland/irelands-ancient-east">Ireland's Ancient East</a>
-        <a href="/ireland/the-heartlands">The Heartlands</a>
-        <a href="/ireland/dublin-and-the-pale">Dublin &amp; The Pale</a>
-        <a href="/ireland/ulster-and-the-north">Ulster &amp; the North</a>
+        <a href="/ireland/central-ireland-heartlands">Central Ireland & the Heartlands</a>
+        <a href="/ireland/dublin-eastern-ireland">Dublin &amp; Eastern Ireland</a>
+        <a href="/ireland/northern-ireland-ulster">Northern Ireland &amp; Ulster</a>
       </div>
       <span class="mob-heading">✨ Collections</span>
       <div class="mob-sub">

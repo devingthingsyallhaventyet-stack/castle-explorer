@@ -100,11 +100,11 @@ Castlecore descriptions are not Wikipedia summaries. They are engaging, professi
 
 **Ireland:**
 - The Wild Atlantic Way
-- The Kingdom of Munster
+- Southwest Ireland & Munster
 - Ireland's Ancient East
-- The Heartlands
-- Dublin & The Pale
-- Ulster & the North
+- Central Ireland & the Heartlands
+- Dublin & Eastern Ireland
+- Northern Ireland & Ulster
 
 ### Region Mapping Rules
 
@@ -144,11 +144,11 @@ Wikipedia will give you a county or area name. Use these rules to map to the cor
 | If the location is in... | Region is... |
 |--------------------------|-------------|
 | Galway, Clare, Aran Islands, Connemara, Mayo, Sligo | The Wild Atlantic Way |
-| Cork, Kerry, Limerick, Tipperary, Waterford | The Kingdom of Munster |
+| Cork, Kerry, Limerick, Tipperary, Waterford | Southwest Ireland & Munster |
 | Kilkenny, Wexford, Carlow, Wicklow, Kildare, Laois, Offaly | Ireland's Ancient East |
-| Westmeath, Roscommon, Longford, Leitrim, Cavan | The Heartlands |
-| Dublin, Meath, Louth | Dublin & The Pale |
-| Antrim, Armagh, Down, Fermanagh, Tyrone, Derry/Londonderry, Donegal, Monaghan | Ulster & the North |
+| Westmeath, Roscommon, Longford, Leitrim, Cavan | Central Ireland & the Heartlands |
+| Dublin, Meath, Louth | Dublin & Eastern Ireland |
+| Antrim, Armagh, Down, Fermanagh, Tyrone, Derry/Londonderry, Donegal, Monaghan | Northern Ireland & Ulster |
 
 *Note: Some counties appear in multiple regions depending on which part of the county. When in doubt, use the Google Maps link to check the exact location.*
 
