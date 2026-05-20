@@ -14,6 +14,7 @@ Each listing has approved source links stored in its links table (labeled "Links
 1. `GET /api/listings/{id}` — returns the full listing including a `links` array
 2. Each link has `type` (wikipedia, official, heritage, google_places) and `url`
 3. **Only fetch URLs from this links array.** No other sources.
+4. **Verify every URL before using it.** If a source returns a 404 or error, log it in your report and try to find the correct URL (e.g. search the heritage body's site). If you find a working URL, update the link via `PUT /api/listings/{id}/links/{linkId}` with the corrected `url`. Do NOT use data from a broken source — only from URLs that return successfully.
 
 Source types and what to use them for:
 - **Wikipedia** — history, descriptions, people, architecture, coordinates, designations, century, type
@@ -274,6 +275,24 @@ From Wikipedia references section or official sources.
 | year | Publication year |
 | url | Link if available |
 | sort_order | Order (1, 2, 3...) |
+
+---
+
+## Google Place ID
+
+Every listing needs a `google_place_id` so the frontend can fetch live ratings, reviews, and photos. The agent is responsible for finding and setting this.
+
+### How to find the Place ID:
+1. The listing's links array will contain a `google_places` link (a Google Maps search URL)
+2. Use `web_fetch` on that Google Maps URL — it will usually redirect to a URL containing the place ID
+3. If the redirect URL contains `/place/` followed by data, look for the place ID (starts with `ChIJ`)
+4. If web_fetch doesn't reveal it, use the Google Places Text Search API through the worker:
+   - `GET /public/places-search?query={listing name + town + country}` (if available)
+5. Alternatively, search for the place on Google Maps in a browser and extract the place ID from the URL
+
+Set `google_place_id` in the PUT request along with all other fields.
+
+**After setting the place_id**, call `POST /api/listings/{id}/cache-places` to cache the Google hours and address for the listing.
 
 ---
 

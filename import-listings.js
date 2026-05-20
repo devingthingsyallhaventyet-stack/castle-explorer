@@ -10,7 +10,7 @@ const regionMap = {
   'edinburgh-lothians': 'Edinburgh & Lothians',
   'glasgow-clyde-valley': 'Glasgow & Clyde Valley',
   'highlands': 'Highlands',
-  'argyll-western-isles': 'Argyll & Western Isles',
+  'argyll-western-isles': 'Argyll & the Western Isles',
   'aberdeenshire-moray': 'Aberdeenshire & Moray',
   'perthshire': 'Perthshire',
   'fife': 'Fife',
@@ -21,7 +21,7 @@ const regionMap = {
   'dundee-angus': 'Perthshire',
   'ayrshire-arran': 'Glasgow & Clyde Valley',
   'orkney-shetland': 'Highlands',
-  'outer-hebrides': 'Argyll & Western Isles',
+  'outer-hebrides': 'Argyll & the Western Isles',
 
   // England
   'south-east': 'South East',
