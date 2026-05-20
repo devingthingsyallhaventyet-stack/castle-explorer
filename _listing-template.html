@@ -889,7 +889,7 @@ footer p {
   .community-buttons { flex-direction: column; }
   .sidebar-hours, .sidebar-location, .sidebar-links { display: none !important; }
   .mobile-visit-info { display: block !important; }
-  .mobile-links { display: none !important; }
+  .mobile-links { display: block !important; }
   .gb-prompts .gb-prompt:last-child:nth-child(odd) {
     grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
   }
@@ -1233,7 +1233,7 @@ footer p {
       <div class="address-text" id="address-text">
         <!-- Address will be populated dynamically -->
       </div>
-      <a href="#" target="_blank" class="sidebar-directions" id="directions-link">📍 Get Directions</a>
+      <a href="#" target="_blank" class="sidebar-directions" id="directions-link">📍 Open in Maps</a>
     </div>
 
     <!-- LINKS & SOURCES -->
@@ -1255,7 +1255,7 @@ footer p {
 <!-- MOBILE STICKY BAR -->
 <div class="mobile-sticky" id="mobile-sticky">
   <button class="mobile-sticky-btn" onclick="navigator.share ? navigator.share({title:window.listingName,url:location.href}) : navigator.clipboard.writeText(location.href)">↗ Share</button>
-  <a href="#" target="_blank" class="mobile-sticky-btn mobile-sticky-primary" id="mobile-directions">📍 Directions</a>
+  <a href="#" target="_blank" class="mobile-sticky-btn mobile-sticky-primary" id="mobile-directions">📍 Open in Maps</a>
 </div>
 
 </div>
@@ -1623,10 +1623,10 @@ function renderLocation(listing) {
     
     addressText.innerHTML = addressParts.join('<br>');
     
-    // Set directions links
-    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${listing.latitude},${listing.longitude}`;
-    directionsLink.href = directionsUrl;
-    mobileDirections.href = directionsUrl;
+    // Set maps links (open location, not directions)
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
+    directionsLink.href = mapsUrl;
+    mobileDirections.href = mapsUrl;
     
     sidebarLocation.style.display = 'block';
   }
@@ -1727,8 +1727,8 @@ function renderMobileVisitInfo(listing) {
       if (listing.country) addressParts.push(listing.country);
       if (addressParts.length) html += `<div class="address-text">${addressParts.join('<br>')}</div>`;
     }
-    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${listing.latitude},${listing.longitude}`;
-    html += `<a href="${directionsUrl}" target="_blank" class="sidebar-directions" style="display:block;text-align:center;background:var(--burgundy);color:#fff;padding:.7rem;border-radius:4px;font-family:var(--sans);font-size:.8rem;font-weight:600;margin-top:.8rem;text-decoration:none;">📍 Get Directions</a>`;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`;
+    html += `<a href="${mapsUrl}" target="_blank" class="sidebar-directions" style="display:block;text-align:center;background:var(--burgundy);color:#fff;padding:.7rem;border-radius:4px;font-family:var(--sans);font-size:.8rem;font-weight:600;margin-top:.8rem;text-decoration:none;">📍 Open in Maps</a>`;
     html += '</div>';
   }
 
