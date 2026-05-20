@@ -349,9 +349,9 @@
                   <a href="/scotland/glasgow-central-scotland">Glasgow &amp; Central Scotland</a>
                 </div>
                 <div class="mega-panel" data-country="wales">
-                  <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
-                  <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
-                  <a href="/wales/west-wales">West Wales</a>
+                  <a href="/wales/north-wales-snowdonia">North Wales &amp; Snowdonia</a>
+                  <a href="/wales/mid-wales-borderlands">Mid Wales &amp; Borderlands</a>
+                  <a href="/wales/west-wales-pembrokeshire">West Wales & Pembrokeshire</a>
                   <a href="/wales/south-wales">South Wales</a>
                 </div>
                 <div class="mega-panel" data-country="ireland">
@@ -416,9 +416,9 @@
       </div>
       <a href="/wales" class="mob-heading" style="text-decoration:none">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
       <div class="mob-sub">
-        <a href="/wales/snowdonia-north">Snowdonia &amp; North Wales</a>
-        <a href="/wales/mid-wales-marches">Mid Wales &amp; the Marches</a>
-        <a href="/wales/west-wales">West Wales</a>
+        <a href="/wales/north-wales-snowdonia">North Wales &amp; Snowdonia</a>
+        <a href="/wales/mid-wales-borderlands">Mid Wales &amp; Borderlands</a>
+        <a href="/wales/west-wales-pembrokeshire">West Wales & Pembrokeshire</a>
         <a href="/wales/south-wales">South Wales</a>
       </div>
       <a href="/ireland" class="mob-heading" style="text-decoration:none">🍀 Ireland</a>

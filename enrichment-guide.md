@@ -93,9 +93,9 @@ Castlecore descriptions are not Wikipedia summaries. They are engaging, professi
 - East of England
 
 **Wales:**
-- Snowdonia & North Wales
-- Mid Wales & the Marches
-- West Wales
+- North Wales & Snowdonia
+- Mid Wales & Borderlands
+- West Wales & Pembrokeshire
 - South Wales
 
 **Ireland:**
@@ -135,9 +135,9 @@ Wikipedia will give you a county or area name. Use these rules to map to the cor
 **Wales:**
 | If the location is in... | Region is... |
 |--------------------------|-------------|
-| Gwynedd, Conwy, Anglesey, Denbighshire, Flintshire, Wrexham | Snowdonia & North Wales |
-| Powys, Ceredigion, Shropshire border (Welsh side), Montgomeryshire, Radnorshire, Breconshire | Mid Wales & the Marches |
-| Pembrokeshire, Carmarthenshire | West Wales |
+| Gwynedd, Conwy, Anglesey, Denbighshire, Flintshire, Wrexham | North Wales & Snowdonia |
+| Powys, Ceredigion, Shropshire border (Welsh side), Montgomeryshire, Radnorshire, Breconshire | Mid Wales & Borderlands |
+| Pembrokeshire, Carmarthenshire | West Wales & Pembrokeshire |
 | Cardiff, Newport, Monmouthshire, Vale of Glamorgan, Blaenau Gwent, Caerphilly, Torfaen, Neath Port Talbot, Bridgend, Merthyr Tydfil, Rhondda Cynon Taf, Swansea | South Wales |
 
 **Ireland:**

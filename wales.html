@@ -214,9 +214,9 @@ img{max-width:100%;display:block}
     </div>
     <div class="castle-filters reveal" id="castle-filters">
       <button class="active" data-filter="all">All (172)</button>
-      <button data-filter="north">Snowdonia &amp; North Wales</button>
-      <button data-filter="mid">Mid Wales &amp; the Marches</button>
-      <button data-filter="west">West Wales</button>
+      <button data-filter="north">North Wales &amp; Snowdonia</button>
+      <button data-filter="mid">Mid Wales &amp; Borderlands</button>
+      <button data-filter="west">West Wales & Pembrokeshire</button>
       <button data-filter="south">South Wales</button>
       <button data-filter="intact">Intact</button>
       <button data-filter="ruin">Ruins</button>
@@ -235,32 +235,32 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="region-grid reveal" id="region-grid">
-      <a class="region-card" href="/wales/snowdonia-north">
-        <img src="img/wales/north-wales.webp" srcset="img/wales/north-wales-mobile.webp 400w, img/wales/north-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Snowdonia & North Wales" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+      <a class="region-card" href="/wales/north-wales-snowdonia">
+        <img src="img/wales/north-wales.webp" srcset="img/wales/north-wales-mobile.webp 400w, img/wales/north-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="North Wales & Snowdonia" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">49 sites</div>
-          <h3 class="region-card-name">Snowdonia & North Wales</h3>
+          <h3 class="region-card-name">North Wales & Snowdonia</h3>
           <p class="region-card-desc">Edward I's iron ring around Snowdonia - Caernarfon, Conwy, Harlech, and Beaumaris. The conquest castles that defined medieval warfare.</p>
         </div>
         <div class="region-card-arrow">?</div>
       </a>
-      <a class="region-card" href="/wales/mid-wales-marches">
-        <img src="img/wales/mid-wales.webp" srcset="img/wales/mid-wales-mobile.webp 400w, img/wales/mid-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Mid Wales & the Marches" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
+      <a class="region-card" href="/wales/mid-wales-borderlands">
+        <img src="img/wales/mid-wales.webp" srcset="img/wales/mid-wales-mobile.webp 400w, img/wales/mid-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Mid Wales & Borderlands" loading="lazy" width="800" height="600" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">19 sites</div>
-          <h3 class="region-card-name">Mid Wales & the Marches</h3>
+          <h3 class="region-card-name">Mid Wales & Borderlands</h3>
           <p class="region-card-desc">Powis Castle's terraced grandeur, Chirk's borderland fortress, and the Marcher lordships where England and Wales collided for centuries.</p>
         </div>
         <div class="region-card-arrow">?</div>
       </a>
-      <a class="region-card" href="/wales/west-wales">
-        <img src="img/wales/south-west-wales.webp" srcset="img/wales/south-west-wales-mobile.webp 400w, img/wales/south-west-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="West Wales" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
+      <a class="region-card" href="/wales/west-wales-pembrokeshire">
+        <img src="img/wales/south-west-wales.webp" srcset="img/wales/south-west-wales-mobile.webp 400w, img/wales/south-west-wales.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="West Wales & Pembrokeshire" loading="lazy" width="800" height="598" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=800&q=80'">
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">50 sites</div>
-          <h3 class="region-card-name">West Wales</h3>
+          <h3 class="region-card-name">West Wales & Pembrokeshire</h3>
           <p class="region-card-desc">Pembroke's Norman stronghold, Carreg Cennen's mountain eyrie, and the castles that guarded the Irish Sea from Viking and Norman alike.</p>
         </div>
         <div class="region-card-arrow">?</div>
@@ -431,9 +431,9 @@ img{max-width:100%;display:block}
   // Map filters to region page URLs
   const regionLinks = {
     'all': '/wales/all-castles',
-    'north': '/wales/snowdonia-north',
-    'mid': '/wales/mid-wales-marches',
-    'west': '/wales/west-wales',
+    'north': '/wales/north-wales-snowdonia',
+    'mid': '/wales/mid-wales-borderlands',
+    'west': '/wales/west-wales-pembrokeshire',
     'south': '/wales/south-wales',
     'intact': '/wales/all-castles?filter=intact',
     'ruin': '/wales/all-castles?filter=ruin'
