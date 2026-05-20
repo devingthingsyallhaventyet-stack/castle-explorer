@@ -889,7 +889,7 @@ footer p {
   .community-buttons { flex-direction: column; }
   .sidebar-hours, .sidebar-location, .sidebar-links { display: none; }
   .mobile-visit-info { display: block !important; }
-  .mobile-links { display: block !important; }
+  .mobile-links { display: none !important; }
   .gb-prompts .gb-prompt:last-child:nth-child(odd) {
     grid-column: 1 / -1; justify-self: center; max-width: calc(50% - .25rem);
   }
@@ -1253,7 +1253,7 @@ footer p {
 </footer>
 
 <!-- MOBILE STICKY BAR -->
-<div class="mobile-sticky" id="mobile-sticky" style="display: none;">
+<div class="mobile-sticky" id="mobile-sticky">
   <button class="mobile-sticky-btn" onclick="navigator.share ? navigator.share({title:window.listingName,url:location.href}) : navigator.clipboard.writeText(location.href)">↗ Share</button>
   <a href="#" target="_blank" class="mobile-sticky-btn mobile-sticky-primary" id="mobile-directions">📍 Directions</a>
 </div>
@@ -1677,6 +1677,71 @@ function renderCachedPlacesData(listing) {
   }
 }
 
+// Render mobile visit info (hours & admission + location inside Visit tab)
+function renderMobileVisitInfo(listing) {
+  const container = document.getElementById('mobile-visit-info');
+  if (!container) return;
+  let html = '';
+
+  // Hours & Admission card
+  const hasHours = listing.google_hours;
+  const hasAdmission = listing.admission_price || listing.time_needed;
+  if (hasHours || hasAdmission || listing.status) {
+    html += '<div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;margin-bottom:.8rem;">';
+    html += '<h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Hours & Admission</h3>';
+    // Open/closed status will be injected by fetchGooglePlaces if applicable
+    html += '<div id="mobile-visit-status"></div>';
+    if (listing.admission_price) {
+      html += `<div class="visit-row"><span class="visit-label">Admission</span><span class="visit-value">${listing.admission_price}</span></div>`;
+    }
+    if (listing.time_needed) {
+      html += `<div class="visit-row"><span class="visit-label">Time needed</span><span class="visit-value">${listing.time_needed}</span></div>`;
+    }
+    // Cached hours from DB
+    if (hasHours) {
+      try {
+        const hours = JSON.parse(listing.google_hours);
+        if (hours && hours.length) {
+          html += `<div class="visit-row"><span class="visit-label">Today's hours</span><span class="visit-value">${hours[0]}</span></div>`;
+          if (hours.length > 1) {
+            html += '<span class="hours-toggle" onclick="this.nextElementSibling.classList.toggle(\'show\')" style="font-family:var(--sans);font-size:.75rem;color:var(--burgundy);cursor:pointer;display:inline-block;margin-top:.4rem;">View all hours ▾</span>';
+            html += '<div class="hours-full">';
+            hours.forEach(h => { html += h + '<br>'; });
+            html += '</div>';
+          }
+        }
+      } catch(e) {}
+    }
+    // Status-based fallbacks
+    if (!hasHours && listing.status === 'Freely Accessible') {
+      html += '<div class="visit-row"><span class="visit-label">Access</span><span class="visit-value free">Open 24/7 · Free</span></div>';
+    }
+    html += '</div>';
+  }
+
+  // Location card
+  if (listing.latitude && listing.longitude) {
+    const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.4!2d${listing.longitude}!3d${listing.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z${listing.latitude},${listing.longitude}!5e0!3m2!1sen!2suk!4v1`;
+    html += '<div style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.4rem;">';
+    html += '<h3 style="font-family:var(--sans);font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:1px;">Location</h3>';
+    html += `<div style="border-radius:4px;overflow:hidden;margin-bottom:.8rem;"><iframe src="${mapSrc}" width="100%" height="180" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`;
+    const addressParts = [];
+    if (listing.google_address) {
+      html += `<div class="address-text">${listing.google_address}</div>`;
+    } else {
+      if (listing.town) addressParts.push(listing.town);
+      if (listing.county) addressParts.push(listing.county);
+      if (listing.country) addressParts.push(listing.country);
+      if (addressParts.length) html += `<div class="address-text">${addressParts.join('<br>')}</div>`;
+    }
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${listing.latitude},${listing.longitude}`;
+    html += `<a href="${directionsUrl}" target="_blank" class="sidebar-directions" style="display:block;text-align:center;background:var(--burgundy);color:#fff;padding:.7rem;border-radius:4px;font-family:var(--sans);font-size:.8rem;font-weight:600;margin-top:.8rem;text-decoration:none;">📍 Get Directions</a>`;
+    html += '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
 // Render guest book title
 function renderGuestBook(listing) {
   const gbTitle = document.getElementById('gb-title');
@@ -1705,6 +1770,7 @@ function renderListing(listing) {
   renderFurtherReading(listing);
   renderLocation(listing);
   renderCachedPlacesData(listing);
+  renderMobileVisitInfo(listing);
   renderLinks(listing);
   renderGuestBook(listing);
   
@@ -1736,8 +1802,9 @@ async function fetchListing() {
     const listing = await response.json();
     renderListing(listing);
     
-    // Fetch Google Places data if we have a place_id
-    if (listing.google_place_id) {
+    // Fetch live Google Places data only for "Open to Visitors" listings
+    // (other statuses like Freely Accessible, Private, Ruin don't need live open/closed checks)
+    if (listing.google_place_id && listing.status === 'Open to Visitors') {
       fetchGooglePlaces(listing.google_place_id, listing);
     }
     
@@ -1778,6 +1845,14 @@ async function fetchGooglePlaces(placeId, listing) {
       hoursHtml += '</div>';
       hoursCard.innerHTML = hoursHtml;
       hoursCard.style.display = 'block';
+    }
+
+    // Update mobile visit status with live open/closed
+    if (places.isOpen !== null) {
+      const mobileStatus = document.getElementById('mobile-visit-status');
+      if (mobileStatus) {
+        mobileStatus.innerHTML = `<div class="visit-status"><span class="status-dot ${places.isOpen ? 'open' : ''}" style="background:${places.isOpen ? 'var(--green)' : 'var(--red)'};"></span><span class="status-text" style="color:${places.isOpen ? 'var(--green)' : 'var(--red)'};">${places.isOpen ? 'Open Now' : 'Closed'}</span></div>`;
+      }
     }
     
     // Render Google reviews
