@@ -341,7 +341,8 @@ These are handled automatically or separately:
 7. `PUT /api/listings/{id}` with all main fields (including `google_place_id`)
 8. `POST /api/listings/{id}/cache-places` to cache Google hours and address
 9. `POST` sub-resources (timeline, people, designations, videos, further reading)
-10. Log what was filled and what was left empty (and why)
+10. **Verify encoding:** After PUT, GET the listing back and check that em dashes (—), curly quotes, and other special characters render correctly. If you see `â€"`, `â€™`, or similar mojibake, re-PUT the affected fields with properly encoded UTF-8 text.
+11. Log what was filled and what was left empty (and why)
 
 ---
 
