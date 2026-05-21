@@ -8,6 +8,23 @@ Every field must be sourced from approved links only. If you can't source it fro
 
 ---
 
+## API Access
+
+The Castlecore API at `castlecore.uk` is behind Cloudflare Access (auth-walled). **Agents must use the workers.dev dev URL instead:**
+
+**Base URL:** `https://castle-explorer2.devingthingsyallhaventyet.workers.dev`
+
+All API calls in this guide use this base URL. For example:
+- `GET {BASE_URL}/api/listings/{id}` — fetch listing data
+- `PUT {BASE_URL}/api/listings/{id}` — update listing fields
+- `POST {BASE_URL}/api/listings/{id}/timeline` — add timeline entries
+
+Public endpoints (no auth needed on either domain):
+- `GET {BASE_URL}/public/places-search?query=...` — Google Place ID lookup
+- `GET {BASE_URL}/public/listing/{slug}` — public listing data
+
+---
+
 ## How to Access Approved Sources
 Each listing has approved source links stored in its links table (labeled "Links & Sources" on the dashboard). To get them:
 
@@ -280,19 +297,22 @@ From Wikipedia references section or official sources.
 
 ## Google Place ID
 
-Every listing needs a `google_place_id` so the frontend can fetch live ratings, reviews, and photos. The agent is responsible for finding and setting this.
+Every listing needs a `google_place_id` so the frontend can fetch live ratings, reviews, and photos. **The agent is responsible for finding and setting this.**
 
 ### How to find the Place ID:
-1. The listing's links array will contain a `google_places` link (a Google Maps search URL)
-2. Use `web_fetch` on that Google Maps URL — it will usually redirect to a URL containing the place ID
-3. If the redirect URL contains `/place/` followed by data, look for the place ID (starts with `ChIJ`)
-4. If web_fetch doesn't reveal it, use the Google Places Text Search API through the worker:
-   - `GET /public/places-search?query={listing name + town + country}` (if available)
-5. Alternatively, search for the place on Google Maps in a browser and extract the place ID from the URL
+1. Use the **Text Search endpoint** (this is the most reliable method):
+   ```
+   GET /public/places-search?query={listing name}+{town}+{country}
+   ```
+   This returns a JSON array of matching places. Pick the first result whose `displayName` matches the listing. The `id` field is the Place ID (starts with `ChIJ`).
 
-Set `google_place_id` in the PUT request along with all other fields.
+2. **Fallback:** The listing's links array will contain a `google_places` link (a Google Maps search URL). Use `web_fetch` on it — if the redirect URL contains a `ChIJ` string, that's the place ID.
 
-**After setting the place_id**, call `POST /api/listings/{id}/cache-places` to cache the Google hours and address for the listing.
+3. If neither method works, log it as unfilled in your report.
+
+### After finding the Place ID:
+1. Include `google_place_id` in your `PUT /api/listings/{id}` request along with all other fields
+2. **Then call `POST /api/listings/{id}/cache-places`** — this caches Google hours and address into the database. This step is **required** for the listing page to display hours and address correctly. If you skip it, the Google section on the page will be broken.
 
 ---
 
@@ -300,6 +320,7 @@ Set `google_place_id` in the PUT request along with all other fields.
 These are handled automatically or separately:
 - **google_rating** — fetched live from Google Places API on the public page
 - **google_review_count** — fetched live from Google Places API
+- **google_hours / google_address** — cached automatically when agent calls `POST /api/listings/{id}/cache-places` (agent triggers the cache but doesn't write these fields manually)
 - **Gallery/photos** — populated automatically from Google Places API when visitors view the page. Agent does not handle images.
 - **Badge** (Must See, Hidden Gem, etc.) — calculated from Google Places rating/review count
 - **Guest Book entries** — user-generated content
@@ -308,14 +329,19 @@ These are handled automatically or separately:
 ---
 
 ## Process Per Listing
+
+**Base URL:** `https://castle-explorer2.devingthingsyallhaventyet.workers.dev`
+
 1. `GET /api/listings/{id}` to get current data and source links
-2. `web_fetch` each source URL from the links array (Wikipedia, heritage/official, Google Maps)
+2. `web_fetch` each source URL from the links array (Wikipedia, heritage/official, Google Maps). **Verify each URL returns 200.** If a source returns 404 or error, try to find the correct URL (e.g. search the heritage body's site). If you find a working URL, update the link via `PUT /api/listings/{id}/links/{linkId}`. Do NOT use data from a broken source.
 3. Extract only what's in those pages
 4. Determine region using the Region Mapping Rules above
 5. Write descriptions in Castlecore voice (engaging, professional, accurate)
-6. `PUT /api/listings/{id}` with all main fields
-7. `POST` sub-resources (timeline, people, designations, videos, further reading)
-8. Log what was filled and what was left empty (and why)
+6. Find the Google Place ID via `GET /public/places-search?query={name}+{town}+{country}`
+7. `PUT /api/listings/{id}` with all main fields (including `google_place_id`)
+8. `POST /api/listings/{id}/cache-places` to cache Google hours and address
+9. `POST` sub-resources (timeline, people, designations, videos, further reading)
+10. Log what was filled and what was left empty (and why)
 
 ---
 
