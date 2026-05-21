@@ -240,7 +240,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <div class="stat-card-value" id="stat-total">—</div>
           <div class="stat-card-sub">All approved</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card" style="cursor:pointer" onclick="document.querySelector('.view-tab[data-view=published]').click()">
           <div class="stat-card-label">Published</div>
           <div class="stat-card-value" id="stat-published">—</div>
           <div class="stat-card-sub" id="stat-published-sub">of — listings</div>
