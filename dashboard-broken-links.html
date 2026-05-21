@@ -306,7 +306,7 @@ function renderTable() {
     const tr = document.createElement('tr');
     tr.dataset.index = i;
     tr.innerHTML = `
-      <td style="font-weight:600">${link.name}</td>
+      <td style="font-weight:600"><a href="https://www.google.com/search?q=${encodeURIComponent(link.name + ' castle')}" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--text-dim)">${link.name}</a></td>
       <td><span class="error-badge ${errorClass}">${link.error}</span></td>
       <td><a class="link-url" href="${link.url}" target="_blank">${link.url}</a></td>
       <td><input class="new-url" data-index="${i}" placeholder="Paste corrected URL or leave blank to delete" value=""></td>
