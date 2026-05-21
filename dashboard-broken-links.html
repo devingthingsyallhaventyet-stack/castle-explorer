@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broken Links — Castlecore Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface-hover: #22262f;
+  --border: #2a2e3a;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --text-dim: #52525b;
+  --accent: #8b2335;
+  --accent-hover: #a12940;
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --blue: #3b82f6;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+body { font-family: var(--sans); background: var(--bg); color: var(--text); }
+.dashboard { display: flex; min-height: 100vh; }
+.sidebar-nav {
+  width: 240px; background: var(--surface); border-right: 1px solid var(--border);
+  padding: 1.5rem 0; flex-shrink: 0; position: fixed; top: 0; left: 0; bottom: 0;
+  display: flex; flex-direction: column;
+}
+.sidebar-logo {
+  font-size: 1rem; font-weight: 700; letter-spacing: 2px;
+  padding: 0 1.5rem 1.5rem; border-bottom: 1px solid var(--border); color: var(--text);
+}
+.sidebar-logo span { color: var(--accent); }
+.nav-section { padding: .8rem 0; }
+.nav-section-title {
+  font-size: .6rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--text-dim); padding: 0 1.5rem .4rem;
+}
+.nav-item {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .55rem 1.5rem; font-size: .8rem; font-weight: 500;
+  color: var(--text-muted); cursor: pointer; transition: all .15s;
+  border-left: 2px solid transparent; text-decoration: none;
+}
+.nav-item:hover { background: var(--surface-hover); color: var(--text); }
+.nav-item.active {
+  background: rgba(139,35,53,.1); color: var(--accent);
+  border-left-color: var(--accent); font-weight: 600;
+}
+.nav-item .badge {
+  margin-left: auto; background: var(--accent); color: #fff;
+  font-size: .6rem; font-weight: 700; padding: 1px 6px; border-radius: 10px;
+}
+.nav-spacer { flex: 1; }
+.nav-footer { padding: .8rem 1.5rem; border-top: 1px solid var(--border); }
+.nav-footer-text { font-size: .65rem; color: var(--text-dim); }
+
+.main { margin-left: 240px; flex: 1; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; border-bottom: 1px solid var(--border); background: var(--surface);
+}
+.topbar h1 { font-size: 1.1rem; font-weight: 700; }
+.topbar-actions { display: flex; gap: .5rem; }
+.btn {
+  font-family: var(--sans); font-size: .75rem; font-weight: 600;
+  padding: .5rem 1rem; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); transition: all .15s;
+}
+.btn:hover { background: var(--surface-hover); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-green { background: var(--green); border-color: var(--green); color: #000; }
+.btn-green:hover { opacity: .9; }
+
+.content { padding: 2rem; }
+
+.stats-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1rem 1.5rem; flex: 1;
+}
+.stat-card .label { font-size: .65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: .3rem; }
+.stat-card .value { font-size: 1.5rem; font-weight: 700; }
+.stat-card .value.red { color: var(--red); }
+.stat-card .value.amber { color: var(--amber); }
+.stat-card .value.green { color: var(--green); }
+
+table {
+  width: 100%; border-collapse: collapse; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+}
+thead { background: rgba(139,35,53,.15); }
+th {
+  text-align: left; padding: .7rem 1rem; font-size: .7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: .6rem 1rem; font-size: .8rem; border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+tr:hover { background: var(--surface-hover); }
+.error-badge {
+  display: inline-block; font-size: .65rem; font-weight: 700; padding: 2px 8px;
+  border-radius: 10px; background: rgba(239,68,68,.15); color: var(--red);
+}
+.error-badge.warn { background: rgba(245,158,11,.15); color: var(--amber); }
+.link-url {
+  color: var(--blue); text-decoration: none; font-size: .75rem; word-break: break-all;
+}
+.link-url:hover { text-decoration: underline; }
+input.new-url {
+  width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+  padding: .4rem .6rem; font-family: var(--sans); font-size: .75rem; color: var(--text);
+  outline: none; transition: border-color .15s;
+}
+input.new-url:focus { border-color: var(--accent); }
+input.new-url::placeholder { color: var(--text-dim); }
+.delete-check { width: 16px; height: 16px; cursor: pointer; accent-color: var(--red); }
+
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; background: var(--green); color: #000;
+  padding: .7rem 1.2rem; border-radius: 6px; font-size: .8rem; font-weight: 600;
+  opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 999;
+}
+.toast.show { opacity: 1; }
+
+.filter-row { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.filter-btn {
+  font-family: var(--sans); font-size: .7rem; font-weight: 600; padding: .35rem .8rem;
+  border-radius: 4px; cursor: pointer; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-muted); transition: all .15s;
+}
+.filter-btn:hover { color: var(--text); background: var(--surface-hover); }
+.filter-btn.active { background: rgba(139,35,53,.15); color: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <nav class="sidebar-nav">
+    <div class="sidebar-logo">CASTLE<span>CORE</span></div>
+    <div class="nav-section">
+      <div class="nav-section-title">Content</div>
+      <a class="nav-item" href="dashboard-prototype.html">📋 Listings</a>
+      <a class="nav-item" href="dashboard-enrichment.html">✨ Enrichment</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Community</div>
+      <a class="nav-item" href="dashboard-moderation.html">💬 Guest Book</a>
+      <a class="nav-item" href="dashboard-improvements.html">💡 Improvements</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-title">Tools</div>
+      <a class="nav-item" href="dashboard-pipeline.html">🔄 New Listings</a>
+      <a class="nav-item active" href="dashboard-broken-links.html">🔗 Broken Links <span class="badge" id="badge-count">72</span></a>
+    </div>
+    <div class="nav-spacer"></div>
+    <div class="nav-footer">
+      <div class="nav-footer-text">Castlecore Dashboard v0.1</div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="topbar">
+      <h1>🔗 Broken Links</h1>
+      <div class="topbar-actions">
+        <button class="btn" onclick="selectAllDelete()">Select All for Delete</button>
+        <button class="btn btn-primary" onclick="copyForClawz()">📋 Copy for Clawz</button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="stats-row">
+        <div class="stat-card"><div class="label">Total Broken</div><div class="value red" id="stat-total">72</div></div>
+        <div class="stat-card"><div class="label">404 Not Found</div><div class="value red" id="stat-404">33</div></div>
+        <div class="stat-card"><div class="label">Connection Error</div><div class="value amber" id="stat-err">25</div></div>
+        <div class="stat-card"><div class="label">403 Blocked</div><div class="value amber" id="stat-403">10</div></div>
+        <div class="stat-card"><div class="label">Fixed / Updated</div><div class="value green" id="stat-fixed">0</div></div>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all" onclick="filterBy('all',this)">All</button>
+        <button class="filter-btn" data-filter="404" onclick="filterBy('404',this)">404</button>
+        <button class="filter-btn" data-filter="ERR" onclick="filterBy('ERR',this)">ERR</button>
+        <button class="filter-btn" data-filter="403" onclick="filterBy('403',this)">403</button>
+        <button class="filter-btn" data-filter="other" onclick="filterBy('other',this)">Other</button>
+        <button class="filter-btn" data-filter="cadw.gov.wales" onclick="filterBy('cadw.gov.wales',this)">Cadw (16)</button>
+        <button class="filter-btn" data-filter="heritageireland.ie" onclick="filterBy('heritageireland.ie',this)">Heritage Ireland (12)</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Site</th>
+            <th style="width:5%">Error</th>
+            <th style="width:30%">Broken Link</th>
+            <th style="width:35%">New Link (paste here)</th>
+            <th style="width:5%">Delete</th>
+            <th style="width:5%">Type</th>
+          </tr>
+        </thead>
+        <tbody id="link-table"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied to clipboard!</div>
+
+<script>
+const BROKEN_LINKS = [
+  {name:"Aberglasney",type:"wikipedia",url:"https://en.wikipedia.org/wiki/Aberglasney_Gardens",error:"404"},
+  {name:"Ardee Castle",type:"heritage",url:"https://www.louthheritage.ie/",error:"ERR"},
+  {name:"Astley Castle",type:"heritage",url:"https://www.landmarktrust.org.uk/properties/astley-castle/",error:"403"},
+  {name:"Athcarne Castle",type:"heritage",url:"https://www.meathtourism.ie/",error:"ERR"},
+  {name:"Athlumney Castle",type:"heritage",url:"https://www.meathtourism.ie/",error:"ERR"},
+  {name:"Athy Castle",type:"heritage",url:"https://www.kildare.ie/",error:"ERR"},
+  {name:"Ballinafad Castle",type:"heritage",url:"https://www.sligoheritage.ie/",error:"ERR"},
+  {name:"Ballymoon Castle",type:"heritage",url:"https://heritageireland.ie/places-to-visit/ballymoon-castle/",error:"404"},
+  {name:"Baltinglass Abbey",type:"heritage",url:"https://www.visitwicklow.ie/",error:"403"},
+  {name:"Barclodiad y Gawres",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/barclodiad-y-gawres",error:"404"},
+  {name:"Bramall Hall",type:"heritage",url:"https://www.stockport.gov.uk/landing/bramall-hall",error:"ERR"},
+  {name:"Caerau Hillfort",type:"heritage",url:"https://caerheritageproject.com/",error:"403"},
+  {name:"Caldicot Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/caldicot-castle",error:"404"},
+  {name:"Candleston Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/candleston-castle",error:"404"},
+  {name:"Carlingford Castle",type:"heritage",url:"https://heritageireland.ie/places-to-visit/king-johns-castle-carlingford/",error:"404"},
+  {name:"Carreg Coetan Arthur",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/carreg-coetan-arthur",error:"404"},
+  {name:"Castell Aberlleiniog",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/castell-aberlleiniog",error:"404"},
+  {name:"Castell Dinas",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/castell-dinas",error:"404"},
+  {name:"Castle Balfour",type:"heritage",url:"https://heritageireland.ie/places-to-visit/castle-balfour/",error:"404"},
+  {name:"Claregalway Friary",type:"heritage",url:"https://heritageireland.ie/visit/places-to-visit/claregalway-friary/",error:"404"},
+  {name:"Classiebawn Castle",type:"heritage",url:"https://www.sligoheritage.ie/",error:"ERR"},
+  {name:"Cong Abbey",type:"heritage",url:"https://heritageireland.ie/places-to-visit/cong-abbey/",error:"404"},
+  {name:"Corcomroe Abbey",type:"heritage",url:"https://heritageireland.ie/visit/places-to-visit/corcomroe-abbey/",error:"404"},
+  {name:"Culzean Castle",type:"heritage",url:"https://www.nts.org.uk/visit/places/culzean-castle-and-country-park",error:"404"},
+  {name:"Cwmhir Abbey",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/abbey-cwmhir",error:"404"},
+  {name:"Din Lligwy",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/din-lligwy",error:"404"},
+  {name:"Drysllwyn Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/dryslwyn-castle",error:"502"},
+  {name:"Duncannon Fort",type:"heritage",url:"https://www.duncannonfort.com/",error:"ERR"},
+  {name:"Dunfermline Palace",type:"heritage",url:"https://www.historicenvironment.scot/visit-a-place/places/dunfermline-palace/",error:"404"},
+  {name:"Dunmoe Castle",type:"heritage",url:"https://www.megalithicireland.com/dunmoe-castle.html",error:"404"},
+  {name:"Dunraven Castle",type:"heritage",url:"https://www.valeofglamorgan.gov.uk/en/enjoying/Heritage-Coast/Dunraven.aspx",error:"404"},
+  {name:"Fiddaun Castle",type:"heritage",url:"https://heritageireland.ie/places-to-visit/fiddaun-castle/",error:"404"},
+  {name:"Gleaston Castle",type:"heritage",url:"https://furness-whisper.uk/2024/04/07/gleaston-castle-a-factual-exploration-of-cumbrias-14th-century-relic/",error:"410"},
+  {name:"Glin Castle",type:"heritage",url:"https://www.glincastle.com/",error:"ERR"},
+  {name:"Hampton Court Palace",type:"heritage",url:"https://www.hrp.org.uk/hampton-court-palace/",error:"403"},
+  {name:"Hay Castle",type:"heritage",url:"https://www.haycastle.org/",error:"ERR"},
+  {name:"Holt Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/holt-castle",error:"404"},
+  {name:"Kingswear Castle",type:"heritage",url:"https://www.landmarktrust.org.uk/properties/kingswear-castle/",error:"403"},
+  {name:"Knappogue Castle",type:"heritage",url:"https://www.knappoguecastle.ie/",error:"403"},
+  {name:"Lamphey Bishop's Palace",type:"heritage",url:"http://cadw.gov.wales/daysout/lampheybishopspalace/",error:"TIMEOUT"},
+  {name:"Lea Castle",type:"wikipedia",url:"https://en.wikipedia.org/wiki/Lea_Castle_(Laois)",error:"404"},
+  {name:"Longleat House",type:"heritage",url:"https://www.longleat.co.uk/",error:"403"},
+  {name:"Lumley Castle",type:"heritage",url:"https://www.lumleycastle.com/",error:"403"},
+  {name:"Magheraghanrush Court Tomb",type:"heritage",url:"https://www.sligoheritage.ie/",error:"ERR"},
+  {name:"Mallow Castle",type:"heritage",url:"https://mallowcastle.ie/",error:"ERR"},
+  {name:"Morlais Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/morlais-castle",error:"404"},
+  {name:"Moyne Abbey",type:"heritage",url:"https://heritageireland.ie/places-to-visit/moyne-abbey/",error:"404"},
+  {name:"Multyfarnham Friary",type:"heritage",url:"https://www.westmeathheritage.ie/",error:"ERR"},
+  {name:"Narberth Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/narberth-castle",error:"404"},
+  {name:"Neath Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/neath-castle",error:"404"},
+  {name:"Newcastle Emlyn Castle",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/newcastle-emlyn-castle",error:"404"},
+  {name:"Norwich Castle",type:"heritage",url:"https://www.museums.norfolk.gov.uk/norwich-castle",error:"403"},
+  {name:"Penmon Priory",type:"heritage",url:"https://cadw.gov.wales/visit/places-to-visit/penmon-priory",error:"404"},
+  {name:"Portaferry Castle",type:"heritage",url:"https://www.visitnewryandmourne.com/",error:"ERR"},
+  {name:"Proleek Dolmen",type:"heritage",url:"https://www.louthheritage.ie/",error:"ERR"},
+  {name:"Redwood Castle",type:"heritage",url:"https://www.redwoodcastle.com/",error:"ERR"},
+  {name:"Roche Castle",type:"heritage",url:"https://heritageireland.ie/places-to-visit/roche-castle/",error:"404"},
+  {name:"Rockfleet Castle",type:"heritage",url:"https://heritageireland.ie/places-to-visit/rockfleet-castle/",error:"404"},
+  {name:"Roodstown Castle",type:"heritage",url:"https://www.louthheritage.ie/",error:"ERR"},
+  {name:"Ross Errilly Friary",type:"heritage",url:"https://heritageireland.ie/visit/places-to-visit/ross-errilly-friary/",error:"404"},
+  {name:"Rosserk Friary",type:"heritage",url:"https://heritageireland.ie/places-to-visit/rosserk-friary/",error:"404"},
+  {name:"Ruperra Castle",type:"heritage",url:"https://www.ruperracastle.org/",error:"ERR"},
+  {name:"Sandal Castle",type:"heritage",url:"https://www.wakefield.gov.uk/events-and-culture/sandal-castle/",error:"404"},
+  {name:"Saul Church",type:"heritage",url:"https://www.visitnewryandmourne.com/",error:"ERR"},
+  {name:"Shane Castle",type:"heritage",url:"https://www.shanescastle.com/",error:"ERR"},
+  {name:"Shankill Castle",type:"heritage",url:"https://www.shankillcastle.ie/",error:"ERR"},
+  {name:"Skryne Church",type:"heritage",url:"https://www.meathtourism.ie/",error:"ERR"},
+  {name:"St Donat's Castle",type:"heritage",url:"https://www.atlanticcollege.org/",error:"TIMEOUT"},
+  {name:"Swords Castle",type:"heritage",url:"https://swordscastle.events/",error:"ERR"},
+  {name:"Termonfeckin Castle",type:"heritage",url:"https://www.louthheritage.ie/",error:"ERR"},
+  {name:"Tonbridge Castle",type:"heritage",url:"https://www.tonbridgecastle.org/",error:"ERR"},
+  {name:"Tower of London",type:"heritage",url:"https://www.hrp.org.uk/tower-of-london/",error:"403"}
+];
+
+let currentFilter = 'all';
+
+function renderTable() {
+  const tbody = document.getElementById('link-table');
+  tbody.innerHTML = '';
+  let visible = 0;
+
+  BROKEN_LINKS.forEach((link, i) => {
+    const show = currentFilter === 'all'
+      || link.error === currentFilter
+      || (currentFilter === 'other' && !['404','ERR','403'].includes(link.error))
+      || link.url.includes(currentFilter);
+    if (!show) return;
+    visible++;
+
+    const errorClass = ['404','410','502'].includes(link.error) ? '' : 'warn';
+    const tr = document.createElement('tr');
+    tr.dataset.index = i;
+    tr.innerHTML = `
+      <td style="font-weight:600">${link.name}</td>
+      <td><span class="error-badge ${errorClass}">${link.error}</span></td>
+      <td><a class="link-url" href="${link.url}" target="_blank">${link.url}</a></td>
+      <td><input class="new-url" data-index="${i}" placeholder="Paste corrected URL or leave blank to delete" value=""></td>
+      <td style="text-align:center"><input type="checkbox" class="delete-check" data-index="${i}"></td>
+      <td style="font-size:.7rem;color:var(--text-dim)">${link.type}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function filterBy(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+
+function selectAllDelete() {
+  document.querySelectorAll('.delete-check').forEach(cb => cb.checked = !cb.checked);
+}
+
+function copyForClawz() {
+  const lines = ['SITE | ACTION | URL'];
+  BROKEN_LINKS.forEach((link, i) => {
+    const input = document.querySelector(`input.new-url[data-index="${i}"]`);
+    const delCheck = document.querySelector(`input.delete-check[data-index="${i}"]`);
+    const newUrl = input ? input.value.trim() : '';
+    const shouldDelete = delCheck ? delCheck.checked : false;
+
+    if (newUrl) {
+      lines.push(`${link.name} | UPDATE | ${newUrl}`);
+    } else if (shouldDelete) {
+      lines.push(`${link.name} | DELETE | ${link.url}`);
+    }
+    // Skip unchanged rows
+  });
+
+  if (lines.length === 1) {
+    showToast('Nothing to copy — fill in URLs or check delete boxes first');
+    return;
+  }
+
+  const text = lines.join('\n');
+  navigator.clipboard.writeText(text).then(() => {
+    showToast(`Copied ${lines.length - 1} changes to clipboard!`);
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function updateStats() {
+  let fixed = 0;
+  BROKEN_LINKS.forEach((link, i) => {
+    const input = document.querySelector(`input.new-url[data-index="${i}"]`);
+    const delCheck = document.querySelector(`input.delete-check[data-index="${i}"]`);
+    if ((input && input.value.trim()) || (delCheck && delCheck.checked)) fixed++;
+  });
+  document.getElementById('stat-fixed').textContent = fixed;
+}
+
+document.addEventListener('input', updateStats);
+document.addEventListener('change', updateStats);
+
+renderTable();
+</script>
+</body>
+</html>
