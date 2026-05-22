@@ -433,4 +433,80 @@ This returns a JSON array of matching places. Pick the first result whose <code>
 <li>Do not add data you cannot trace to a specific approved source URL</li>
 </ul>
 
+<hr>
+
+<h2>Technical Reference: Reliable API Calls</h2>
+
+<h3>PowerShell JSON Issues Fix</h3>
+
+<p><strong>Problem:</strong> PowerShell <code>Invoke-RestMethod</code> with JSON files can hang indefinitely, especially for timeline POST requests.</p>
+
+<p><strong>Solution:</strong> Use Node.js for JSON POST operations, or improved PowerShell techniques.</p>
+
+<h4>Method 1: Node.js (Recommended for POST requests)</h4>
+
+<pre><code>// Create timeline-post.js
+const fetch = require('node-fetch'); // if available, or use built-in fetch in newer Node
+const timelineData = {
+  "date_label": "c. 1420",
+  "title": "Construction began",
+  "description": "Timeline description here...",
+  "image_url": "",
+  "sort_order": 1
+};
+
+fetch('https://castle-explorer2.devingthingsyallhaventyet.workers.dev/api/listings/800/timeline', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(timelineData)
+}).then(res => res.json()).then(data => console.log(data));
+</code></pre>
+
+<p>Then run: <code>node timeline-post.js</code></p>
+
+<h4>Method 2: Improved PowerShell (Direct JSON)</h4>
+
+<p>Instead of saving JSON to files, use inline JSON:</p>
+
+<pre><code>$timelineJson = @"
+{
+  "date_label": "c. 1420",
+  "title": "Construction began", 
+  "description": "Timeline description here...",
+  "image_url": "",
+  "sort_order": 1
+}
+"@
+
+Invoke-RestMethod -Uri "https://castle-explorer2.devingthingsyallhaventyet.workers.dev/api/listings/800/timeline" -Method POST -ContentType "application/json" -Body $timelineJson
+</code></pre>
+
+<h4>Method 3: PowerShell with Hashtable (Alternative)</h4>
+
+<pre><code>$timeline = @{
+    date_label = "c. 1420"
+    title = "Construction began"
+    description = "Timeline description here..."
+    image_url = ""
+    sort_order = 1
+}
+$json = $timeline | ConvertTo-Json -Depth 3
+Invoke-RestMethod -Uri "https://castle-explorer2.devingthingsyallhaventyet.workers.dev/api/listings/800/timeline" -Method POST -ContentType "application/json" -Body $json
+</code></pre>
+
+<h3>For Timeline POST Specifically</h3>
+
+<p>Timeline entries often have long descriptions with special characters. Use <strong>Method 1 (Node.js)</strong> for timeline POSTs to avoid PowerShell parsing issues.</p>
+
+<h3>Troubleshooting</h3>
+
+<p>If you encounter hanging commands:</p>
+<ul>
+<li>Kill the process with Ctrl+C</li>
+<li>Switch to Node.js method</li>
+<li>Continue with other sub-resources</li>
+</ul>
+
+<p><strong>Never skip timeline entries due to technical issues</strong> - use the Node.js fallback method.</p>
+
 </body></html>
