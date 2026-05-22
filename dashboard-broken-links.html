@@ -122,6 +122,16 @@ input.new-url {
 input.new-url:focus { border-color: var(--accent); }
 input.new-url::placeholder { color: var(--text-dim); }
 .delete-check { width: 16px; height: 16px; cursor: pointer; accent-color: var(--red); }
+.ok-btn {
+  width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--border);
+  background: transparent; color: var(--text-muted); cursor: pointer; font-size: .9rem;
+  display: inline-flex; align-items: center; justify-content: center; transition: all .15s;
+  padding: 0; line-height: 1;
+}
+.ok-btn:hover { border-color: var(--green); color: var(--green); }
+.ok-btn.active { background: var(--green); border-color: var(--green); color: #000; }
+tr.ok-row { opacity: .4; }
+tr.ok-row td:first-child { text-decoration: line-through; }
 
 .toast {
   position: fixed; bottom: 2rem; right: 2rem; background: var(--green); color: #000;
@@ -200,8 +210,9 @@ input.new-url::placeholder { color: var(--text-dim); }
           <tr>
             <th style="width:20%">Site</th>
             <th style="width:5%">Error</th>
-            <th style="width:30%">Broken Link</th>
-            <th style="width:35%">New Link (paste here)</th>
+            <th style="width:25%">Broken Link</th>
+            <th style="width:30%">New Link (paste here)</th>
+            <th style="width:5%">OK</th>
             <th style="width:5%">Delete</th>
             <th style="width:5%">Type</th>
           </tr>
@@ -363,6 +374,7 @@ function renderTable() {
       <td><span class="error-badge ${errorClass}">${link.error}</span></td>
       <td><a class="link-url" href="${link.url}" target="_blank">${link.url}</a></td>
       <td><input class="new-url" data-index="${i}" placeholder="Paste corrected URL or leave blank to delete" value=""></td>
+      <td style="text-align:center"><button class="ok-btn" data-index="${i}" onclick="toggleOk(this)" title="Mark as not broken">✓</button></td>
       <td style="text-align:center"><input type="checkbox" class="delete-check" data-index="${i}"></td>
       <td style="font-size:.7rem;color:var(--text-dim)">${link.type}</td>
     `;
@@ -377,6 +389,13 @@ function filterBy(filter, btn) {
   renderTable();
 }
 
+function toggleOk(btn) {
+  btn.classList.toggle('active');
+  const tr = btn.closest('tr');
+  tr.classList.toggle('ok-row');
+  updateStats();
+}
+
 function selectAllDelete() {
   document.querySelectorAll('.delete-check').forEach(cb => cb.checked = !cb.checked);
 }
@@ -388,8 +407,12 @@ function copyForClawz() {
     const delCheck = document.querySelector(`input.delete-check[data-index="${i}"]`);
     const newUrl = input ? input.value.trim() : '';
     const shouldDelete = delCheck ? delCheck.checked : false;
+    const okBtn = document.querySelector(`button.ok-btn[data-index="${i}"]`);
+    const isOk = okBtn ? okBtn.classList.contains('active') : false;
 
-    if (newUrl) {
+    if (isOk) {
+      lines.push(`${link.name} | OK | ${link.url}`);
+    } else if (newUrl) {
       lines.push(`${link.name} | UPDATE | ${newUrl}`);
     } else if (shouldDelete) {
       lines.push(`${link.name} | DELETE | ${link.url}`);
@@ -420,7 +443,8 @@ function updateStats() {
   BROKEN_LINKS.forEach((link, i) => {
     const input = document.querySelector(`input.new-url[data-index="${i}"]`);
     const delCheck = document.querySelector(`input.delete-check[data-index="${i}"]`);
-    if ((input && input.value.trim()) || (delCheck && delCheck.checked)) fixed++;
+    const okBtn = document.querySelector(`button.ok-btn[data-index="${i}"]`);
+    if ((input && input.value.trim()) || (delCheck && delCheck.checked) || (okBtn && okBtn.classList.contains('active'))) fixed++;
   });
   document.getElementById('stat-fixed').textContent = fixed;
 }
