@@ -1,0 +1,30 @@
+{
+  "reviewDate": "2026-05-21",
+  "decisions": [
+    {"name": "Castle Stalker", "action": "OK", "url": "https://www.castlestalker.com/wp/"},
+    {"name": "Duart Castle", "action": "OK", "url": "https://duartcastle.com/"},
+    {"name": "Inveraray Castle", "action": "OK", "url": "https://www.inveraray-castle.com/"},
+    {"name": "Tarbert Castle", "action": "OK", "url": "https://www.tarbertcastle.info/"},
+    {"name": "Finlaggan Castle", "action": "OK", "url": "https://www.finlaggan.org"},
+    {"name": "Lews Castle", "action": "OK", "url": "https://www.lews-castle.co.uk/"},
+    {"name": "Old Castle Lachlan", "action": "OK", "url": "https://www.oldcastlelachlan.com/"},
+    {"name": "Breachacha Castle", "action": "OK", "url": "https://breachachacastle.com/"},
+    {"name": "Newgrange Cursus", "action": "UPDATE", "oldUrl": "https://whc.unesco.org/en/list/659/", "newUrl": "https://www.newgrange.com/"},
+    {"name": "Dunollie Castle", "action": "OK", "url": "https://www.dunollie.org/"},
+    {"name": "Barcaldine Castle", "action": "OK", "url": "https://barcaldinecastle.co.uk"},
+    {"name": "Dunderave Castle", "action": "OK", "url": "https://www.dunderave-castle.co.uk/"},
+    {"name": "Neidpath Castle", "action": "OK", "url": "https://www.neidpathcastle.com/"},
+    {"name": "Floors Castle", "action": "OK", "url": "https://www.floorscastle.com/"},
+    {"name": "Thirlestane Castle", "action": "OK", "url": "https://thirlestanecastle.co.uk"},
+    {"name": "Ferniehirst Castle", "action": "OK", "url": "https://www.ferniehirst.com/"},
+    {"name": "Aikwood Tower", "action": "OK", "url": "https://www.aikwoodtower.com/"},
+    {"name": "Duns Castle", "action": "OK", "url": "https://dunscastle.co.uk/"},
+    {"name": "Fatlips Castle", "action": "OK", "url": "https://www.fatlipscastle.com/"},
+    {"name": "Hume Castle", "action": "OK", "url": "https://humecastle.org/"},
+    {"name": "Abbotsford House", "action": "OK", "url": "https://www.scottsabbotsford.com/"},
+    {"name": "Traquair House", "action": "OK", "url": "https://www.traquair.co.uk/"},
+    {"name": "Borthwick Castle", "action": "OK", "url": "https://borthwickcastle.com/"}
+  ],
+  "autoApproved": 266,
+  "notes": "266 links auto-approved (dedicated castle websites with matching domains). 96 flagged for manual review."
+}
