@@ -524,7 +524,7 @@ async function publishListing(id, env) {
   const listing = await env.DB.prepare('SELECT * FROM listings WHERE id = ?').bind(id).first();
   if (!listing) return json({ error: 'Not found' }, 404);
 
-  // Parse and update internal tags to include "published"
+  // Parse and update internal tags: remove "ok-to-enrich", add "published"
   let internalTags = [];
   try {
     internalTags = JSON.parse(listing.internal_tags || '[]');
@@ -532,11 +532,15 @@ async function publishListing(id, env) {
     internalTags = [];
   }
   
+  // Remove "ok-to-enrich" tag (enrichment is complete)
+  internalTags = internalTags.filter(tag => tag !== 'ok-to-enrich');
+  
+  // Add "published" tag if not already present
   if (!internalTags.includes('published')) {
     internalTags.push('published');
   }
 
-  // Mark as published and add "published" internal tag
+  // Mark as published and update internal tags
   await env.DB.prepare(
     "UPDATE listings SET published = 1, published_at = datetime('now'), updated_at = datetime('now'), internal_tags = ? WHERE id = ?"
   ).bind(JSON.stringify(internalTags), id).run();
