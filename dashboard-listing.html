@@ -1253,6 +1253,11 @@ function removeInternalTag(tag) {
 function toggleQuickTag(tag) {
   if (_internalTags.includes(tag)) removeInternalTag(tag);
   else { _internalTags.push(tag); renderInternalTags(JSON.stringify(_internalTags)); }
+  
+  // Auto-save when toggling "ok-to-enrich" tag
+  if (tag === 'ok-to-enrich') {
+    saveListing();
+  }
 }
 
 // Enter key for internal tag input
