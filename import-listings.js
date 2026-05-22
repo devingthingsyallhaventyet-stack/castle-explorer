@@ -160,8 +160,9 @@ async function run() {
       // Add source links
       const links = [];
       
-      if (entry.wiki) {
-        links.push({ type: 'wikipedia', url: entry.wiki, label: 'Wikipedia' });
+      const wikiUrl = entry.wikipediaUrl || entry.wiki;
+      if (wikiUrl) {
+        links.push({ type: 'wikipedia', url: wikiUrl, label: 'Wikipedia' });
       }
       
       if (entry.sources && Array.isArray(entry.sources)) {
