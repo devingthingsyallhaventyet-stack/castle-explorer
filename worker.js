@@ -524,10 +524,22 @@ async function publishListing(id, env) {
   const listing = await env.DB.prepare('SELECT * FROM listings WHERE id = ?').bind(id).first();
   if (!listing) return json({ error: 'Not found' }, 404);
 
-  // For now, just mark as published. HTML generation comes next.
+  // Parse and update internal tags to include "published"
+  let internalTags = [];
+  try {
+    internalTags = JSON.parse(listing.internal_tags || '[]');
+  } catch (e) {
+    internalTags = [];
+  }
+  
+  if (!internalTags.includes('published')) {
+    internalTags.push('published');
+  }
+
+  // Mark as published and add "published" internal tag
   await env.DB.prepare(
-    "UPDATE listings SET published = 1, published_at = datetime('now'), updated_at = datetime('now') WHERE id = ?"
-  ).bind(id).run();
+    "UPDATE listings SET published = 1, published_at = datetime('now'), updated_at = datetime('now'), internal_tags = ? WHERE id = ?"
+  ).bind(JSON.stringify(internalTags), id).run();
 
   return json({ ok: true, slug: listing.slug, published: true });
 }
