@@ -515,6 +515,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         <div class="section-tab">Visit</div>
         <div class="section-tab">History</div>
         <div class="section-tab">Links & Sources</div>
+<div class="section-tab">Internal Notes</div>
       </div>
 
       <!-- ==================== CORE INFO TAB ==================== -->
@@ -1006,6 +1007,39 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
 
       </div><!-- /links tab -->
 
+      <!-- ==================== INTERNAL NOTES TAB ==================== -->
+      <div class="tab-panel" data-tab="notes">
+
+      <div class="edit-section">
+        <div class="edit-section-title">📝 Internal Notes</div>
+        <div class="edit-section-subtitle">Private notes — only visible on the dashboard, never shown on the public site</div>
+        <textarea id="fieldInternalNotes" class="edit-input" style="min-height:200px;font-family:var(--sans);font-size:.85rem;line-height:1.6;resize:vertical" placeholder="Add notes about this listing... e.g. source quality concerns, things to verify, enrichment status, content ideas"></textarea>
+      </div>
+
+      <div class="edit-section">
+        <div class="edit-section-title">🏷️ Internal Tags</div>
+        <div class="edit-section-subtitle">Quick labels for filtering and workflow — type and press Enter to add</div>
+        <div style="display:flex;gap:.5rem;margin-bottom:.75rem">
+          <input type="text" id="internalTagInput" class="edit-input" style="flex:1;margin:0" placeholder="Type a tag and press Enter…">
+          <button class="btn" onclick="addInternalTag()">Add</button>
+        </div>
+        <div id="internalTagsList" style="display:flex;flex-wrap:wrap;gap:.4rem;min-height:32px"></div>
+        <div style="margin-top:.75rem">
+          <div class="field-label" style="margin-bottom:.4rem">Quick tags:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.3rem">
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('needs-photos')">📷 needs-photos</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('needs-review')">🔍 needs-review</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('check-hours')">🕐 check-hours</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('enrichment-done')">✅ enrichment-done</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('bad-source')">⚠️ bad-source</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('priority')">🔥 priority</button>
+            <button class="btn" style="font-size:.65rem;padding:.2rem .5rem" onclick="toggleQuickTag('incomplete')">📝 incomplete</button>
+          </div>
+        </div>
+      </div>
+
+      </div><!-- /notes tab -->
+
     </div>
   </div>
 </div>
@@ -1128,6 +1162,10 @@ function populateForm() {
   // Architecture
   document.getElementById('fieldArchitecture').value = listing.architecture || '';
 
+  // Internal Notes & Tags
+  document.getElementById('fieldInternalNotes').value = listing.internal_notes || '';
+  renderInternalTags(listing.internal_tags);
+
   // Sub-resources
   renderTimeline(listing.timeline || []);
   renderPeople(listing.people || []);
@@ -1182,6 +1220,46 @@ function getTagsFromSelector(selectorId) {
     .map(c => c.textContent.replace('✕','').trim());
 }
 
+// ===== INTERNAL TAGS =====
+let _internalTags = [];
+
+function renderInternalTags(raw) {
+  _internalTags = [];
+  try { _internalTags = JSON.parse(raw || '[]'); } catch(e) {}
+  if (!Array.isArray(_internalTags)) _internalTags = [];
+  const container = document.getElementById('internalTagsList');
+  container.innerHTML = _internalTags.map(t =>
+    `<span style="display:inline-flex;align-items:center;gap:.3rem;background:rgba(139,35,53,.15);color:var(--accent);font-size:.75rem;font-weight:600;padding:.25rem .6rem;border-radius:4px;border:1px solid var(--accent)">${esc(t)}<span style="cursor:pointer;opacity:.6;font-size:.85rem" onclick="removeInternalTag('${esc(t)}')">✕</span></span>`
+  ).join('');
+}
+
+function getInternalTags() { return _internalTags; }
+
+function addInternalTag(tag) {
+  const input = document.getElementById('internalTagInput');
+  const val = (tag || input.value).trim().toLowerCase().replace(/[^a-z0-9\-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  if (!val || _internalTags.includes(val)) { input.value = ''; return; }
+  _internalTags.push(val);
+  input.value = '';
+  renderInternalTags(JSON.stringify(_internalTags));
+}
+
+function removeInternalTag(tag) {
+  _internalTags = _internalTags.filter(t => t !== tag);
+  renderInternalTags(JSON.stringify(_internalTags));
+}
+
+function toggleQuickTag(tag) {
+  if (_internalTags.includes(tag)) removeInternalTag(tag);
+  else { _internalTags.push(tag); renderInternalTags(JSON.stringify(_internalTags)); }
+}
+
+// Enter key for internal tag input
+document.addEventListener('DOMContentLoaded', () => {
+  const inp = document.getElementById('internalTagInput');
+  if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addInternalTag(); } });
+});
+
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
 function toast(msg, type='success') {
@@ -1215,7 +1293,7 @@ document.querySelectorAll('.section-tab').forEach(tab => {
     document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
-    const tabs = ['core','photos','visit','history','links'];
+    const tabs = ['core','photos','visit','history','links','notes'];
     const idx = [...tab.parentElement.children].indexOf(tab);
     const panel = document.querySelector(`.tab-panel[data-tab="${tabs[idx]}"]`);
     if (panel) panel.classList.add('active');
@@ -1717,6 +1795,8 @@ function collectMainFields() {
     getting_there_train: document.getElementById('fieldGetTrain').value,
     getting_there_bus: document.getElementById('fieldGetBus').value,
     getting_there_airport: document.getElementById('fieldGetAirport').value,
+    internal_notes: document.getElementById('fieldInternalNotes').value,
+    internal_tags: JSON.stringify(getInternalTags()),
   };
 }
 

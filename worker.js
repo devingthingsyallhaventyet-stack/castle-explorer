@@ -225,6 +225,11 @@ async function handleAPI(path, request, env) {
     return getStats(env);
   }
 
+  // --- ADMIN MIGRATION ---
+  if (path === '/api/admin/migrate' && method === 'POST') {
+    return runMigrations(env);
+  }
+
   // --- ENRICHMENT ---
   if (path === '/api/enrichment/coverage' && method === 'GET') {
     return getEnrichmentCoverage(env);
@@ -386,7 +391,7 @@ async function updateListing(id, request, env) {
   const fields = [];
   const values = [];
 
-  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture', 'tags', 'terrain_description', 'terrain_tags', 'getting_there_car', 'getting_there_train', 'getting_there_bus', 'getting_there_airport'];
+  const allowed = ['name', 'slug', 'subtitle', 'type', 'century', 'country', 'region', 'town', 'county', 'latitude', 'longitude', 'status', 'condition', 'google_place_id', 'google_rating', 'google_review_count', 'description_short', 'description_expanded', 'architecture', 'tags', 'terrain_description', 'terrain_tags', 'getting_there_car', 'getting_there_train', 'getting_there_bus', 'getting_there_airport', 'internal_notes', 'internal_tags'];
 
   for (const key of allowed) {
     if (key in data) {
@@ -953,4 +958,27 @@ async function getGooglePlacesPhoto(photoName, env) {
 
   // Redirect to the actual photo
   return Response.redirect(data.photoUri, 302);
+}
+
+// ===== ADMIN MIGRATIONS =====
+async function runMigrations(env) {
+  const migrations = [
+    { name: 'add_internal_notes', sql: 'ALTER TABLE listings ADD COLUMN internal_notes TEXT' },
+    { name: 'add_internal_tags', sql: 'ALTER TABLE listings ADD COLUMN internal_tags TEXT' },
+  ];
+  const results = [];
+  for (const m of migrations) {
+    try {
+      await env.DB.prepare(m.sql).run();
+      results.push({ name: m.name, status: 'ok' });
+    } catch (err) {
+      // "duplicate column" means already applied
+      if (err.message && err.message.includes('duplicate column')) {
+        results.push({ name: m.name, status: 'already_exists' });
+      } else {
+        results.push({ name: m.name, status: 'error', error: err.message });
+      }
+    }
+  }
+  return json({ migrations: results });
 }

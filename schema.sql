@@ -49,6 +49,10 @@ CREATE TABLE IF NOT EXISTS listings (
   getting_there_bus TEXT,
   getting_there_airport TEXT,
 
+  -- Internal (admin-only, not shown on public site)
+  internal_notes TEXT,
+  internal_tags TEXT,  -- JSON array e.g. ["needs-photos","check-hours","enrichment-done"]
+
   -- State
   published INTEGER NOT NULL DEFAULT 0,
   published_at TEXT,
