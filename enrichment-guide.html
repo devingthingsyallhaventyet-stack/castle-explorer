@@ -417,6 +417,8 @@ This returns a JSON array of matching places. Pick the first result whose <code>
 <li><code>PUT /api/listings/{id}</code> with all main fields (including <code>google_place_id</code>)</li>
 <li><code>POST /api/listings/{id}/cache-places</code> to cache Google hours and address</li>
 <li><code>POST</code> sub-resources (timeline, people, designations, videos, further reading)</li>
+<li><strong>Verify encoding:</strong> After PUT, GET the listing back and check that em dashes (—), curly quotes, and other special characters render correctly. If you see <code>â€"</code>, <code>â€™</code>, or similar mojibake, re-PUT the affected fields with properly encoded UTF-8 text.</li>
+<li><strong>Auto-publish:</strong> <code>POST /api/listings/{id}/publish</code> to publish the enriched listing (this automatically adds the "published" internal tag)</li>
 <li>Log what was filled and what was left empty (and why)</li>
 </ol>
 
