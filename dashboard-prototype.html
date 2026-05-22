@@ -297,6 +297,13 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <option>Intact</option>
           <option>Ruin</option>
         </select>
+        <select class="filter-select" id="filter-internal-tags">
+          <option value="">All Internal Tags</option>
+          <option value="has:ok-to-enrich">Has: ok-to-enrich</option>
+          <option value="missing:ok-to-enrich">Missing: ok-to-enrich</option>
+          <option value="has-any">Has any tags</option>
+          <option value="has-none">Has no tags</option>
+        </select>
       </div>
 
       <!-- TABLE -->
@@ -343,6 +350,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
   const filterType = document.getElementById('filter-type');
   const filterStatus = document.getElementById('filter-status');
   const filterCondition = document.getElementById('filter-condition');
+  const filterInternalTags = document.getElementById('filter-internal-tags');
   const paginationInfo = document.getElementById('pagination-info');
   const pageBtns = document.getElementById('page-btns');
 
@@ -430,6 +438,30 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
         listings = listings.filter(l => calcCompleteness(l) < 100);
       }
 
+      // Client-side internal tags filter
+      if (filterInternalTags.value) {
+        const tagFilter = filterInternalTags.value;
+        listings = listings.filter(l => {
+          const tags = l.internal_tags ? (() => {
+            try { return JSON.parse(l.internal_tags); }
+            catch { return []; }
+          })() : [];
+          
+          if (tagFilter === 'has-any') {
+            return tags.length > 0;
+          } else if (tagFilter === 'has-none') {
+            return tags.length === 0;
+          } else if (tagFilter.startsWith('has:')) {
+            const targetTag = tagFilter.substring(4);
+            return tags.includes(targetTag);
+          } else if (tagFilter.startsWith('missing:')) {
+            const targetTag = tagFilter.substring(8);
+            return !tags.includes(targetTag);
+          }
+          return true;
+        });
+      }
+
       if (listings.length === 0) {
         tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim)">No listings found</td></tr>';
       } else {
@@ -510,7 +542,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(() => { currentPage = 1; loadListings(); }, 300);
   });
-  [filterCountry, filterType, filterStatus, filterCondition].forEach(el => {
+  [filterCountry, filterType, filterStatus, filterCondition, filterInternalTags].forEach(el => {
     el.addEventListener('change', () => { currentPage = 1; loadListings(); });
   });
 
