@@ -1,0 +1,728 @@
+[
+  {
+    "name": "Duart Castle",
+    "type": "heritage",
+    "url": "https://duartcastle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Newgrange Cursus",
+    "type": "heritage",
+    "url": "https://whc.unesco.org/en/list/659/",
+    "error": "403"
+  },
+  {
+    "name": "Barcaldine Castle",
+    "type": "heritage",
+    "url": "https://barcaldinecastle.co.uk",
+    "error": "403"
+  },
+  {
+    "name": "Ferniehirst Castle",
+    "type": "heritage",
+    "url": "https://www.ferniehirst.com/",
+    "error": "403"
+  },
+  {
+    "name": "Bodnant Garden",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/wales/bodnant-garden",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Abbotsford House",
+    "type": "heritage",
+    "url": "https://www.scottsabbotsford.com/",
+    "error": "403"
+  },
+  {
+    "name": "Borthwick Castle",
+    "type": "heritage",
+    "url": "https://borthwickcastle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Palace of Holyroodhouse",
+    "type": "heritage",
+    "url": "https://www.rct.uk/visit/palace-of-holyroodhouse",
+    "error": "403"
+  },
+  {
+    "name": "Alloa Tower",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/alloa-tower",
+    "error": "403"
+  },
+  {
+    "name": "Aberdour Castle",
+    "type": "heritage",
+    "url": "https://www.historicenvironment.scot/visit-a-place/places/aberdour-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Falkland Palace",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/falkland-palace",
+    "error": "403"
+  },
+  {
+    "name": "Kellie Castle",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/kellie-castle",
+    "error": "403"
+  },
+  {
+    "name": "Dunfermline Palace",
+    "type": "heritage",
+    "url": "https://www.historicenvironment.scot/visit-a-place/places/dunfermline-palace/",
+    "error": "404"
+  },
+  {
+    "name": "Culross Palace",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/culross",
+    "error": "403"
+  },
+  {
+    "name": "Eilean Donan Castle",
+    "type": "heritage",
+    "url": "https://www.eileandonancastle.com",
+    "error": "403"
+  },
+  {
+    "name": "Mingary Castle",
+    "type": "heritage",
+    "url": "https://mingarycastle.co.uk/",
+    "error": "403"
+  },
+  {
+    "name": "Carbisdale Castle",
+    "type": "heritage",
+    "url": "https://carbisdalecastle.com/",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Castle Grant",
+    "type": "heritage",
+    "url": "https://www.castlegrant.com/",
+    "error": "403"
+  },
+  {
+    "name": "Dalcross Castle",
+    "type": "heritage",
+    "url": "http://www.dalcross.org/",
+    "error": "403"
+  },
+  {
+    "name": "Leslie Castle",
+    "type": "heritage",
+    "url": "https://leslie-castle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Hampton Court Palace",
+    "type": "heritage",
+    "url": "https://www.hrp.org.uk/hampton-court-palace/",
+    "error": "403"
+  },
+  {
+    "name": "St Michael's Mount",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/cornwall/st-michaels-mount",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Montacute House",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/somerset/montacute-house",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Craigston Castle",
+    "type": "heritage",
+    "url": "https://craigston-castle.co.uk/",
+    "error": "405"
+  },
+  {
+    "name": "House of Dun",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/house-of-dun",
+    "error": "403"
+  },
+  {
+    "name": "Culzean Castle",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/culzean-castle-and-country-park",
+    "error": "403"
+  },
+  {
+    "name": "Drumlanrig Castle",
+    "type": "heritage",
+    "url": "https://www.drumlanrigcastle.co.uk/",
+    "error": "403"
+  },
+  {
+    "name": "Alloway Auld Kirk",
+    "type": "heritage",
+    "url": "https://www.nts.org.uk/visit/places/robert-burns-birthplace-museum/highlights/alloway-auld-kirk",
+    "error": "403"
+  },
+  {
+    "name": "Whithorn Priory",
+    "type": "heritage",
+    "url": "https://www.historicenvironment.scot/visit-a-place/places/whithorn-priory/",
+    "error": "404"
+  },
+  {
+    "name": "Norwich Castle",
+    "type": "heritage",
+    "url": "https://www.museums.norfolk.gov.uk/norwich-castle",
+    "error": "403"
+  },
+  {
+    "name": "Colchester Castle",
+    "type": "heritage",
+    "url": "https://www.colchester.cimuseums.org.uk/visit/colchester-castle/",
+    "error": "403"
+  },
+  {
+    "name": "Oxburgh Hall",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/norfolk/oxburgh-hall",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Wingfield Castle",
+    "type": "heritage",
+    "url": "https://heritage.suffolk.gov.uk/Monument/MSF3087",
+    "error": "404"
+  },
+  {
+    "name": "Speke Hall",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/liverpool-lancashire/speke-hall-garden-and-estate",
+    "error": "404"
+  },
+  {
+    "name": "Lancaster Castle",
+    "type": "heritage",
+    "url": "https://www.lancastercastle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Lyme Park",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/peak-district-derbyshire/lyme",
+    "error": "404"
+  },
+  {
+    "name": "Lumley Castle",
+    "type": "heritage",
+    "url": "https://www.lumleycastle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Lindisfarne Castle",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/northumberland/lindisfarne-castle",
+    "error": "404"
+  },
+  {
+    "name": "Penrhyn Castle",
+    "type": "heritage",
+    "url": "https://www.nationaltrust.org.uk/visit/wales/penrhyn-castle-and-garden",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Pentre Ifan",
+    "type": "heritage",
+    "url": "https://www.atlasobscura.com/places/pentre-ifan",
+    "error": "403"
+  },
+  {
+    "name": "Kylemore Abbey",
+    "type": "heritage",
+    "url": "https://www.kylemoreabbey.com/",
+    "error": "403"
+  },
+  {
+    "name": "Bramall Hall",
+    "type": "heritage",
+    "url": "https://www.stockport.gov.uk/landing/bramall-hall",
+    "error": "ERR"
+  },
+  {
+    "name": "Tower of London",
+    "type": "heritage",
+    "url": "https://www.hrp.org.uk/tower-of-london/",
+    "error": "403"
+  },
+  {
+    "name": "Tonbridge Castle",
+    "type": "heritage",
+    "url": "https://www.tonbridgecastle.org/",
+    "error": "ERR"
+  },
+  {
+    "name": "Windsor Castle",
+    "type": "heritage",
+    "url": "https://www.rct.uk/visit/windsor-castle",
+    "error": "403"
+  },
+  {
+    "name": "Longleat House",
+    "type": "heritage",
+    "url": "https://www.longleat.co.uk/",
+    "error": "403"
+  },
+  {
+    "name": "Kingswear Castle",
+    "type": "heritage",
+    "url": "https://www.landmarktrust.org.uk/properties/kingswear-castle/",
+    "error": "403"
+  },
+  {
+    "name": "Castell Dinas",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/castell-dinas",
+    "error": "404"
+  },
+  {
+    "name": "Lamphey Bishop's Palace",
+    "type": "heritage",
+    "url": "http://cadw.gov.wales/daysout/lampheybishopspalace/",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Cabra Castle",
+    "type": "heritage",
+    "url": "https://www.cabracastle.com/history",
+    "error": "403"
+  },
+  {
+    "name": "Magheraghanrush Court Tomb",
+    "type": "heritage",
+    "url": "https://www.sligoheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Cwmhir Abbey",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/abbey-cwmhir",
+    "error": "404"
+  },
+  {
+    "name": "Penmon Priory",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/penmon-priory",
+    "error": "404"
+  },
+  {
+    "name": "Sandal Castle",
+    "type": "heritage",
+    "url": "https://www.wakefield.gov.uk/events-and-culture/sandal-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Roche Castle",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/roche-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Hay Castle",
+    "type": "heritage",
+    "url": "https://www.haycastle.org/",
+    "error": "ERR"
+  },
+  {
+    "name": "Dudley Castle",
+    "type": "heritage",
+    "url": "https://www.dudleyzoo.org.uk/",
+    "error": "403"
+  },
+  {
+    "name": "Astley Castle",
+    "type": "heritage",
+    "url": "https://www.landmarktrust.org.uk/properties/astley-castle/",
+    "error": "403"
+  },
+  {
+    "name": "Morlais Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/morlais-castle",
+    "error": "404"
+  },
+  {
+    "name": "Castell Aberlleiniog",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/castell-aberlleiniog",
+    "error": "404"
+  },
+  {
+    "name": "Carlingford Castle",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/king-johns-castle-carlingford/",
+    "error": "404"
+  },
+  {
+    "name": "Barclodiad y Gawres",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/barclodiad-y-gawres",
+    "error": "404"
+  },
+  {
+    "name": "Din Lligwy",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/din-lligwy",
+    "error": "404"
+  },
+  {
+    "name": "Glenstal Castle",
+    "type": "heritage",
+    "url": "https://www.glenstal.com/",
+    "error": "403"
+  },
+  {
+    "name": "Ballinskelligs Priory",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Holt Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/holt-castle",
+    "error": "404"
+  },
+  {
+    "name": "Caldicot Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/caldicot-castle",
+    "error": "404"
+  },
+  {
+    "name": "Usk Castle",
+    "type": "heritage",
+    "url": "https://www.uskcastle.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Saul Church",
+    "type": "heritage",
+    "url": "https://www.visitnewryandmourne.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Candleston Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/candleston-castle",
+    "error": "404"
+  },
+  {
+    "name": "Dunraven Castle",
+    "type": "heritage",
+    "url": "https://www.valeofglamorgan.gov.uk/en/enjoying/Heritage-Coast/Dunraven.aspx",
+    "error": "404"
+  },
+  {
+    "name": "Caerau Hillfort",
+    "type": "heritage",
+    "url": "https://caerheritageproject.com/",
+    "error": "403"
+  },
+  {
+    "name": "St Donat's Castle",
+    "type": "heritage",
+    "url": "https://www.atlanticcollege.org/",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Ruperra Castle",
+    "type": "heritage",
+    "url": "https://www.ruperracastle.org/",
+    "error": "ERR"
+  },
+  {
+    "name": "Neath Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/neath-castle",
+    "error": "404"
+  },
+  {
+    "name": "Classiebawn Castle",
+    "type": "heritage",
+    "url": "https://www.sligoheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Newcastle Emlyn Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/newcastle-emlyn-castle",
+    "error": "404"
+  },
+  {
+    "name": "Narberth Castle",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/narberth-castle",
+    "error": "404"
+  },
+  {
+    "name": "Whitland Abbey",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/whitland-abbey",
+    "error": "403"
+  },
+  {
+    "name": "Carreg Coetan Arthur",
+    "type": "heritage",
+    "url": "https://cadw.gov.wales/visit/places-to-visit/carreg-coetan-arthur",
+    "error": "404"
+  },
+  {
+    "name": "Swords Castle",
+    "type": "heritage",
+    "url": "https://swordscastle.events/",
+    "error": "ERR"
+  },
+  {
+    "name": "Ardee Castle",
+    "type": "heritage",
+    "url": "https://www.louthheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Termonfeckin Castle",
+    "type": "heritage",
+    "url": "https://www.louthheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Roodstown Castle",
+    "type": "heritage",
+    "url": "https://www.louthheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Proleek Dolmen",
+    "type": "heritage",
+    "url": "https://www.louthheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Dunmoe Castle",
+    "type": "heritage",
+    "url": "https://www.megalithicireland.com/dunmoe-castle.html",
+    "error": "404"
+  },
+  {
+    "name": "Athcarne Castle",
+    "type": "heritage",
+    "url": "https://www.meathtourism.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Ballymoon Castle",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/ballymoon-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Shankill Castle",
+    "type": "heritage",
+    "url": "https://www.shankillcastle.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Athlumney Castle",
+    "type": "heritage",
+    "url": "https://www.meathtourism.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Skryne Church",
+    "type": "heritage",
+    "url": "https://www.meathtourism.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Duncannon Fort",
+    "type": "heritage",
+    "url": "https://www.duncannonfort.com/",
+    "error": "TIMEOUT"
+  },
+  {
+    "name": "Shane Castle",
+    "type": "heritage",
+    "url": "https://www.shanescastle.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Athy Castle",
+    "type": "heritage",
+    "url": "https://www.kildare.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Leacanabuaile Fort",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Mallow Castle",
+    "type": "heritage",
+    "url": "https://mallowcastle.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Gallarus Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Dunkerron Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Glin Castle",
+    "type": "heritage",
+    "url": "https://www.glincastle.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Ballymalis Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Fenit Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Parkavonear Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Dough Castle",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Gleaston Castle",
+    "type": "heritage",
+    "url": "https://furness-whisper.uk/2024/04/07/gleaston-castle-a-factual-exploration-of-cumbrias-14th-century-relic/",
+    "error": "410"
+  },
+  {
+    "name": "Killagha Abbey",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Lislaughtin Abbey",
+    "type": "heritage",
+    "url": "https://www.kerrytourism.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Redwood Castle",
+    "type": "heritage",
+    "url": "https://www.redwoodcastle.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Multyfarnham Friary",
+    "type": "heritage",
+    "url": "https://www.westmeathheritage.ie/",
+    "error": "ERR"
+  },
+  {
+    "name": "Castle Balfour",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/castle-balfour/",
+    "error": "404"
+  },
+  {
+    "name": "Portaferry Castle",
+    "type": "heritage",
+    "url": "https://www.visitnewryandmourne.com/",
+    "error": "ERR"
+  },
+  {
+    "name": "Claregalway Friary",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/visit/places-to-visit/claregalway-friary/",
+    "error": "404"
+  },
+  {
+    "name": "Ross Errilly Friary",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/visit/places-to-visit/ross-errilly-friary/",
+    "error": "404"
+  },
+  {
+    "name": "Ballynahinch Castle",
+    "type": "heritage",
+    "url": "https://www.ballynahinch-castle.com/",
+    "error": "403"
+  },
+  {
+    "name": "Fiddaun Castle",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/fiddaun-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Rockfleet Castle",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/rockfleet-castle/",
+    "error": "404"
+  },
+  {
+    "name": "Moyne Abbey",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/moyne-abbey/",
+    "error": "404"
+  },
+  {
+    "name": "Rosserk Friary",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/rosserk-friary/",
+    "error": "404"
+  },
+  {
+    "name": "Cong Abbey",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/places-to-visit/cong-abbey/",
+    "error": "404"
+  },
+  {
+    "name": "Markree Castle",
+    "type": "heritage",
+    "url": "https://www.markreecastle.ie/",
+    "error": "403"
+  },
+  {
+    "name": "Corcomroe Abbey",
+    "type": "heritage",
+    "url": "https://heritageireland.ie/visit/places-to-visit/corcomroe-abbey/",
+    "error": "404"
+  },
+  {
+    "name": "Ballinafad Castle",
+    "type": "heritage",
+    "url": "https://www.sligoheritage.ie/",
+    "error": "ERR"
+  }
+]
