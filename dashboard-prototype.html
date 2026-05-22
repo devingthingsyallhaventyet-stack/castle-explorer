@@ -303,6 +303,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           <option value="missing:ok-to-enrich">Missing: ok-to-enrich</option>
           <option value="has:published">Has: published</option>
           <option value="missing:published">Missing: published</option>
+          <option value="missing:ok-to-enrich-or-published">Missing: ok-to-enrich OR published</option>
           <option value="has-any">Has any tags</option>
           <option value="has-none">Has no tags</option>
         </select>
@@ -456,6 +457,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           } else if (tagFilter.startsWith('has:')) {
             const targetTag = tagFilter.substring(4);
             return tags.includes(targetTag);
+          } else if (tagFilter === 'missing:ok-to-enrich-or-published') {
+            return !tags.includes('ok-to-enrich') && !tags.includes('published');
           } else if (tagFilter.startsWith('missing:')) {
             const targetTag = tagFilter.substring(8);
             return !tags.includes(targetTag);
