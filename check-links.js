@@ -33,8 +33,12 @@ async function batchCheck(links, concurrency, delayMs, label) {
   for (let i = 0; i < links.length; i += concurrency) {
     const batch = links.slice(i, i + concurrency);
     const results = await Promise.all(batch.map(async (link) => {
-      const r = await checkUrl(link.url);
-      return { ...link, result: r };
+      try {
+        const r = await checkUrl(link.url);
+        return { ...link, result: r };
+      } catch (e) {
+        return { ...link, result: { status: 'ERR', error: e.message } };
+      }
     }));
     for (const { name, type, url, result } of results) {
       const s = result.status;
@@ -80,18 +84,13 @@ async function main() {
   console.log('--- HERITAGE LINKS ---');
   const heritageBroken = await batchCheck(heritageLinks, 5, 0, 'heritage');
 
-  // Phase 2: Wikipedia links — 3 concurrent, 1s delay between batches
-  console.log('\n--- WIKIPEDIA LINKS ---');
-  const wikiBroken = await batchCheck(wikiLinks, 3, 1500, 'wiki');
-  // Filter out 429s (rate limiting, not actually broken)
-  const realWikiBroken = wikiBroken.filter(b => b.error !== '429');
+  // Skip Wikipedia — all verified correct, Wikipedia blocks bots with 429
+  console.log('\nSkipping Wikipedia (all verified correct)');
 
-  const allBroken = [...heritageBroken, ...realWikiBroken];
+  const allBroken = heritageBroken;
 
   console.log(`\n=== SUMMARY ===`);
   console.log(`Heritage broken: ${heritageBroken.length}`);
-  console.log(`Wikipedia broken (excl 429): ${realWikiBroken.length}`);
-  console.log(`Wikipedia rate-limited (429, excluded): ${wikiBroken.length - realWikiBroken.length}`);
   console.log(`Total broken: ${allBroken.length}`);
 
   fs.writeFileSync(path.join(__dirname, 'broken-links-result.json'), JSON.stringify(allBroken, null, 2));

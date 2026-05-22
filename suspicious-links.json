@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Newgrange Cursus",
+    "url": "https://whc.unesco.org/en/list/659/",
+    "domain": "whc.unesco.org",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Blair Castle",
+    "url": "https://atholl-estates.co.uk/blair-castle/",
+    "domain": "atholl-estates.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Balhousie Castle",
+    "url": "https://theblackwatch.co.uk/",
+    "domain": "theblackwatch.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Castle Stuart",
+    "url": "https://cabot.com/highlands/golf/castle-stuart/",
+    "domain": "cabot.com",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Skibo Castle",
+    "url": "https://www.carnegieclub.co.uk/",
+    "domain": "carnegieclub.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Brechin Castle",
+    "url": "https://dalhousieestates.co.uk/",
+    "domain": "dalhousieestates.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Turnberry Castle",
+    "url": "https://www.ayrshirescotland.com/turnberry-castle.html",
+    "domain": "ayrshirescotland.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Norwich Castle",
+    "url": "https://www.museums.norfolk.gov.uk/norwich-castle",
+    "domain": "museums.norfolk.gov.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "New Buckenham Castle",
+    "url": "http://www.heritage.norfolk.gov.uk/record-details?MNF44378-New-Buckenham-Castle=",
+    "domain": "heritage.norfolk.gov.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Layer Marney Tower",
+    "url": "https://www.historichouses.org/house/layer-marney-tower/visit/",
+    "domain": "historichouses.org",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Haughton Castle",
+    "url": "https://www.gatehouse-gazetteer.info/English%20sites/2661.html",
+    "domain": "gatehouse-gazetteer.info",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Haworth Parsonage",
+    "url": "https://www.bronte.org.uk/",
+    "domain": "bronte.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Bramall Hall",
+    "url": "https://www.stockport.gov.uk/landing/bramall-hall",
+    "domain": "stockport.gov.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Allington Castle",
+    "url": "https://crazyaboutcastles.com/english-castles/allington-castle/",
+    "domain": "crazyaboutcastles.com",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Newcastle Castle Keep",
+    "url": "https://www.historic-uk.com/HistoryMagazine/DestinationsUK/NewcastleuponTyne/",
+    "domain": "historic-uk.com",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Stogursey Castle",
+    "url": "https://www.somersetheritage.org.uk/eus/stogursey_eus.html",
+    "domain": "somersetheritage.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Castle an Dinas",
+    "url": "https://www.cornwallheritagetrust.org/our_sites/castle-an-dinas/",
+    "domain": "cornwallheritagetrust.org",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Castle Leslie",
+    "url": "https://www.ihh.ie/index.cfm/houses/house/name/Castle%20Leslie",
+    "domain": "ihh.ie",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Craggaunowen Castle",
+    "url": "https://www.shannonheritage.com/",
+    "domain": "shannonheritage.com",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Segedunum Roman Fort",
+    "url": "https://www.northeastmuseums.org.uk/segedunum",
+    "domain": "northeastmuseums.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Kingswear Castle",
+    "url": "https://www.landmarktrust.org.uk/properties/kingswear-castle/",
+    "domain": "landmarktrust.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Michelham Priory",
+    "url": "https://sussexpast.co.uk/attraction/michelham-priory/",
+    "domain": "sussexpast.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Grimsthorpe Castle",
+    "url": "https://www.lincolnshirelife.co.uk/heritage/grimsthorpe-castle/",
+    "domain": "lincolnshirelife.co.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Castell Dinas",
+    "url": "https://www.clwydianrangeanddeevalleyaonb.org.uk/article/visit-castell-dinas-bran/",
+    "domain": "clwydianrangeanddeevalleyaonb.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Hussey Tower",
+    "url": "https://www.heritagelincolnshire.org/explore-with-us/historic-sites/hussey-tower",
+    "domain": "heritagelincolnshire.org",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Compton Verney",
+    "url": "https://www.artfund.org/explore/museums-and-galleries/compton-verney",
+    "domain": "artfund.org",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Coughton Court",
+    "url": "https://tudortimes.co.uk/places/coughton-court",
+    "domain": "tudortimes.co.uk",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Croxteth Hall",
+    "url": "https://www.visitliverpool.com/listing/croxteth-hall/68324101/",
+    "domain": "visitliverpool.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Kirkstall Abbey",
+    "url": "https://museumsandgalleries.leeds.gov.uk/kirkstall-abbey/",
+    "domain": "museumsandgalleries.leeds.gov.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Wilton Castle",
+    "url": "https://www.gatehouse-gazetteer.info/English%20sites/3022.html",
+    "domain": "gatehouse-gazetteer.info",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Kinnitty Castle",
+    "url": "https://slievebloom.ie/visit/kinnitty-castle/",
+    "domain": "slievebloom.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Dunserverick Castle",
+    "url": "https://www.visitcausewaycoastandglens.com/",
+    "domain": "visitcausewaycoastandglens.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Temple Newsam",
+    "url": "https://museumsandgalleries.leeds.gov.uk/temple-newsam/",
+    "domain": "museumsandgalleries.leeds.gov.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Astley Castle",
+    "url": "https://www.landmarktrust.org.uk/properties/astley-castle/",
+    "domain": "landmarktrust.org.uk",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Morlais Castle",
+    "url": "https://www.visitmerthyr.co.uk/things-to-do/places-of-interest/morlais-castle/",
+    "domain": "visitmerthyr.co.uk",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Castell Henllys",
+    "url": "https://www.pembrokeshirecoast.wales/castell-henllys/",
+    "domain": "pembrokeshirecoast.wales",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Castell Aberlleiniog",
+    "url": "https://www.visitanglesey.co.uk/en-gb/explore/aberlleiniog-castle",
+    "domain": "visitanglesey.co.uk",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Selskar Abbey",
+    "url": "https://www.visitwexford.ie/",
+    "domain": "visitwexford.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Llandaff Cathedral",
+    "url": "https://www.visitcardiff.com/highlights/llandaff-cathedral/",
+    "domain": "visitcardiff.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "St Donat's Castle",
+    "url": "https://www.visitwales.com/attraction/castle/st-donats-castle-uwc-atlantic-experience-560741",
+    "domain": "visitwales.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Murrisk Abbey",
+    "url": "https://www.mayo.ie/",
+    "domain": "mayo.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "St Fagans Castle",
+    "url": "https://museum.wales/stfagans/buildings/castle/",
+    "domain": "museum.wales",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Caisl\\u00e9an Ghr\\u00e1inne",
+    "url": "https://www.mayo.ie/",
+    "domain": "mayo.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Carew Castle",
+    "url": "https://www.pembrokeshirecoast.wales/carew-castle/",
+    "domain": "pembrokeshirecoast.wales",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Whitland Abbey",
+    "url": "https://www.visitwales.com/attraction/historic-site/whitland-abbey-571961#:~:text=Whitland%20Abbey%20was%20an%20important,be%20sheep%20grazing%20the%20grass.",
+    "domain": "visitwales.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Bullock Castle",
+    "url": "https://www.dlrcoco.ie/",
+    "domain": "dlrcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Ardee Castle",
+    "url": "https://www.discoverboynevalley.ie/boyne-valley-drive/heritage-sites/ardee-castle",
+    "domain": "discoverboynevalley.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Clonca Church",
+    "url": "https://www.govisitdonegal.com/",
+    "domain": "govisitdonegal.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Strade Abbey",
+    "url": "https://www.mayo.ie/",
+    "domain": "mayo.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Portumna Priory",
+    "url": "https://www.galwaytourism.ie/",
+    "domain": "galwaytourism.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Dunmore Castle",
+    "url": "https://www.kilkennyheritage.ie/",
+    "domain": "kilkennyheritage.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Rathmacknee Castle",
+    "url": "https://www.visitwexford.ie/",
+    "domain": "visitwexford.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Burnchurch Castle",
+    "url": "https://www.kilkennyheritage.ie/",
+    "domain": "kilkennyheritage.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Clomantagh Castle",
+    "url": "https://www.kilkennyheritage.ie/",
+    "domain": "kilkennyheritage.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Magh Adair",
+    "url": "https://www.clare.ie/",
+    "domain": "clare.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Molana Abbey",
+    "url": "https://www.visitwaterford.com/",
+    "domain": "visitwaterford.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Ballysaggartmore Towers",
+    "url": "https://www.visitwaterford.com/",
+    "domain": "visitwaterford.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Baltinglass Abbey",
+    "url": "https://www.visitwicklow.ie/",
+    "domain": "visitwicklow.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Kilmore Cathedral",
+    "url": "https://www.thisiscavan.ie/",
+    "domain": "thisiscavan.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Clones Round Tower",
+    "url": "https://www.monaghantourism.com/",
+    "domain": "monaghantourism.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Salcombe Castle",
+    "url": "https://www.exploredevon.info/activities/places/fort-charles-salcombe/",
+    "domain": "exploredevon.info",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Kilkieran High Crosses",
+    "url": "https://www.tipperary.com/",
+    "domain": "tipperary.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Grallagh Castle",
+    "url": "https://www.visitwaterford.com/",
+    "domain": "visitwaterford.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Kilcoe Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Kilbolane Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Ballinacarriga Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Carriganass Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Castledonovan",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Dunmanus Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Togher Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Drishane Castle",
+    "url": "https://www.millstreet.ie/",
+    "domain": "millstreet.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Dromaneen Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Conna Castle",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Cloyne Round Tower",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Castle Salem",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Ballybeg Priory",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Bantry House",
+    "url": "https://www.ihh.ie/index.cfm/houses/house/name/Bantry%20House",
+    "domain": "ihh.ie",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "James Fort",
+    "url": "https://www.corkcoco.ie/",
+    "domain": "corkcoco.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Killahara Castle",
+    "url": "https://www.tipperary.com/",
+    "domain": "tipperary.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Lackeen Castle",
+    "url": "https://www.tipperary.com/",
+    "domain": "tipperary.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Dromineer Castle",
+    "url": "https://www.tipperary.com/",
+    "domain": "tipperary.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Castle Otway",
+    "url": "https://www.tipperary.com/",
+    "domain": "tipperary.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Carrickabraghy Castle",
+    "url": "https://www.govisitdonegal.com/",
+    "domain": "govisitdonegal.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Donamon Castle",
+    "url": "https://www.roscommon.ie/",
+    "domain": "roscommon.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Castle Saunderson",
+    "url": "https://www.scouts.ie/",
+    "domain": "scouts.ie",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Glinsk Castle",
+    "url": "https://www.galwaytourism.ie/",
+    "domain": "galwaytourism.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Drumboe Castle",
+    "url": "https://www.govisitdonegal.com/",
+    "domain": "govisitdonegal.com",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Tyrone House",
+    "url": "https://theirishaesthete.com/",
+    "domain": "theirishaesthete.com",
+    "reason": "blog/fan-site"
+  },
+  {
+    "name": "Newtown Castle",
+    "url": "https://www.burrencollege.ie/",
+    "domain": "burrencollege.ie",
+    "reason": "domain-mismatch"
+  },
+  {
+    "name": "Doonagore Castle",
+    "url": "https://www.clare.ie/",
+    "domain": "clare.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Gleninagh Castle",
+    "url": "https://www.clare.ie/",
+    "domain": "clare.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Clifden Castle",
+    "url": "https://www.connemara.ie/",
+    "domain": "connemara.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Menlo Castle",
+    "url": "https://www.galwaytourism.ie/",
+    "domain": "galwaytourism.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Burrishoole Abbey",
+    "url": "https://www.mayo.ie/",
+    "domain": "mayo.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Errew Abbey",
+    "url": "https://www.mayo.ie/",
+    "domain": "mayo.ie",
+    "reason": "generic-tourism"
+  },
+  {
+    "name": "Clare Island Abbey",
+    "url": "https://www.clareisland.ie/",
+    "domain": "clareisland.ie",
+    "reason": "generic-tourism"
+  }
+]
