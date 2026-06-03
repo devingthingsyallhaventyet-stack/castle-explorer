@@ -63,6 +63,17 @@ export default {
       }
     }
 
+    // Public per-card metadata (live star rating + required photo attribution),
+    // via the approved google_place_id only. Edge-cached so views don't re-bill.
+    const listingCardMatch = path.match(/^\/public\/listing-card\/(.+)$/);
+    if (listingCardMatch && request.method === 'GET') {
+      try {
+        return addCors(await getListingCard(decodeURIComponent(listingCardMatch[1]), env, ctx));
+      } catch (err) {
+        return addCors(json({ error: err.message }, 500));
+      }
+    }
+
     // Public Google Places proxy (keeps API key server-side)
     const placesMatch = path.match(/^\/public\/places\/(.+)$/);
     if (placesMatch && request.method === 'GET') {
@@ -395,6 +406,8 @@ async function getPublicListings(url, env, ctx) {
     // (live, via the approved place_id) only when the card is actually viewed.
     image: r.hero_key ? '/img/' + r.hero_key
          : (r.google_place_id ? '/public/listing-photo/' + encodeURIComponent(r.slug) : ''),
+    // Whether a live per-card lookup (rating + photo credit) is available.
+    hasGoogle: !!r.google_place_id,
     tags: parseJsonArray(r.tags),
   }));
 
@@ -452,6 +465,44 @@ async function getListingHeroPhoto(slug, env, ctx) {
   // Cache at the edge/browser for performance so we don't re-bill Google on every view.
   headers.set('Cache-Control', 'public, max-age=2592000');
   const resp = new Response(media.body, { status: 200, headers });
+  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
+  return resp;
+}
+
+// Per-card metadata: live Google star rating + the photo's required attribution.
+// Uses ONLY the stored/approved google_place_id (never a search). Edge-cached so
+// repeat views don't re-bill. Falls back to any rating already saved in the DB.
+async function getListingCard(slug, env, ctx) {
+  const cache = caches.default;
+  const cacheKey = new Request('https://cache.internal/listing-card/' + encodeURIComponent(slug));
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit;
+
+  const row = await env.DB.prepare(
+    'SELECT google_place_id, google_rating, google_review_count FROM listings WHERE slug = ? AND published = 1'
+  ).bind(slug).first();
+  if (!row) return json({}, 404);
+
+  const out = { rating: row.google_rating || null, reviewCount: row.google_review_count || null, attribution: null };
+
+  if (row.google_place_id && env.GOOGLE_PLACES_KEY) {
+    try {
+      const det = await fetch(
+        'https://places.googleapis.com/v1/places/' + encodeURIComponent(row.google_place_id),
+        { headers: { 'X-Goog-Api-Key': env.GOOGLE_PLACES_KEY, 'X-Goog-FieldMask': 'rating,userRatingCount,photos' } }
+      );
+      if (det.ok) {
+        const d = await det.json();
+        if (d.rating != null) out.rating = d.rating;
+        if (d.userRatingCount != null) out.reviewCount = d.userRatingCount;
+        const attr = d.photos && d.photos[0] && d.photos[0].authorAttributions && d.photos[0].authorAttributions[0];
+        if (attr) out.attribution = { name: attr.displayName || 'Google user', uri: attr.uri || null };
+      }
+    } catch (e) { /* keep DB fallback values */ }
+  }
+
+  const resp = json(out);
+  resp.headers.set('Cache-Control', 'public, max-age=2592000');
   if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
   return resp;
 }

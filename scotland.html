@@ -486,6 +486,7 @@ img{max-width:100%;display:block}
 <div id="site-footer"></div><script src="/components/footer.js"></script>
 
 <!-- ===== SCRIPTS ===== -->
+<script src="/components/card-meta.js"></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -563,8 +564,10 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '★ ' + c.rating : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+      card.setAttribute('data-card-slug', slug);
+      if(c.hasGoogle) card.setAttribute('data-card-google','1');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
         <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
@@ -576,10 +579,12 @@ img{max-width:100%;display:block}
             <span>${c.county||''}</span>
           </div>
           <p>${c.description||''}</p>
-          ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
+          <div class="castle-card-rating" data-card-rating style="${stars?'':'display:none'}">${stars}</div>
+          <div class="castle-card-credit" data-card-credit style="display:none;font-size:.6rem;color:rgba(255,255,255,.4);margin-top:6px"></div>
         </div>
         </a>`;
       grid.appendChild(card);
+      if(window.enrichCard) window.enrichCard(card);
     });
     shown += batch.length;
     const remaining = filtered.length - shown;
