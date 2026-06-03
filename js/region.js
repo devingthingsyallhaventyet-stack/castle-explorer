@@ -9,24 +9,16 @@
   // Load per-region JSON data
   const regionSlug = CONFIG.slug || location.pathname.split('/').pop().replace('.html','');
   
-  var dataCountry = (CONFIG.country || 'Scotland').toLowerCase();
-  // Scotland reads live from the database (single source of truth); other
-  // countries still use the static per-region JSON until they're migrated too.
-  if (country === 'Scotland') {
-    fetch('/public/listings?country=' + encodeURIComponent(country))
-      .then(r => r.json())
-      .then(rows => {
-        var arr = Array.isArray(rows) ? rows : (rows.listings || []);
-        var set = (counties && counties.length) ? arr.filter(function(c){ return counties.includes(c.county); }) : arr;
-        initRegion(set);
-      })
-      .catch(err => { console.error('Failed to load region data:', err); });
-  } else {
-    fetch('/' + dataCountry + '/data/' + regionSlug + '.json')
-      .then(r => r.json())
-      .then(all => initRegion(all))
-      .catch(err => { console.error('Failed to load region data:', err); });
-  }
+  // All countries read live from the database (single source of truth).
+  // Filter to this region's counties client-side to match the country page grouping.
+  fetch('/public/listings?country=' + encodeURIComponent(country))
+    .then(r => r.json())
+    .then(rows => {
+      var arr = Array.isArray(rows) ? rows : (rows.listings || []);
+      var set = (counties && counties.length) ? arr.filter(function(c){ return counties.includes(c.county); }) : arr;
+      initRegion(set);
+    })
+    .catch(err => { console.error('Failed to load region data:', err); });
 
   function slug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
   var countrySlug = (CONFIG.country || 'Scotland').toLowerCase().replace(/\s+/g, '-');

@@ -398,7 +398,6 @@ img{max-width:100%;display:block}
 <div id="site-footer"></div><script src="/components/footer.js"></script>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="data-ireland.js"></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -427,7 +426,7 @@ img{max-width:100%;display:block}
   },{passive:true});
 
   // ---- Castle Grid ----
-  const castleData = window.irelandCastles || [];
+  let castleData = [];
   const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
@@ -536,7 +535,16 @@ img{max-width:100%;display:block}
     renderCastles(true);
   });
 
-  renderCastles(true);
+  // Load listings live from the database (single source of truth).
+  fetch('/public/listings?country=Ireland')
+    .then(r => r.json())
+    .then(data => {
+      castleData = Array.isArray(data) ? data : (data.listings || []);
+      const allBtn = document.querySelector('.castle-filters button[data-filter="all"]');
+      if (allBtn) allBtn.textContent = 'All (' + castleData.length + ')';
+      renderCastles(true);
+    })
+    .catch(err => { console.error('Failed to load listings:', err); });
 
   // ---- Region cards are static HTML now ----
 })();
