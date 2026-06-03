@@ -11,7 +11,7 @@
         if (!d) return;
         var rt = el.querySelector('[data-card-rating]');
         if (rt && d.rating) {
-          rt.textContent = '★ ' + d.rating + (d.reviewCount ? ' (' + d.reviewCount + ')' : '');
+          rt.textContent = '★ ' + d.rating;
           rt.style.display = '';
         }
         // Show the photo credit only when the card is actually showing a Google photo.

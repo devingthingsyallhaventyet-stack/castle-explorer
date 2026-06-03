@@ -385,9 +385,10 @@ async function getPublicListings(url, env, ctx) {
 
   const rows = await env.DB.prepare(
     `SELECT slug, name, type, century, country, region, county, condition, status,
-            google_rating, google_review_count, description_short, tags, google_place_id,
+            google_rating, google_review_count, description_short, description_expanded, tags, google_place_id,
             (SELECT r2_key FROM photos p WHERE p.listing_id = listings.id AND p.is_hero = 1 ORDER BY p.sort_order LIMIT 1) AS hero_key
-       FROM listings ${whereClause} ORDER BY name ASC`
+       FROM listings ${whereClause}
+       ORDER BY (google_review_count IS NULL), google_review_count DESC, name ASC`
   ).bind(...params).all();
 
   let out = (rows.results || []).map(r => ({
@@ -401,7 +402,9 @@ async function getPublicListings(url, env, ctx) {
     rating: r.google_rating || null,
     reviewCount: r.google_review_count || null,
     access: r.status === 'Freely Accessible' ? 'free' : 'paid',
-    description: r.description_short || '',
+    // Short descriptions were retired during enrichment; fall back to the first
+    // sentence of the full description so every card still has a blurb.
+    description: r.description_short || firstSentence(r.description_expanded),
     // Prefer an uploaded R2 hero photo; otherwise lazily fetch the Google photo
     // (live, via the approved place_id) only when the card is actually viewed.
     image: r.hero_key ? '/img/' + r.hero_key
@@ -424,6 +427,14 @@ async function getPublicListings(url, env, ctx) {
 function parseJsonArray(s) {
   if (!s) return [];
   try { const v = JSON.parse(s); return Array.isArray(v) ? v : []; } catch (e) { return []; }
+}
+
+// First sentence of a (possibly HTML/markdown) description, for card blurbs.
+function firstSentence(text) {
+  if (!text) return '';
+  const plain = String(text).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const m = plain.match(/^.*?[.!?](?=\s|$)/);
+  return (m ? m[0] : plain).trim();
 }
 
 // Per-listing hero photo, fetched LIVE from Google Places. Uses ONLY the

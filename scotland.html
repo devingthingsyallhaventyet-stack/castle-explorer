@@ -576,7 +576,7 @@ img{max-width:100%;display:block}
           <div class="castle-card-meta">
             <span>${c.era||''}</span>
             <span>${c.condition||''}</span>
-            <span>${c.county||''}</span>
+            <span>${(c.county||'').replace('Scottish Borders','Borders')}</span>
           </div>
           <p>${c.description||''}</p>
           <div class="castle-card-rating" data-card-rating style="${stars?'':'display:none'}">${stars}</div>
