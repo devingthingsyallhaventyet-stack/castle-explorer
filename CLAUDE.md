@@ -32,6 +32,18 @@ the database. There must be **no second data source.**
 - Region pages filter by `CONFIG.counties` client-side to match the country
   page's county-based grouping.
 
+## Images & Google Places (cost-sensitive — read carefully)
+- Each listing has an **approved `google_place_id`** the user curated by hand over
+  days. ALWAYS use that stored place_id for any Google lookup. **NEVER search
+  Google or guess/bulk-match place IDs** — a wrong match is worse than no image.
+  Listings with no approved place_id get no image (skip them).
+- `google_rating` / `google_review_count` are **cached in the DB** during
+  enrichment, so list cards show ratings for **FREE** (no per-load API call).
+- Google Places API calls **cost money per call**. NEVER call Google on every
+  page load / per card. The plan for card images is **fetch once per listing
+  (using its approved place_id) and cache** (e.g. store the hero photo), then
+  serve the cached image for free thereafter.
+
 ## Querying the live database (the dashboard)
 A `CLOUDFLARE_API_TOKEN` env var is configured (D1 access). The account and DB
 ids are non-secret. To read listings directly, query the D1 HTTP API:
