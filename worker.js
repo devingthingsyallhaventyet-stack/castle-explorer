@@ -409,8 +409,10 @@ async function getPublicListings(url, env, ctx) {
     // (live, via the approved place_id) only when the card is actually viewed.
     image: r.hero_key ? '/img/' + r.hero_key
          : (r.google_place_id ? '/public/listing-photo/' + encodeURIComponent(r.slug) : ''),
-    // Whether a live per-card lookup (rating + photo credit) is available.
+    // Whether a live per-card lookup (rating) is available at all.
     hasGoogle: !!r.google_place_id,
+    // Whether the image shown is a Google photo (so it needs photo attribution).
+    googlePhoto: !!r.google_place_id && !r.hero_key,
     tags: parseJsonArray(r.tags),
   }));
 

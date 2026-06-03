@@ -35,7 +35,8 @@
 
   // Public hook: call with a card element that carries data-card-slug.
   window.enrichCard = function (el) {
-    if (!el) return;
+    if (!el || el.__cm) return;
+    el.__cm = true;
     if (io) io.observe(el); else fill(el);
   };
 })();

@@ -86,7 +86,7 @@
       filterRow.appendChild(b);
     });
 
-    let activeFilters = new Set([0]), curSort = 'rating', searchQ = '', shown = 12;
+    let activeFilters = new Set([0]), curSort = 'reviews', searchQ = '', shown = 12;
 
     filterRow.addEventListener('click', e => {
       if (!e.target.classList.contains('filter-chip')) return;
@@ -156,21 +156,43 @@
           '<a href="' + listingUrl(c.name) + '" style="background:var(--burgundy);border:1px solid var(--burgundy);border-radius:20px;padding:8px 20px;color:#fff;font-size:.85rem;font-weight:600;text-align:center;flex:1;text-decoration:none">Explore</a>' +
           '</div>';
         
-        return '<div class="site-card" data-idx="' + i + '">' +
+        return '<div class="site-card" data-idx="' + i + '"' + (c.hasGoogle ? ' data-card-slug="' + (c.slug || '') + '"' : '') + (c.googlePhoto ? ' data-card-google="1"' : '') + '>' +
           '<div class="site-card-img" style="position:relative">' + (img ? '<img src="' + optImg(img, 600) + '" alt="' + c.name + '" loading="lazy" decoding="async" onerror="this.parentElement.style.background=\'rgba(201,168,76,.03)\'">' : '') + (c.access === 'free' ? '<span class="free-badge">Free</span>' : '') + '</div>' +
           '<div class="site-card-body">' +
           '<h3>' + c.name + '</h3>' +
           mobGallery +
-          '<p class="sc-meta">' + (c.era || '') + (c.county ? ' · ' + c.county : '') + '</p>' +
+          '<p class="sc-meta">' + (c.era || '') + (c.county ? ' · ' + c.county.replace('Scottish Borders', 'Borders') : '') + '</p>' +
           '<p class="sc-desc">' + (c.description || '') + '</p>' +
-          '<div class="site-card-foot"><span class="sc-type">' + (c.type || 'Castle') + '</span>' + (c.rating ? '<span class="sc-rating">★ ' + c.rating + '</span>' : '') + '</div>' +
+          '<div class="site-card-foot"><span class="sc-type">' + (c.type || 'Castle') + '</span>' + '<span class="sc-rating" data-card-rating style="' + (c.rating ? '' : 'display:none') + '">' + (c.rating ? '★ ' + c.rating : '') + '</span></div>' +
+          '<div class="sc-credit" data-card-credit style="display:none;font-size:.6rem;color:rgba(255,255,255,.4);margin-top:4px"></div>' +
           mobActions +
           '</div></div>';
       }).join('');
 
       const btn = document.getElementById('loadMore');
       btn.classList.toggle('hidden', shown >= list.length);
+
+      // Lazily fill live star ratings + Google photo credits on the cards.
+      ensureCardMeta();
+      enrichVisibleCards();
     }
+
+    // Load the shared card-meta component once (works on every region page
+    // without editing each region's HTML), then enrich any rendered cards.
+    function ensureCardMeta() {
+      if (window.enrichCard || document.getElementById('card-meta-js')) return;
+      var s = document.createElement('script');
+      s.id = 'card-meta-js';
+      s.src = '/components/card-meta.js';
+      s.onload = enrichVisibleCards;
+      document.head.appendChild(s);
+    }
+    function enrichVisibleCards() {
+      if (!window.enrichCard) return;
+      var cards = document.querySelectorAll('#gridView .site-card[data-card-slug]');
+      for (var i = 0; i < cards.length; i++) window.enrichCard(cards[i]);
+    }
+
     render();
 
     // ===== EVENT DELEGATION for hover/swipe/clicks =====
