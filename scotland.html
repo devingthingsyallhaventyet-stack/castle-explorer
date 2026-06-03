@@ -203,6 +203,22 @@ img{max-width:100%;display:block}
   .region-card-desc{display:none}
 }
 
+/* ========== INTRO ========== */
+.intro{position:relative;padding:90px 0 30px;background:var(--charcoal)}
+.intro .container{max-width:860px;margin:0 auto;padding:0 24px;text-align:center}
+.intro h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:28px;color:#fff}
+.intro p{font-family:var(--serif);font-size:1.2rem;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:20px}
+.intro p:last-child{margin-bottom:0}
+
+/* ========== FAQ ========== */
+.faq{position:relative;padding:90px 0;background:var(--charcoal)}
+.faq .container{max-width:860px;margin:0 auto;padding:0 24px}
+.faq-header{text-align:center;margin-bottom:48px}
+.faq-item{border-top:1px solid rgba(201,168,76,.15);padding:28px 0}
+.faq-item:last-child{border-bottom:1px solid rgba(201,168,76,.15)}
+.faq-item h3{font-family:var(--display);font-size:1.35rem;color:var(--pale-gold);margin-bottom:12px;line-height:1.3}
+.faq-item p{font-family:var(--serif);font-size:1.12rem;color:rgba(255,255,255,.72);line-height:1.75}
+
 </style>
 
 </head>
@@ -220,11 +236,11 @@ img{max-width:100%;display:block}
 
   <div class="hero-content">
 
-    <h1 class="reveal">SCOTLAND<span>400+ Castles · 2,000 Years of History<br>One Untamed Land</span></h1>
+    <h1 class="reveal">Explore Scotland<span>Historic places shaped by power, faith, conflict, and memory.</span></h1>
 
-    <p class="hero-quote reveal">Some places you visit. Scotland haunts you. It seeps into your bones like rain into ancient stone - a land where every ruin whispers and every horizon dares you to keep going.</p>
+    <p class="hero-quote reveal">Scotland's history has a rare physical presence. It rises over cities, follows the coast, cuts through the Borders, and reaches deep into the Highlands. The places left behind still carry the force of the people who built, fought for, prayed in, and abandoned them.</p>
 
-    <a href="#castles" class="hero-cta reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})">Explore</a>
+    <a href="#castles" class="hero-cta reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})">Explore Scotland</a>
 
   </div>
 
@@ -232,13 +248,23 @@ img{max-width:100%;display:block}
 
 
 
+<!-- ===== OPENING INTRODUCTION ===== -->
+<section class="intro" id="intro">
+  <div class="container reveal">
+    <h2>Scotland's Castles &amp; Historic Places</h2>
+    <p>Scotland has a way of making history feel near. A fortress above a city, a roofless abbey in a quiet valley, a tower on contested ground - these places still carry the pressure of the lives once shaped around them.</p>
+    <p>The country's story was never only royal. It was written by clan chiefs and queens, reformers and rebels, monks and soldiers, island lords and border families. Geography mattered as much as ambition. Mountains protected. Rivers divided. The sea connected distant communities long before roads made them feel close.</p>
+    <p>To follow Scotland through its historic places is to see how power moved across the country: into royal castles, through religious houses, across western sea routes, along the Borders, and deep into the Highlands. The result is a landscape where history remains visible, layered, and unusually easy to feel.</p>
+  </div>
+</section>
+
 <!-- ===== 4. THE CASTLES ===== -->
 <section class="castles" id="castles">
   <div class="container">
     <div class="castles-header reveal">
       <div class="section-label">The Collection</div>
-      <h2 class="section-title" style="color:#fff">The Castles of Scotland</h2>
-      <p class="section-subtitle" style="margin:0 auto">Over 400 castle sites mapped and documented. Filter by region, era, or condition - then explore each one.</p>
+      <h2 class="section-title" style="color:#fff">Browse Scottish Sites</h2>
+      <p class="section-subtitle" style="margin:0 auto;max-width:760px">A royal fortress, a roofless abbey, a border tower, a ruined chapel - each one opens a different way into Scotland. Some places are famous for the people who passed through them. Others matter because of what happened nearby, what survived, or what their setting still reveals.</p>
     </div>
     <div class="castle-filters reveal" id="castle-filters">
       <button class="active" data-filter="all">All (447)</button>
@@ -263,7 +289,8 @@ img{max-width:100%;display:block}
   <div class="land-bg"></div>
   <div class="container">
     <div class="land-header reveal">
-      <h2 class="section-title" style="color:#fff">Explore Scotland's Castles by Region</h2>
+      <h2 class="section-title" style="color:#fff">Explore Scotland by Region</h2>
+      <p class="section-subtitle" style="margin:16px auto 0;max-width:780px">Scotland's regions each carry a different historical rhythm. Argyll &amp; The Western Isles were shaped by sea power. The Scottish Borders by conflict and family strongholds. Edinburgh &amp; The Lothians by royal authority, politics, and the pull of the capital. Each region opens a different route into the country's past.</p>
     </div>
 
     <div class="region-grid reveal" id="region-grid">
@@ -356,8 +383,8 @@ img{max-width:100%;display:block}
   <div class="history-bg"></div>
   <div class="container">
     <div class="history-header reveal">
-      <h2 class="section-title" style="color:#fff">Explore Scotland's History</h2>
-      <p class="section-subtitle" style="margin:0 auto">Every siege, coronation, and betrayal left its mark in stone. These are the events that shaped a nation — and the castles that survived to tell the tale.</p>
+      <h2 class="section-title" style="color:#fff">Stories That Shaped Scotland</h2>
+      <p class="section-subtitle" style="margin:0 auto;max-width:780px">Some stories become clearer when the places are seen together. A single castle can hold one chapter, but a route can reveal the movement of a life, a rebellion, a kingdom, or an idea. These histories connect the physical remains - castles, royal residences, sacred sites, battle landscapes, and older settlements - with the larger forces that gave them meaning.</p>
     </div>
     <div class="history-grid">
 
@@ -368,7 +395,7 @@ img{max-width:100%;display:block}
         </div>
         <div class="hc-body">
           <h3>The Wars of Scottish Independence</h3>
-          <p>William Wallace's rebellion and Robert the Bruce's coronation forged a nation from the fires of English occupation. From Stirling Bridge to Bannockburn, Scotland's greatest castles were the prizes and battlefields of a 60-year struggle for sovereignty.</p>
+          <p>The struggle for Scottish independence was fought through castles as much as battlefields. Strongholds were seized, surrendered, destroyed, and rebuilt as Robert the Bruce, William Wallace, Edward I, and Scotland's nobles fought over the future of the kingdom.</p>
           <div class="hc-castles"><strong>45 sites</strong> — Caerlaverock, Bothwell, Kildrummy, Dunfermline Abbey…</div>
           <span class="hc-link">Explore Collection →</span>
         </div>
@@ -380,22 +407,9 @@ img{max-width:100%;display:block}
           <span class="hc-date">1542-1587</span>
         </div>
         <div class="hc-body">
-          <h3>Mary Queen of Scots</h3>
-          <p>Crowned at nine months old, imprisoned by her cousin Elizabeth, and beheaded at 44 - Mary Stuart's life reads like a Shakespearean tragedy played out across the castles of Scotland. Her story touches more Scottish sites than any other single figure.</p>
+          <h3>Mary Queen of Scots: Birth, Betrayal, Captivity &amp; Escape</h3>
+          <p>Mary's life moved through some of the most charged places in Scotland: palaces of birth and rule, castles of crisis, and routes tied to escape, defeat, and imprisonment. Her story brings together monarchy, religion, marriage, betrayal, and the dangerous politics of a divided realm.</p>
           <div class="hc-castles"><strong>27 sites</strong> — Craigmillar, Linlithgow Palace, Borthwick, Stirling…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/macbeth-early-kings" class="history-card reveal" style="transition-delay:.1s">
-        <div class="hc-image">
-          <img src="img/scotland/macbeth-fuseli.webp" alt="Macbeth and the Witches by Fuseli" loading="lazy" width="506" height="710" style="object-position:center 20%">
-          <span class="hc-date">1005-1057</span>
-        </div>
-        <div class="hc-body">
-          <h3>Macbeth &amp; the Early Kings</h3>
-          <p>The real Macbeth was no Shakespearean villain - he was a successful king who ruled Scotland for 17 years. But his story, and the brutal politics of early medieval Scotland, gave us some of the oldest castle sites in the country.</p>
-          <div class="hc-castles"><strong>24 sites</strong> — Glamis, Cawdor, Iona Abbey, Jarlshof…</div>
           <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
@@ -406,78 +420,42 @@ img{max-width:100%;display:block}
           <span class="hc-date">1689-1746</span>
         </div>
         <div class="hc-body">
-          <h3>The Jacobite Risings</h3>
-          <p>For nearly 60 years, the Stuart loyalists fought to reclaim the British throne. Their campaigns swept through the Highlands, leaving a trail of siege, betrayal, and romantic myth that still echoes through Scotland's glens.</p>
+          <h3>The Jacobite Risings &amp; the Fall of the Highland Cause</h3>
+          <p>The Jacobite cause drew loyalty from dynasties, clans, soldiers, and families who risked everything for the Stuart line. Its story moves through Highland landscapes, military roads, fortified houses, and places where defeat changed the future of Gaelic Scotland.</p>
           <div class="hc-castles"><strong>27 sites</strong> — Eilean Donan, Kildrummy, Urquhart, Fort George…</div>
           <span class="hc-link">Explore Collection →</span>
         </div>
       </a>
 
-      <a href="/scotland/culloden" class="history-card reveal" style="transition-delay:0s">
-        <div class="hc-image">
-          <img src="img/scotland/culloden.webp" alt="The Battle of Culloden by David Morier" loading="lazy" width="800" height="483">
-          <span class="hc-date">1746</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Battle of Culloden</h3>
-          <p>The last pitched battle on British soil lasted barely an hour. Bonnie Prince Charlie's exhausted Highlanders were cut down by government artillery on Drumossie Moor - ending the Jacobite cause and the old Highland way of life forever.</p>
-          <div class="hc-castles"><strong>6 sites</strong> — Fort George, Castle Lachlan, Ruthven Barracks…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
+    </div>
+  </div>
+</section>
 
-      <a href="/scotland/bonnie-prince-charlie" class="history-card reveal" style="transition-delay:.1s">
-        <div class="hc-image">
-          <img src="img/scotland/charlie-mosman.webp" alt="Portrait of Bonnie Prince Charlie" loading="lazy" width="800" height="1024" style="object-position:center 20%">
-          <span class="hc-date">The '45</span>
-        </div>
-        <div class="hc-body">
-          <h3>Bonnie Prince Charlie</h3>
-          <p>Charles Edward Stuart landed on Eriskay with seven men and raised an army that marched to within 125 miles of London. His dramatic flight through the Highlands after Culloden - aided by Flora MacDonald - became one of Scotland's great romantic legends.</p>
-          <div class="hc-castles"><strong>8 sites</strong> — Castle Menzies, Culloden Battlefield, Ruthven Barracks, Calvay Castle…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/robert-the-bruce" class="history-card reveal" style="transition-delay:0s">
-        <div class="hc-image">
-          <img src="img/scotland/robert-bruce.webp" alt="Robert the Bruce statue" loading="lazy" width="800" height="600" style="object-position:top">
-          <span class="hc-date">1274-1329</span>
-        </div>
-        <div class="hc-body">
-          <h3>Robert the Bruce</h3>
-          <p>Excommunicated, hunted, and nearly broken, Bruce clawed back a kingdom one castle at a time. His guerrilla campaign of castle-slighting and surprise attacks is a masterclass in medieval warfare and the foundation myth of Scottish nationhood.</p>
-          <div class="hc-castles"><strong>22 sites</strong> — Drum Castle, Melrose Abbey, Dunfermline Abbey, Lochranza…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/reformation" class="history-card reveal" style="transition-delay:.2s">
-        <div class="hc-image">
-          <img src="img/scotland/knox-preaching.webp" alt="John Knox preaching - stained glass, St Giles Edinburgh" loading="lazy" width="800" height="775">
-          <span class="hc-date">1560</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Scottish Reformation</h3>
-          <p>John Knox's fiery preaching and the Protestant lords' rebellion transformed Scotland from a Catholic kingdom into a Calvinist one in barely a decade. Monasteries were stripped, churches remodelled, and the political landscape shifted forever.</p>
-          <div class="hc-castles"><strong>29 sites</strong> — St Andrews Castle, Melrose Abbey, Sweetheart Abbey, Dunfermline Abbey…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/covenanters" class="history-card reveal" style="transition-delay:0s">
-        <div class="hc-image">
-          <img src="img/scotland/covenanters-signing.webp" alt="The Signing of the National Covenant in Greyfriars Kirkyard by William Allan" loading="lazy" width="800" height="498">
-          <span class="hc-date">1638-1689</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Covenanters &amp; Civil Wars</h3>
-          <p>Scotland's radical Presbyterians signed their National Covenant in blood and fought both Charles I and Cromwell to defend their faith. The Killing Times saw executions, imprisonments, and guerrilla warfare across the Lowlands.</p>
-          <div class="hc-castles"><strong>21 sites</strong> — Dunnottar, Edzell, Castle Girnigoe, Gylen Castle…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <h2 class="section-title" style="color:#fff">Questions About Exploring Scotland's Historic Sites</h2>
+    </div>
+    <div class="faq-item reveal">
+      <h3>What is the best way to explore Scotland's historic sites?</h3>
+      <p>Choose a region or a story before trying to see everything. Scotland becomes easier to understand when the journey has a shape: a royal route around Edinburgh, a borderlands trip through tower country, or a western journey shaped by islands and sea power.</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>Which part of Scotland is best for castles?</h3>
+      <p>Edinburgh &amp; The Lothians, Fife &amp; Perthshire, and Northeast Scotland &amp; Tayside are strong starting points for major castles and easier travel. The Scottish Highlands &amp; Northern Isles and Argyll &amp; The Western Isles offer a more remote experience, with sites shaped by distance, clan power, and the sea.</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>Can you visit ruined castles and abbeys in Scotland?</h3>
+      <p>Many ruined castles, abbeys, and religious sites can be visited, though access varies by site. Some are ticketed, some are free, and some may only be viewed from the exterior, so current access details should be checked before travelling.</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>Do you need a car to explore historic Scotland?</h3>
+      <p>A car is helpful for rural ruins, Highland routes, island sites, and places outside major towns. Edinburgh, Glasgow, Stirling, and some central locations can be reached by public transport, but the most atmospheric routes often require more flexibility.</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>What history should visitors know before exploring Scotland?</h3>
+      <p>Medieval kingship, the Wars of Scottish Independence, the Reformation, the Jacobite Risings, and the older Pictish, Norse, and early Christian worlds all help make sense of what survives. The places themselves can do the rest once the larger story is in view.</p>
     </div>
   </div>
 </section>
