@@ -52,6 +52,17 @@ export default {
       }
     }
 
+    // Public per-listing hero photo — fetched LIVE from Google Places using the
+    // listing's APPROVED google_place_id only (never a search), then edge-cached.
+    const listingPhotoMatch = path.match(/^\/public\/listing-photo\/(.+)$/);
+    if (listingPhotoMatch && request.method === 'GET') {
+      try {
+        return await getListingHeroPhoto(decodeURIComponent(listingPhotoMatch[1]), env, ctx);
+      } catch (err) {
+        return new Response('', { status: 404 });
+      }
+    }
+
     // Public Google Places proxy (keeps API key server-side)
     const placesMatch = path.match(/^\/public\/places\/(.+)$/);
     if (placesMatch && request.method === 'GET') {
@@ -363,7 +374,7 @@ async function getPublicListings(url, env, ctx) {
 
   const rows = await env.DB.prepare(
     `SELECT slug, name, type, century, country, region, county, condition, status,
-            google_rating, google_review_count, description_short, tags,
+            google_rating, google_review_count, description_short, tags, google_place_id,
             (SELECT r2_key FROM photos p WHERE p.listing_id = listings.id AND p.is_hero = 1 ORDER BY p.sort_order LIMIT 1) AS hero_key
        FROM listings ${whereClause} ORDER BY name ASC`
   ).bind(...params).all();
@@ -380,7 +391,10 @@ async function getPublicListings(url, env, ctx) {
     reviewCount: r.google_review_count || null,
     access: r.status === 'Freely Accessible' ? 'free' : 'paid',
     description: r.description_short || '',
-    image: r.hero_key ? '/img/' + r.hero_key : '',
+    // Prefer an uploaded R2 hero photo; otherwise lazily fetch the Google photo
+    // (live, via the approved place_id) only when the card is actually viewed.
+    image: r.hero_key ? '/img/' + r.hero_key
+         : (r.google_place_id ? '/public/listing-photo/' + encodeURIComponent(r.slug) : ''),
     tags: parseJsonArray(r.tags),
   }));
 
@@ -397,6 +411,49 @@ async function getPublicListings(url, env, ctx) {
 function parseJsonArray(s) {
   if (!s) return [];
   try { const v = JSON.parse(s); return Array.isArray(v) ? v : []; } catch (e) { return []; }
+}
+
+// Per-listing hero photo, fetched LIVE from Google Places. Uses ONLY the
+// listing's stored/approved google_place_id (never a search). Edge-cached so
+// repeat views don't re-bill Google. Listings without an approved place_id 404.
+async function getListingHeroPhoto(slug, env, ctx) {
+  const cache = caches.default;
+  const cacheKey = new Request('https://cache.internal/listing-photo/' + encodeURIComponent(slug));
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit;
+
+  const row = await env.DB.prepare(
+    'SELECT google_place_id FROM listings WHERE slug = ? AND published = 1'
+  ).bind(slug).first();
+  if (!row || !row.google_place_id) return new Response('', { status: 404 });
+
+  const apiKey = env.GOOGLE_PLACES_KEY;
+  if (!apiKey) return new Response('', { status: 404 });
+
+  // 1) Place Details — request only the photos field (lowest-cost field mask).
+  const det = await fetch(
+    'https://places.googleapis.com/v1/places/' + encodeURIComponent(row.google_place_id),
+    { headers: { 'X-Goog-Api-Key': apiKey, 'X-Goog-FieldMask': 'photos' } }
+  );
+  if (!det.ok) return new Response('', { status: 404 });
+  const detData = await det.json();
+  const photoName = detData.photos && detData.photos[0] && detData.photos[0].name;
+  if (!photoName) return new Response('', { status: 404 });
+
+  // 2) Fetch the photo media bytes (follows Google's redirect to the image).
+  const media = await fetch(
+    'https://places.googleapis.com/v1/' + photoName + '/media?maxWidthPx=800',
+    { headers: { 'X-Goog-Api-Key': apiKey } }
+  );
+  if (!media.ok || !media.body) return new Response('', { status: 404 });
+
+  const headers = new Headers();
+  headers.set('Content-Type', media.headers.get('Content-Type') || 'image/jpeg');
+  // Cache at the edge/browser for performance so we don't re-bill Google on every view.
+  headers.set('Cache-Control', 'public, max-age=2592000');
+  const resp = new Response(media.body, { status: 200, headers });
+  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
+  return resp;
 }
 
 async function getListing(id, env) {
