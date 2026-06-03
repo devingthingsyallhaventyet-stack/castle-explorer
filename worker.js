@@ -43,6 +43,15 @@ export default {
       }
     }
 
+    // Public listings for country/region list pages (published only, public-safe fields)
+    if (path === '/public/listings' && request.method === 'GET') {
+      try {
+        return addCors(await getPublicListings(url, env, ctx));
+      } catch (err) {
+        return addCors(json({ error: err.message }, 500));
+      }
+    }
+
     // Public Google Places proxy (keeps API key server-side)
     const placesMatch = path.match(/^\/public\/places\/(.+)$/);
     if (placesMatch && request.method === 'GET') {
@@ -333,6 +342,61 @@ async function getListingBySlug(slug, env) {
   const listing = await env.DB.prepare('SELECT id FROM listings WHERE slug = ?').bind(slug).first();
   if (!listing) return json({ error: 'Not found' }, 404);
   return getListing(listing.id, env);
+}
+
+// Public, read-only listings for the country/region list pages.
+// Source of truth = the live database. Returns ONLY published listings and
+// only public-safe fields (never internal_notes / internal_tags). Edge-cached.
+async function getPublicListings(url, env, ctx) {
+  const cache = caches.default;
+  const cacheKey = new Request(url.toString(), { method: 'GET' });
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
+
+  const country = url.searchParams.get('country');
+  const regionParam = url.searchParams.get('region'); // optional region slug
+
+  const where = ['published = 1'];
+  const params = [];
+  if (country) { where.push('country = ?'); params.push(country); }
+  const whereClause = 'WHERE ' + where.join(' AND ');
+
+  const rows = await env.DB.prepare(
+    `SELECT slug, name, type, century, country, region, county, condition, status,
+            google_rating, google_review_count, description_short, tags,
+            (SELECT r2_key FROM photos p WHERE p.listing_id = listings.id AND p.is_hero = 1 ORDER BY p.sort_order LIMIT 1) AS hero_key
+       FROM listings ${whereClause} ORDER BY name ASC`
+  ).bind(...params).all();
+
+  let out = (rows.results || []).map(r => ({
+    slug: r.slug,
+    name: r.name,
+    type: (r.type || '').toLowerCase(),
+    region: r.region,
+    county: r.county,
+    era: r.century || '',
+    condition: (r.condition || '').toLowerCase(),
+    rating: r.google_rating || null,
+    reviewCount: r.google_review_count || null,
+    access: r.status === 'Freely Accessible' ? 'free' : 'paid',
+    description: r.description_short || '',
+    image: r.hero_key ? '/img/' + r.hero_key : '',
+    tags: parseJsonArray(r.tags),
+  }));
+
+  if (regionParam) {
+    out = out.filter(x => regionToSlug(x.region || '') === regionParam);
+  }
+
+  const response = json(out);
+  response.headers.set('Cache-Control', 'public, max-age=300');
+  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, response.clone()));
+  return response;
+}
+
+function parseJsonArray(s) {
+  if (!s) return [];
+  try { const v = JSON.parse(s); return Array.isArray(v) ? v : []; } catch (e) { return []; }
 }
 
 async function getListing(id, env) {
