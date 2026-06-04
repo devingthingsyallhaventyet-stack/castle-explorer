@@ -18,6 +18,12 @@
 
 <link rel="canonical" href="https://castlecore.uk/england">
 
+<link rel="preload" as="image" href="https://img.castlecore.uk/england/colin-watts-3blV4-86aUo-unsplash.jpg" fetchpriority="high">
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-variable-latin.woff2" crossorigin>
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
+
 <meta property="og:title" content="England - 500+ Castles | CastleCore">
 
 <meta property="og:description" content="Explore England's castles, history, regions, and legends in one cinematic guide.">
@@ -207,7 +213,7 @@ img{max-width:100%;display:block}
 
 
 
-<div id="site-nav"></div><script src="/components/nav.js"></script>
+<div id="site-nav"></div><script src="/components/nav.js" defer></script>
 <section class="hero" id="hero">
 
   <div class="hero-bg"></div>
@@ -457,10 +463,10 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- ===== FOOTER ===== -->
-<div id="site-footer"></div><script src="/components/footer.js"></script>
+<div id="site-footer"></div><script src="/components/footer.js" defer></script>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="data-england.js"></script>
+<script src="/components/card-meta.js" defer></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -489,7 +495,7 @@ img{max-width:100%;display:block}
   },{passive:true});
 
   // ---- Castle Grid ----
-  const englandCastles = typeof CASTLES!=='undefined' ? CASTLES : [];
+  let englandCastles = [];
   const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
@@ -533,11 +539,13 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '★'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '★ ' + c.rating : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+      card.setAttribute('data-card-slug', slug);
+      if(c.googlePhoto) card.setAttribute('data-card-google','1');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" decoding="async" width="280" height="200" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
           <h3>${c.name}</h3>
           <div class="castle-card-meta">
@@ -546,10 +554,12 @@ img{max-width:100%;display:block}
             <span>${c.county||''}</span>
           </div>
           <p>${c.description||''}</p>
-          ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
+          <div class="castle-card-rating" data-card-rating style="${stars?'':'display:none'}">${stars}</div>
+          <div class="castle-card-credit" data-card-credit style="display:none;font-size:.6rem;color:rgba(255,255,255,.4);margin-top:6px"></div>
         </div>
         </a>`;
       grid.appendChild(card);
+      if(c.hasGoogle && window.enrichCard) window.enrichCard(card);
     });
     shown += batch.length;
     const remaining = filtered.length - shown;
@@ -571,7 +581,16 @@ img{max-width:100%;display:block}
     renderCastles(true);
   });
 
-  renderCastles(true);
+  // Load listings live from the database (single source of truth).
+  fetch('/public/listings?country=England')
+    .then(r => r.json())
+    .then(data => {
+      englandCastles = Array.isArray(data) ? data : (data.listings || []);
+      const allBtn = document.querySelector('.castle-filters button[data-filter="all"]');
+      if (allBtn) allBtn.textContent = 'All (' + englandCastles.length + ')';
+      renderCastles(true);
+    })
+    .catch(err => { console.error('Failed to load listings:', err); });
 
 })();
 </script>

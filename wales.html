@@ -14,6 +14,8 @@
 <meta property="og:url" content="https://castlecore.uk/wales">
 <link rel="preload" as="image" type="image/webp" href="img/wales/hero-wales-mobile.webp" media="(max-width: 768px)">
 <link rel="preload" as="image" type="image/webp" href="img/wales/hero-wales-desktop.webp" media="(min-width: 769px)">
+<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-variable-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
 <!-- Self-hosted fonts (no external dependencies) -->
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2')}
@@ -192,7 +194,7 @@ img{max-width:100%;display:block}
 <body>
 
 <!-- ===== NAV ===== -->
-<div id="site-nav"></div><script src="/components/nav.js"></script>
+<div id="site-nav"></div><script src="/components/nav.js" defer></script>
 <section class="hero" id="hero">
   <div class="hero-bg" data-parallax="0.3"><img src="img/wales/hero-wales.webp" srcset="img/wales/hero-wales-mobile.webp 1200w, img/wales/hero-wales-desktop.webp 1800w, img/wales/hero-wales.webp 2560w" sizes="100vw" alt="Wales hero landscape" width="2560" height="1707" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'"></div>
   <div class="hero-overlay"></div>
@@ -373,10 +375,10 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- ===== FOOTER ===== -->
-<div id="site-footer"></div><script src="/components/footer.js"></script>
+<div id="site-footer"></div><script src="/components/footer.js" defer></script>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="data-wales.js"></script>
+<script src="/components/card-meta.js" defer></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -405,7 +407,7 @@ img{max-width:100%;display:block}
   },{passive:true});
 
   // ---- Castle Grid ----
-  const castleData = window.walesCastles || (typeof CASTLES!=='undefined' ? CASTLES : []);
+  let castleData = [];
   const grid = document.getElementById('castle-grid');
   const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
@@ -446,11 +448,13 @@ img{max-width:100%;display:block}
     batch.forEach(c=>{
       const card = document.createElement('div');
       card.className='castle-card';
-      const stars = c.rating ? '?'.repeat(Math.round(c.rating)) + ` ${c.rating}` : '';
+      const stars = c.rating ? '★ ' + c.rating : '';
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+      card.setAttribute('data-card-slug', slug);
+      if(c.googlePhoto) card.setAttribute('data-card-google','1');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" decoding="async" width="280" height="200" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
           <h3>${c.name}</h3>
           <div class="castle-card-meta">
@@ -459,10 +463,12 @@ img{max-width:100%;display:block}
             <span>${c.county||''}</span>
           </div>
           <p>${c.description||''}</p>
-          ${stars?`<div class="castle-card-rating">${stars}</div>`:''}
+          <div class="castle-card-rating" data-card-rating style="${stars?'':'display:none'}">${stars}</div>
+          <div class="castle-card-credit" data-card-credit style="display:none;font-size:.6rem;color:rgba(255,255,255,.4);margin-top:6px"></div>
         </div>
         </a>`;
       grid.appendChild(card);
+      if(c.hasGoogle && window.enrichCard) window.enrichCard(card);
     });
     shown += batch.length;
     const remaining = filtered.length - shown;
@@ -484,7 +490,16 @@ img{max-width:100%;display:block}
     renderCastles(true);
   });
 
-  renderCastles(true);
+  // Load listings live from the database (single source of truth).
+  fetch('/public/listings?country=Wales')
+    .then(r => r.json())
+    .then(data => {
+      castleData = Array.isArray(data) ? data : (data.listings || []);
+      const allBtn = document.querySelector('.castle-filters button[data-filter="all"]');
+      if (allBtn) allBtn.textContent = 'All (' + castleData.length + ')';
+      renderCastles(true);
+    })
+    .catch(err => { console.error('Failed to load listings:', err); });
 
   // ---- Region cards are static HTML now ----
 })();
