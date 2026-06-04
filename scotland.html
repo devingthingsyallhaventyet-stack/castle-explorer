@@ -30,6 +30,10 @@
 
 <link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-desktop.webp" media="(min-width: 769px)">
 
+<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-variable-latin.woff2" crossorigin>
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
+
 
 
 <style>
@@ -77,7 +81,7 @@ img{max-width:100%;display:block}
 
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:72px}
 
-.hero-bg{position:absolute;inset:0;background:url('img/scotland/hero-scotland.webp') center/cover no-repeat;transform:translateY(0)}
+.hero-bg{position:absolute;inset:0;background:url('img/scotland/hero-scotland-desktop.webp') center/cover no-repeat;transform:translateY(0)}
 
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,40,.4) 0%,rgba(15,22,40,.2) 35%,rgba(15,22,40,.45) 100%)}
 
@@ -192,6 +196,8 @@ img{max-width:100%;display:block}
 @media(max-width:768px){
   .history-grid{grid-template-columns:1fr}
   .history-card:nth-child(odd),.history-card:nth-child(even){transform:none}
+  .hero-bg{background-image:url('img/scotland/hero-scotland-mobile.webp')}
+  .hero h1 span{white-space:normal}
 }
 @media(max-width:560px){
   .region-grid{grid-template-columns:1fr 1fr;gap:12px}
@@ -199,7 +205,6 @@ img{max-width:100%;display:block}
   .region-card-content{padding:16px}
   .region-card-name{font-size:1rem}
   .region-card-desc{display:none}
-  .hero h1 span{white-space:normal}
 }
 
 /* ========== INTRO ========== */
@@ -228,7 +233,7 @@ img{max-width:100%;display:block}
 
 
 
-<div id="site-nav"></div><script src="/components/nav.js"></script>
+<div id="site-nav"></div><script src="/components/nav.js" defer></script>
 <section class="hero" id="hero">
 
   <div class="hero-bg"></div>
@@ -502,10 +507,10 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- ===== FOOTER ===== -->
-<div id="site-footer"></div><script src="/components/footer.js"></script>
+<div id="site-footer"></div><script src="/components/footer.js" defer></script>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="/components/card-meta.js"></script>
+<script src="/components/card-meta.js" defer></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -589,7 +594,7 @@ img{max-width:100%;display:block}
       if(c.googlePhoto) card.setAttribute('data-card-google','1');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" decoding="async" width="280" height="200" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
           <h3>${(c.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones')}</h3>
           <div class="castle-card-meta">
