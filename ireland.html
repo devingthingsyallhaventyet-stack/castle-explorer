@@ -14,6 +14,8 @@
 <meta property="og:url" content="https://castlecore.uk/ireland">
 <link rel="preload" as="image" type="image/webp" href="img/ireland/hero-ireland-mobile.webp" media="(max-width: 768px)">
 <link rel="preload" as="image" type="image/webp" href="img/ireland/hero-ireland-desktop.webp" media="(min-width: 769px)">
+<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-variable-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
 <!-- Self-hosted fonts (no external dependencies) -->
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2')}
@@ -192,7 +194,7 @@ img{max-width:100%;display:block}
 <body>
 
 <!-- ===== NAV ===== -->
-<div id="site-nav"></div><script src="/components/nav.js"></script>
+<div id="site-nav"></div><script src="/components/nav.js" defer></script>
 <section class="hero" id="hero">
   <div class="hero-bg" data-parallax="0.3"><img src="img/ireland/hero-ireland.webp" srcset="img/ireland/hero-ireland-mobile.webp 1200w, img/ireland/hero-ireland-desktop.webp 1800w, img/ireland/hero-ireland.webp 2560w" sizes="100vw" alt="Ireland hero landscape" width="2560" height="1707" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1580492516014-4a28466d55a9?w=2560&q=80'"></div>
   <div class="hero-overlay"></div>
@@ -395,10 +397,10 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- ===== FOOTER ===== -->
-<div id="site-footer"></div><script src="/components/footer.js"></script>
+<div id="site-footer"></div><script src="/components/footer.js" defer></script>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="/components/card-meta.js"></script>
+<script src="/components/card-meta.js" defer></script>
 <script>
 (function(){
   // ---- Intersection Observer for reveal animations ----
@@ -504,7 +506,7 @@ img{max-width:100%;display:block}
       if(c.googlePhoto) card.setAttribute('data-card-google','1');
       card.innerHTML=`
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
+        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" decoding="async" width="280" height="200" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
           <h3>${c.name}</h3>
           <div class="castle-card-meta">
