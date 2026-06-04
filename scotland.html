@@ -8,9 +8,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scotland - 400+ Castles, 2,000 Years of History | CastleCore</title>
+<title>Explore Scotland: Castles &amp; Historic Places | CastleCore</title>
 
-<meta name="description" content="Explore Scotland's 400+ castles, from Edinburgh's volcanic fortress to lonely Highland ruins. Discover the wars, kings, and legends that shaped them.">
+<meta name="description" content="Explore Scotland through historic places shaped by power, faith, conflict, and memory, from royal strongholds and ruined abbeys to regions and stories that still define the landscape.">
 
 <meta name="keywords" content="castles in Scotland, Scottish castles, best castles in Scotland, Highland castles, Scottish history, medieval Scotland, castle ruins Scotland">
 
@@ -18,9 +18,9 @@
 
 <link rel="canonical" href="https://castlecore.uk/scotland">
 
-<meta property="og:title" content="Scotland - 400+ Castles | CastleCore">
+<meta property="og:title" content="Explore Scotland: Castles & Historic Places">
 
-<meta property="og:description" content="Explore Scotland's castles, history, wildlife, and heritage in one immersive digital museum exhibit.">
+<meta property="og:description" content="Explore Scotland through historic places shaped by power, faith, conflict, and memory, from royal strongholds and ruined abbeys to regions and stories that still define the landscape.">
 
 <meta property="og:type" content="website">
 
@@ -126,7 +126,7 @@ img{max-width:100%;display:block}
 .land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
 .land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .land-header{text-align:center;margin-bottom:40px}
-.region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1045px;margin:0 auto}
+.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1340px;margin:0 auto}
 .region-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s,box-shadow .4s}
 .region-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
 .region-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
@@ -150,8 +150,6 @@ img{max-width:100%;display:block}
 .history-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:32px;position:relative}
 .history-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.12);border-radius:8px;overflow:hidden;transition:all .4s ease;cursor:pointer}
 .history-card:hover{transform:translateY(-6px) rotate(0deg)!important;border-color:var(--candlelight);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px var(--candlelight);z-index:20}
-.history-card:nth-child(odd){transform:rotate(-.5deg)}
-.history-card:nth-child(even){transform:rotate(.5deg)}
 .hc-image{position:relative;height:240px;overflow:hidden}
 .hc-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .history-card:hover .hc-image img{transform:scale(1.05)}
@@ -204,11 +202,13 @@ img{max-width:100%;display:block}
 }
 
 /* ========== INTRO ========== */
-.intro{position:relative;padding:90px 0 30px;background:var(--charcoal)}
-.intro .container{max-width:860px;margin:0 auto;padding:0 24px;text-align:center}
-.intro h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:28px;color:#fff}
-.intro p{font-family:var(--serif);font-size:1.2rem;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:20px}
-.intro p:last-child{margin-bottom:0}
+.intro{position:relative;padding:80px 0 40px;background:var(--charcoal)}
+.intro .container{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.intro-text h2{font-family:var(--display);font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:700;line-height:1.18;margin-bottom:20px;color:#fff}
+.intro-text p{font-family:var(--serif);font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:16px}
+.intro-text p:last-child{margin-bottom:0}
+.intro-photo img{display:block;width:100%;height:100%;max-height:440px;object-fit:cover;border-radius:8px;border:1px solid rgba(201,168,76,.15)}
+@media(max-width:768px){.intro .container{grid-template-columns:1fr;gap:28px}.intro-photo{order:-1}.intro-photo img{max-height:300px}}
 
 /* ========== FAQ ========== */
 .faq{position:relative;padding:90px 0;background:var(--charcoal)}
@@ -216,8 +216,8 @@ img{max-width:100%;display:block}
 .faq-header{text-align:center;margin-bottom:48px}
 .faq-item{border-top:1px solid rgba(201,168,76,.15);padding:28px 0}
 .faq-item:last-child{border-bottom:1px solid rgba(201,168,76,.15)}
-.faq-item h3{font-family:var(--display);font-size:1.35rem;color:var(--pale-gold);margin-bottom:12px;line-height:1.3}
-.faq-item p{font-family:var(--serif);font-size:1.12rem;color:rgba(255,255,255,.72);line-height:1.75}
+.faq-item h3{font-family:var(--display);font-size:1.2rem;color:var(--pale-gold);margin-bottom:10px;line-height:1.3}
+.faq-item p{font-family:var(--serif);font-size:1rem;color:rgba(255,255,255,.7);line-height:1.7}
 
 </style>
 
@@ -236,7 +236,7 @@ img{max-width:100%;display:block}
 
   <div class="hero-content">
 
-    <h1 class="reveal">Explore Scotland<span>Historic places shaped by power, faith, conflict, and memory.</span></h1>
+    <h1 class="reveal">Scotland<span>Historic places shaped by power, faith, conflict, and memory.</span></h1>
 
     <p class="hero-quote reveal">Scotland's history has a rare physical presence. It rises over cities, follows the coast, cuts through the Borders, and reaches deep into the Highlands. The places left behind still carry the force of the people who built, fought for, prayed in, and abandoned them.</p>
 
@@ -251,10 +251,14 @@ img{max-width:100%;display:block}
 <!-- ===== OPENING INTRODUCTION ===== -->
 <section class="intro" id="intro">
   <div class="container reveal">
-    <h2>Scotland's Castles &amp; Historic Places</h2>
-    <p>Scotland has a way of making history feel near. A fortress above a city, a roofless abbey in a quiet valley, a tower on contested ground - these places still carry the pressure of the lives once shaped around them.</p>
-    <p>The country's story was never only royal. It was written by clan chiefs and queens, reformers and rebels, monks and soldiers, island lords and border families. Geography mattered as much as ambition. Mountains protected. Rivers divided. The sea connected distant communities long before roads made them feel close.</p>
-    <p>To follow Scotland through its historic places is to see how power moved across the country: into royal castles, through religious houses, across western sea routes, along the Borders, and deep into the Highlands. The result is a landscape where history remains visible, layered, and unusually easy to feel.</p>
+    <div class="intro-text">
+      <h2>Scotland's Castles &amp; Historic Places</h2>
+      <p>Scotland has a way of making history feel near. A fortress above a city, a roofless abbey in a quiet valley, a tower on contested ground - these places still carry the pressure of the lives once shaped around them.</p>
+      <p>The country's story was never only royal. It was written by clan chiefs and queens, reformers and rebels, monks and soldiers, island lords and border families. Geography mattered as much as ambition. Mountains protected. Rivers divided. The sea connected distant communities long before roads made them feel close.</p>
+    </div>
+    <div class="intro-photo">
+      <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on the cliffs of the northeast coast" loading="lazy" width="800" height="600">
+    </div>
   </div>
 </section>
 
@@ -268,7 +272,7 @@ img{max-width:100%;display:block}
     </div>
     <div class="castle-filters reveal" id="castle-filters">
       <button class="active" data-filter="all">All (447)</button>
-      <button data-filter="highlands-northern">Scottish Scottish Highlands &amp; Northern Isles</button>
+      <button data-filter="highlands-northern">Scottish Highlands &amp; Northern Isles</button>
       <button data-filter="northeast-tayside">Northeast Scotland &amp; Tayside</button>
       <button data-filter="argyll-western">Argyll &amp; the Western Isles</button>
       <button data-filter="borders">Scottish Borders</button>
@@ -299,7 +303,7 @@ img{max-width:100%;display:block}
         <div class="region-card-overlay"></div>
         <div class="region-card-content">
           <div class="region-card-castles">74 sites</div>
-          <h3 class="region-card-name">Scottish Scottish Highlands &amp; Northern Isles</h3>
+          <h3 class="region-card-name">Scottish Highlands &amp; Northern Isles</h3>
           <p class="region-card-desc">Storm-battered keeps and clan strongholds across Britain's last great wilderness.</p>
         </div>
         <div class="region-card-arrow">→</div>
@@ -550,7 +554,7 @@ img{max-width:100%;display:block}
         <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
         <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
         <div class="castle-card-body">
-          <h3>${c.name}</h3>
+          <h3>${(c.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones')}</h3>
           <div class="castle-card-meta">
             <span>${c.era||''}</span>
             <span>${c.condition||''}</span>

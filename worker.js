@@ -388,7 +388,7 @@ async function getPublicListings(url, env, ctx) {
             google_rating, google_review_count, description_short, description_expanded, tags, google_place_id,
             (SELECT r2_key FROM photos p WHERE p.listing_id = listings.id AND p.is_hero = 1 ORDER BY p.sort_order LIMIT 1) AS hero_key
        FROM listings ${whereClause}
-       ORDER BY (google_review_count IS NULL), google_review_count DESC, name ASC`
+       ORDER BY (google_review_count IS NULL), CAST(google_review_count AS INTEGER) DESC, name ASC`
   ).bind(...params).all();
 
   let out = (rows.results || []).map(r => ({
