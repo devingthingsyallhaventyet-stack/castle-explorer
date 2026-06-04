@@ -1,550 +1,359 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Explore Scotland: Castles &amp; Historic Places | CastleCore</title>
-
-<meta name="description" content="Explore Scotland through historic places shaped by power, faith, conflict, and memory, from royal strongholds and ruined abbeys to regions and stories that still define the landscape.">
-
-<meta name="keywords" content="castles in Scotland, Scottish castles, best castles in Scotland, Highland castles, Scottish history, medieval Scotland, castle ruins Scotland">
-
+<meta name="description" content="Discover Scotland through its castles, abbeys, and battle-grounds — a landscape shaped by the Wars of Independence, clan power, the Reformation, the Jacobite risings, and the sea kingdoms of the west.">
+<meta name="keywords" content="castles in Scotland, Scottish castles, historic sites Scotland, Highland castles, Scottish history, castle ruins Scotland">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 <link rel="canonical" href="https://castlecore.uk/scotland">
-
 <meta property="og:title" content="Explore Scotland: Castles & Historic Places">
-
-<meta property="og:description" content="Explore Scotland through historic places shaped by power, faith, conflict, and memory, from royal strongholds and ruined abbeys to regions and stories that still define the landscape.">
-
+<meta property="og:description" content="Discover Scotland through its castles, abbeys, and battle-grounds — a landscape shaped by the Wars of Independence, clan power, the Reformation, the Jacobite risings, and the sea kingdoms of the west.">
 <meta property="og:type" content="website">
-
 <meta property="og:url" content="https://castlecore.uk/scotland">
 
-<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-mobile.webp" media="(max-width: 768px)">
-
-<link rel="preload" as="image" type="image/webp" href="img/scotland/hero-scotland-desktop.webp" media="(min-width: 769px)">
-
-<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-variable-latin.woff2" crossorigin>
-
-<link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/scotland/dunnottar.webp" fetchpriority="high">
 
 <style>
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2')}
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 700;font-display:swap;src:url(fonts/cormorant-italic-latin.woff2) format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-latin.woff2) format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url(fonts/playfair-variable-latin.woff2) format('woff2')}
-@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url(fonts/playfair-italic-latin.woff2) format('woff2')}
 :root{
-
-  --burgundy:#8b2335;--cream:#f0ebe0;--candlelight:#c9a84c;
-
-  --navy:#0f1628;--charcoal:#1a1d2e;--forest:#2d5a3d;
-
-  --pale-gold:#e8d5a3;--parchment:#f5f0e8;--ink:#1a1714;
-
-  --warm-white:#faf8f4;--border:#e8e8e8;
-  --shadow:#2a2522;--twilight:#4a5568;--hearth:#6b4c3b;
-
-  --serif:'Cormorant Garamond','Playfair Display',serif;
-
-  --display:'Playfair Display','Cormorant Garamond',serif;
-
-  --sans:'Inter',sans-serif;
-
-  --pill:20px;
-
+  --parchment:#F2EBDD; --bone:#FBF7EF; --ink:#262019; --ink-2:#5d5346; --ink-3:#978B78;
+  --night:#1C1813; --line:#E4DBC9; --line-strong:#D4C6AD;
+  --brass:#B0863C; --brass-soft:#C9A55A; --brass-deep:#8A6A2E; --pine:#3C5141; --heather:#6E5A74;
+  --serif:'Newsreader',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif; --mono:'Spline Sans Mono',ui-monospace,monospace;
 }
-
 *{box-sizing:border-box}
-
-body{margin:0;font-family:var(--sans);color:var(--parchment);background:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-h1,h2,h3,h4,h5{font-family:var(--display);font-weight:400;margin:0}
-
-a{text-decoration:none;color:inherit}
-
+body{margin:0;background:var(--parchment);-webkit-font-smoothing:antialiased}
+::selection{background:rgba(176,134,60,.25)}
 img{max-width:100%;display:block}
 
-::selection{background:var(--candlelight);color:var(--navy)}
+.cc-outer{background:var(--parchment)}
+.cc-page{max-width:1320px;margin:0 auto;background:var(--parchment);box-shadow:0 0 80px rgba(40,32,18,.10);overflow:hidden}
+.cc-sec{position:relative;padding:78px 64px 84px}
+.cc-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto}
+/* faint letterpress paper grain over each section */
+.cc-sec::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");background-size:220px 220px;opacity:.05;mix-blend-mode:multiply}
+.cc-regions::before{opacity:.06;mix-blend-mode:screen}
 
+/* shared bits */
+.cc-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-deep);display:flex;align-items:center;gap:11px}
+.cc-eyebrow::before{content:"";width:16px;height:1px;background:currentColor;opacity:.55}
+.cc-btn{font-family:var(--sans);font-size:13.5px;font-weight:600;letter-spacing:.01em;padding:13px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.cc-btn:hover{transform:translateY(-1px)}
+.cc-btn-solid{background:var(--brass);color:#241b0c;border-color:var(--brass);box-shadow:0 1px 0 #8A6A2E inset,0 6px 16px rgba(138,106,46,.22)}
+.cc-btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
 
+/* hero */
+.cc-hero{position:relative;background:var(--parchment)}
+.cc-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.cc-hero-left{padding:70px 64px 64px;display:flex;flex-direction:column;justify-content:center}
+.cc-hero-left h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:92px;line-height:.92;color:var(--ink);margin:20px 0 0;letter-spacing:-.02em}
+.cc-hero-intro{font-family:var(--sans);font-size:16.5px;line-height:1.62;color:var(--ink-2);max-width:430px;margin:24px 0 28px}
+.cc-hero-btns{display:flex;gap:12px;margin-bottom:38px;flex-wrap:wrap}
+.cc-hero-stats{display:flex;gap:40px;border-top:1px solid var(--line-strong);padding-top:22px}
+.cc-stat-n{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--ink);line-height:1}
+.cc-stat-l{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.cc-hero-right{position:relative;padding:22px}
+.cc-hero-photo{width:100%;height:100%;min-height:480px;object-fit:cover;border-radius:12px;background:var(--line-strong)}
+.cc-hero-cap{position:absolute;left:40px;bottom:40px;background:rgba(28,24,19,.82);backdrop-filter:blur(3px);padding:12px 16px;border-radius:8px}
+.cc-hero-cap-t{font-family:var(--serif);font-style:italic;font-size:19px;color:#f6f1e6}
+.cc-hero-cap-m{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--brass-soft);margin-top:3px}
 
-/* NAV — handled by /components/nav.js */
+/* intro */
+.cc-intro{background:var(--bone)}
+.cc-intro h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:52px;line-height:1.04;color:var(--ink);text-align:center;margin:0 0 36px;letter-spacing:-.015em}
+.cc-intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.cc-intro-text p{font-family:var(--serif);font-size:19px;line-height:1.62;color:var(--ink);margin:0 0 20px}
+.cc-intro-text p:last-child{margin:0}
+.cc-dropcap{float:left;font-family:var(--serif);font-style:italic;font-size:78px;line-height:.72;color:var(--brass-deep);margin:8px 14px 0 0}
+.cc-intro-photo{width:100%;height:380px;object-fit:cover;border-radius:12px;background:var(--line-strong)}
 
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:72px}
+/* browse */
+.cc-browse{background:var(--parchment)}
+.cc-browse-head{text-align:center;max-width:660px;margin:0 auto 32px}
+.cc-browse-head h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:50px;color:var(--ink);margin:0 0 14px;letter-spacing:-.015em}
+.cc-browse-head p{font-family:var(--sans);font-size:15.5px;line-height:1.62;color:var(--ink-2);margin:0}
+.cc-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:40px}
+.cc-chip{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;padding:8px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line-strong);background:transparent;color:var(--ink-2)}
+.cc-chip.active{border-color:var(--brass);background:var(--brass);color:#241b0c;font-weight:600}
+.cc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto}
+.cc-card{background:var(--bone);border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 2px rgba(40,32,18,.04);text-decoration:none;color:inherit;display:block;transition:transform .15s,box-shadow .15s}
+.cc-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(40,32,18,.12)}
+.cc-card-img{width:100%;height:168px;object-fit:cover;background:var(--line)}
+.cc-card-body{padding:18px 20px 20px}
+.cc-card-body h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--ink);margin:0 0 9px;line-height:1.15}
+.cc-meta{display:flex;gap:9px;margin-bottom:12px;flex-wrap:wrap}
+.cc-tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-3);white-space:nowrap;text-transform:capitalize}
+.cc-tag.accent{color:var(--pine)}
+.cc-card-desc{font-family:var(--sans);font-size:13.5px;line-height:1.56;color:var(--ink-2);margin:0 0 16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cc-card-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px}
+.cc-rating{font-family:var(--mono);font-size:12.5px;color:var(--brass-deep);font-weight:500}
+.cc-view{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--brass-deep)}
+.cc-card-credit{font-family:var(--mono);font-size:9px;letter-spacing:.02em;color:var(--ink-3);margin-top:8px}
+.cc-browse-more{text-align:center;margin-top:44px}
 
-.hero-bg{position:absolute;inset:0;background:url('img/scotland/hero-scotland-desktop.webp') center/cover no-repeat;transform:translateY(0)}
+/* regions */
+.cc-regions{background:var(--ink)}
+.cc-regions h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:50px;color:#f6f1e6;margin:0 0 36px;letter-spacing:-.015em}
+.cc-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1180px;margin:0 auto}
+.cc-tile{position:relative;border-radius:11px;overflow:hidden;height:188px;display:block;text-decoration:none}
+.cc-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cc-tile:hover img{transform:scale(1.06)}
+.cc-tile-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,24,19,.1) 30%,rgba(28,24,19,.86) 100%);pointer-events:none}
+.cc-tile-label{position:absolute;left:16px;right:16px;bottom:15px;pointer-events:none}
+.cc-tile-c{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--brass-soft);margin-bottom:6px}
+.cc-tile-n{font-family:var(--serif);font-style:italic;font-weight:500;font-size:19px;color:#f6f1e6;line-height:1.12}
 
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,40,.4) 0%,rgba(15,22,40,.2) 35%,rgba(15,22,40,.45) 100%)}
+/* stories */
+.cc-stories{background-color:var(--bone);background-image:linear-gradient(rgba(251,247,239,.88),rgba(251,247,239,.88)),url('img/scotland/tartan.webp');background-size:cover;background-position:center}
+.cc-stories-head{text-align:center;margin-bottom:38px}
+.cc-stories-head h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:50px;color:var(--ink);margin:0 0 12px;letter-spacing:-.015em}
+.cc-stories-head p{font-family:var(--sans);font-size:15.5px;line-height:1.6;color:var(--ink-2);max-width:560px;margin:0 auto}
+.cc-stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cc-story{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--parchment);text-decoration:none;color:inherit;display:block;transition:transform .15s,box-shadow .15s}
+.cc-story:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(40,32,18,.12)}
+.cc-story-imgwrap{position:relative}
+.cc-story-img{width:100%;height:172px;object-fit:cover;background:var(--line)}
+.cc-era{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#f6f1e6;background:rgba(28,24,19,.7);padding:5px 11px;border-radius:999px}
+.cc-story-body{padding:20px 22px 22px}
+.cc-story-body h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--ink);margin:0 0 10px;line-height:1.12}
+.cc-story-body p{font-family:var(--sans);font-size:13.5px;line-height:1.56;color:var(--ink-2);margin:0 0 16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cc-story-foot{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--brass-deep)}
 
-.hero-content{position:relative;z-index:3;text-align:center;max-width:980px;padding:0 24px}
+/* faq */
+.cc-faq{background:var(--parchment)}
+.cc-faq-grid{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start;max-width:1180px;margin:0 auto;position:relative;z-index:2}
+.cc-faq-left h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:40px;color:var(--ink);margin:16px 0;line-height:1.05;letter-spacing:-.01em}
+.cc-faq-left p{font-family:var(--sans);font-size:14px;line-height:1.6;color:var(--ink-2);margin:0}
+.cc-faq-item{border-top:1px solid var(--line-strong)}
+.cc-faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0}
+.cc-faq-q .q{font-family:var(--sans);font-weight:600;font-size:17px;color:var(--ink)}
+.cc-faq-toggle{font-family:var(--mono);font-size:19px;color:var(--brass-deep);line-height:1;flex-shrink:0}
+.cc-faq-a{font-family:var(--sans);font-size:14.5px;line-height:1.66;color:var(--ink-2);margin:0 0 24px;max-width:640px}
+.cc-faq-a[hidden]{display:none}
 
-.hero-pre{font-family:var(--sans);font-size:.75rem;letter-spacing:6px;text-transform:uppercase;color:var(--candlelight);margin-bottom:22px;opacity:.95}
-
-.hero h1{font-family:var(--display);font-size:clamp(2.4rem,7vw,5.25rem);font-weight:900;color:#fff;line-height:.9;letter-spacing:-.02em;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,.45)}
-
-.hero h1 span{display:block;font-size:clamp(.8rem,1.7vw,1.05rem);font-family:var(--serif);font-style:italic;letter-spacing:.05em;margin-top:12px;color:var(--pale-gold);line-height:1.4;white-space:nowrap}
-
-.hero-quote{max-width:680px;margin:20px auto 40px;font-size:clamp(.9rem,2vw,1.15rem);color:#fff;font-family:var(--serif);font-style:italic;line-height:1.7;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-
-.hero-cta{display:inline-flex;gap:8px;padding:14px 36px;background:var(--candlelight);color:var(--navy);border-radius:var(--pill);font-weight:700}
-
-.section{position:relative;padding:100px 0}
-
-.section-label{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--candlelight);margin-bottom:12px}
-.section-title{font-family:var(--display);font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:700;line-height:1.18;margin-bottom:20px}
-.section-subtitle{font-family:var(--serif);font-size:1.05rem;font-style:normal;color:rgba(255,255,255,.72);max-width:600px;line-height:1.8}
-
-
-
-/* old castle/filter styles removed — Scotland-matching styles below */
-
-/* old region/history styles removed — Scotland-matching styles below */
-
-
-
-.footer{padding:52px 24px 36px;border-top:1px solid rgba(255,255,255,.09);text-align:center;color:rgba(255,255,255,.36)}
-
-.footer a{color:var(--candlelight)}
-
-
-
-.reveal{opacity:1;transform:none;transition:opacity .8s ease,transform .8s ease}
-
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-
-
-
-/* ========== LAND/REGION CARDS ========== */
-.land{position:relative;padding:60px 0 80px;background:var(--navy);overflow:hidden}
-.land-bg{position:absolute;inset:0;opacity:1;background:url('img/scotland/antique-map.webp') center/cover;pointer-events:none;z-index:1}
-.land-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
-.land .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.land-header{text-align:center;margin-bottom:40px}
-.region-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1340px;margin:0 auto}
-.region-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s,box-shadow .4s}
-.region-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.region-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.region-card:hover img{transform:scale(1.08)}
-.region-card-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 40%,transparent 70%);transition:background .4s}
-.region-card:hover .region-card-overlay{background:linear-gradient(0deg,rgba(139,35,53,.9) 0%,rgba(139,35,53,.3) 40%,transparent 70%)}
-.region-card-content{position:absolute;bottom:0;left:0;right:0;padding:0 24px 18px;z-index:2}
-.region-card-castles{font-family:var(--sans);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--candlelight);margin-bottom:0}
-.region-card-name{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:#fff;line-height:1.1;margin:0}
-.region-card-desc{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(255,255,255,.85);line-height:1.5;overflow:hidden;opacity:0;max-height:0;transition:opacity .4s,max-height .4s}
-.region-card:hover .region-card-desc{opacity:1;max-height:200px}
-.region-card-arrow{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;color:var(--candlelight);font-size:1rem;opacity:0;transform:translateX(-8px);transition:opacity .3s,transform .3s}
-.region-card:hover .region-card-arrow{opacity:1;transform:translateX(0)}
-
-/* ========== HISTORY CARDS ========== */
-.history{position:relative;padding:120px 0;background:var(--navy);overflow:visible}
-.history-bg{position:absolute;inset:0;opacity:1;background:url('img/scotland/tartan.webp') center/cover;pointer-events:none;z-index:1}
-.history-bg::after{content:'';position:absolute;inset:0;background:rgba(26,31,54,.88);pointer-events:none}
-.history .container{max-width:1300px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.history-header{text-align:center;margin-bottom:80px}
-.history-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:32px;position:relative}
-.history-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.12);border-radius:8px;overflow:hidden;transition:all .4s ease;cursor:pointer}
-.history-card:hover{transform:translateY(-6px) rotate(0deg)!important;border-color:var(--candlelight);box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 0 1px var(--candlelight);z-index:20}
-.hc-image{position:relative;height:240px;overflow:hidden}
-.hc-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.history-card:hover .hc-image img{transform:scale(1.05)}
-.hc-image::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(15,22,40,.9))}
-.hc-date{position:absolute;top:16px;left:16px;background:rgba(15,22,40,.8);color:var(--candlelight);font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;border:1px solid rgba(201,168,76,.2);z-index:2}
-.hc-body{padding:24px;position:relative;margin-top:-40px;z-index:2}
-.hc-body h3{font-family:var(--display);font-size:1.5rem;color:var(--pale-gold);margin-bottom:10px;line-height:1.2}
-.hc-body p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.hc-castles{font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:16px;font-family:var(--sans)}
-.hc-castles strong{color:var(--candlelight)}
-.hc-link{display:inline-flex;align-items:center;gap:6px;color:var(--candlelight);font-family:var(--serif);font-size:.95rem;font-style:italic;transition:gap .3s}
-.history-card:hover .hc-link{gap:12px}
-
-/* ========== CASTLES ========== */
-.castles{position:relative;padding:80px 0 40px;background:var(--charcoal);overflow:hidden}
-.castles .container{max-width:1400px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-.castles-header{text-align:center;margin-bottom:48px}
-.castle-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:48px}
-.castle-filters button{padding:8px 20px;border-radius:var(--pill);border:1px solid rgba(201,168,76,.25);background:transparent;color:var(--pale-gold);font-family:var(--sans);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s}
-.castle-filters button:hover,.castle-filters button.active{background:var(--candlelight);color:var(--navy);border-color:var(--candlelight)}
-.castle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
-.castle-card{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;transition:all .3s;cursor:pointer}
-.castle-card:hover{transform:translateY(-4px);border-color:var(--candlelight);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-.castle-card-img{height:200px;overflow:hidden;background:var(--navy)}
-.castle-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.castle-card:hover .castle-card-img img{transform:scale(1.06)}
-.castle-card-body{padding:16px 20px}
-.castle-card-body h3{font-family:var(--display);font-size:1.15rem;color:var(--pale-gold);margin-bottom:4px}
-.castle-card-meta{display:flex;gap:12px;font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:8px}
-.castle-card-meta span{display:flex;align-items:center;gap:4px}
-.castle-card-body p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.castle-card-rating{color:var(--candlelight);font-size:.8rem;margin-top:8px}
-.load-more{display:block;margin:48px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--candlelight);border-radius:var(--pill);color:var(--candlelight);font-family:var(--sans);font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
-.load-more:hover{background:var(--candlelight);color:var(--navy)}
-
-@media(max-width:1024px){
-  .region-grid{grid-template-columns:repeat(2,1fr)}
-  .land-bg{background-image:url('img/scotland/antique-map-mobile.webp')}
-}
-@media(max-width:768px){
-  .history-grid{grid-template-columns:1fr}
-  .history-card:nth-child(odd),.history-card:nth-child(even){transform:none}
-  .hero-bg{background-image:url('img/scotland/hero-scotland-mobile.webp')}
-  .hero h1 span{white-space:normal}
+@media(max-width:960px){
+  .cc-sec{padding:60px 32px 66px}
+  .cc-hero-grid{grid-template-columns:1fr}
+  .cc-hero-left{padding:52px 32px 40px}
+  .cc-hero-left h1{font-size:66px}
+  .cc-hero-right{padding:0 32px 32px}
+  .cc-hero-photo{min-height:340px;height:340px}
+  .cc-hero-cap{left:52px;bottom:24px}
+  .cc-intro-grid{grid-template-columns:1fr;gap:32px}
+  .cc-intro h2{font-size:40px}
+  .cc-browse-head h2,.cc-regions h2,.cc-stories-head h2{font-size:38px}
+  .cc-grid,.cc-stories-grid{grid-template-columns:repeat(2,1fr)}
+  .cc-tiles{grid-template-columns:repeat(2,1fr)}
+  .cc-faq-grid{grid-template-columns:1fr;gap:24px}
 }
 @media(max-width:560px){
-  .region-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .region-card{aspect-ratio:2/3}
-  .region-card-content{padding:16px}
-  .region-card-name{font-size:1rem}
-  .region-card-desc{display:none}
+  .cc-sec{padding:48px 20px 54px}
+  .cc-hero-left{padding:40px 20px 32px}
+  .cc-hero-left h1{font-size:52px}
+  .cc-hero-right{padding:0 20px 20px}
+  .cc-grid,.cc-stories-grid,.cc-tiles{grid-template-columns:1fr}
+  .cc-intro h2{font-size:32px}
+  .cc-intro-text p{font-size:17px}
 }
-
-/* ========== INTRO ========== */
-.intro{position:relative;padding:80px 0 40px;background:var(--charcoal)}
-.intro .container{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-.intro-text h2{font-family:var(--display);font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:700;line-height:1.18;margin-bottom:20px;color:#fff}
-.intro-text p{font-family:var(--serif);font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:16px}
-.intro-text p:last-child{margin-bottom:0}
-.intro-photo img{display:block;width:100%;height:100%;max-height:440px;object-fit:cover;border-radius:8px;border:1px solid rgba(201,168,76,.15)}
-@media(max-width:768px){.intro .container{grid-template-columns:1fr;gap:28px}.intro-photo{order:-1}.intro-photo img{max-height:300px}}
-
-/* ========== FAQ ========== */
-.faq{position:relative;padding:90px 0;background:var(--charcoal)}
-.faq .container{max-width:860px;margin:0 auto;padding:0 24px}
-.faq-header{text-align:center;margin-bottom:48px}
-.faq-item{border-top:1px solid rgba(201,168,76,.15);padding:28px 0}
-.faq-item:last-child{border-bottom:1px solid rgba(201,168,76,.15)}
-.faq-item h3{font-family:var(--display);font-size:1.2rem;color:var(--pale-gold);margin-bottom:10px;line-height:1.3}
-.faq-item p{font-family:var(--serif);font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.8}
-
 </style>
-
 </head>
-
 <body>
 
-
-
+<!-- ===== NAV (existing global chrome — unchanged) ===== -->
 <div id="site-nav"></div><script src="/components/nav.js" defer></script>
-<section class="hero" id="hero">
 
-  <div class="hero-bg"></div>
+<div class="cc-outer">
+<div class="cc-page">
 
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-
-    <h1 class="reveal">Scotland<span>Historic places shaped by power, faith, conflict, and memory.</span></h1>
-
-    <p class="hero-quote reveal">Scotland's history has a rare physical presence. It rises over cities, follows the coast, cuts through the Borders, and reaches deep into the Highlands. The places left behind still carry the force of the people who built, fought for, prayed in, and abandoned them.</p>
-
-    <a href="#castles" class="hero-cta reveal" onclick="event.preventDefault();document.getElementById('castles').scrollIntoView({behavior:'smooth'})">Explore Scotland</a>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===== OPENING INTRODUCTION ===== -->
-<section class="intro" id="intro">
-  <div class="container reveal">
-    <div class="intro-text">
-      <h2>Scotland's Castles &amp; Historic Places</h2>
-      <p>Scotland has a way of making history feel near. A fortress above a city, a roofless abbey in a quiet valley, a tower on contested ground - these places still carry the pressure of the lives once shaped around them.</p>
-      <p>The country's story was never only royal. It was written by clan chiefs and queens, reformers and rebels, monks and soldiers, island lords and border families. Geography mattered as much as ambition. Mountains protected. Rivers divided. The sea connected distant communities long before roads made them feel close.</p>
-    </div>
-    <div class="intro-photo">
-      <img src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on the cliffs of the northeast coast" loading="lazy" width="800" height="600">
-    </div>
-  </div>
-</section>
-
-<!-- ===== 4. THE CASTLES ===== -->
-<section class="castles" id="castles">
-  <div class="container">
-    <div class="castles-header reveal">
-      <div class="section-label">The Collection</div>
-      <h2 class="section-title" style="color:#fff">Browse Scottish Sites</h2>
-      <p class="section-subtitle" style="margin:0 auto;max-width:760px">A royal fortress, a roofless abbey, a border tower, a ruined chapel - each one opens a different way into Scotland. Some places are famous for the people who passed through them. Others matter because of what happened nearby, what survived, or what their setting still reveals.</p>
-    </div>
-    <div class="castle-filters reveal" id="castle-filters">
-      <button class="active" data-filter="all">All (447)</button>
-      <button data-filter="highlands-northern">Scottish Highlands &amp; Northern Isles</button>
-      <button data-filter="northeast-tayside">Northeast Scotland &amp; Tayside</button>
-      <button data-filter="argyll-western">Argyll &amp; the Western Isles</button>
-      <button data-filter="borders">Scottish Borders</button>
-      <button data-filter="southwest">Southwest Scotland</button>
-      <button data-filter="edinburgh-lothians">Edinburgh &amp; Lothians</button>
-      <button data-filter="fife-perthshire">Fife &amp; Perthshire</button>
-      <button data-filter="glasgow-central">Glasgow &amp; Central</button>
-      <button data-filter="intact">Intact</button>
-      <button data-filter="ruin">Ruins</button>
-    </div>
-    <div class="castle-grid" id="castle-grid"></div>
-    <button class="load-more" id="load-more">Show More Castles</button>
-  </div>
-</section>
-
-<!-- ===== THE LAND - Region Cards ===== -->
-<section class="land" id="land">
-  <div class="land-bg"></div>
-  <div class="container">
-    <div class="land-header reveal">
-      <h2 class="section-title" style="color:#fff">Explore Scotland by Region</h2>
-      <p class="section-subtitle" style="margin:16px auto 0;max-width:780px">Scotland's regions each carry a different historical rhythm. Argyll &amp; The Western Isles were shaped by sea power. The Scottish Borders by conflict and family strongholds. Edinburgh &amp; The Lothians by royal authority, politics, and the pull of the capital. Each region opens a different route into the country's past.</p>
-    </div>
-
-    <div class="region-grid reveal" id="region-grid">
-      <a class="region-card" href="/scotland/scottish-highlands">
-        <img src="img/scotland/highlands.webp" srcset="img/scotland/highlands-mobile.webp 400w, img/scotland/highlands.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Eilean Donan Castle, Highlands" loading="lazy" width="800" height="600">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">74 sites</div>
-          <h3 class="region-card-name">Scottish Highlands &amp; Northern Isles</h3>
-          <p class="region-card-desc">Storm-battered keeps and clan strongholds across Britain's last great wilderness.</p>
+  <!-- ===== 1. HERO — split editorial ===== -->
+  <header class="cc-hero cc-sec" style="padding:0">
+    <div class="cc-hero-grid">
+      <div class="cc-hero-left">
+        <div class="cc-eyebrow">Countries · Scotland</div>
+        <h1>Scotland</h1>
+        <p class="cc-hero-intro">Scotland's history was never a single crown's story. It was argued out by clan chiefs and queens, monks and reformers, island lords and border riders — people whose loyalties ran to kin, faith, or region long before they ran to a king in Edinburgh.</p>
+        <div class="cc-hero-btns">
+          <a href="#browse" class="cc-btn cc-btn-solid">Explore Scotland</a>
+          <a href="#browse" class="cc-btn cc-btn-ghost" id="hero-browse-btn">Browse sites</a>
         </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/edinburgh-lothians">
-        <img src="img/scotland/edinburgh-region.webp" srcset="img/scotland/edinburgh-region-mobile.webp 400w, img/scotland/edinburgh-region.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Edinburgh Castle" loading="lazy" width="800" height="600">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">27 sites</div>
-          <h3 class="region-card-name">Edinburgh & the Lothians</h3>
-          <p class="region-card-desc">A volcanic fortress, a thousand years of royal drama, and castles woven into every cobblestone.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/northeast-scotland-tayside">
-        <img src="img/scotland/aberdeen.webp" srcset="img/scotland/aberdeen-mobile.webp 400w, img/scotland/aberdeen.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Dunnottar Castle, Aberdeen" loading="lazy" width="800" height="598">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">118 sites</div>
-          <h3 class="region-card-name">Northeast Scotland & Tayside</h3>
-          <p class="region-card-desc">More castles per acre than anywhere in Britain. Granite towers rising from farmland and wild coast.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/argyll-western-isles">
-        <img src="img/scotland/argyll.webp" srcset="img/scotland/argyll-mobile.webp 400w, img/scotland/argyll.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Argyll & the Western Isles" loading="lazy" width="800" height="545">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">53 sites</div>
-          <h3 class="region-card-name">Argyll & the Western Isles</h3>
-          <p class="region-card-desc">Sea-girt fortresses where Atlantic storms crash against castle walls.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/fife-perthshire">
-        <img src="img/scotland/fife-perthshire.webp" srcset="img/scotland/fife-perthshire-mobile.webp 400w, img/scotland/fife-perthshire.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Blair Castle, Perthshire" loading="lazy" width="800" height="601">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">56 sites</div>
-          <h3 class="region-card-name">Fife & Perthshire</h3>
-          <p class="region-card-desc">The heartland of Scottish kings, from Scone's coronation stone to St Andrews.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/borders">
-        <img src="img/scotland/borders.webp" srcset="img/scotland/borders-mobile.webp 400w, img/scotland/borders.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Scottish Borders" loading="lazy" width="800" height="908">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">30 sites</div>
-          <h3 class="region-card-name">Scottish Borders</h3>
-          <p class="region-card-desc">Tower houses and peel towers forged by centuries of English raids.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/southwest-scotland">
-        <img src="img/scotland/dumfries.webp" srcset="img/scotland/dumfries-mobile.webp 400w, img/scotland/dumfries.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Southwest Scotland" loading="lazy" width="800" height="666">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">60 sites</div>
-          <h3 class="region-card-name">Southwest Scotland</h3>
-          <p class="region-card-desc">Robert the Bruce's homeland and the cradle of Scottish independence.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-      <a class="region-card" href="/scotland/glasgow-central-scotland">
-        <img src="img/scotland/glasgow-stirling.webp" srcset="img/scotland/glasgow-stirling-mobile.webp 400w, img/scotland/glasgow-stirling.webp 800w" sizes="(max-width:560px) 45vw, 25vw" alt="Stirling Castle" loading="lazy" width="800" height="534">
-        <div class="region-card-overlay"></div>
-        <div class="region-card-content">
-          <div class="region-card-castles">26 sites</div>
-          <h3 class="region-card-name">Glasgow & Central Scotland</h3>
-          <p class="region-card-desc">Where Bannockburn was fought and Scotland's industrial heart meets medieval might.</p>
-        </div>
-        <div class="region-card-arrow">→</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 3. HISTORY ===== -->
-<section class="history" id="history" style="position:relative;overflow:visible">
-  <div class="history-bg"></div>
-  <div class="container">
-    <div class="history-header reveal">
-      <h2 class="section-title" style="color:#fff">Stories That Shaped Scotland</h2>
-      <p class="section-subtitle" style="margin:0 auto;max-width:780px">Some stories become clearer when the places are seen together. A single castle can hold one chapter, but a route can reveal the movement of a life, a rebellion, a kingdom, or an idea. These histories connect the physical remains - castles, royal residences, sacred sites, battle landscapes, and older settlements - with the larger forces that gave them meaning.</p>
-    </div>
-    <div class="history-grid">
-
-      <a href="/scotland/wars-of-independence" class="history-card reveal" style="transition-delay:0s">
-        <div class="hc-image">
-          <img src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence painting" loading="lazy" width="800" height="585">
-          <span class="hc-date">1296-1357</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Wars of Scottish Independence</h3>
-          <p>The struggle for Scottish independence was fought through castles as much as battlefields. Strongholds were seized, surrendered, destroyed, and rebuilt as Robert the Bruce, William Wallace, Edward I, and Scotland's nobles fought over the future of the kingdom.</p>
-          <div class="hc-castles"><strong>45 sites</strong> — Caerlaverock, Bothwell, Kildrummy, Dunfermline Abbey…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/mary-queen-of-scots" class="history-card reveal" style="transition-delay:.2s">
-        <div class="hc-image">
-          <img src="img/scotland/mary-hilliard.webp" alt="Portrait of Mary Queen of Scots" loading="lazy" width="800" height="841" style="object-position:top">
-          <span class="hc-date">1542-1587</span>
-        </div>
-        <div class="hc-body">
-          <h3>Mary Queen of Scots: Birth, Betrayal, Captivity &amp; Escape</h3>
-          <p>Mary's life moved through some of the most charged places in Scotland: palaces of birth and rule, castles of crisis, and routes tied to escape, defeat, and imprisonment. Her story brings together monarchy, religion, marriage, betrayal, and the dangerous politics of a divided realm.</p>
-          <div class="hc-castles"><strong>27 sites</strong> — Craigmillar, Linlithgow Palace, Borthwick, Stirling…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <a href="/scotland/jacobite-risings" class="history-card reveal" style="transition-delay:.2s">
-        <div class="hc-image">
-          <img src="img/scotland/glenfinnan.webp" alt="Glenfinnan Monument" loading="lazy" width="800" height="150">
-          <span class="hc-date">1689-1746</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Jacobite Risings &amp; the Fall of the Highland Cause</h3>
-          <p>The Jacobite cause drew loyalty from dynasties, clans, soldiers, and families who risked everything for the Stuart line. Its story moves through Highland landscapes, military roads, fortified houses, and places where defeat changed the future of Gaelic Scotland.</p>
-          <div class="hc-castles"><strong>27 sites</strong> — Eilean Donan, Kildrummy, Urquhart, Fort George…</div>
-          <span class="hc-link">Explore Collection →</span>
-        </div>
-      </a>
-
-      <div class="history-card reveal" style="transition-delay:0s;cursor:default">
-        <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/960px-Dunstaffnage_Castle%2C_near_Oban_(BM_1928%2C1210.110).jpg" alt="Dunstaffnage Castle, near Oban — a western stronghold of the Gaelic sea kingdoms" loading="lazy" width="800" height="600" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'">
-          <span class="hc-date">c.1100–1493</span>
-        </div>
-        <div class="hc-body">
-          <h3>The Lords of the Isles &amp; the Gaelic Sea Kingdoms</h3>
-          <p>For centuries, power in the west moved by water. The Lords of the Isles ruled through ships, kinship, sacred authority, and island strongholds, creating a Gaelic world that looked as much toward Ireland and the Atlantic as toward the Scottish crown.</p>
-          <div class="hc-castles"><strong>28 sites</strong> — Finlaggan, Dunyvaig Castle, Iona Abbey, Kisimul Castle…</div>
+        <div class="cc-hero-stats">
+          <div>
+            <div class="cc-stat-n" id="hero-stat-count">326</div>
+            <div class="cc-stat-l">Historic sites</div>
+          </div>
+          <div>
+            <div class="cc-stat-n">8</div>
+            <div class="cc-stat-l">Regions</div>
+          </div>
         </div>
       </div>
-
-      <div class="history-card reveal" style="transition-delay:.1s;cursor:default">
-        <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/960px-Dunnottar_Castle.jpeg" alt="Dunnottar Castle, linked to the Honours of Scotland and Covenanter imprisonment" loading="lazy" width="800" height="600" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'">
-          <span class="hc-date">1560–1688</span>
-        </div>
-        <div class="hc-body">
-          <h3>Scotland's Reformation, Covenanters &amp; Crown Jewels</h3>
-          <p>Scotland's religious conflicts reshaped churches, crowns, communities, and loyalties. This story follows the places where faith and royal authority collided, where Covenanting resistance took hold, and where symbols of monarchy were hidden, defended, and preserved.</p>
-          <div class="hc-castles"><strong>14 sites</strong> — St Andrews Castle, St Giles' Cathedral, Dunnottar Castle, Kinneff Church…</div>
+      <div class="cc-hero-right">
+        <img class="cc-hero-photo" src="img/scotland/dunnottar.webp" alt="Dunnottar Castle on the cliffs of Aberdeenshire" fetchpriority="high" width="800" height="600">
+        <div class="cc-hero-cap">
+          <div class="cc-hero-cap-t">Dunnottar Castle</div>
+          <div class="cc-hero-cap-m">15TH C · RUIN · ABERDEENSHIRE</div>
         </div>
       </div>
+    </div>
+  </header>
 
-      <div class="history-card reveal" style="transition-delay:.2s;cursor:default">
-        <div class="hc-image">
-          <img src="https://img.castlecore.uk/scotland/960px-Mousa_broch.jpg" alt="Mousa Broch, Shetland — an Iron Age broch" loading="lazy" width="800" height="600" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'">
-          <span class="hc-date">c.3000 BC–1100</span>
+  <!-- ===== BROWSE ===== -->
+  <section class="cc-browse cc-sec" id="browse">
+    <div class="cc-inner">
+      <div class="cc-browse-head">
+        <h2>Browse Scottish Sites</h2>
+        <p>A fortress on a volcanic rock, an abbey left open to the sky, a lonely Border tower, a chapel worn down to its footings — Scottish sites tend to wear their history on the outside.</p>
+      </div>
+      <div class="cc-chips" id="cc-chips">
+        <span class="cc-chip active" data-filter="all">All · <span id="chip-all-count">326</span></span>
+        <span class="cc-chip" data-filter="highlands-northern">Highlands &amp; Isles</span>
+        <span class="cc-chip" data-filter="edinburgh-lothians">Edinburgh &amp; Lothians</span>
+        <span class="cc-chip" data-filter="northeast-scotland-tayside">Northeast &amp; Tayside</span>
+        <span class="cc-chip" data-filter="fife-perthshire">Fife &amp; Perthshire</span>
+        <span class="cc-chip" data-filter="borders">Borders</span>
+        <span class="cc-chip" data-filter="ruin">Ruins</span>
+        <span class="cc-chip" data-filter="intact">Intact</span>
+      </div>
+      <div class="cc-grid" id="cc-grid"></div>
+      <div class="cc-browse-more">
+        <a class="cc-btn cc-btn-ghost" id="cc-seeall" href="/scotland/all-castles">See all sites</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. REGIONS ===== -->
+  <section class="cc-regions cc-sec">
+    <div class="cc-inner">
+      <h2>Explore Scotland by Region</h2>
+      <div class="cc-tiles">
+        <a class="cc-tile" href="/scotland/scottish-highlands"><img src="img/scotland/highlands.webp" alt="Scottish Highlands" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">74 SITES</div><div class="cc-tile-n">Scottish Highlands &amp; Northern Isles</div></div></a>
+        <a class="cc-tile" href="/scotland/glasgow-central-scotland"><img src="img/scotland/glasgow-stirling.webp" alt="Glasgow &amp; Central Scotland" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">26 SITES</div><div class="cc-tile-n">Glasgow &amp; Central Scotland</div></div></a>
+        <a class="cc-tile" href="/scotland/northeast-scotland-tayside"><img src="img/scotland/aberdeen.webp" alt="Northeast Scotland &amp; Tayside" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">118 SITES</div><div class="cc-tile-n">Northeast Scotland &amp; Tayside</div></div></a>
+        <a class="cc-tile" href="/scotland/argyll-western-isles"><img src="img/scotland/argyll.webp" alt="Argyll &amp; the Western Isles" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">53 SITES</div><div class="cc-tile-n">Argyll &amp; the Western Isles</div></div></a>
+        <a class="cc-tile" href="/scotland/fife-perthshire"><img src="img/scotland/fife-perthshire.webp" alt="Fife &amp; Perthshire" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">56 SITES</div><div class="cc-tile-n">Fife &amp; Perthshire</div></div></a>
+        <a class="cc-tile" href="/scotland/edinburgh-lothians"><img src="img/scotland/edinburgh-region.webp" alt="Edinburgh &amp; the Lothians" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">27 SITES</div><div class="cc-tile-n">Edinburgh &amp; the Lothians</div></div></a>
+        <a class="cc-tile" href="/scotland/southwest-scotland"><img src="img/scotland/dumfries.webp" alt="Southwest Scotland" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">60 SITES</div><div class="cc-tile-n">Southwest Scotland</div></div></a>
+        <a class="cc-tile" href="/scotland/borders"><img src="img/scotland/borders.webp" alt="Scottish Borders" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">30 SITES</div><div class="cc-tile-n">Scottish Borders</div></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. STORIES ===== -->
+  <section class="cc-stories cc-sec">
+    <div class="cc-inner">
+      <div class="cc-stories-head">
+        <h2>Stories That Shaped Scotland</h2>
+        <p>Some Scottish stories only make sense on the move. A single castle holds one scene; a string of them can trace a whole life on the run, a rebellion gathering and breaking, or a kingdom changing hands.</p>
+      </div>
+      <div class="cc-stories-grid">
+
+        <a class="cc-story" href="/scotland/wars-of-independence">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence" loading="lazy"><span class="cc-era">1296–1357</span></div>
+          <div class="cc-story-body">
+            <h3>The Wars of Scottish Independence</h3>
+            <p>Scotland's fight for independence was won and lost at the castle gate as much as on the open field. Strongholds were stormed, slighted, and rebuilt as Wallace, Bruce, and Edward I of England fought over whether Scotland would survive as a kingdom at all.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
+          </div>
+        </a>
+
+        <a class="cc-story" href="/scotland/mary-queen-of-scots">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/mary-hilliard.webp" alt="Mary, Queen of Scots" loading="lazy" style="object-position:top"><span class="cc-era">1542–1587</span></div>
+          <div class="cc-story-body">
+            <h3>Mary, Queen of Scots: Birth, Betrayal, Captivity &amp; Escape</h3>
+            <p>Few lives were lived so visibly across a landscape. Mary's story runs from the palace of her birth to the castles of her ruin and the lochside fortress of her escape — a journey through marriage, murder, religion, and the betrayals of a divided court that ended in exile and the scaffold.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
+          </div>
+        </a>
+
+        <a class="cc-story" href="/scotland/jacobite-risings">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/glenfinnan.webp" alt="The Jacobite Risings" loading="lazy"><span class="cc-era">1689–1746</span></div>
+          <div class="cc-story-body">
+            <h3>The Jacobite Risings &amp; the Fall of the Highland Cause</h3>
+            <p>The Jacobite risings drew clans, exiles, and gentry into a series of gambles for the Stuart throne. The trail crosses Highland glens, the military roads built to subdue them, and the field where the cause finally died — after which the old Gaelic world it fought for was deliberately taken apart.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
+          </div>
+        </a>
+
+        <div class="cc-story" style="cursor:default">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="https://img.castlecore.uk/scotland/960px-Dunstaffnage_Castle%2C_near_Oban_(BM_1928%2C1210.110).jpg" alt="The Lords of the Isles" loading="lazy"><span class="cc-era">c.1100–1493</span></div>
+          <div class="cc-story-body">
+            <h3>The Lords of the Isles &amp; the Gaelic Sea Kingdoms</h3>
+            <p>Long before Edinburgh's writ reached the west, power there moved by water. The Lords of the Isles ruled from island castles through fleets, kinship, and the sanctity of Iona, holding a Gaelic realm that faced Ireland and the Atlantic far more than the Scottish crown.</p>
+          </div>
         </div>
-        <div class="hc-body">
-          <h3>Before Scotland: Picts, Brochs, Saints &amp; Norse Settlements</h3>
-          <p>Before the medieval kingdom took shape, older cultures left marks across the north, the islands, and the eastern coast. Carved stones, early Christian sites, brochs, and Norse settlements point to a deeper Scotland — one built through migration, belief, craft, and contact across the sea.</p>
-          <div class="hc-castles"><strong>22 sites</strong> — Jarlshof, Mousa Broch, Aberlemno Sculptured Stones, Iona Abbey…</div>
+
+        <div class="cc-story" style="cursor:default">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="https://img.castlecore.uk/scotland/960px-Dunnottar_Castle.jpeg" alt="Scotland's Reformation, Covenanters &amp; Crown Jewels" loading="lazy"><span class="cc-era">1560–1688</span></div>
+          <div class="cc-story-body">
+            <h3>Scotland's Reformation, Covenanters &amp; Crown Jewels</h3>
+            <p>Scotland's Reformation tore through churches, crowns, and communities at once. This route follows the places where reformers preached, where Covenanters signed and died for their cause, and where the Honours of Scotland were smuggled out and hidden to keep them from English hands.</p>
+          </div>
+        </div>
+
+        <div class="cc-story" style="cursor:default">
+          <div class="cc-story-imgwrap"><img class="cc-story-img" src="https://img.castlecore.uk/scotland/960px-Mousa_broch.jpg" alt="Before Scotland: Picts, Brochs, Saints &amp; Norse Settlements" loading="lazy"><span class="cc-era">c.3000 BC–1100</span></div>
+          <div class="cc-story-body">
+            <h3>Before Scotland: Picts, Brochs, Saints &amp; Norse Settlements</h3>
+            <p>Long before there was a Scotland, there were Picts carving symbol stones, builders raising drystone brochs, saints founding island monasteries, and Norse settlers naming the northern coasts.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. FAQ ===== -->
+  <section class="cc-faq cc-sec">
+    <div class="cc-faq-grid">
+      <div class="cc-faq-left">
+        <div class="cc-eyebrow">Before you go</div>
+        <h2>Questions About Exploring Scotland's Historic Sites</h2>
+      </div>
+      <div id="cc-faq-list">
+        <div class="cc-faq-item">
+          <button class="cc-faq-q" aria-expanded="true"><span class="q">What is the best way to explore Scotland's historic sites?</span><span class="cc-faq-toggle">–</span></button>
+          <p class="cc-faq-a">Pick a story or a corner of the country and let the distances be your guide — Scotland is bigger and emptier than it looks on a map, and trying to "do it all" means a lot of driving and very little standing still. A capital loop around Edinburgh and the Lothians is dense and easy; a Borders run links the great abbeys and tower houses; a western trip means islands, ferries, and sea kingdoms. Check ferry timetables and daylight hours before you commit, because both shrink fast outside summer.</p>
+        </div>
+        <div class="cc-faq-item">
+          <button class="cc-faq-q" aria-expanded="false"><span class="q">Which part of Scotland is best for castles?</span><span class="cc-faq-toggle">+</span></button>
+          <p class="cc-faq-a" hidden>For sheer concentration, the east wins: Edinburgh and the Lothians, Fife, and the Northeast around Aberdeen and Tayside are thick with castles and easy to travel between. The west and north — Argyll, the Isles, and the Highlands — trade that density for atmosphere, with fewer sites set much further apart, but often on a sea loch or clifftop you'll remember longer than the building itself.</p>
+        </div>
+        <div class="cc-faq-item">
+          <button class="cc-faq-q" aria-expanded="false"><span class="q">Can you visit ruined castles and abbeys in Scotland?</span><span class="cc-faq-toggle">+</span></button>
+          <p class="cc-faq-a" hidden>Yes, and a great many are open. A large share are looked after by Historic Environment Scotland or the National Trust for Scotland; some are ticketed, and plenty of smaller ruins sit on open ground you can walk right up to under Scotland's right-to-roam tradition. The catch is practical: remote and exposed sites often close in winter or in poor weather, and island sites depend on the ferry running, so it pays to confirm before setting out.</p>
+        </div>
+        <div class="cc-faq-item">
+          <button class="cc-faq-q" aria-expanded="false"><span class="q">Do you need a car to explore historic Scotland?</span><span class="cc-faq-toggle">+</span></button>
+          <p class="cc-faq-a" hidden>For the cities — Edinburgh, Glasgow, Stirling, and the towns along the main lines — trains and buses do the job well, and a few routes (the West Highland Line above all) are sights in their own right. But the lonelier ruins, the Highland glens, and the islands really do need a car, and reaching the isles means building ferry crossings into the plan.</p>
+        </div>
+        <div class="cc-faq-item">
+          <button class="cc-faq-q" aria-expanded="false"><span class="q">What history should visitors know before exploring Scotland?</span><span class="cc-faq-toggle">+</span></button>
+          <p class="cc-faq-a" hidden>A little goes a long way: the long fight for independence from England, the upheaval of the Reformation, the tragedy of the Jacobite risings, and — older still — the Pictish, Gaelic, and Norse worlds that existed before the medieval kingdom. Hold those in mind and the ruins stop being scenery. A slighted castle, a roofless abbey, and an empty Highland glen each turn out to be the visible end of one of those stories.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-    </div>
-  </div>
-</section>
+</div><!-- /.cc-page -->
+</div><!-- /.cc-outer -->
 
-<!-- ===== FAQ ===== -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="faq-header reveal">
-      <h2 class="section-title" style="color:#fff">Questions About Exploring Scotland's Historic Sites</h2>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What is the best way to explore Scotland's historic sites?</h3>
-      <p>Choose a region or a story before trying to see everything. Scotland becomes easier to understand when the journey has a shape: a royal route around Edinburgh, a borderlands trip through tower country, or a western journey shaped by islands and sea power.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Which part of Scotland is best for castles?</h3>
-      <p>Edinburgh &amp; The Lothians, Fife &amp; Perthshire, and Northeast Scotland &amp; Tayside are strong starting points for major castles and easier travel. The Scottish Highlands &amp; Northern Isles and Argyll &amp; The Western Isles offer a more remote experience, with sites shaped by distance, clan power, and the sea.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Can you visit ruined castles and abbeys in Scotland?</h3>
-      <p>Many ruined castles, abbeys, and religious sites can be visited, though access varies by site. Some are ticketed, some are free, and some may only be viewed from the exterior, so current access details should be checked before travelling.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>Do you need a car to explore historic Scotland?</h3>
-      <p>A car is helpful for rural ruins, Highland routes, island sites, and places outside major towns. Edinburgh, Glasgow, Stirling, and some central locations can be reached by public transport, but the most atmospheric routes often require more flexibility.</p>
-    </div>
-    <div class="faq-item reveal">
-      <h3>What history should visitors know before exploring Scotland?</h3>
-      <p>Medieval kingship, the Wars of Scottish Independence, the Reformation, the Jacobite Risings, and the older Pictish, Norse, and early Christian worlds all help make sense of what survives. The places themselves can do the rest once the larger story is in view.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER (existing global chrome — unchanged) ===== -->
 <div id="site-footer"></div><script src="/components/footer.js" defer></script>
 
 <!-- ===== SCRIPTS ===== -->
 <script src="/components/card-meta.js" defer></script>
 <script>
 (function(){
-  // ---- Intersection Observer for reveal animations ----
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
-    })
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.floater').forEach(el=>obs.observe(el));
-
-  // ---- Parallax + Nav (batched to avoid forced reflow) ----
-  const pxEls = document.querySelectorAll('[data-parallax]');
-  const nav = document.getElementById('nav');
-  let ticking = false;
-  window.addEventListener('scroll',()=>{
-    if(!ticking){requestAnimationFrame(()=>{
-      const sy = window.scrollY;
-      // Batch all reads first, then writes
-      if(nav) nav.classList.toggle('scrolled', sy > 50);
-      pxEls.forEach(el=>{
-        const r = parseFloat(el.dataset.parallax)||0.3;
-        el.style.transform = `translateY(${sy * r * 0.5}px)`;
-      });
-      ticking=false;
-    });ticking=true}
-  },{passive:true});
-
-  // ---- Castle Grid ----
+  // ---------- Browse: live site grid + filter chips ----------
   let scotCastles = [];
-  const grid = document.getElementById('castle-grid');
-  const loadBtn = document.getElementById('load-more');
   let currentFilter = 'all';
-  let shown = 0;
-  const PER_PAGE = window.innerWidth <= 768 ? 10 : 12;
+  const PER_PAGE = 9;
+  const grid = document.getElementById('cc-grid');
+  const seeAll = document.getElementById('cc-seeall');
 
   const REGION_COUNTIES = {
     'highlands-northern': ['Highland','Inverness','Ross','Sutherland','Caithness','Isle of Skye','Lochaber','Nairn','Badenoch','Orkney','Shetland','Na h-Eileanan Siar'],
@@ -556,6 +365,12 @@ img{max-width:100%;display:block}
     'fife-perthshire': ['Fife','Perth and Kinross','Perthshire','Clackmannanshire'],
     'glasgow-central': ['Glasgow','Stirling','Falkirk','South Lanarkshire','North Lanarkshire','East Dunbartonshire','West Dunbartonshire','Renfrewshire','East Renfrewshire','Inverclyde']
   };
+  const regionLinks = {
+    'all':'/scotland/all-castles','highlands-northern':'/scotland/scottish-highlands',
+    'northeast-scotland-tayside':'/scotland/northeast-scotland-tayside','borders':'/scotland/borders',
+    'edinburgh-lothians':'/scotland/edinburgh-lothians','fife-perthshire':'/scotland/fife-perthshire',
+    'ruin':'/scotland/all-castles?filter=ruin','intact':'/scotland/all-castles?filter=intact'
+  };
 
   function getFiltered(){
     if(currentFilter==='all') return scotCastles;
@@ -566,84 +381,88 @@ img{max-width:100%;display:block}
     return scotCastles;
   }
 
-  // Map filters to region page URLs
-  const regionLinks = {
-    'all': '/scotland/all-castles',
-    'highlands-northern': '/scotland/scottish-highlands',
-    'northeast-scotland-tayside': '/scotland/northeast-scotland-tayside',
-    'argyll-western': '/scotland/argyll-western-isles',
-    'borders': '/scotland/borders',
-    'southwest': '/scotland/southwest-scotland',
-    'edinburgh-lothians': '/scotland/edinburgh-lothians',
-    'fife-perthshire': '/scotland/fife-perthshire',
-    'glasgow-central': '/scotland/glasgow-central',
-    'intact': '/scotland/all-castles?filter=intact',
-    'ruin': '/scotland/all-castles?filter=ruin'
-  };
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-  function renderCastles(reset){
-    if(reset){grid.innerHTML='';shown=0}
+  function render(){
     const filtered = getFiltered();
-    const batch = filtered.slice(shown, shown+PER_PAGE);
-    batch.forEach(c=>{
-      const card = document.createElement('div');
-      card.className='castle-card';
-      const stars = c.rating ? '★ ' + c.rating : '';
+    grid.innerHTML='';
+    filtered.slice(0, PER_PAGE).forEach(c=>{
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-      card.setAttribute('data-card-slug', slug);
-      if(c.googlePhoto) card.setAttribute('data-card-google','1');
-      card.innerHTML=`
-        <a href="site/${slug}.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="castle-card-img"><img src="${c.image||''}" alt="${c.name}" loading="lazy" decoding="async" width="280" height="200" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1f36,#2d1f1f)'"></div>
-        <div class="castle-card-body">
-          <h3>${(c.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones')}</h3>
-          <div class="castle-card-meta">
-            <span>${c.era||''}</span>
-            <span>${c.condition||''}</span>
-            <span>${(c.county||'').replace('Scottish Borders','Borders')}</span>
-          </div>
-          <p>${c.description||''}</p>
-          <div class="castle-card-rating" data-card-rating style="${stars?'':'display:none'}">${stars}</div>
-          <div class="castle-card-credit" data-card-credit style="display:none;font-size:.6rem;color:rgba(255,255,255,.4);margin-top:6px"></div>
-        </div>
-        </a>`;
-      grid.appendChild(card);
-      if(c.hasGoogle && window.enrichCard) window.enrichCard(card);
+      const name = esc((c.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
+      const era = esc(c.era||''), cond = esc(c.condition||''), county = esc((c.county||'').replace('Scottish Borders','Borders'));
+      const rating = c.rating ? '★ ' + c.rating : '';
+      const a = document.createElement('a');
+      a.className='cc-card';
+      a.href='site/'+slug+'.html';
+      a.setAttribute('data-card-slug', slug);
+      if(c.googlePhoto) a.setAttribute('data-card-google','1');
+      a.innerHTML =
+        '<img class="cc-card-img" src="'+(c.image||'')+'" alt="'+name+'" loading="lazy" decoding="async" width="360" height="168" onerror="this.style.visibility=\'hidden\'">'+
+        '<div class="cc-card-body">'+
+          '<h3>'+name+'</h3>'+
+          '<div class="cc-meta">'+
+            (era?'<span class="cc-tag">'+era+'</span>':'')+
+            (era&&cond?'<span class="cc-tag">·</span>':'')+
+            (cond?'<span class="cc-tag accent">'+cond+'</span>':'')+
+            ((cond||era)&&county?'<span class="cc-tag">·</span>':'')+
+            (county?'<span class="cc-tag">'+county+'</span>':'')+
+          '</div>'+
+          '<p class="cc-card-desc">'+esc(c.description||'')+'</p>'+
+          '<div class="cc-card-foot">'+
+            '<span class="cc-rating" data-card-rating style="'+(rating?'':'display:none')+'">'+rating+'</span>'+
+            '<span class="cc-view">VIEW SITE →</span>'+
+          '</div>'+
+          '<div class="cc-card-credit" data-card-credit style="display:none"></div>'+
+        '</div>';
+      grid.appendChild(a);
+      if(c.hasGoogle && window.enrichCard) window.enrichCard(a);
     });
-    shown += batch.length;
-    const remaining = filtered.length - shown;
-    if(remaining > 0){
-      loadBtn.style.display = 'block';
-      const link = regionLinks[currentFilter] || '/scotland/all-castles';
-      loadBtn.textContent = `View All ${filtered.length} Castles →`;
-      loadBtn.onclick = function(){ window.location.href = link; };
-    } else {
-      loadBtn.style.display = 'none';
+    if(seeAll){
+      seeAll.textContent = 'See all ' + filtered.length + ' sites';
+      seeAll.href = regionLinks[currentFilter] || '/scotland/all-castles';
     }
   }
 
-  document.getElementById('castle-filters').addEventListener('click',e=>{
-    if(e.target.tagName!=='BUTTON') return;
-    document.querySelectorAll('.castle-filters button').forEach(b=>b.classList.remove('active'));
-    e.target.classList.add('active');
-    currentFilter = e.target.dataset.filter;
-    renderCastles(true);
+  document.getElementById('cc-chips').addEventListener('click', function(e){
+    const chip = e.target.closest('.cc-chip'); if(!chip) return;
+    this.querySelectorAll('.cc-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    currentFilter = chip.getAttribute('data-filter');
+    render();
   });
 
-  // Load listings live from the database (single source of truth).
   fetch('/public/listings?country=Scotland')
-    .then(r => r.json())
-    .then(data => {
-      scotCastles = Array.isArray(data) ? data : (data.listings || []);
-      const allBtn = document.querySelector('.castle-filters button[data-filter="all"]');
-      if (allBtn) allBtn.textContent = 'All (' + scotCastles.length + ')';
-      renderCastles(true);
+    .then(r=>r.json())
+    .then(data=>{
+      scotCastles = Array.isArray(data) ? data : (data.listings||[]);
+      const n = scotCastles.length;
+      const set = (id,v)=>{ const el=document.getElementById(id); if(el) el.textContent=v; };
+      set('hero-stat-count', n);
+      set('chip-all-count', n);
+      const hb = document.getElementById('hero-browse-btn'); if(hb) hb.textContent = 'Browse ' + n + ' sites';
+      render();
     })
-    .catch(err => { console.error('Failed to load listings:', err); });
+    .catch(err=>{ console.error('Failed to load listings:', err); render(); });
 
+  // ---------- FAQ accordion (single-open) ----------
+  document.getElementById('cc-faq-list').addEventListener('click', function(e){
+    const btn = e.target.closest('.cc-faq-q'); if(!btn) return;
+    const item = btn.parentElement;
+    const ans = item.querySelector('.cc-faq-a');
+    const isOpen = !ans.hasAttribute('hidden');
+    // close all
+    this.querySelectorAll('.cc-faq-a').forEach(a=>a.setAttribute('hidden',''));
+    this.querySelectorAll('.cc-faq-q').forEach(q=>{ q.setAttribute('aria-expanded','false'); q.querySelector('.cc-faq-toggle').textContent='+'; });
+    if(!isOpen){
+      ans.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded','true');
+      btn.querySelector('.cc-faq-toggle').textContent='–';
+    }
+  });
 })();
 </script>
 <script>(function(){
+  // Existing nav mega-menu + search wiring (provided by /components/nav.js)
   document.querySelectorAll('.mega-country').forEach(btn => {
     btn.addEventListener('mouseenter', function(){
       const c = this.dataset.country;
@@ -652,21 +471,15 @@ img{max-width:100%;display:block}
       this.closest('.mega-menu').querySelectorAll('.mega-panel').forEach(p => p.classList.toggle('active', p.dataset.country === c));
     });
   });
-
   const runNavSearch = (id) => {
     const input = document.getElementById(id);
     if(!input) return;
     input.addEventListener('keydown', (e) => {
-      if(e.key === 'Enter'){
-        e.preventDefault();
-        const q = input.value.trim();
-        if(q) window.location.href = `search.html?query=${encodeURIComponent(q)}`;
-      }
+      if(e.key === 'Enter'){ e.preventDefault(); const q = input.value.trim(); if(q) window.location.href = `search.html?query=${encodeURIComponent(q)}`; }
     });
   };
-  runNavSearch('navSearch');
-  runNavSearch('mobNavSearch');
-})();
-</script>
+  runNavSearch('navSearch'); runNavSearch('mobNavSearch');
+})();</script>
+
 </body>
 </html>
