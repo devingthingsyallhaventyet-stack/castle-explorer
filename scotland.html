@@ -34,6 +34,9 @@ img{max-width:100%;display:block}
 .cc-page{max-width:1320px;margin:0 auto;background:var(--parchment);box-shadow:0 0 80px rgba(40,32,18,.10);overflow:hidden}
 .cc-sec{position:relative;padding:78px 64px 84px}
 .cc-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto}
+/* faint letterpress paper grain over each section */
+.cc-sec::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");background-size:220px 220px;opacity:.05;mix-blend-mode:multiply}
+.cc-regions::before{opacity:.06;mix-blend-mode:screen}
 
 /* shared bits */
 .cc-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-deep);display:flex;align-items:center;gap:11px}
@@ -45,7 +48,7 @@ img{max-width:100%;display:block}
 
 /* hero */
 .cc-hero{position:relative;background:var(--parchment)}
-.cc-hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.cc-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;min-height:560px}
 .cc-hero-left{padding:70px 64px 64px;display:flex;flex-direction:column;justify-content:center}
 .cc-hero-left h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:92px;line-height:.92;color:var(--ink);margin:20px 0 0;letter-spacing:-.02em}
 .cc-hero-intro{font-family:var(--sans);font-size:16.5px;line-height:1.62;color:var(--ink-2);max-width:430px;margin:24px 0 28px}
@@ -172,7 +175,7 @@ img{max-width:100%;display:block}
       <div class="cc-hero-left">
         <div class="cc-eyebrow">Countries · Scotland</div>
         <h1>Scotland</h1>
-        <p class="cc-hero-intro">A fortress above a city, a roofless abbey in a quiet valley, a tower on contested ground. Every site that shaped the nation — mapped, rated and told in one place.</p>
+        <p class="cc-hero-intro">A country whose history was decided as often by mountains, sea, and weather as by kings.</p>
         <div class="cc-hero-btns">
           <a href="#browse" class="cc-btn cc-btn-solid">Explore Scotland</a>
           <a href="#browse" class="cc-btn cc-btn-ghost" id="hero-browse-btn">Browse sites</a>
@@ -216,8 +219,8 @@ img{max-width:100%;display:block}
   <section class="cc-browse cc-sec" id="browse">
     <div class="cc-inner">
       <div class="cc-browse-head">
-        <h2>Browse Scottish sites</h2>
-        <p>A royal fortress, a roofless abbey, a border tower, a ruined chapel — each one opens a different way into Scotland.</p>
+        <h2>Browse Scottish Sites</h2>
+        <p>A fortress on a volcanic rock, an abbey left open to the sky, a lonely Border tower, a chapel worn down to its footings — Scottish sites tend to wear their history on the outside.</p>
       </div>
       <div class="cc-chips" id="cc-chips">
         <span class="cc-chip active" data-filter="all">All · <span id="chip-all-count">326</span></span>
@@ -239,7 +242,7 @@ img{max-width:100%;display:block}
   <!-- ===== 4. REGIONS ===== -->
   <section class="cc-regions cc-sec">
     <div class="cc-inner">
-      <h2>Explore Scotland by region</h2>
+      <h2>Explore Scotland by Region</h2>
       <div class="cc-tiles">
         <a class="cc-tile" href="/scotland/scottish-highlands"><img src="img/scotland/highlands.webp" alt="Scottish Highlands" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">74 SITES</div><div class="cc-tile-n">Scottish Highlands &amp; Northern Isles</div></div></a>
         <a class="cc-tile" href="/scotland/glasgow-central-scotland"><img src="img/scotland/glasgow-stirling.webp" alt="Glasgow &amp; Central Scotland" loading="lazy"><div class="cc-tile-scrim"></div><div class="cc-tile-label"><div class="cc-tile-c">26 SITES</div><div class="cc-tile-n">Glasgow &amp; Central Scotland</div></div></a>
@@ -257,8 +260,8 @@ img{max-width:100%;display:block}
   <section class="cc-stories cc-sec">
     <div class="cc-inner">
       <div class="cc-stories-head">
-        <h2>Stories that shaped Scotland</h2>
-        <p>The threads that connect the sites — read them, then walk them in person.</p>
+        <h2>Stories That Shaped Scotland</h2>
+        <p>Some Scottish stories only make sense on the move. A single castle holds one scene; a string of them can trace a whole life on the run, a rebellion gathering and breaking, or a kingdom changing hands.</p>
       </div>
       <div class="cc-stories-grid">
 
@@ -266,26 +269,26 @@ img{max-width:100%;display:block}
           <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/bannockburn.webp" alt="Wars of Scottish Independence" loading="lazy"><span class="cc-era">1296–1357</span></div>
           <div class="cc-story-body">
             <h3>The Wars of Scottish Independence</h3>
-            <p>Scotland's fight for independence was won and lost at the castle gate as much as on the open field — as Wallace, Bruce, and Edward I fought over whether Scotland would survive as a kingdom at all.</p>
-            <span class="cc-story-foot">READ THE STORY → · 45 SITES</span>
+            <p>Scotland's fight for independence was won and lost at the castle gate as much as on the open field. Strongholds were stormed, slighted, and rebuilt as Wallace, Bruce, and Edward I of England fought over whether Scotland would survive as a kingdom at all.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
           </div>
         </a>
 
         <a class="cc-story" href="/scotland/mary-queen-of-scots">
           <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/mary-hilliard.webp" alt="Mary, Queen of Scots" loading="lazy" style="object-position:top"><span class="cc-era">1542–1587</span></div>
           <div class="cc-story-body">
-            <h3>Mary, Queen of Scots</h3>
-            <p>Few lives were lived so visibly across a landscape — from the palace of her birth to the castles of her ruin and the lochside fortress of her escape, ending in exile and the scaffold.</p>
-            <span class="cc-story-foot">READ THE STORY → · 27 SITES</span>
+            <h3>Mary, Queen of Scots: Birth, Betrayal, Captivity &amp; Escape</h3>
+            <p>Few lives were lived so visibly across a landscape. Mary's story runs from the palace of her birth to the castles of her ruin and the lochside fortress of her escape — a journey through marriage, murder, religion, and the betrayals of a divided court that ended in exile and the scaffold.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
           </div>
         </a>
 
         <a class="cc-story" href="/scotland/jacobite-risings">
           <div class="cc-story-imgwrap"><img class="cc-story-img" src="img/scotland/glenfinnan.webp" alt="The Jacobite Risings" loading="lazy"><span class="cc-era">1689–1746</span></div>
           <div class="cc-story-body">
-            <h3>The Jacobite Risings</h3>
-            <p>Clans, exiles, and gentry drawn into a series of gambles for the Stuart throne — through Highland glens and the military roads built to subdue them, to the field where the cause finally died.</p>
-            <span class="cc-story-foot">READ THE STORY → · 27 SITES</span>
+            <h3>The Jacobite Risings &amp; the Fall of the Highland Cause</h3>
+            <p>The Jacobite risings drew clans, exiles, and gentry into a series of gambles for the Stuart throne. The trail crosses Highland glens, the military roads built to subdue them, and the field where the cause finally died — after which the old Gaelic world it fought for was deliberately taken apart.</p>
+            <span class="cc-story-foot">READ THE STORY →</span>
           </div>
         </a>
 
@@ -293,7 +296,7 @@ img{max-width:100%;display:block}
           <div class="cc-story-imgwrap"><img class="cc-story-img" src="https://img.castlecore.uk/scotland/960px-Dunstaffnage_Castle%2C_near_Oban_(BM_1928%2C1210.110).jpg" alt="The Lords of the Isles" loading="lazy"><span class="cc-era">c.1100–1493</span></div>
           <div class="cc-story-body">
             <h3>The Lords of the Isles &amp; the Gaelic Sea Kingdoms</h3>
-            <p>Long before Edinburgh's writ reached the west, power there moved by water — the Lords of the Isles ruling from island castles through fleets, kinship, and the sanctity of Iona.</p>
+            <p>Long before Edinburgh's writ reached the west, power there moved by water. The Lords of the Isles ruled from island castles through fleets, kinship, and the sanctity of Iona, holding a Gaelic realm that faced Ireland and the Atlantic far more than the Scottish crown.</p>
           </div>
         </div>
 
@@ -301,7 +304,7 @@ img{max-width:100%;display:block}
           <div class="cc-story-imgwrap"><img class="cc-story-img" src="https://img.castlecore.uk/scotland/960px-Dunnottar_Castle.jpeg" alt="Scotland's Reformation, Covenanters &amp; Crown Jewels" loading="lazy"><span class="cc-era">1560–1688</span></div>
           <div class="cc-story-body">
             <h3>Scotland's Reformation, Covenanters &amp; Crown Jewels</h3>
-            <p>Scotland's Reformation tore through churches, crowns, and communities at once — following the places where reformers preached, Covenanters signed and died, and the Honours of Scotland were hidden away.</p>
+            <p>Scotland's Reformation tore through churches, crowns, and communities at once. This route follows the places where reformers preached, where Covenanters signed and died for their cause, and where the Honours of Scotland were smuggled out and hidden to keep them from English hands.</p>
           </div>
         </div>
 
@@ -322,8 +325,7 @@ img{max-width:100%;display:block}
     <div class="cc-faq-grid">
       <div class="cc-faq-left">
         <div class="cc-eyebrow">Before you go</div>
-        <h2>Questions about exploring Scotland</h2>
-        <p>Practical answers, for first-time and returning visitors alike.</p>
+        <h2>Questions About Exploring Scotland's Historic Sites</h2>
       </div>
       <div id="cc-faq-list">
         <div class="cc-faq-item">
