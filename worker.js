@@ -21,11 +21,13 @@ export default {
       }
     }
 
-    // Serve R2 images
+    // Serve R2 images (uploaded listing photos). If the key isn't in R2, fall
+    // back to a static asset bundled with the site — e.g. the region/history
+    // card images and section backgrounds that live in /img/scotland/*.webp.
     if (path.startsWith('/img/')) {
       const key = path.slice(5); // remove /img/
       const object = await env.R2.get(key);
-      if (!object) return new Response('Not found', { status: 404 });
+      if (!object) return env.ASSETS.fetch(request);
       const headers = new Headers();
       object.writeHttpMetadata(headers);
       headers.set('Cache-Control', 'public, max-age=31536000');
