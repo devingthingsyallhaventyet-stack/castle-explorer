@@ -391,7 +391,7 @@ img{max-width:100%;display:block}
       const rating = c.rating ? '★ ' + c.rating : '';
       const a = document.createElement('a');
       a.className='cc-card';
-      a.href='site/'+slug+'.html';
+      a.href='/listing/'+slug;
       a.setAttribute('data-card-slug', slug);
       if(c.googlePhoto) a.setAttribute('data-card-google','1');
       a.innerHTML =

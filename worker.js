@@ -386,7 +386,7 @@ async function getPublicListings(url, env, ctx) {
   const whereClause = 'WHERE ' + where.join(' AND ');
 
   const rows = await env.DB.prepare(
-    `SELECT slug, name, type, century, country, region, county, condition, status,
+    `SELECT slug, name, type, century, country, region, county, town, condition, status,
             google_rating, google_review_count, description_short, description_expanded, tags, google_place_id,
             (SELECT r2_key FROM photos p WHERE p.listing_id = listings.id AND p.is_hero = 1 ORDER BY p.sort_order LIMIT 1) AS hero_key
        FROM listings ${whereClause}
@@ -399,8 +399,10 @@ async function getPublicListings(url, env, ctx) {
     type: (r.type || '').toLowerCase(),
     region: r.region,
     county: r.county,
+    town: r.town || '',
     era: r.century || '',
     condition: (r.condition || '').toLowerCase(),
+    status: r.status || '',
     rating: r.google_rating || null,
     reviewCount: r.google_review_count || null,
     access: r.status === 'Freely Accessible' ? 'free' : 'paid',
