@@ -88,6 +88,7 @@ img{max-width:100%;display:block}
 .sp-card-desc{font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--ink-2);margin:0 0 13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sp-card-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:11px}
 .sp-rating{font-family:var(--mono);font-size:12.5px;color:var(--brass-deep);font-weight:500}
+.sp-credit{font-family:var(--mono);font-size:9px;letter-spacing:.02em;color:var(--ink-3);margin-top:8px;display:block}
 .sp-view-link{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--brass-deep)}
 
 .sp-list-feed{padding-top:12px}
@@ -278,26 +279,36 @@ img{max-width:100%;display:block}
 
   function slugFor(s){ return s.slug || (s.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
 
-  // ---- live ratings: cached google_rating is sparse, so fetch per-card from the
-  // edge-cached /public/listing-card endpoint. Lazy for display; on-demand (only
-  // when the user uses the Rating filter / Top-rated sort) for full-set filtering.
-  function applyRating(slug, v){ ratingCache[slug] = v; if(v && bySlug[slug]) bySlug[slug].rating = v; }
-  function fetchRating(slug){
-    if(slug in ratingCache) return Promise.resolve(ratingCache[slug]);
+  // ---- live ratings + photo attribution. Nothing is cached/stored (per Google
+  // Places API policy): ratings (shown as "★ N · Google") and the photo's author
+  // attribution are fetched live from /public/listing-card. Lazy per visible card
+  // for display; on-demand (Rating filter / Top-rated sort) for full-set filtering.
+  function applyCard(slug, d){
+    var v=(d && d.rating)?d.rating:0; ratingCache[slug]=v;
+    if(bySlug[slug]){ if(v) bySlug[slug].rating=v; bySlug[slug]._attr=(d && d.attribution)?d.attribution:null; }
+  }
+  function fetchCard(slug){
+    if(slug in ratingCache) return Promise.resolve({rating:ratingCache[slug], attribution:(bySlug[slug]?bySlug[slug]._attr:null)});
     return fetch('/public/listing-card/'+encodeURIComponent(slug))
       .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(d){ var v=(d && d.rating)?d.rating:0; applyRating(slug,v); return v; })
-      .catch(function(){ applyRating(slug,0); return 0; });
+      .then(function(d){ applyCard(slug,d); return d||{}; })
+      .catch(function(){ ratingCache[slug]=0; return {}; });
+  }
+  function setCardMeta(card, d){
+    var rt = card.querySelector('[data-rate-slug]');
+    if(rt && d && d.rating) rt.textContent='★ '+d.rating+' · Google';
+    var cr = card.querySelector('[data-cred-slug]');
+    if(cr && d && d.attribution){ cr.textContent='Photo: '+(d.attribution.name||'Google user'); cr.style.display=''; }
   }
   var rateIO = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ var el=e.target; rateIO.unobserve(el);
-      fetchRating(el.getAttribute('data-rate-slug')).then(function(v){ if(v) el.textContent='★ '+v; }); } });
+    es.forEach(function(e){ if(e.isIntersecting){ var card=e.target; rateIO.unobserve(card);
+      fetchCard(card.getAttribute('data-card-slug')).then(function(d){ setCardMeta(card,d); }); } });
   },{ rootMargin:'400px' }) : null;
   function observeRatings(){
-    var els = $('sp-feed').querySelectorAll('[data-rate-slug]');
-    for(var i=0;i<els.length;i++){
-      if(rateIO) rateIO.observe(els[i]);
-      else (function(el){ fetchRating(el.getAttribute('data-rate-slug')).then(function(v){ if(v) el.textContent='★ '+v; }); })(els[i]);
+    var cards = $('sp-feed').querySelectorAll('[data-card-slug]');
+    for(var i=0;i<cards.length;i++){
+      if(rateIO) rateIO.observe(cards[i]);
+      else (function(c){ fetchCard(c.getAttribute('data-card-slug')).then(function(d){ setCardMeta(c,d); }); })(cards[i]);
     }
   }
   function ensureAllRatings(){
@@ -308,7 +319,7 @@ img{max-width:100%;display:block}
     var i=0, active=0, finished=0, total=pending.length;
     function pump(){
       while(active<6 && i<pending.length){
-        (function(site){ active++; fetchRating(slugFor(site)).then(function(){
+        (function(site){ active++; fetchCard(slugFor(site)).then(function(){
           active--; finished++; if(finished===total) render(); else pump(); }); })(pending[i++]);
       }
     }
@@ -316,7 +327,7 @@ img{max-width:100%;display:block}
   }
   function ratingSpan(s, slug){
     var v = s.rating || ratingCache[slug];
-    if(v) return '<span class="sp-rating">★ '+esc(v)+'</span>';
+    if(v) return '<span class="sp-rating">★ '+esc(v)+' · Google</span>';
     return '<span class="sp-rating" data-rate-slug="'+esc(slug)+'"'+(s.hasGoogle?'':' style="display:none"')+'></span>';
   }
 
@@ -324,7 +335,9 @@ img{max-width:100%;display:block}
     var slug = slugFor(s);
     var name = esc((s.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
     var img = s.image ? '<img class="sp-card-img" data-src="'+esc(s.image)+'" alt="'+name+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
-    return '<a class="sp-card" href="/listing/'+esc(slug)+'">'+
+    var cardSlug = s.hasGoogle ? ' data-card-slug="'+esc(slug)+'"' : '';
+    var credit = s.googlePhoto ? '<span class="sp-credit" data-cred-slug="'+esc(slug)+'" style="display:none"></span>' : '';
+    return '<a class="sp-card"'+cardSlug+' href="/listing/'+esc(slug)+'">'+
       '<div class="sp-card-imgwrap">'+img+'<span class="sp-badge">'+esc(cap(s.type)||'Site')+'</span></div>'+
       '<div class="sp-card-body"><h3>'+name+'</h3>'+
         '<div class="sp-meta">'+
@@ -334,6 +347,7 @@ img{max-width:100%;display:block}
         '</div>'+
         '<p class="sp-card-desc">'+esc(s.description||'')+'</p>'+
         '<div class="sp-card-foot">'+ratingSpan(s,slug)+'<span class="sp-view-link">VIEW →</span></div>'+
+        credit +
       '</div></a>';
   }
 
@@ -341,11 +355,13 @@ img{max-width:100%;display:block}
     var slug = slugFor(s);
     var name = esc((s.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
     var img = s.image ? '<img data-src="'+esc(s.image)+'" alt="'+name+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
+    var cardSlug = s.hasGoogle ? ' data-card-slug="'+esc(slug)+'"' : '';
+    var credit = s.googlePhoto ? '<span class="sp-credit" data-cred-slug="'+esc(slug)+'" style="display:none"></span>' : '';
     var meta = [cap(s.type), s.era, cap(s.condition), [s.town,s.county].filter(Boolean).join(', '), s.status]
       .filter(Boolean).map(function(x){ return '<span class="sp-tag">'+esc(x)+'</span>'; }).join('<span class="sp-tag">·</span>');
-    return '<a class="sp-row" href="/listing/'+esc(slug)+'">'+
+    return '<a class="sp-row"'+cardSlug+' href="/listing/'+esc(slug)+'">'+
       '<div class="sp-row-thumb">'+img+'</div>'+
-      '<div><h3>'+name+'</h3><div class="sp-meta">'+meta+'</div></div>'+
+      '<div><h3>'+name+'</h3><div class="sp-meta">'+meta+'</div>'+credit+'</div>'+
       '<div class="sp-row-right">'+ratingSpan(s,slug)+'<span class="sp-view-link">VIEW →</span></div>'+
     '</a>';
   }
