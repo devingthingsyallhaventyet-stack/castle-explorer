@@ -165,7 +165,10 @@ img{max-width:100%;display:block}
 <script>
 (function(){
   var sites = [];
-  var state = { town:'', county:[], type:[], era:[], status:[], cond:[], minRt:0, sort:'rating', view:'grid', openMenu:null };
+  var state = { town:'', county:[], type:[], era:[], status:[], cond:[], minRt:0, sort:'az', view:'grid', openMenu:null };
+  var ratingCache = {};   // slug -> rating number (0 = none)
+  var bySlug = {};        // slug -> site object
+  var allRatingsRequested = false;
 
   var $ = function(id){ return document.getElementById(id); };
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -275,11 +278,52 @@ img{max-width:100%;display:block}
 
   function slugFor(s){ return s.slug || (s.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''); }
 
+  // ---- live ratings: cached google_rating is sparse, so fetch per-card from the
+  // edge-cached /public/listing-card endpoint. Lazy for display; on-demand (only
+  // when the user uses the Rating filter / Top-rated sort) for full-set filtering.
+  function applyRating(slug, v){ ratingCache[slug] = v; if(v && bySlug[slug]) bySlug[slug].rating = v; }
+  function fetchRating(slug){
+    if(slug in ratingCache) return Promise.resolve(ratingCache[slug]);
+    return fetch('/public/listing-card/'+encodeURIComponent(slug))
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){ var v=(d && d.rating)?d.rating:0; applyRating(slug,v); return v; })
+      .catch(function(){ applyRating(slug,0); return 0; });
+  }
+  var rateIO = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ var el=e.target; rateIO.unobserve(el);
+      fetchRating(el.getAttribute('data-rate-slug')).then(function(v){ if(v) el.textContent='★ '+v; }); } });
+  },{ rootMargin:'400px' }) : null;
+  function observeRatings(){
+    var els = $('sp-feed').querySelectorAll('[data-rate-slug]');
+    for(var i=0;i<els.length;i++){
+      if(rateIO) rateIO.observe(els[i]);
+      else (function(el){ fetchRating(el.getAttribute('data-rate-slug')).then(function(v){ if(v) el.textContent='★ '+v; }); })(els[i]);
+    }
+  }
+  function ensureAllRatings(){
+    if(allRatingsRequested) return;
+    allRatingsRequested = true;
+    var pending = sites.filter(function(s){ return s.hasGoogle && !s.rating && !(slugFor(s) in ratingCache); });
+    if(pending.length===0) return;
+    var i=0, active=0, finished=0, total=pending.length;
+    function pump(){
+      while(active<6 && i<pending.length){
+        (function(site){ active++; fetchRating(slugFor(site)).then(function(){
+          active--; finished++; if(finished===total) render(); else pump(); }); })(pending[i++]);
+      }
+    }
+    pump();
+  }
+  function ratingSpan(s, slug){
+    var v = s.rating || ratingCache[slug];
+    if(v) return '<span class="sp-rating">★ '+esc(v)+'</span>';
+    return '<span class="sp-rating" data-rate-slug="'+esc(slug)+'"'+(s.hasGoogle?'':' style="display:none"')+'></span>';
+  }
+
   function cardGrid(s){
     var slug = slugFor(s);
     var name = esc((s.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
     var img = s.image ? '<img class="sp-card-img" data-src="'+esc(s.image)+'" alt="'+name+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
-    var rating = s.rating ? '★ '+s.rating : '';
     return '<a class="sp-card" href="/listing/'+esc(slug)+'">'+
       '<div class="sp-card-imgwrap">'+img+'<span class="sp-badge">'+esc(cap(s.type)||'Site')+'</span></div>'+
       '<div class="sp-card-body"><h3>'+name+'</h3>'+
@@ -289,7 +333,7 @@ img{max-width:100%;display:block}
           (s.town?'<span class="sp-tag">·</span><span class="sp-tag">'+esc(s.town)+'</span>':'')+
         '</div>'+
         '<p class="sp-card-desc">'+esc(s.description||'')+'</p>'+
-        '<div class="sp-card-foot"><span class="sp-rating">'+esc(rating)+'</span><span class="sp-view-link">VIEW →</span></div>'+
+        '<div class="sp-card-foot">'+ratingSpan(s,slug)+'<span class="sp-view-link">VIEW →</span></div>'+
       '</div></a>';
   }
 
@@ -297,13 +341,12 @@ img{max-width:100%;display:block}
     var slug = slugFor(s);
     var name = esc((s.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
     var img = s.image ? '<img data-src="'+esc(s.image)+'" alt="'+name+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
-    var rating = s.rating ? '★ '+s.rating : '';
     var meta = [cap(s.type), s.era, cap(s.condition), [s.town,s.county].filter(Boolean).join(', '), s.status]
       .filter(Boolean).map(function(x){ return '<span class="sp-tag">'+esc(x)+'</span>'; }).join('<span class="sp-tag">·</span>');
     return '<a class="sp-row" href="/listing/'+esc(slug)+'">'+
       '<div class="sp-row-thumb">'+img+'</div>'+
       '<div><h3>'+name+'</h3><div class="sp-meta">'+meta+'</div></div>'+
-      '<div class="sp-row-right"><span class="sp-rating">'+esc(rating)+'</span><span class="sp-view-link">VIEW →</span></div>'+
+      '<div class="sp-row-right">'+ratingSpan(s,slug)+'<span class="sp-view-link">VIEW →</span></div>'+
     '</a>';
   }
 
@@ -356,6 +399,9 @@ img{max-width:100%;display:block}
   }
 
   function render(){
+    // Rating filter / Top-rated sort need ratings for every site — load them
+    // on demand (cached at the edge) only when the user actually uses them.
+    if(state.minRt>0 || state.sort==='rating') ensureAllRatings();
     var r = getFiltered();
     $('sp-count').textContent = r.length + (r.length===1 ? ' SITE' : ' SITES');
     renderChips();
@@ -371,6 +417,7 @@ img{max-width:100%;display:block}
       feed.innerHTML = '<div class="sp-list-feed">'+ r.map(rowList).join('') +'</div>';
     }
     observeImages();
+    observeRatings();
   }
 
   // ---- events ----
@@ -404,10 +451,12 @@ img{max-width:100%;display:block}
   });
 
   // ---- load ----
+  var sortSel = $('sp-sort'); if(sortSel) sortSel.value = state.sort;
   fetch('/public/listings?country=Wales')
     .then(function(r){ return r.json(); })
     .then(function(data){
       sites = Array.isArray(data) ? data : (data.listings||[]);
+      bySlug = {}; sites.forEach(function(s){ bySlug[slugFor(s)] = s; });
       buildBar();
       render();
     })
