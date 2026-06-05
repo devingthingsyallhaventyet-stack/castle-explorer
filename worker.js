@@ -444,14 +444,9 @@ function firstSentence(text) {
 }
 
 // Per-listing hero photo, fetched LIVE from Google Places. Uses ONLY the
-// listing's stored/approved google_place_id (never a search). Edge-cached so
-// repeat views don't re-bill Google. Listings without an approved place_id 404.
+// listing's stored/approved google_place_id (never a search). NOT cached/stored
+// (per Google Places API policy); lazy loading on the client limits requests.
 async function getListingHeroPhoto(slug, env, ctx) {
-  const cache = caches.default;
-  const cacheKey = new Request('https://cache.internal/listing-photo/' + encodeURIComponent(slug));
-  const hit = await cache.match(cacheKey);
-  if (hit) return hit;
-
   const row = await env.DB.prepare(
     'SELECT google_place_id FROM listings WHERE slug = ? AND published = 1'
   ).bind(slug).first();
@@ -479,28 +474,21 @@ async function getListingHeroPhoto(slug, env, ctx) {
 
   const headers = new Headers();
   headers.set('Content-Type', media.headers.get('Content-Type') || 'image/jpeg');
-  // Cache at the edge/browser for performance so we don't re-bill Google on every view.
-  headers.set('Cache-Control', 'public, max-age=2592000');
-  const resp = new Response(media.body, { status: 200, headers });
-  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
-  return resp;
+  // Do NOT cache/store Google Places photos (per Places API policy).
+  headers.set('Cache-Control', 'no-store');
+  return new Response(media.body, { status: 200, headers });
 }
 
-// Per-card metadata: live Google star rating + the photo's required attribution.
-// Uses ONLY the stored/approved google_place_id (never a search). Edge-cached so
-// repeat views don't re-bill. Falls back to any rating already saved in the DB.
+// Per-card metadata: LIVE Google star rating + the photo's required attribution.
+// Uses ONLY the stored/approved google_place_id (never a search). Always live,
+// never cached/stored (per Google Places API policy).
 async function getListingCard(slug, env, ctx) {
-  const cache = caches.default;
-  const cacheKey = new Request('https://cache.internal/listing-card/' + encodeURIComponent(slug));
-  const hit = await cache.match(cacheKey);
-  if (hit) return hit;
-
   const row = await env.DB.prepare(
-    'SELECT google_place_id, google_rating, google_review_count FROM listings WHERE slug = ? AND published = 1'
+    'SELECT google_place_id FROM listings WHERE slug = ? AND published = 1'
   ).bind(slug).first();
   if (!row) return json({}, 404);
 
-  const out = { rating: row.google_rating || null, reviewCount: row.google_review_count || null, attribution: null };
+  const out = { rating: null, reviewCount: null, attribution: null };
 
   if (row.google_place_id && env.GOOGLE_PLACES_KEY) {
     try {
@@ -519,8 +507,7 @@ async function getListingCard(slug, env, ctx) {
   }
 
   const resp = json(out);
-  resp.headers.set('Cache-Control', 'public, max-age=2592000');
-  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, resp.clone()));
+  resp.headers.set('Cache-Control', 'no-store');
   return resp;
 }
 

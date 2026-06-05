@@ -388,7 +388,7 @@ img{max-width:100%;display:block}
       const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
       const name = esc((c.name||'').replace(/Aberlemno Sculptured Stones?/,'Aberlemno Stones'));
       const era = esc(c.era||''), cond = esc(c.condition||''), county = esc((c.county||'').replace('Scottish Borders','Borders'));
-      const rating = c.rating ? '★ ' + c.rating : '';
+      const rating = c.rating ? '★ ' + c.rating + ' · Google' : '';
       const a = document.createElement('a');
       a.className='cc-card';
       a.href='/listing/'+slug;
