@@ -729,6 +729,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           📡 No own photos — gallery will show Google Places images at runtime
         </div>
         <input type="file" id="photoFileInput" accept="image/*" style="display:none" onchange="uploadPhoto(this)">
+        <div class="photo-source-note" style="margin-top:.4rem">
+          📱 Upload straight from your phone — pick from your Photo Library. iPhone photos are converted and optimised automatically so pages stay fast.
+        </div>
       </div>
 
       </div><!-- /photos tab -->
@@ -1404,10 +1407,11 @@ function triggerTimelineFileUpload(entryId) {
 }
 
 async function uploadTimelineImage(entryId, file, zone) {
+  if (zone) zone.innerHTML = '⏳';
+  file = await compressImage(file);
   const formData = new FormData();
   formData.append('photo', file);
   try {
-    if (zone) zone.innerHTML = '⏳';
     const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
@@ -1634,7 +1638,7 @@ function setupNewTimelineDropZone() {
     if (e.dataTransfer.files.length) {
       zone.innerHTML = '⏳ Uploading...';
       const formData = new FormData();
-      formData.append('photo', e.dataTransfer.files[0]);
+      formData.append('photo', await compressImage(e.dataTransfer.files[0]));
       try {
         const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
         if (!res.ok) throw new Error('Upload failed');
@@ -1651,7 +1655,7 @@ function setupNewTimelineDropZone() {
     if (!fileInput.files[0]) return;
     zone.innerHTML = '⏳ Uploading...';
     const formData = new FormData();
-    formData.append('photo', fileInput.files[0]);
+    formData.append('photo', await compressImage(fileInput.files[0]));
     try {
       const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
       if (!res.ok) throw new Error('Upload failed');
@@ -1745,6 +1749,54 @@ async function addLinkEntry() {
   }
 }
 
+// ===== CLIENT-SIDE IMAGE COMPRESSION =====
+// Runs on EVERY upload before it leaves the browser. Handles iPhone photos:
+//  • converts HEIC/HEIF (Apple's format, unviewable in most browsers) to JPEG
+//  • applies EXIF orientation so portrait shots aren't sideways
+//  • resizes the longest edge to MAX_IMAGE_DIMENSION and re-encodes, so big
+//    phone photos don't slow the page down.
+// If the browser can't decode the file (e.g. HEIC on a non-Apple desktop
+// browser), it safely falls back to uploading the original untouched.
+const MAX_IMAGE_DIMENSION = 2000; // longest edge, in pixels
+const JPEG_QUALITY = 0.82;
+
+async function compressImage(file) {
+  if (!file) return file;
+  const looksLikeImage = file.type.startsWith('image/') ||
+    /\.(heic|heif|jpe?g|png|webp|gif|bmp|tiff?)$/i.test(file.name || '');
+  if (!looksLikeImage) return file;
+
+  try {
+    // createImageBitmap decodes HEIC natively on iOS/Safari and honours the
+    // photo's saved orientation, so iPhone portraits don't come out rotated.
+    const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
+    let { width, height } = bitmap;
+    const scale = Math.min(1, MAX_IMAGE_DIMENSION / Math.max(width, height));
+    width = Math.round(width * scale);
+    height = Math.round(height * scale);
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d').drawImage(bitmap, 0, 0, width, height);
+    if (bitmap.close) bitmap.close();
+
+    const blob = await new Promise(res => canvas.toBlob(res, 'image/jpeg', JPEG_QUALITY));
+    if (!blob) return file; // toBlob unsupported — keep original
+
+    // Always keep the JPEG if the source was HEIC (it must be converted to be
+    // viewable). Otherwise only swap in the compressed copy if it's smaller.
+    const isHeic = /heic|heif/i.test(file.type) || /\.(heic|heif)$/i.test(file.name || '');
+    if (!isHeic && blob.size >= file.size) return file;
+
+    const newName = (file.name || 'photo').replace(/\.[^.]+$/, '') + '.jpg';
+    return new File([blob], newName, { type: 'image/jpeg', lastModified: Date.now() });
+  } catch (err) {
+    console.warn('Image compression skipped, uploading original:', err);
+    return file;
+  }
+}
+
 // ===== PHOTO UPLOAD =====
 async function uploadPhoto(input) {
   if (!input.files[0]) return;
@@ -1753,6 +1805,7 @@ async function uploadPhoto(input) {
 }
 
 async function uploadPhotoFile(file) {
+  file = await compressImage(file);
   const formData = new FormData();
   formData.append('photo', file);
   try {
