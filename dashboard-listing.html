@@ -729,6 +729,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); }
           📡 No own photos — gallery will show Google Places images at runtime
         </div>
         <input type="file" id="photoFileInput" accept="image/*" style="display:none" onchange="uploadPhoto(this)">
+        <div class="photo-source-note" style="margin-top:.4rem">
+          📱 Upload straight from your phone — pick from your Photo Library. Photos are optimised automatically when shown on the site, so pages stay fast.
+        </div>
       </div>
 
       </div><!-- /photos tab -->
@@ -1404,10 +1407,11 @@ function triggerTimelineFileUpload(entryId) {
 }
 
 async function uploadTimelineImage(entryId, file, zone) {
+  if (zone) zone.innerHTML = '⏳';
+  file = await convertHeicIfNeeded(file);
   const formData = new FormData();
   formData.append('photo', file);
   try {
-    if (zone) zone.innerHTML = '⏳';
     const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
@@ -1634,7 +1638,7 @@ function setupNewTimelineDropZone() {
     if (e.dataTransfer.files.length) {
       zone.innerHTML = '⏳ Uploading...';
       const formData = new FormData();
-      formData.append('photo', e.dataTransfer.files[0]);
+      formData.append('photo', await convertHeicIfNeeded(e.dataTransfer.files[0]));
       try {
         const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
         if (!res.ok) throw new Error('Upload failed');
@@ -1651,7 +1655,7 @@ function setupNewTimelineDropZone() {
     if (!fileInput.files[0]) return;
     zone.innerHTML = '⏳ Uploading...';
     const formData = new FormData();
-    formData.append('photo', fileInput.files[0]);
+    formData.append('photo', await convertHeicIfNeeded(fileInput.files[0]));
     try {
       const res = await fetch(`/api/listings/${listingId}/photos/upload`, { method: 'POST', body: formData });
       if (!res.ok) throw new Error('Upload failed');
@@ -1745,6 +1749,34 @@ async function addLinkEntry() {
   }
 }
 
+// ===== HEIC → JPEG (the one thing Cloudflare can't do) =====
+// All resizing, compression and modern-format delivery happen automatically
+// on Cloudflare (Image Transformations) when an image is *served*. The only
+// gap is that Cloudflare can't read Apple's HEIC/HEIF format, so we convert
+// just those on the device. Every other file is uploaded untouched.
+async function convertHeicIfNeeded(file) {
+  if (!file) return file;
+  const isHeic = /heic|heif/i.test(file.type) || /\.(heic|heif)$/i.test(file.name || '');
+  if (!isHeic) return file;
+  try {
+    // iOS/Safari decodes HEIC natively and honours orientation here.
+    const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
+    const canvas = document.createElement('canvas');
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    canvas.getContext('2d').drawImage(bitmap, 0, 0);
+    if (bitmap.close) bitmap.close();
+    // High quality — Cloudflare re-compresses on serve, so don't lose detail here.
+    const blob = await new Promise(res => canvas.toBlob(res, 'image/jpeg', 0.92));
+    if (!blob) return file;
+    const newName = (file.name || 'photo').replace(/\.[^.]+$/, '') + '.jpg';
+    return new File([blob], newName, { type: 'image/jpeg', lastModified: Date.now() });
+  } catch (err) {
+    console.warn('HEIC conversion skipped, uploading original:', err);
+    return file;
+  }
+}
+
 // ===== PHOTO UPLOAD =====
 async function uploadPhoto(input) {
   if (!input.files[0]) return;
@@ -1753,6 +1785,7 @@ async function uploadPhoto(input) {
 }
 
 async function uploadPhotoFile(file) {
+  file = await convertHeicIfNeeded(file);
   const formData = new FormData();
   formData.append('photo', file);
   try {
