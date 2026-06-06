@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <title id="page-title">Loading... — castlecore</title>
+<!-- Fonts: preconnect + <link> instead of CSS @import (faster, non-serialised). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -1853,7 +1856,10 @@ function initGallery(photos) {
   let thumbsHtml = '';
   photos.forEach((p, i) => {
     const credit = p.attribution ? `<div class="img-credit">📷 ${p.attribution}</div>` : '';
-    stripHtml += `<div class="img-wrap"><img src="${p.src}" alt="${p.alt || ''}" loading="lazy">${credit}</div>`;
+    // First image is the likely LCP element: load it eagerly with high priority;
+    // lazy-load the rest.
+    const loadAttrs = i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+    stripHtml += `<div class="img-wrap"><img src="${p.src}" alt="${p.alt || ''}" ${loadAttrs}>${credit}</div>`;
     thumbsHtml += `<img src="${p.thumb || p.src}" alt="Thumb ${i+1}" ${i===0?'class="active"':''} onclick="goToSlide(${i})">`;
   });
 
