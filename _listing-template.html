@@ -1847,6 +1847,17 @@ function cfImg(path, width) {
   return '/cdn-cgi/image/width=' + width + ',quality=82,format=auto/' + src;
 }
 
+// Responsive image candidates for the gallery. Mobile renders images at ~100vw
+// (~400px) while desktop shows them ~800px tall-cropped, so we offer a range and
+// let the browser pick. NOTE: the Worker's hero <link rel=preload imagesrcset>
+// (serveListingPage in worker.js) MUST mirror these widths + GALLERY_SIZES, or
+// the preload fetches a different candidate than the gallery and downloads twice.
+const GALLERY_WIDTHS = [480, 768, 1024, 1366, 1600];
+const GALLERY_SIZES = '(max-width: 700px) 100vw, 800px';
+function imgSrcset(path) {
+  return GALLERY_WIDTHS.map(function(w){ return cfImg(path, w) + ' ' + w + 'w'; }).join(', ');
+}
+
 // Build the photo gallery + lightbox from a list of photos:
 //   { src, thumb, full, attribution, attributionUrl, alt }
 // Used with the listing's own uploaded photos when present, otherwise with
@@ -1861,7 +1872,8 @@ function initGallery(photos) {
     // First image is the likely LCP element: load it eagerly with high priority;
     // lazy-load the rest.
     const loadAttrs = i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
-    stripHtml += `<div class="img-wrap"><img src="${p.src}" alt="${p.alt || ''}" ${loadAttrs}>${credit}</div>`;
+    const responsive = p.srcset ? ` srcset="${p.srcset}" sizes="${p.sizes || GALLERY_SIZES}"` : '';
+    stripHtml += `<div class="img-wrap"><img src="${p.src}"${responsive} alt="${p.alt || ''}" ${loadAttrs}>${credit}</div>`;
     thumbsHtml += `<img src="${p.thumb || p.src}" alt="Thumb ${i+1}" ${i===0?'class="active"':''} onclick="goToSlide(${i})">`;
   });
 
@@ -1967,7 +1979,9 @@ function renderListing(listing) {
     initGallery(listing.photos.map(function(p){
       var path = '/img/' + p.r2_key;
       return {
-        src: cfImg(path, 1600),
+        src: cfImg(path, 1024),        // fallback for browsers without srcset
+        srcset: imgSrcset(path),       // responsive candidates (mobile picks small)
+        sizes: GALLERY_SIZES,
         thumb: cfImg(path, 240),
         full: cfImg(path, 2000),
         alt: p.alt_text || listing.name,

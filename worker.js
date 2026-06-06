@@ -396,10 +396,16 @@ async function serveListingPage(slug, url, env, ctx) {
         );
       }
       if (row.first_photo) {
-        // Must match exactly the URL the gallery requests (cfImg(path, 1600)),
-        // otherwise the preload is wasted on a different resource.
-        const heroUrl = '/cdn-cgi/image/width=1600,quality=82,format=auto/img/' + row.first_photo;
-        const preload = '<link rel="preload" as="image" fetchpriority="high" href="' + heroUrl + '">\n';
+        // Responsive preload — MUST mirror the gallery's srcset + sizes
+        // (GALLERY_WIDTHS / GALLERY_SIZES in _listing-template.html), or the
+        // browser preloads a different candidate than the <img> uses and
+        // downloads the image twice.
+        const widths = [480, 768, 1024, 1366, 1600];
+        const srcset = widths
+          .map(w => '/cdn-cgi/image/width=' + w + ',quality=82,format=auto/img/' + row.first_photo + ' ' + w + 'w')
+          .join(', ');
+        const preload = '<link rel="preload" as="image" fetchpriority="high" imagesrcset="' +
+          srcset + '" imagesizes="(max-width: 700px) 100vw, 800px">\n';
         html = html.replace('<style>', preload + '<style>');
       }
     }
