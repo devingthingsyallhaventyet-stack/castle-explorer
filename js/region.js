@@ -24,11 +24,17 @@
   var countrySlug = (CONFIG.country || 'Scotland').toLowerCase().replace(/\s+/g, '-');
   function listingUrl(name) { return '/' + countrySlug + '/' + regionSlug + '/' + slug(name); }
   
-  // Cloudflare Image Transformations — resize + auto-format on the fly
+  // Cloudflare Image Transformations — resize + auto-format on the fly.
+  // Wraps images we host in a /cdn-cgi/image/ URL so Cloudflare serves a
+  // right-sized, modern-format (WebP/AVIF), compressed copy, cached at the edge.
   function optImg(url, width, quality) {
     if (!url) return '';
-    // Pass all URLs through directly — CDN images are already optimised
-    return url;
+    if (url.indexOf('/cdn-cgi/image/') !== -1) return url; // already a transform URL
+    // Only transform images we host; leave external (e.g. Google) URLs untouched.
+    var ours = url.charAt(0) === '/' || url.indexOf('img.castlecore.uk') !== -1;
+    if (!ours) return url;
+    var opts = (width ? 'width=' + width + ',' : '') + 'quality=' + (quality || 80) + ',format=auto,fit=cover';
+    return '/cdn-cgi/image/' + opts + '/' + url;
   }
 
   function getImg(c){
