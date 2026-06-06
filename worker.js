@@ -378,27 +378,33 @@ async function serveListingPage(slug, url, env, ctx) {
   const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
   let html = await asset.text();
 
-  // First photo by sort order = what the gallery shows first (the LCP image).
-  const row = await env.DB.prepare(
-    `SELECT l.name,
-            (SELECT p.r2_key FROM photos p WHERE p.listing_id = l.id ORDER BY p.sort_order LIMIT 1) AS first_photo
-       FROM listings l WHERE l.slug = ?`
-  ).bind(slug).first();
+  // Best-effort enhancement: never let a DB hiccup break the page — fall back
+  // to serving the plain template if the lookup or injection fails.
+  try {
+    // First photo by sort order = what the gallery shows first (the LCP image).
+    const row = await env.DB.prepare(
+      `SELECT l.name,
+              (SELECT p.r2_key FROM photos p WHERE p.listing_id = l.id ORDER BY p.sort_order LIMIT 1) AS first_photo
+         FROM listings l WHERE l.slug = ?`
+    ).bind(slug).first();
 
-  if (row) {
-    if (row.name) {
-      html = html.replace(
-        '<title id="page-title">Loading... — castlecore</title>',
-        '<title id="page-title">' + esc(row.name) + ' — castlecore</title>'
-      );
+    if (row) {
+      if (row.name) {
+        html = html.replace(
+          '<title id="page-title">Loading... — castlecore</title>',
+          '<title id="page-title">' + esc(row.name) + ' — castlecore</title>'
+        );
+      }
+      if (row.first_photo) {
+        // Must match exactly the URL the gallery requests (cfImg(path, 1600)),
+        // otherwise the preload is wasted on a different resource.
+        const heroUrl = '/cdn-cgi/image/width=1600,quality=82,format=auto/img/' + row.first_photo;
+        const preload = '<link rel="preload" as="image" fetchpriority="high" href="' + heroUrl + '">\n';
+        html = html.replace('<style>', preload + '<style>');
+      }
     }
-    if (row.first_photo) {
-      // Must match exactly the URL the gallery requests (cfImg(path, 1600)),
-      // otherwise the preload is wasted on a different resource.
-      const heroUrl = '/cdn-cgi/image/width=1600,quality=82,format=auto/img/' + row.first_photo;
-      const preload = '<link rel="preload" as="image" fetchpriority="high" href="' + heroUrl + '">\n';
-      html = html.replace('<style>', preload + '<style>');
-    }
+  } catch (err) {
+    // Serve the unmodified template; the client still renders normally.
   }
 
   const response = new Response(html, {
