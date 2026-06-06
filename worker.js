@@ -121,10 +121,7 @@ export default {
     const countries = ['scotland','england','wales','ireland','northern-ireland'];
     const listingMatch = path.match(/^\/([a-z-]+)\/([a-z0-9-]+)\/([a-z0-9-]+)$/);
     if (listingMatch && countries.includes(listingMatch[1])) {
-      // Check this isn't a static asset (region pages are /:country/:region)
-      const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
-      const html = await asset.text();
-      return new Response(html, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
+      return await serveListingPage(listingMatch[3], url, env, ctx);
     }
 
     // Legacy listing URLs: /listing/{slug} → 301 redirect to new structure
@@ -360,6 +357,64 @@ async function getListings(request, env) {
     limit,
     pages: Math.ceil(countResult.total / limit)
   });
+}
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Serve the listing detail page. The page renders client-side, so the main
+// (LCP) photo would otherwise not start loading until JS has fetched the
+// listing data. To fix that we inject, server-side, the real <title> and a
+// <link rel="preload"> for the first photo — letting the browser fetch that
+// image in parallel with the JS. Edge-cached per URL so the D1 lookup is paid
+// at most once per cache window.
+async function serveListingPage(slug, url, env, ctx) {
+  const cache = caches.default;
+  const cacheKey = new Request(url.toString(), { method: 'GET' });
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
+
+  const asset = await env.ASSETS.fetch(new Request(new URL('/_listing-template.html', url.origin)));
+  let html = await asset.text();
+
+  // Best-effort enhancement: never let a DB hiccup break the page — fall back
+  // to serving the plain template if the lookup or injection fails.
+  try {
+    // First photo by sort order = what the gallery shows first (the LCP image).
+    const row = await env.DB.prepare(
+      `SELECT l.name,
+              (SELECT p.r2_key FROM photos p WHERE p.listing_id = l.id ORDER BY p.sort_order LIMIT 1) AS first_photo
+         FROM listings l WHERE l.slug = ?`
+    ).bind(slug).first();
+
+    if (row) {
+      if (row.name) {
+        html = html.replace(
+          '<title id="page-title">Loading... — castlecore</title>',
+          '<title id="page-title">' + esc(row.name) + ' — castlecore</title>'
+        );
+      }
+      if (row.first_photo) {
+        // Must match exactly the URL the gallery requests (cfImg(path, 1600)),
+        // otherwise the preload is wasted on a different resource.
+        const heroUrl = '/cdn-cgi/image/width=1600,quality=82,format=auto/img/' + row.first_photo;
+        const preload = '<link rel="preload" as="image" fetchpriority="high" href="' + heroUrl + '">\n';
+        html = html.replace('<style>', preload + '<style>');
+      }
+    }
+  } catch (err) {
+    // Serve the unmodified template; the client still renders normally.
+  }
+
+  const response = new Response(html, {
+    headers: {
+      'Content-Type': 'text/html;charset=UTF-8',
+      'Cache-Control': 'public, max-age=300'
+    }
+  });
+  if (ctx && ctx.waitUntil) ctx.waitUntil(cache.put(cacheKey, response.clone()));
+  return response;
 }
 
 async function getListingBySlug(slug, env) {
