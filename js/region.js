@@ -34,7 +34,10 @@
     var ours = url.charAt(0) === '/' || url.indexOf('img.castlecore.uk') !== -1;
     if (!ours) return url;
     var opts = (width ? 'width=' + width + ',' : '') + 'quality=' + (quality || 80) + ',format=auto,fit=cover';
-    return '/cdn-cgi/image/' + opts + '/' + url;
+    // Source must follow the options with a single slash — strip a leading
+    // slash from absolute paths so we don't emit a broken "//img/..." URL.
+    var src = url.charAt(0) === '/' ? url.slice(1) : url;
+    return '/cdn-cgi/image/' + opts + '/' + src;
   }
 
   function getImg(c){

@@ -1836,7 +1836,10 @@ function renderGuestBook(listing) {
 function cfImg(path, width) {
   if (!path) return '';
   if (path.indexOf('/cdn-cgi/image/') !== -1) return path;
-  return '/cdn-cgi/image/width=' + width + ',quality=82,format=auto/' + path;
+  // Source must follow the options with a single slash — strip a leading slash
+  // so we don't emit a broken "//img/..." URL that the /img/ route won't match.
+  var src = path.charAt(0) === '/' ? path.slice(1) : path;
+  return '/cdn-cgi/image/width=' + width + ',quality=82,format=auto/' + src;
 }
 
 // Build the photo gallery + lightbox from a list of photos:
