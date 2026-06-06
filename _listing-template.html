@@ -1838,13 +1838,15 @@ function renderGuestBook(listing) {
 // Main render function
 // Wrap an image path in Cloudflare's on-the-fly transform (resize + modern
 // format + compression), matching the optimisation used elsewhere on the site.
-function cfImg(path, width) {
+function cfImg(path, width, quality) {
   if (!path) return '';
   if (path.indexOf('/cdn-cgi/image/') !== -1) return path;
   // Source must follow the options with a single slash — strip a leading slash
   // so we don't emit a broken "//img/..." URL that the /img/ route won't match.
   var src = path.charAt(0) === '/' ? path.slice(1) : path;
-  return '/cdn-cgi/image/width=' + width + ',quality=82,format=auto/' + src;
+  // Default quality 75 — a good photo balance with AVIF/WebP (format=auto).
+  // The Worker's hero-preload srcset uses the same 75; keep them in sync.
+  return '/cdn-cgi/image/width=' + width + ',quality=' + (quality || 75) + ',format=auto/' + src;
 }
 
 // Responsive image candidates for the gallery. Mobile renders images at ~100vw
@@ -1979,11 +1981,11 @@ function renderListing(listing) {
     initGallery(listing.photos.map(function(p){
       var path = '/img/' + p.r2_key;
       return {
-        src: cfImg(path, 1024),        // fallback for browsers without srcset
-        srcset: imgSrcset(path),       // responsive candidates (mobile picks small)
+        src: cfImg(path, 1024),        // fallback for browsers without srcset (q75)
+        srcset: imgSrcset(path),       // responsive candidates (mobile picks small, q75)
         sizes: GALLERY_SIZES,
-        thumb: cfImg(path, 240),
-        full: cfImg(path, 2000),
+        thumb: cfImg(path, 160, 60),   // displayed ~133px; small + extra-compressed
+        full: cfImg(path, 2000, 82),   // lightbox/full-screen: keep crisp
         alt: p.alt_text || listing.name,
         attribution: null
       };
