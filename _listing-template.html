@@ -1831,6 +1831,95 @@ function renderGuestBook(listing) {
 }
 
 // Main render function
+// Wrap an image path in Cloudflare's on-the-fly transform (resize + modern
+// format + compression), matching the optimisation used elsewhere on the site.
+function cfImg(path, width) {
+  if (!path) return '';
+  if (path.indexOf('/cdn-cgi/image/') !== -1) return path;
+  return '/cdn-cgi/image/width=' + width + ',quality=82,format=auto/' + path;
+}
+
+// Build the photo gallery + lightbox from a list of photos:
+//   { src, thumb, full, attribution, attributionUrl, alt }
+// Used with the listing's own uploaded photos when present, otherwise with
+// Google Places photos.
+function initGallery(photos) {
+  if (!photos || !photos.length) return;
+  const gallery = document.getElementById('gallery');
+  let stripHtml = '';
+  let thumbsHtml = '';
+  photos.forEach((p, i) => {
+    const credit = p.attribution ? `<div class="img-credit">📷 ${p.attribution}</div>` : '';
+    stripHtml += `<div class="img-wrap"><img src="${p.src}" alt="${p.alt || ''}" loading="lazy">${credit}</div>`;
+    thumbsHtml += `<img src="${p.thumb || p.src}" alt="Thumb ${i+1}" ${i===0?'class="active"':''} onclick="goToSlide(${i})">`;
+  });
+
+  gallery.innerHTML = `
+    <div class="gallery-strip-wrapper">
+      <div class="gallery-strip" id="galleryStrip">${stripHtml}</div>
+      <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
+      <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
+    </div>
+    <div class="gallery-thumbs" id="galleryThumbs">${thumbsHtml}</div>`;
+  gallery.style.display = 'block';
+
+  const strip = document.getElementById('galleryStrip');
+  const imgs = strip.querySelectorAll('img');
+  const thumbs = document.querySelectorAll('#galleryThumbs img');
+  window.goToSlide = function(i) {
+    imgs[i]?.scrollIntoView({ behavior:'smooth', inline:'start', block:'nearest' });
+    thumbs.forEach((t,j) => t.classList.toggle('active', j===i));
+  };
+
+  // Lightbox
+  var lbEl = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbCounter = document.getElementById('lightboxCounter');
+  var lbAttribution = document.getElementById('lightboxAttribution');
+  var lbPhotos = photos.map(function(p){
+    return { src: p.full || p.src, attribution: p.attribution, attributionUrl: p.attributionUrl || null };
+  });
+  var lbIdx = 0;
+
+  function updateLightbox() {
+    var photo = lbPhotos[lbIdx];
+    lbImg.src = photo.src;
+    lbCounter.textContent = (lbIdx+1) + ' / ' + lbPhotos.length;
+    if (photo.attribution && photo.attributionUrl) {
+      lbAttribution.innerHTML = '📷 Photo by <a href="' + photo.attributionUrl + '" target="_blank">' + photo.attribution + '</a>';
+    } else if (photo.attribution) {
+      lbAttribution.textContent = '📷 Photo by ' + photo.attribution;
+    } else {
+      lbAttribution.textContent = '';
+    }
+  }
+
+  window.openLightbox = function(i) { lbIdx = i; updateLightbox(); lbEl.classList.add('active'); document.body.style.overflow = 'hidden'; };
+  window.closeLightbox = function() { lbEl.classList.remove('active'); document.body.style.overflow = ''; };
+  window.navLightbox = function(dir) { lbIdx = (lbIdx + dir + lbPhotos.length) % lbPhotos.length; updateLightbox(); };
+
+  var touchStartX = 0, touchMoved = false;
+  var stripEl = document.getElementById('galleryStrip');
+  stripEl.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; touchMoved = false; }, {passive:true});
+  stripEl.addEventListener('touchmove', function(e){ if(Math.abs(e.touches[0].clientX - touchStartX) > 10) touchMoved = true; }, {passive:true});
+
+  document.querySelectorAll('#galleryStrip img').forEach(function(img, i){
+    img.addEventListener('click', function(e){ if(touchMoved) return; e.stopPropagation(); if(i < lbPhotos.length) openLightbox(i); });
+  });
+  document.querySelectorAll('#galleryThumbs img').forEach(function(thumb, i){
+    thumb.addEventListener('click', function(){ if(i < lbPhotos.length) openLightbox(i); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(!lbEl.classList.contains('active')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') navLightbox(-1);
+    if(e.key === 'ArrowRight') navLightbox(1);
+  });
+  var lbTouchX = 0;
+  lbEl.addEventListener('touchstart', function(e){ lbTouchX = e.touches[0].clientX; }, {passive:true});
+  lbEl.addEventListener('touchend', function(e){ var dx = e.changedTouches[0].clientX - lbTouchX; if(Math.abs(dx) > 50) navLightbox(dx > 0 ? -1 : 1); });
+}
+
 function renderListing(listing) {
   // Update page title
   document.getElementById('page-title').textContent = `${listing.name} — castlecore`;
@@ -1860,8 +1949,24 @@ function renderListing(listing) {
   var communityDesc = document.getElementById('community-desc');
   if (communityDesc) communityDesc.textContent = 'Our ' + listing.name + ' listing is always growing. We rely on a mix of historical sources, open data, and community contributions — but we know we don\'t always get it right. If you spot a mistake, have a photo to share, or know something we\'ve missed, we\'d love to hear from you.';
   
+  // Show the listing's OWN uploaded photos in the gallery. When present they
+  // take priority: Google Places photos are skipped (see fetchGooglePlaces).
+  if (listing.photos && listing.photos.length) {
+    window.__galleryShown = true;
+    initGallery(listing.photos.map(function(p){
+      var path = '/img/' + p.r2_key;
+      return {
+        src: cfImg(path, 1600),
+        thumb: cfImg(path, 240),
+        full: cfImg(path, 2000),
+        alt: p.alt_text || listing.name,
+        attribution: null
+      };
+    }));
+  }
+
   // Mobile sticky bar display is handled by CSS media query
-  
+
   showContent();
 }
 
@@ -1974,107 +2079,18 @@ async function fetchGooglePlaces(placeId, listing) {
       reviewsContainer.innerHTML = html;
     }
     
-    // Render Google Photos in gallery
-    if (places.photos && places.photos.length) {
-      const gallery = document.getElementById('gallery');
-      let stripHtml = '';
-      let thumbsHtml = '';
-      places.photos.forEach((p, i) => {
-        stripHtml += `<div class="img-wrap"><img src="${p.url}" alt="Photo by ${p.attribution}" loading="lazy"><div class="img-credit">📷 ${p.attribution}</div></div>`;
-        thumbsHtml += `<img src="${p.url}" alt="Thumb ${i+1}" ${i===0?'class="active"':''} onclick="goToSlide(${i})">`;
-      });
-      
-      gallery.innerHTML = `
-        <div class="gallery-strip-wrapper">
-          <div class="gallery-strip" id="galleryStrip">${stripHtml}</div>
-          <button class="gallery-nav gallery-prev" onclick="document.getElementById('galleryStrip').scrollBy({left:-400,behavior:'smooth'})">‹</button>
-          <button class="gallery-nav gallery-next" onclick="document.getElementById('galleryStrip').scrollBy({left:400,behavior:'smooth'})">›</button>
-        </div>
-        <div class="gallery-thumbs" id="galleryThumbs">${thumbsHtml}</div>`;
-      gallery.style.display = 'block';
-      
-      // Re-init gallery scroll tracking
-      const strip = document.getElementById('galleryStrip');
-      const imgs = strip.querySelectorAll('img');
-      const thumbs = document.querySelectorAll('#galleryThumbs img');
-      window.goToSlide = function(i) {
-        imgs[i]?.scrollIntoView({ behavior:'smooth', inline:'start', block:'nearest' });
-        thumbs.forEach((t,j) => t.classList.toggle('active', j===i));
-      };
-
-      // Lightbox
-      var lbEl = document.getElementById('lightbox');
-      var lbImg = document.getElementById('lightboxImg');
-      var lbCounter = document.getElementById('lightboxCounter');
-      var lbAttribution = document.getElementById('lightboxAttribution');
-      var lbPhotos = []; // {src, attribution, attributionUrl}
-      var lbIdx = 0;
-
-      places.photos.forEach(function(p){
-        lbPhotos.push({
+    // Render Google Photos in gallery — skipped when the listing has its own
+    // uploaded photos (those are shown by renderListing and take priority).
+    if (!window.__galleryShown && places.photos && places.photos.length) {
+      initGallery(places.photos.map(function(p){
+        return {
           src: p.url,
+          thumb: p.url,
+          full: p.url,
           attribution: p.attribution || 'Google Maps',
           attributionUrl: p.attributionUrl || null
-        });
-      });
-
-      function updateLightbox() {
-        var photo = lbPhotos[lbIdx];
-        lbImg.src = photo.src;
-        lbCounter.textContent = (lbIdx+1) + ' / ' + lbPhotos.length;
-        if (photo.attributionUrl) {
-          lbAttribution.innerHTML = '📷 Photo by <a href="' + photo.attributionUrl + '" target="_blank">' + photo.attribution + '</a>';
-        } else {
-          lbAttribution.textContent = '📷 Photo by ' + photo.attribution;
-        }
-      }
-
-      window.openLightbox = function(i) {
-        lbIdx = i;
-        updateLightbox();
-        lbEl.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      };
-      window.closeLightbox = function() {
-        lbEl.classList.remove('active');
-        document.body.style.overflow = '';
-      };
-      window.navLightbox = function(dir) {
-        lbIdx = (lbIdx + dir + lbPhotos.length) % lbPhotos.length;
-        updateLightbox();
-      };
-
-      // Click on gallery images opens lightbox
-      var touchStartX = 0, touchMoved = false;
-      var stripEl = document.getElementById('galleryStrip');
-      stripEl.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; touchMoved = false; }, {passive:true});
-      stripEl.addEventListener('touchmove', function(e){ if(Math.abs(e.touches[0].clientX - touchStartX) > 10) touchMoved = true; }, {passive:true});
-
-      document.querySelectorAll('#galleryStrip img').forEach(function(img, i){
-        img.addEventListener('click', function(e){
-          if(touchMoved) return;
-          e.stopPropagation();
-          if(i < lbPhotos.length) openLightbox(i);
-        });
-      });
-
-      document.querySelectorAll('#galleryThumbs img').forEach(function(thumb, i){
-        thumb.addEventListener('click', function(){ if(i < lbPhotos.length) openLightbox(i); });
-      });
-
-      document.addEventListener('keydown', function(e){
-        if(!lbEl.classList.contains('active')) return;
-        if(e.key === 'Escape') closeLightbox();
-        if(e.key === 'ArrowLeft') navLightbox(-1);
-        if(e.key === 'ArrowRight') navLightbox(1);
-      });
-
-      var lbTouchX = 0;
-      lbEl.addEventListener('touchstart', function(e){ lbTouchX = e.touches[0].clientX; }, {passive:true});
-      lbEl.addEventListener('touchend', function(e){
-        var dx = e.changedTouches[0].clientX - lbTouchX;
-        if(Math.abs(dx) > 50) navLightbox(dx > 0 ? -1 : 1);
-      });
+        };
+      }));
     }
 
     // Update address if available
