@@ -402,7 +402,7 @@ async function serveListingPage(slug, url, env, ctx) {
         // downloads the image twice.
         const widths = [480, 768, 1024, 1366, 1600];
         const srcset = widths
-          .map(w => '/cdn-cgi/image/width=' + w + ',quality=82,format=auto/img/' + row.first_photo + ' ' + w + 'w')
+          .map(w => '/cdn-cgi/image/width=' + w + ',quality=75,format=auto/img/' + row.first_photo + ' ' + w + 'w')
           .join(', ');
         const preload = '<link rel="preload" as="image" fetchpriority="high" imagesrcset="' +
           srcset + '" imagesizes="(max-width: 700px) 100vw, 800px">\n';
